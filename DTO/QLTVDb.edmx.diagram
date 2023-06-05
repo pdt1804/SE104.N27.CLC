@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a402f520ab3b41d88604ea1874c04b05" Name="Diagram1">
+        <EntityTypeShape EntityType="QLTVDb.BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.BCSACHTRATRE" Width="1.5" PointX="9.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.CHUCNANG" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.CT_BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.CT_PHIEUNHAP" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.CUONSACH" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.DOCGIA" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.LOAIDOCGIA" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.NGUOIDUNG" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.NHOMNGUOIDUNG" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.PHIEUMUONTRA" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.PHIEUNHAPSACH" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.PHIEUTHU" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.SACH" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.TACGIA" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.THAMSO" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.THELOAI" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.TUASACH" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="QLTVDb.FK__CT_BCLUOT__idBao__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__BCSACHTRA__idCuo__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__CT_BCLUOT__idThe__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__CT_PHIEUN__idSac__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__CT_PHIEUN__SoPhi__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__CUONSACH__idSach__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__PHIEUMUON__idCuo__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__DOCGIA__idLoaiDo__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__DOCGIA__idNguoiD__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__PHIEUMUON__idDoc__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__PHIEUTHU__idDocG__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__NGUOIDUNG__idNho__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__SACH__idTuaSach__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.FK__TUASACH__idTheLo__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.CT_TACGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVDb.PHANQUYEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

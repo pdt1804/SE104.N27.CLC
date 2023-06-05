@@ -7,3 +7,9 @@ C:\Users\sonle\Desktop\Library\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\sonle\Desktop\Library\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\sonle\Desktop\Library\DAL\obj\Debug\DAL.dll
 C:\Users\sonle\Desktop\Library\DAL\obj\Debug\DAL.pdb
+C:\Users\sonle\Desktop\Library\DAL\bin\Debug\DAL.dll.config
+C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.dll
+C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sonle\Desktop\Library\DAL\bin\Debug\DTO.dll.config
+C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.xml
+C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.SqlServer.xml

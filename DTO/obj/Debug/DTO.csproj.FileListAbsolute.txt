@@ -4,3 +4,9 @@ C:\Users\sonle\Desktop\Library\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 C:\Users\sonle\Desktop\Library\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\sonle\Desktop\Library\DTO\obj\Debug\DTO.dll
 C:\Users\sonle\Desktop\Library\DTO\obj\Debug\DTO.pdb
+C:\Users\sonle\Desktop\Library\DTO\bin\Debug\DTO.dll.config
+C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.dll
+C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.xml
+C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sonle\Desktop\Library\DTO\obj\Debug\DTO.csproj.CopyComplete

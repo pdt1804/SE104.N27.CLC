@@ -13,3 +13,9 @@ C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DTO.dll
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\BUS.pdb
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DTO.pdb
 C:\Users\sonle\Desktop\Library\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.dll
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\BUS.dll.config
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DTO.dll.config
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.xml
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.SqlServer.xml

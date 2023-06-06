@@ -15,6 +15,17 @@ namespace DTO
     
     public partial class QLTVEntities : DbContext
     {
+        private static QLTVEntities instance;
+        public static QLTVEntities Instance
+        {
+            get
+            {
+                if (instance == null) instance = new QLTVEntities();
+                return instance;
+            }
+            set
+            { instance = value; }
+        }
         public QLTVEntities()
             : base("name=QLTVEntities")
         {

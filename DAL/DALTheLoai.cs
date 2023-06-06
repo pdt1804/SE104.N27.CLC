@@ -7,7 +7,7 @@ using DTO;
 
 namespace DAL
 {
-    internal class DALTheLoai
+    public class DALTheLoai
     {
         private static DALTheLoai instance;
 

@@ -19,3 +19,11 @@ C:\Users\sonle\Desktop\Library\GUI\bin\Debug\BUS.dll.config
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DTO.dll.config
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.xml
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.SqlServer.xml
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.formLogin.resources
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.exe
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.pdb

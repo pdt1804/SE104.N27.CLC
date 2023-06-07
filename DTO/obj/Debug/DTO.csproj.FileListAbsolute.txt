@@ -10,3 +10,16 @@ C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.xml
 C:\Users\sonle\Desktop\Library\DTO\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sonle\Desktop\Library\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\CNPM1\CNPM\DTO\bin\Debug\DTO.dll.config
+D:\CNPM1\CNPM\DTO\bin\Debug\DTO.dll
+D:\CNPM1\CNPM\DTO\bin\Debug\DTO.pdb
+D:\CNPM1\CNPM\DTO\bin\Debug\EntityFramework.dll
+D:\CNPM1\CNPM\DTO\bin\Debug\EntityFramework.SqlServer.dll
+D:\CNPM1\CNPM\DTO\bin\Debug\EntityFramework.xml
+D:\CNPM1\CNPM\DTO\bin\Debug\EntityFramework.SqlServer.xml
+D:\CNPM1\CNPM\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\CNPM1\CNPM\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\CNPM1\CNPM\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\CNPM1\CNPM\DTO\obj\Debug\DTO.dll
+D:\CNPM1\CNPM\DTO\obj\Debug\DTO.pdb
+D:\CNPM1\CNPM\DTO\bin\Debug\Siticone.Desktop.UI.dll

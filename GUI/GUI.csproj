@@ -68,6 +68,12 @@
     <Compile Include="DiamondPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FORM\fAddNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fAddNguoiDung.Designer.cs">
+      <DependentUpon>fAddNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fEditNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM\fAddNguoiDung.resx">
+      <DependentUpon>fAddNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\fEditNguoiDung.resx">
       <DependentUpon>fEditNguoiDung.cs</DependentUpon>
     </EmbeddedResource>

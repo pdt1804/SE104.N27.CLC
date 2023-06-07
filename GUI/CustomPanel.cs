@@ -25,6 +25,13 @@ namespace GUI
             this.Size = new Size(350, 300);
             DoubleBuffered = true;
         }
+        //Properties
+        public int BorderRadius { get => borderRadius; set { borderRadius = value; this.Invalidate(); } }
+        public float GradientAngle { get => gradientAngle; set { gradientAngle = value; this.Invalidate(); } }
+        public Color GradientTopColor { get => gradientTopColor; set { gradientTopColor = value; this.Invalidate(); } }
+        public Color GradientBottomColor { get => gradientBottomColor; set { gradientBottomColor = value; this.Invalidate(); } }
 
-    }        
+        
+
+    }
 }

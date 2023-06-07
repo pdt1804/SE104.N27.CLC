@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace GUI
 {
@@ -26,6 +27,74 @@ namespace GUI
             this.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-    } 
+        //Properties
+        [Category("Custom PictureBox")]
+        public int BorderSize
+        {
+            get { return borderSize; }
+            set
+            {
+                borderSize = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Custom PictureBox")]
+        public Color BorderColor
+        {
+            get { return borderColor; }
+            set
+            {
+                borderColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Custom PictureBox")]
+        public Color BorderColor2
+        {
+            get { return borderColor2; }
+            set
+            {
+                borderColor2 = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Custom PictureBox")]
+        public DashStyle BorderLineStyle
+        {
+            get { return borderLineStyle; }
+            set
+            {
+                borderLineStyle = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Custom PictureBox")]
+        public DashCap BorderCapStyle
+        {
+            get { return borderCapStyle; }
+            set
+            {
+                borderCapStyle = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("Custom PictureBox")]
+        public float GradientAngle
+        {
+            get { return gradientAngle; }
+            set
+            {
+                gradientAngle = value;
+                this.Invalidate();
+            }
+        }
+
+        
+    }
 
 }

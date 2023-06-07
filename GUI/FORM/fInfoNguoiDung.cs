@@ -12,15 +12,17 @@ namespace GUI
 {
     public partial class fInfoNguoiDung : Form
     {
+    
         public fInfoNguoiDung(int _id)
         {
             InitializeComponent();
+
         }
 
        
         private void butChange_Click(object sender, EventArgs e)
         {
-            var f = new fEditNguoiDung(id);
+            var f = new fEditNguoiDung();
             f.ShowDialog();
         }
 

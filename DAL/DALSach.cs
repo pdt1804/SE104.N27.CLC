@@ -153,5 +153,34 @@ namespace DAL
                 return false;
             }
         }
+
+        /// <summary>
+        /// Thêm số lượng sách đã có
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="soLuong"></param>
+        /// <returns></returns>
+        public bool AddSachDaCo(int id, int soLuong)
+        {
+            try
+            {
+                SACH sach = GetSachById(id);
+                if (sach == null) return false;
+                sach.SoLuong += soLuong;
+                sach.SoLuongConLai += soLuong;
+                sach.DaAn = 0;
+                Console.WriteLine("{0} {1}", id, sach.SoLuong);
+                for (int i = 0; i<soLuong; ++i)
+                {
+                    DALCuonSach.Instance.AddCuonSach(sach, 1);
+                }
+                QLTVEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch
+            {
+            return false;
+            }
+        }
     }
 }

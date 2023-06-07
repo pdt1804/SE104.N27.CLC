@@ -37,11 +37,13 @@
             this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.customPictureBox1 = new GUI.CustomPictureBox();
+            this.diamondPanel1 = new GUI.DiamondPanel();
             this.customPanel1 = new GUI.CustomPanel();
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.customPictureBox1 = new GUI.CustomPictureBox();
-            this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
+            this.diamondPanel1.SuspendLayout();
+            this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -104,7 +106,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.MediumPurple;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtUsername.Location = new System.Drawing.Point(759, 296);
+            this.txtUsername.Location = new System.Drawing.Point(759, 292);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.LightSteelBlue;
@@ -120,7 +122,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(812, 173);
+            this.label1.Location = new System.Drawing.Point(809, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 60);
             this.label1.TabIndex = 3;
@@ -155,6 +157,33 @@
             this.txtUserpwd.UseSystemPasswordChar = true;
             this.txtUserpwd.TextChanged += new System.EventHandler(this.txtUserpwd_TextChanged);
             // 
+            // customPictureBox1
+            // 
+            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.customPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.customPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
+            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.customPictureBox1.BorderSize = 2;
+            this.customPictureBox1.GradientAngle = 50F;
+            this.customPictureBox1.Location = new System.Drawing.Point(-232, -94);
+            this.customPictureBox1.Name = "customPictureBox1";
+            this.customPictureBox1.Size = new System.Drawing.Size(875, 875);
+            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.customPictureBox1.TabIndex = 7;
+            this.customPictureBox1.TabStop = false;
+            // 
+            // diamondPanel1
+            // 
+            this.diamondPanel1.BorderRadius = 250F;
+            this.diamondPanel1.Controls.Add(this.customPanel1);
+            this.diamondPanel1.GradientAngle = 45;
+            this.diamondPanel1.GradientBottomColor = System.Drawing.Color.Gray;
+            this.diamondPanel1.GradientTopColor = System.Drawing.Color.White;
+            this.diamondPanel1.Location = new System.Drawing.Point(673, 105);
+            this.diamondPanel1.Name = "diamondPanel1";
+            this.diamondPanel1.Size = new System.Drawing.Size(533, 518);
+            this.diamondPanel1.TabIndex = 9;
+            // 
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.White;
@@ -164,9 +193,9 @@
             this.customPanel1.GradientAngle = 90F;
             this.customPanel1.GradientBottomColor = System.Drawing.Color.PeachPuff;
             this.customPanel1.GradientTopColor = System.Drawing.Color.Bisque;
-            this.customPanel1.Location = new System.Drawing.Point(759, 522);
+            this.customPanel1.Location = new System.Drawing.Point(105, 393);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(361, 62);
+            this.customPanel1.Size = new System.Drawing.Size(302, 62);
             this.customPanel1.TabIndex = 8;
             // 
             // butLogin
@@ -183,44 +212,30 @@
             this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.butLogin.Location = new System.Drawing.Point(5, 7);
             this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(352, 49);
+            this.butLogin.Size = new System.Drawing.Size(294, 49);
             this.butLogin.TabIndex = 2;
             this.butLogin.Text = "Đăng nhập";
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
-            // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.customPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.customPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.customPictureBox1.BorderSize = 2;
-            this.customPictureBox1.GradientAngle = 50F;
-            this.customPictureBox1.Location = new System.Drawing.Point(-233, -94);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(875, 875);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customPictureBox1.TabIndex = 7;
-            this.customPictureBox1.TabStop = false;
             // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 715);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.customPanel1);
-            this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.txtUserpwd);
             this.Controls.Add(this.siticoneControlBox2);
+            this.Controls.Add(this.diamondPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLogin";
-            this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
+            this.diamondPanel1.ResumeLayout(false);
+            this.customPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +253,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox exit;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private CustomPanel customPanel1;
+        private DiamondPanel diamondPanel1;
     }
 }

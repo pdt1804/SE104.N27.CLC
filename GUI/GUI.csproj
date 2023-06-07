@@ -65,6 +65,7 @@
     <Compile Include="CustomPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DiamondPanel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

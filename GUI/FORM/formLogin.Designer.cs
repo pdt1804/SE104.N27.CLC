@@ -37,13 +37,12 @@
             this.txtUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserpwd = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.customPictureBox1 = new GUI.CustomPictureBox();
-            this.diamondPanel1 = new GUI.DiamondPanel();
             this.customPanel1 = new GUI.CustomPanel();
             this.butLogin = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
-            this.diamondPanel1.SuspendLayout();
+            this.customPictureBox1 = new GUI.CustomPictureBox();
+            this.diamondPanel1 = new GUI.DiamondPanel();
             this.customPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -122,7 +121,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(809, 179);
+            this.label1.Location = new System.Drawing.Point(808, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 60);
             this.label1.TabIndex = 3;
@@ -157,6 +156,39 @@
             this.txtUserpwd.UseSystemPasswordChar = true;
             this.txtUserpwd.TextChanged += new System.EventHandler(this.txtUserpwd_TextChanged);
             // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.White;
+            this.customPanel1.BorderRadius = 50;
+            this.customPanel1.Controls.Add(this.butLogin);
+            this.customPanel1.ForeColor = System.Drawing.Color.Black;
+            this.customPanel1.GradientAngle = 90F;
+            this.customPanel1.GradientBottomColor = System.Drawing.Color.PeachPuff;
+            this.customPanel1.GradientTopColor = System.Drawing.Color.Bisque;
+            this.customPanel1.Location = new System.Drawing.Point(760, 522);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Size = new System.Drawing.Size(361, 62);
+            this.customPanel1.TabIndex = 8;
+            // 
+            // butLogin
+            // 
+            this.butLogin.BackColor = System.Drawing.Color.Transparent;
+            this.butLogin.BorderRadius = 20;
+            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butLogin.FillColor = System.Drawing.Color.Coral;
+            this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butLogin.Location = new System.Drawing.Point(5, 7);
+            this.butLogin.Name = "butLogin";
+            this.butLogin.Size = new System.Drawing.Size(352, 49);
+            this.butLogin.TabIndex = 2;
+            this.butLogin.Text = "Đăng nhập";
+            this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
+            // 
             // customPictureBox1
             // 
             this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -174,48 +206,14 @@
             // 
             // diamondPanel1
             // 
-            this.diamondPanel1.BorderRadius = 250F;
-            this.diamondPanel1.Controls.Add(this.customPanel1);
+            this.diamondPanel1.BorderRadius = 10F;
             this.diamondPanel1.GradientAngle = 45;
             this.diamondPanel1.GradientBottomColor = System.Drawing.Color.Gray;
             this.diamondPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.diamondPanel1.Location = new System.Drawing.Point(673, 105);
+            this.diamondPanel1.Location = new System.Drawing.Point(462, 235);
             this.diamondPanel1.Name = "diamondPanel1";
-            this.diamondPanel1.Size = new System.Drawing.Size(533, 518);
+            this.diamondPanel1.Size = new System.Drawing.Size(236, 176);
             this.diamondPanel1.TabIndex = 9;
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.White;
-            this.customPanel1.BorderRadius = 50;
-            this.customPanel1.Controls.Add(this.butLogin);
-            this.customPanel1.ForeColor = System.Drawing.Color.Black;
-            this.customPanel1.GradientAngle = 90F;
-            this.customPanel1.GradientBottomColor = System.Drawing.Color.PeachPuff;
-            this.customPanel1.GradientTopColor = System.Drawing.Color.Bisque;
-            this.customPanel1.Location = new System.Drawing.Point(105, 393);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(302, 62);
-            this.customPanel1.TabIndex = 8;
-            // 
-            // butLogin
-            // 
-            this.butLogin.BackColor = System.Drawing.Color.Transparent;
-            this.butLogin.BorderRadius = 20;
-            this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butLogin.FillColor = System.Drawing.Color.Coral;
-            this.butLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butLogin.Location = new System.Drawing.Point(5, 7);
-            this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(294, 49);
-            this.butLogin.TabIndex = 2;
-            this.butLogin.Text = "Đăng nhập";
-            this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
             // 
             // formLogin
             // 
@@ -224,18 +222,18 @@
             this.ClientSize = new System.Drawing.Size(1235, 715);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.diamondPanel1);
+            this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.txtUserpwd);
             this.Controls.Add(this.siticoneControlBox2);
-            this.Controls.Add(this.diamondPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLogin";
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
-            this.diamondPanel1.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

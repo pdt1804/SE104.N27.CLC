@@ -306,14 +306,14 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox exitControlBox;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
-        private static ucBanAccess ucBan;
-        private static ucQLDG ucqldg;
-        private static ucQLSach ucqlsach;
-        private static ucQLPhieuMuon ucphieumuontra;
-        private static ucQLPhieuThu ucphieuthu;
-        private static ucBCTK ucbaocao;
-        private static ucQLND ucnguoidung;
-        private static ucThongTinTaiKhoan uctaikhoan;
-        private static ucThayDoiQuiDinh ucquidinh;
+        //private static ucBanAccess ucBan;
+        //private static ucQLDG ucqldg;
+        //private static ucQLSach ucqlsach;
+        //private static ucQLPhieuMuon ucphieumuontra;
+        //private static ucQLPhieuThu ucphieuthu;
+        //private static ucBCTK ucbaocao;
+        //private static ucQLND ucnguoidung;
+        //private static ucThongTinTaiKhoan uctaikhoan;
+        //private static ucThayDoiQuiDinh ucquidinh;
     }
 }

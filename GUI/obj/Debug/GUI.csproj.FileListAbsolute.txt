@@ -45,3 +45,5 @@ D:\CNPM1\CNPM\GUI\bin\Debug\EntityFramework.SqlServer.xml
 D:\CNPM1\CNPM\GUI\bin\Debug\DAL.pdb
 D:\CNPM1\CNPM\GUI\bin\Debug\DAL.dll.config
 D:\CNPM1\CNPM\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.fHome.resources
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.fManager.resources

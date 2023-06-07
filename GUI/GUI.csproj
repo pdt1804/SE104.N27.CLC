@@ -68,39 +68,48 @@
     <Compile Include="DiamondPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="fHome.cs">
+    <Compile Include="fInfoNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fHome.Designer.cs">
+    <Compile Include="fInfoNguoiDung.Designer.cs">
+      <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\fHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fHome.Designer.cs">
       <DependentUpon>fHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="fManager.cs">
+    <Compile Include="FORM\fManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fManager.Designer.cs">
+    <Compile Include="FORM\fManager.Designer.cs">
       <DependentUpon>fManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FORM\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="FORM\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLogin.cs">
+    <Compile Include="FORM\formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLogin.Designer.cs">
+    <Compile Include="FORM\formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fHome.resx">
+    <EmbeddedResource Include="fInfoNguoiDung.resx">
+      <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fHome.resx">
       <DependentUpon>fHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fManager.resx">
+    <EmbeddedResource Include="FORM\fManager.resx">
       <DependentUpon>fManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLogin.resx">
+    <EmbeddedResource Include="FORM\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

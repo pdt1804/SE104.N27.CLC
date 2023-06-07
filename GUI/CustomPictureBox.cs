@@ -94,7 +94,41 @@ namespace GUI
             }
         }
 
-        
+        //Overridden methods
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            this.Size = new Size(this.Width, this.Width);
+        }
+
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
+            //Fields
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(this.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(this.Parent.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+                //Set rounded region 
+                this.Region = new Region(pathRegion);
+
+                //Drawing
+                graph.DrawEllipse(penSmooth, rectContourSmooth);//Draw contour smoothing
+                if (borderSize > 0) //Draw border
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
     }
+
 
 }

@@ -51,8 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALChucNang.cs" />
+    <Compile Include="DALCuonSach.cs" />
+    <Compile Include="DALNhomNguoiDung.cs" />
+    <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />
     <Compile Include="DALTheLoai.cs" />
+    <Compile Include="DALTuaSach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

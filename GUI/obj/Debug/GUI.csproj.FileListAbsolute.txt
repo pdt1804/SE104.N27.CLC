@@ -50,3 +50,4 @@ D:\CNPM1\CNPM\GUI\obj\Debug\GUI.fManager.resources
 D:\CNPM1\CNPM\GUI\obj\Debug\GUI.fAddNguoiDung.resources
 D:\CNPM1\CNPM\GUI\obj\Debug\GUI.fEditNguoiDung.resources
 D:\CNPM1\CNPM\GUI\obj\Debug\GUI.fInfoNguoiDung.resources
+D:\CNPM1\CNPM\GUI\obj\Debug\GUI.FORM.fAddDocGia.resources

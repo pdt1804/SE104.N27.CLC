@@ -130,6 +130,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucCuonSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCuonSach.Designer.cs">
+      <DependentUpon>ucCuonSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucDocGia.cs">
       <SubType>UserControl</SubType>
     </Compile>

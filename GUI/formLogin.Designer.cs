@@ -105,6 +105,7 @@
             // 
             // butLogin
             // 
+            this.butLogin.BorderRadius = 20;
             this.butLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -123,6 +124,7 @@
             // txtUserpwd
             // 
             this.txtUserpwd.BorderColor = System.Drawing.Color.Black;
+            this.txtUserpwd.BorderRadius = 20;
             this.txtUserpwd.BorderThickness = 2;
             this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserpwd.DefaultText = "";
@@ -150,6 +152,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.AliceBlue;
             this.txtUsername.BorderColor = System.Drawing.Color.Black;
+            this.txtUsername.BorderRadius = 20;
             this.txtUsername.BorderThickness = 2;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
@@ -235,7 +238,6 @@
             // 
             // pictureBox1
             // 
-   
             this.pictureBox1.Location = new System.Drawing.Point(0, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(592, 657);

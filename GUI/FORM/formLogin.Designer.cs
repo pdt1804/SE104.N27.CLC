@@ -123,7 +123,7 @@
             this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLogin.ForeColor = System.Drawing.SystemColors.Window;
-            this.butLogin.Location = new System.Drawing.Point(120, 335);
+            this.butLogin.Location = new System.Drawing.Point(127, 335);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(240, 51);
             this.butLogin.TabIndex = 11;
@@ -219,7 +219,7 @@
             this.customPictureBox1.BorderSize = 2;
             this.customPictureBox1.GradientAngle = 50F;
             this.customPictureBox1.Image = global::GUI.Properties.Resources.Book;
-            this.customPictureBox1.Location = new System.Drawing.Point(-410, -78);
+            this.customPictureBox1.Location = new System.Drawing.Point(-410, -82);
             this.customPictureBox1.Name = "customPictureBox1";
             this.customPictureBox1.Size = new System.Drawing.Size(906, 906);
             this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

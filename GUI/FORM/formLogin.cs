@@ -25,16 +25,16 @@ namespace GUI
 
         private void butLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string userpwd = txtUserpwd.Text;
-            //BUSLogin bLogin = new BUSLogin();
-            //int id = bLogin.checkValidLogin(username, userpwd);
-            if (username == "" || userpwd == "")
-            {
-                MessageBox.Show("Thông tin đăng nhập không đầy đủ!", "Thông báo", MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                this.resetTextboxs();
-            }
+            //string username = txtUsername.Text;
+            //string userpwd = txtUserpwd.Text;
+            ////BUSLogin bLogin = new BUSLogin();
+            ////int id = bLogin.checkValidLogin(username, userpwd);
+            //if (username == "" || userpwd == "")
+            //{
+            //    MessageBox.Show("Thông tin đăng nhập không đầy đủ!", "Thông báo", MessageBoxButtons.OK,
+            //                    MessageBoxIcon.Warning);
+            //    this.resetTextboxs();
+            //}
             //else if (id != -1)
             //{
             //    MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
@@ -60,12 +60,12 @@ namespace GUI
             //    this.resetTextboxs();
             //    this.Show();
             //}
-            else
-            {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                this.resetTextboxs();
-            }
+
+            Form loginForm = new fManager(1);
+            loginForm.Show();
+           
+            
+
         }
 
         private void exit_Click(object sender, EventArgs e)

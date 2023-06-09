@@ -19,3 +19,6 @@ C:\Users\sonle\Desktop\Library\GUI\bin\Debug\BUS.dll.config
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DTO.dll.config
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.xml
 C:\Users\sonle\Desktop\Library\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DAL.dll
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DAL.pdb
+C:\Users\sonle\Desktop\Library\GUI\bin\Debug\DAL.dll.config

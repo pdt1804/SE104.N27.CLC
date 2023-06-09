@@ -53,6 +53,9 @@
   <ItemGroup>
     <Compile Include="DALChucNang.cs" />
     <Compile Include="DALCuonSach.cs" />
+    <Compile Include="DALDocGia.cs" />
+    <Compile Include="DALLoaiDocGia.cs" />
+    <Compile Include="DALNguoiDung.cs" />
     <Compile Include="DALNhomNguoiDung.cs" />
     <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />

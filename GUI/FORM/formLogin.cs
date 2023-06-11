@@ -60,7 +60,7 @@ namespace GUI
             //    this.resetTextboxs();
             //    this.Show();
             //}
-
+            this.Hide();
             Form loginForm = new fManager(1);
             loginForm.Show();
            

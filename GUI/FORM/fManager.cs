@@ -49,5 +49,10 @@ namespace GUI
         {
 
         }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,7 +26,6 @@ namespace DTO
         public string TenDocGia { get; set; }
         public System.DateTime NgaySinh { get; set; }
         public string DiaChi { get; set; }
-        public string Email { get; set; }
         public System.DateTime NgayLapThe { get; set; }
         public System.DateTime NgayHetHan { get; set; }
         public int idLoaiDocGia { get; set; }

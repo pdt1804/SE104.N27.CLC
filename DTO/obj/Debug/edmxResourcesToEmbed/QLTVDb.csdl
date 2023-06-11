@@ -79,7 +79,6 @@
     <Property Name="TenDocGia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="NgayLapThe" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="NgayHetHan" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="idLoaiDocGia" Type="Int32" Nullable="false" />
@@ -111,6 +110,7 @@
     <Property Name="TenDangNhap" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="idNhomNguoiDung" Type="Int32" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="DOCGIAs" Relationship="Self.FK__DOCGIA__idNguoiD__656C112C" FromRole="NGUOIDUNG" ToRole="DOCGIA" />
     <NavigationProperty Name="NHOMNGUOIDUNG" Relationship="Self.FK__NGUOIDUNG__idNho__52593CB8" FromRole="NGUOIDUNG" ToRole="NHOMNGUOIDUNG" />
   </EntityType>

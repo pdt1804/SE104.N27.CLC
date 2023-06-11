@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a402f520ab3b41d88604ea1874c04b05" Name="Diagram1">
+      <Diagram DiagramId="afd59fee6039464d8631c05b6cdf97a5" Name="Diagram1">
         <EntityTypeShape EntityType="QLTVDb.BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.BCSACHTRATRE" Width="1.5" PointX="9.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.CHUCNANG" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.CT_BCLUOTMUONTHEOTHELOAI" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.CT_PHIEUNHAP" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.CUONSACH" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTVDb.DOCGIA" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.DOCGIA" Width="1.5" PointX="7.5" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.LOAIDOCGIA" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTVDb.NGUOIDUNG" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVDb.NGUOIDUNG" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.NHOMNGUOIDUNG" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.PHIEUMUONTRA" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTVDb.PHIEUNHAPSACH" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />

@@ -58,7 +58,6 @@ namespace DAL
                 obj.TenDocGia = tenDocGia;
                 obj.NgaySinh = ngaySinh;
                 obj.DiaChi = diaChi;
-                obj.Email = email;
                 obj.NgayLapThe = ngayLapThe;
                 obj.NgayHetHan = ngayHetHan;
                 obj.idLoaiDocGia = idLoaiDocGia;
@@ -86,7 +85,6 @@ namespace DAL
                 if (tenDocGia != null) dg.TenDocGia = tenDocGia;
                 if (ngaySinh != null) dg.NgaySinh = (DateTime)ngaySinh;
                 if (diaChi != null) dg.DiaChi = diaChi;
-                if (email != null) dg.Email = email;
                 if (ngayHetHan != null) dg.NgayHetHan = (DateTime)ngayHetHan;
                 if (idLoaiDocGia != null) dg.idLoaiDocGia = (int)idLoaiDocGia;
 

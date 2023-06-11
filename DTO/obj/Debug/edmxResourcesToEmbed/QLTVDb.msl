@@ -72,7 +72,6 @@
           <ScalarProperty Name="TenDocGia" ColumnName="TenDocGia" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="NgayLapThe" ColumnName="NgayLapThe" />
           <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
           <ScalarProperty Name="idLoaiDocGia" ColumnName="idLoaiDocGia" />
@@ -101,6 +100,7 @@
           <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="idNhomNguoiDung" ColumnName="idNhomNguoiDung" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

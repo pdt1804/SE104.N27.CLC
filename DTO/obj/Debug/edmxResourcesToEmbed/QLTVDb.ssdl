@@ -77,7 +77,6 @@
     <Property Name="TenDocGia" Type="nvarchar(max)" Nullable="false" />
     <Property Name="NgaySinh" Type="datetime" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar(max)" />
-    <Property Name="Email" Type="varchar(max)" />
     <Property Name="NgayLapThe" Type="datetime" Nullable="false" />
     <Property Name="NgayHetHan" Type="datetime" Nullable="false" />
     <Property Name="idLoaiDocGia" Type="int" Nullable="false" />
@@ -104,6 +103,7 @@
     <Property Name="TenDangNhap" Type="varchar" MaxLength="256" Nullable="false" />
     <Property Name="MatKhau" Type="varchar(max)" Nullable="false" />
     <Property Name="idNhomNguoiDung" Type="int" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="NHOMNGUOIDUNG">
     <Key>

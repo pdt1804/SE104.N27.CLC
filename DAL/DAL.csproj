@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALChucNang.cs" />
+    <Compile Include="DALCTPhieuNhap.cs" />
     <Compile Include="DALCuonSach.cs" />
     <Compile Include="DALDocGia.cs" />
     <Compile Include="DALLoaiDocGia.cs" />

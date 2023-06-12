@@ -46,7 +46,7 @@ namespace DAL
             return null;
         }
         public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
-                                 string tenDangNhap, string matKhau, int idNhomNguoiDung)
+                                 string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {
 
             try
@@ -58,6 +58,7 @@ namespace DAL
                     ChucVu = chucVu,
                     TenDangNhap = tenDangNhap,
                     MatKhau = matKhau,
+                    EMAIL = email,
                     idNhomNguoiDung = idNhomNguoiDung,
                     NHOMNGUOIDUNG = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung)
                 };
@@ -71,7 +72,7 @@ namespace DAL
                 return -1;
             }
         }
-        public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
+        public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu, string email,
                                  int? idNhomNguoiDung)
         {
             try
@@ -83,6 +84,7 @@ namespace DAL
                 if (ngaySinh != null) nd.NgaySinh = ngaySinh;
                 if (chucVu != null) nd.ChucVu = chucVu;
                 if (idNhomNguoiDung != null) nd.idNhomNguoiDung = (int)idNhomNguoiDung;
+                if (email != null) nd.EMAIL = email;
                 QLTVEntities.Instance.SaveChanges();
                 return true;
             }

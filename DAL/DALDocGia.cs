@@ -49,7 +49,7 @@ namespace DAL
         {
             return QLTVEntities.Instance.DOCGIAs.AsNoTracking().Where(d => d.idNguoiDung == idnguoidung).First();
         }
-        public bool AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi, string email,
+        public bool AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi,
             DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai, int idND)
         {
             try
@@ -74,7 +74,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi, string email,
+        public bool UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi, 
             DateTime? ngayHetHan, int? idLoaiDocGia)
         {
             try

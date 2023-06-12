@@ -38,6 +38,13 @@ namespace DAL
                 return res.FirstOrDefault();
             return null;
         }
+        public NGUOIDUNG GetNguoiDungByUsername(string username)
+        {
+            var res = QLTVEntities.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.TenDangNhap == username);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
+        }
         public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
                                  string tenDangNhap, string matKhau, int idNhomNguoiDung)
         {

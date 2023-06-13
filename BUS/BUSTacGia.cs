@@ -24,14 +24,13 @@ namespace BUS
         // Lấy ra tất cả tác giả
         public List<TACGIA> GetAllTacGia()
         {
-            return DALTacGia.Instance.GetAllTacGia();
+            List<TACGIA> list = DAL.DALTacGia.Instance.GetAllTacGia();
+            return list;
         }
         // Lấy tác giả bằng id
         public TACGIA GetTacGia(int id)
         {
-            TACGIA tg;
-            tg = DALTacGia.Instance.GetTacGiaById(id);
-            return tg;
+            return DALTacGia.Instance.GetTacGiaById(id);
         }
         // Tìm thông tin tác giả
         public List<TACGIA> FindTacGia(string name)
@@ -41,7 +40,7 @@ namespace BUS
         //Thêm tác giả
         public int AddTacGia(string name)
         {
-            return (DALTacGia.Instance.AddTacGia(name));
+            return DALTacGia.Instance.AddTacGia(name);
 
         }
         // Chỉnh sửa tên tác giả
@@ -51,7 +50,8 @@ namespace BUS
             if (tacgia == null) return false;
             if (DALTacGia.Instance.UpdTacGia(id, name))
                 return true;
-            else return false;
+            else 
+                return false;
         }
         //Xóa tác giả
         public string DelTacGia(int id)

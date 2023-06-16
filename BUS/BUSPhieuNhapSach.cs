@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -29,7 +30,9 @@ namespace BUS
 
         public PHIEUNHAPSACH GetPhieuById(int id)
         {
-            return DALPhieuNhapSach.Instance.GetPhieuById(id);
+            PHIEUNHAPSACH p = DALPhieuNhapSach.Instance.GetPhieuById(id);
+            if (p == null) return null;
+            else return p;
         }
 
         public List<PHIEUNHAPSACH> GetPhieuByNgayNhap(DateTime ngayNhap)
@@ -44,18 +47,29 @@ namespace BUS
 
         public int AddPhieuNhap(DateTime ngayNhap)
         {
-            return DALPhieuNhapSach.Instance.AddPhieuNhap(ngayNhap);
-
+            int i = DALPhieuNhapSach.Instance.AddPhieuNhap(ngayNhap);
+            if (i > 0) return i;
+            else return 0;
         }
 
         public bool UpdPhieuNhap(int id, DateTime? ngayNhap, int? tongTien)
         {
-            return DALPhieuNhapSach.Instance.UpdPhieuNhap(id, ngayNhap, tongTien);
+            if (!DALPhieuNhapSach.Instance.UpdPhieuNhap(id, ngayNhap, tongTien))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể cập nhật.");
+                return false;
+            }    
+            return true;
         }
 
         public bool DelPhieuNhap(int id)
         {
-            return DALPhieuNhapSach.Instance.DelPhieuNhap(id);
+            if (!DALPhieuNhapSach.Instance.DelPhieuNhap(id))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể xoá.");
+                return false;
+            }
+            return true;
         }
 
 

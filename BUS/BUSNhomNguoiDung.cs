@@ -11,9 +11,9 @@ namespace BUS
 {
     public class BUSNhomNguoiDung
     {
-        private BUSNhomNguoiDung instance;
+        private static BUSNhomNguoiDung instance;
 
-        public BUSNhomNguoiDung Instance
+        public static BUSNhomNguoiDung Instance
         {
             get { if (instance == null) instance = new BUSNhomNguoiDung();  return instance; }
             set { instance = value; }

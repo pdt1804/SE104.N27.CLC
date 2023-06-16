@@ -11,9 +11,9 @@ namespace BUS
 {
     public class BUSSach
     {
-        private DALSach instance;
+        private static DALSach instance;
 
-        public DALSach Instance
+        public static DALSach Instance
         {
             get 
             { 

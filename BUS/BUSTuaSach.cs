@@ -11,9 +11,9 @@ namespace BUS
 {
     public class BUSTuaSach
     {
-        private BUSTuaSach instance;
+        private static BUSTuaSach instance;
 
-        public BUSTuaSach Instance
+        public static BUSTuaSach Instance
         {
             get { if (instance == null) instance = new BUSTuaSach(); return instance; }
             set { instance = value; }

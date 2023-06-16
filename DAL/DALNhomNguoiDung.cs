@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class DALNhomNguoiDung
+    public class DALNhomNguoiDung
     {
         private static DALNhomNguoiDung instance;
 

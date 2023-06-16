@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSNguoiDung.cs" />
     <Compile Include="BUSNhomNguoiDung.cs" />
     <Compile Include="BUSPhieuNhapSach.cs" />
     <Compile Include="BUSSach.cs" />

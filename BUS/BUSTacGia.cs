@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -21,46 +22,55 @@ namespace BUS
             set => instance = value;
         }
 
-        // Lấy ra tất cả tác giả
         public List<TACGIA> GetAllTacGia()
         {
             return DALTacGia.Instance.GetAllTacGia();
         }
-        // Lấy tác giả bằng id
+
         public TACGIA GetTacGia(int id)
         {
-            TACGIA tg;
-            tg = DALTacGia.Instance.GetTacGiaById(id);
-            return tg;
+            TACGIA tg = DALTacGia.Instance.GetTacGiaById(id);
+            if (tg == null) return null;
+            else return tg;
         }
-        // Tìm thông tin tác giả
+
         public List<TACGIA> FindTacGia(string name)
         {
             return DALTacGia.Instance.FindTacGia(name);
         }
-        //Thêm tác giả
+
         public int AddTacGia(string name)
         {
-            return (DALTacGia.Instance.AddTacGia(name));
-
+            int i = DALTacGia.Instance.AddTacGia(name);
+            if (i == -1)
+            {
+                MessageBox.Show("Thêm tác giả không thành công");
+                return i; // return về -1
+            }    
+            else
+            {
+                MessageBox.Show("Thêm thành công");
+                return i; // return về id của tác giả vừa được thêm
+            }    
         }
-        // Chỉnh sửa tên tác giả
+
         public bool UpdTacGia(int id, string name)
         {
-            TACGIA tacgia = DALTacGia.Instance.GetTacGiaById(id);
-            if (tacgia == null) return false;
-            if (DALTacGia.Instance.UpdTacGia(id, name))
-                return true;
-            else return false;
+            if (!DALTacGia.Instance.UpdTacGia(id, name))
+            {
+                MessageBox.Show("Cập nhật thông tin tác giả không thành công.");
+                return false;
+            }
+            return true;
         }
-        //Xóa tác giả
+
         public string DelTacGia(int id)
         {
-            TACGIA tg = DALTacGia.Instance.GetTacGiaById(id);
-            if (tg == null) return "Mã tác giả không đúng ";
-            if (DALTacGia.Instance.DelTacGia(tg.id))
-                return "";
-            return "Không thể xóa tác giả";
+            if (!DALTacGia.Instance.DelTacGia(id))
+            {
+                return "Xoá tác giả không thành công";
+            }
+            return "Xoá tác giả thành công";
         }
     }
 }

@@ -13,3 +13,7 @@ C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\sonle\Desktop\Library\DAL\bin\Debug\DTO.dll.config
 C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.xml
 C:\Users\sonle\Desktop\Library\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\CNPM\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\CNPM\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\CNPM\DAL\obj\Debug\DAL.dll
+E:\CNPM\DAL\obj\Debug\DAL.pdb

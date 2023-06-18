@@ -16,3 +16,7 @@ C:\Users\sonle\Desktop\Library\BUS\bin\Debug\DAL.dll.config
 C:\Users\sonle\Desktop\Library\BUS\bin\Debug\DTO.dll.config
 C:\Users\sonle\Desktop\Library\BUS\bin\Debug\EntityFramework.xml
 C:\Users\sonle\Desktop\Library\BUS\bin\Debug\EntityFramework.SqlServer.xml
+E:\CNPM\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\CNPM\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\CNPM\BUS\obj\Debug\BUS.dll
+E:\CNPM\BUS\obj\Debug\BUS.pdb

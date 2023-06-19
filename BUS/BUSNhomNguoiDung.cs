@@ -15,7 +15,7 @@ namespace BUS
 
         public static BUSNhomNguoiDung Instance
         {
-            get { if (instance == null) instance = new BUSNhomNguoiDung();  return instance; }
+            get { if (instance == null) instance = new BUSNhomNguoiDung(); return instance; }
             set { instance = value; }
         }
 
@@ -37,7 +37,6 @@ namespace BUS
             if (nnd == null) return null;
             else return nnd;
         }
-
         public int AddNhomNguoiDung(string tenNhom)
         {
             int i = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);

@@ -60,7 +60,6 @@ namespace DAL
                     MatKhau = matKhau,
                     EMAIL = email,
                     idNhomNguoiDung = idNhomNguoiDung,
-                    EMAIL = email,
                     NHOMNGUOIDUNG = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung)
                 };
                 QLTVEntities.Instance.NGUOIDUNGs.Add(nd);
@@ -84,7 +83,6 @@ namespace DAL
                 if (tenNguoiDung != null) nd.TenNguoiDung = tenNguoiDung;
                 if (ngaySinh != null) nd.NgaySinh = ngaySinh;
                 if (chucVu != null) nd.ChucVu = chucVu;
-                if (email != null) nd.EMAIL = email;
                 if (idNhomNguoiDung != null) nd.idNhomNguoiDung = (int)idNhomNguoiDung;
                 if (email != null) nd.EMAIL = email;
                 QLTVEntities.Instance.SaveChanges();

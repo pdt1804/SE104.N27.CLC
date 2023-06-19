@@ -62,6 +62,8 @@
     <Compile Include="BUSTacGia.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
+    <Compile Include="BUSPhieuNhapSach.cs" />
+    <Compile Include="BUSSach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

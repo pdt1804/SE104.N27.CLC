@@ -39,9 +39,9 @@ namespace BUS
         }
 
         public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
-                                 string tenDangNhap, string matKhau, int idNhomNguoiDung)
+                                 string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {
-            int i = DALNguoiDung.Instance.AddNguoiDung(tenNguoiDung, ngaySinh, chucVu, tenDangNhap, matKhau, idNhomNguoiDung);
+            int i = DALNguoiDung.Instance.AddNguoiDung(tenNguoiDung, ngaySinh, chucVu, tenDangNhap, matKhau, email, idNhomNguoiDung);
             if (i == -1)
             {
                 MessageBox.Show("Đã có lỗi, không thể thêm người dùng.");
@@ -55,9 +55,9 @@ namespace BUS
         }
 
         public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
-                                 int? idNhomNguoiDung)
+                                 int? idNhomNguoiDung, string email)
         {
-            if (!DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu, idNhomNguoiDung))
+            if (!DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu, email, idNhomNguoiDung))
             {
                 MessageBox.Show("Cập nhật thông tin không thành công");
                 return false;

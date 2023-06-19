@@ -28,6 +28,7 @@ namespace DTO
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public int idNhomNguoiDung { get; set; }
+        public string EMAIL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DOCGIA> DOCGIAs { get; set; }

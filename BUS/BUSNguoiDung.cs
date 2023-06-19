@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL;
 using DTO;
 
@@ -38,31 +38,29 @@ namespace BUS
             else return nd;
         }
 
-        public int AddNguoiDung(string tenDocGiaNguoiDung, DateTime ngaySinh, string chucVu,
-                                 string tenDocGiaDangNhap, string matKhau,string email, int idNhomNguoiDung)
+        public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
+                                 string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {
-            int i = DALNguoiDung.Instance.AddNguoiDung(tenDocGiaNguoiDung, ngaySinh, chucVu, tenDocGiaDangNhap, matKhau,email, idNhomNguoiDung);
+            int i = DALNguoiDung.Instance.AddNguoiDung(tenNguoiDung, ngaySinh, chucVu, tenDangNhap, matKhau, email, idNhomNguoiDung);
             if (i == -1)
             {
-/*                MessageBox.Show("Đã có lỗi, không thể thêm người dùng.");
-*/                return i; // return -1 
-            }
+                MessageBox.Show("Đã có lỗi, không thể thêm người dùng.");
+                return i; // return -1 
+            }    
             else
             {
-/*                MessageBox.Show("Thêm thành công");
-*/                return i; // return về ID của người dùng 
-            }
+                MessageBox.Show("Thêm thành công");
+                return i; // return về ID của người dùng 
+            }    
         }
 
-        public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu, string email,
-                                 int? idNhomNguoiDung)
+        public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
+                                 int? idNhomNguoiDung, string email)
         {
-            
-            idNhomNguoiDung = Convert.ToInt32(DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id));
-            if (!DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu,email, idNhomNguoiDung))
+            if (!DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu, email, idNhomNguoiDung))
             {
-/*                MessageBox.Show("Cập nhật thông tin không thành công");
-*/                return false;
+                MessageBox.Show("Cập nhật thông tin không thành công");
+                return false;
             }
             return true;
         }
@@ -71,8 +69,8 @@ namespace BUS
         {
             if (!DALNguoiDung.Instance.DelNguoiDung(id))
             {
-/*                MessageBox.Show("Xoá không thành công");
-*/                return false;
+                MessageBox.Show("Xoá không thành công");
+                return false;
             }
             return true;
         }
@@ -81,14 +79,16 @@ namespace BUS
         {
             if (!DALNguoiDung.Instance.UpdPassword(id, password))
             {
-/*                MessageBox.Show("Đổi mật khẩu không thành công");
-*/                return false;
+
+                MessageBox.Show("Đổi mật khẩu không thành công");
+                return false;
             }
             else
             {
-/*                MessageBox.Show("Đổi mật khẩu thành công");
-*/                return true;
-            }
+                MessageBox.Show("Đổi mật khẩu thành công");
+                return true;
+            }    
         }
     }
 }
+

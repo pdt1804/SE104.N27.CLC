@@ -60,6 +60,7 @@
     <Compile Include="BUSNhomNguoiDung.cs" />
     <Compile Include="BUSNguoiDung.cs" />
     <Compile Include="BUSTacGia.cs" />
+    <Compile Include="BUSThamSo.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

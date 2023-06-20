@@ -53,9 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUSNguoiDung.cs" />
+<<<<<<< Updated upstream
     <Compile Include="BUSNhomNguoiDung.cs" />
     <Compile Include="BUSPhieuNhapSach.cs" />
     <Compile Include="BUSSach.cs" />
+=======
+    <Compile Include="BUSPhieuThu.cs" />
+>>>>>>> Stashed changes
     <Compile Include="BUSTacGia.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />

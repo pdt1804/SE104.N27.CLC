@@ -10,13 +10,13 @@ namespace BUS
 {
     public class BUSThamSo
     {
-        private static DALThamSo instance;
+        private static BUSThamSo instance;
 
-        public static DALThamSo Instance
+        public static BUSThamSo Instance
         {
             get
             {
-                if (instance == null) instance = new DALThamSo();
+                if (instance == null) instance = new BUSThamSo();
                 return instance;
             }
             set => instance = value;

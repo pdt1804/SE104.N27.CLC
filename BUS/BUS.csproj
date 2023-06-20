@@ -52,8 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="BUSBCLuotMuonTheoTheLoai.cs" />
+    <Compile Include="BUSChucNang.cs" />
+    <Compile Include="BUSCTPhieuNhap.cs" />
+    <Compile Include="BUSCT_BCLuotMuonTheoTheLoai.cs" />
+    <Compile Include="BUSCuonSach.cs" />
+    <Compile Include="BUSDocGia.cs" />
+    <Compile Include="BUSLoaiDocGia.cs" />
+    <Compile Include="BUSNhomNguoiDung.cs" />
+    <Compile Include="BUSNguoiDung.cs" />
     <Compile Include="BUSTacGia.cs" />
+    <Compile Include="BUSThamSo.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
     <Compile Include="BUSPhieuNhapSach.cs" />

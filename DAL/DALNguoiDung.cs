@@ -38,6 +38,13 @@ namespace DAL
                 return res.FirstOrDefault();
             return null;
         }
+        public NGUOIDUNG GetNguoiDungByUsername(string username)
+        {
+            var res = QLTVEntities.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.TenDangNhap == username);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
+        }
         public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
                                  string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {
@@ -51,8 +58,8 @@ namespace DAL
                     ChucVu = chucVu,
                     TenDangNhap = tenDangNhap,
                     MatKhau = matKhau,
-                    idNhomNguoiDung = idNhomNguoiDung,
                     EMAIL = email,
+                    idNhomNguoiDung = idNhomNguoiDung,
                     NHOMNGUOIDUNG = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung)
                 };
                 QLTVEntities.Instance.NGUOIDUNGs.Add(nd);
@@ -76,8 +83,8 @@ namespace DAL
                 if (tenNguoiDung != null) nd.TenNguoiDung = tenNguoiDung;
                 if (ngaySinh != null) nd.NgaySinh = ngaySinh;
                 if (chucVu != null) nd.ChucVu = chucVu;
-                if (email != null) nd.EMAIL = email;
                 if (idNhomNguoiDung != null) nd.idNhomNguoiDung = (int)idNhomNguoiDung;
+                if (email != null) nd.EMAIL = email;
                 QLTVEntities.Instance.SaveChanges();
                 return true;
             }

@@ -79,6 +79,7 @@ namespace BUS
         {
             if (!DALNguoiDung.Instance.UpdPassword(id, password))
             {
+
                 MessageBox.Show("Đổi mật khẩu không thành công");
                 return false;
             }
@@ -90,3 +91,4 @@ namespace BUS
         }
     }
 }
+

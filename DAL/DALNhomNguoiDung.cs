@@ -88,6 +88,42 @@ namespace DAL
                 return false;
             }
         }
-        // Cần thêm tính năng thêm và Xóa tính năng cho nhóm
+        public bool AddChucNangNhom(int id, List<CHUCNANG> dsChucNang)
+        {
+            try
+            {
+                var nhom = GetNhomNguoiDungById(id);
+                if (nhom == null) return false;
+                nhom.CHUCNANGs.Clear();
+                nhom.CHUCNANGs = dsChucNang;
+                QLTVEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
+
+        public bool DelChucNangNhom(int id, List<CHUCNANG> dsChucNang)
+        {
+            try
+            {
+                var nhom = GetNhomNguoiDungById(id);
+                if (nhom == null) return false;
+                foreach (var cn in dsChucNang)
+                {
+                    if (!nhom.CHUCNANGs.Contains(cn)) nhom.CHUCNANGs.Remove(cn);
+                }
+                QLTVEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
     }
 }

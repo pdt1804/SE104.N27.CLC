@@ -12,6 +12,8 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -22,7 +24,6 @@ namespace GUI
         public fManager(int id)
         {
             InitializeComponent();
-            
         }
 
         

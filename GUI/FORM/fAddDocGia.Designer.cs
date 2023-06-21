@@ -72,11 +72,13 @@ namespace GUI.FORM
             // 
             // siticoneEmailValidatingTool1
             // 
+            this.siticoneEmailValidatingTool1.EmailNoError = System.Drawing.Color.RoyalBlue;
             this.siticoneEmailValidatingTool1.EmailTextbox = this.txtEmail;
             this.siticoneEmailValidatingTool1.MessageDescription = this.labelEmailError;
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderRadius = 15;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
             this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -86,12 +88,12 @@ namespace GUI.FORM
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(133, 348);
+            this.txtEmail.Location = new System.Drawing.Point(118, 348);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(367, 36);
+            this.txtEmail.Size = new System.Drawing.Size(379, 36);
             this.txtEmail.TabIndex = 1;
             // 
             // labelEmailError
@@ -108,9 +110,9 @@ namespace GUI.FORM
             this.comboNND.DisplayMember = "TenNhomNguoiDung";
             this.comboNND.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboNND.FormattingEnabled = true;
-            this.comboNND.Location = new System.Drawing.Point(317, 494);
+            this.comboNND.Location = new System.Drawing.Point(317, 504);
             this.comboNND.Name = "comboNND";
-            this.comboNND.Size = new System.Drawing.Size(183, 30);
+            this.comboNND.Size = new System.Drawing.Size(180, 30);
             this.comboNND.TabIndex = 9;
             this.comboNND.ValueMember = "id";
             // 
@@ -122,7 +124,8 @@ namespace GUI.FORM
             // 
             this.dateNgayHetHan.AutoSize = true;
             this.dateNgayHetHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgayHetHan.Location = new System.Drawing.Point(343, 570);
+            this.dateNgayHetHan.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.dateNgayHetHan.Location = new System.Drawing.Point(325, 589);
             this.dateNgayHetHan.Name = "dateNgayHetHan";
             this.dateNgayHetHan.Size = new System.Drawing.Size(112, 25);
             this.dateNgayHetHan.TabIndex = 7;
@@ -132,8 +135,8 @@ namespace GUI.FORM
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.Location = new System.Drawing.Point(339, 542);
+            this.label7.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label7.Location = new System.Drawing.Point(313, 555);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 22);
             this.label7.TabIndex = 6;
@@ -141,23 +144,24 @@ namespace GUI.FORM
             // 
             // butOK
             // 
-            this.butOK.BorderRadius = 3;
+            this.butOK.BorderRadius = 15;
             this.butOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butOK.FillColor = System.Drawing.Color.SlateBlue;
+            this.butOK.FillColor = System.Drawing.Color.RoyalBlue;
             this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(274, 636);
+            this.butOK.Location = new System.Drawing.Point(217, 650);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(101, 45);
+            this.butOK.Size = new System.Drawing.Size(166, 45);
             this.butOK.TabIndex = 5;
             this.butOK.Text = "Thêm";
             // 
             // comboLoaiDG
             // 
             this.comboLoaiDG.BackColor = System.Drawing.Color.Transparent;
+            this.comboLoaiDG.BorderRadius = 15;
             this.comboLoaiDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboLoaiDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboLoaiDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -165,18 +169,20 @@ namespace GUI.FORM
             this.comboLoaiDG.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLoaiDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboLoaiDG.ItemHeight = 30;
-            this.comboLoaiDG.Location = new System.Drawing.Point(317, 202);
+            this.comboLoaiDG.Location = new System.Drawing.Point(314, 202);
             this.comboLoaiDG.Name = "comboLoaiDG";
             this.comboLoaiDG.Size = new System.Drawing.Size(183, 36);
             this.comboLoaiDG.TabIndex = 4;
             // 
             // dateNgayLap
             // 
+            this.dateNgayLap.BorderRadius = 15;
             this.dateNgayLap.Checked = true;
-            this.dateNgayLap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.dateNgayLap.FillColor = System.Drawing.Color.DodgerBlue;
             this.dateNgayLap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateNgayLap.ForeColor = System.Drawing.Color.White;
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayLap.Location = new System.Drawing.Point(136, 567);
+            this.dateNgayLap.Location = new System.Drawing.Point(113, 589);
             this.dateNgayLap.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dateNgayLap.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateNgayLap.Name = "dateNgayLap";
@@ -186,15 +192,17 @@ namespace GUI.FORM
             // 
             // dateNgaySinh
             // 
+            this.dateNgaySinh.BorderRadius = 15;
             this.dateNgaySinh.Checked = true;
-            this.dateNgaySinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.dateNgaySinh.FillColor = System.Drawing.Color.DodgerBlue;
             this.dateNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateNgaySinh.ForeColor = System.Drawing.Color.White;
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgaySinh.Location = new System.Drawing.Point(133, 202);
+            this.dateNgaySinh.Location = new System.Drawing.Point(113, 202);
             this.dateNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Size = new System.Drawing.Size(159, 40);
+            this.dateNgaySinh.Size = new System.Drawing.Size(159, 36);
             this.dateNgaySinh.TabIndex = 3;
             this.dateNgaySinh.Value = new System.DateTime(2022, 12, 16, 12, 3, 14, 424);
             // 
@@ -202,8 +210,8 @@ namespace GUI.FORM
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.Location = new System.Drawing.Point(132, 542);
+            this.label6.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label6.Location = new System.Drawing.Point(114, 555);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 22);
             this.label6.TabIndex = 2;
@@ -213,7 +221,7 @@ namespace GUI.FORM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.ForeColor = System.Drawing.Color.MediumBlue;
             this.label3.Location = new System.Drawing.Point(313, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 22);
@@ -230,8 +238,8 @@ namespace GUI.FORM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(129, 176);
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label2.Location = new System.Drawing.Point(109, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 2;
@@ -241,8 +249,8 @@ namespace GUI.FORM
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(313, 397);
+            this.label9.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label9.Location = new System.Drawing.Point(313, 403);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 22);
             this.label9.TabIndex = 2;
@@ -252,8 +260,8 @@ namespace GUI.FORM
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label11.Location = new System.Drawing.Point(313, 469);
+            this.label11.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label11.Location = new System.Drawing.Point(313, 479);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(151, 22);
             this.label11.TabIndex = 2;
@@ -263,8 +271,8 @@ namespace GUI.FORM
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label10.Location = new System.Drawing.Point(132, 469);
+            this.label10.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label10.Location = new System.Drawing.Point(114, 479);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 22);
             this.label10.TabIndex = 2;
@@ -274,8 +282,8 @@ namespace GUI.FORM
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label8.Location = new System.Drawing.Point(132, 397);
+            this.label8.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label8.Location = new System.Drawing.Point(114, 403);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 22);
             this.label8.TabIndex = 2;
@@ -283,13 +291,13 @@ namespace GUI.FORM
             // 
             // controlPanel
             // 
-            this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.controlPanel.BackColor = System.Drawing.Color.RoyalBlue;
             this.controlPanel.Controls.Add(this.miniControlBox);
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(831, 54);
+            this.controlPanel.Size = new System.Drawing.Size(776, 54);
             this.controlPanel.TabIndex = 2;
             // 
             // miniControlBox
@@ -297,8 +305,8 @@ namespace GUI.FORM
             this.miniControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
-            this.miniControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.miniControlBox.Location = new System.Drawing.Point(708, 0);
+            this.miniControlBox.IconColor = System.Drawing.Color.Lavender;
+            this.miniControlBox.Location = new System.Drawing.Point(652, 0);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
@@ -307,8 +315,8 @@ namespace GUI.FORM
             // 
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
-            this.closeControlBox.IconColor = System.Drawing.Color.DarkSlateBlue;
-            this.closeControlBox.Location = new System.Drawing.Point(770, 0);
+            this.closeControlBox.IconColor = System.Drawing.Color.Lavender;
+            this.closeControlBox.Location = new System.Drawing.Point(712, 0);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
@@ -323,8 +331,8 @@ namespace GUI.FORM
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label5.Location = new System.Drawing.Point(129, 323);
+            this.label5.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label5.Location = new System.Drawing.Point(114, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 22);
             this.label5.TabIndex = 2;
@@ -334,8 +342,8 @@ namespace GUI.FORM
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.Location = new System.Drawing.Point(129, 251);
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(114, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 2;
@@ -345,8 +353,8 @@ namespace GUI.FORM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(129, 105);
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label1.Location = new System.Drawing.Point(109, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 22);
             this.label1.TabIndex = 2;
@@ -354,6 +362,7 @@ namespace GUI.FORM
             // 
             // txtUserpwd
             // 
+            this.txtUserpwd.BorderRadius = 15;
             this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserpwd.DefaultText = "";
             this.txtUserpwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -363,16 +372,17 @@ namespace GUI.FORM
             this.txtUserpwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserpwd.Location = new System.Drawing.Point(317, 422);
+            this.txtUserpwd.Location = new System.Drawing.Point(317, 430);
             this.txtUserpwd.Name = "txtUserpwd";
             this.txtUserpwd.PasswordChar = '\0';
             this.txtUserpwd.PlaceholderText = "";
             this.txtUserpwd.SelectedText = "";
-            this.txtUserpwd.Size = new System.Drawing.Size(183, 36);
+            this.txtUserpwd.Size = new System.Drawing.Size(180, 36);
             this.txtUserpwd.TabIndex = 1;
             // 
             // txtChucVu
             // 
+            this.txtChucVu.BorderRadius = 15;
             this.txtChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtChucVu.DefaultText = "";
             this.txtChucVu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -382,7 +392,7 @@ namespace GUI.FORM
             this.txtChucVu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChucVu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucVu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtChucVu.Location = new System.Drawing.Point(133, 494);
+            this.txtChucVu.Location = new System.Drawing.Point(113, 504);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.PasswordChar = '\0';
             this.txtChucVu.PlaceholderText = "";
@@ -392,6 +402,7 @@ namespace GUI.FORM
             // 
             // txtUsername
             // 
+            this.txtUsername.BorderRadius = 15;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -401,7 +412,7 @@ namespace GUI.FORM
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(133, 422);
+            this.txtUsername.Location = new System.Drawing.Point(118, 430);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "";
@@ -411,6 +422,7 @@ namespace GUI.FORM
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.BorderRadius = 15;
             this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiaChi.DefaultText = "";
             this.txtDiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -420,12 +432,12 @@ namespace GUI.FORM
             this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaChi.Location = new System.Drawing.Point(133, 276);
+            this.txtDiaChi.Location = new System.Drawing.Point(113, 276);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(367, 36);
+            this.txtDiaChi.Size = new System.Drawing.Size(384, 36);
             this.txtDiaChi.TabIndex = 1;
             // 
             // txtHoTen
@@ -440,12 +452,12 @@ namespace GUI.FORM
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(133, 130);
+            this.txtHoTen.Location = new System.Drawing.Point(113, 130);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderText = "";
             this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(367, 36);
+            this.txtHoTen.Size = new System.Drawing.Size(384, 36);
             this.txtHoTen.TabIndex = 1;
             // 
             // labelTitle
@@ -454,8 +466,8 @@ namespace GUI.FORM
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.SlateBlue;
-            this.labelTitle.Location = new System.Drawing.Point(119, 42);
+            this.labelTitle.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelTitle.Location = new System.Drawing.Point(104, 43);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(393, 53);
             this.labelTitle.TabIndex = 0;
@@ -465,10 +477,10 @@ namespace GUI.FORM
             // 
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.mainPanel.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BorderColor = System.Drawing.Color.RoyalBlue;
             this.mainPanel.BorderRadius = 50;
-            this.mainPanel.BorderThickness = 1;
+            this.mainPanel.BorderThickness = 2;
             this.mainPanel.Controls.Add(this.comboNND);
             this.mainPanel.Controls.Add(this.labelEmailError);
             this.mainPanel.Controls.Add(this.dateNgayHetHan);
@@ -494,20 +506,20 @@ namespace GUI.FORM
             this.mainPanel.Controls.Add(this.txtDiaChi);
             this.mainPanel.Controls.Add(this.txtHoTen);
             this.mainPanel.Controls.Add(this.labelTitle);
-            this.mainPanel.Location = new System.Drawing.Point(92, 88);
+            this.mainPanel.Location = new System.Drawing.Point(88, 116);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShadowDecoration.Color = System.Drawing.Color.MediumSlateBlue;
             this.mainPanel.ShadowDecoration.CustomizableEdges.BottomLeft = false;
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopLeft = false;
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopRight = false;
-            this.mainPanel.Size = new System.Drawing.Size(649, 721);
+            this.mainPanel.Size = new System.Drawing.Size(594, 721);
             this.mainPanel.TabIndex = 3;
             // 
             // fAddDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 888);
+            this.ClientSize = new System.Drawing.Size(776, 888);
             this.Controls.Add(this.controlPanel);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

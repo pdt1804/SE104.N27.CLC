@@ -142,12 +142,6 @@
     <Compile Include="UserControls\ucDocGia.Designer.cs">
       <DependentUpon>ucDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucNguoiDung.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucNguoiDung.Designer.cs">
-      <DependentUpon>ucNguoiDung.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FORM\fAddDocGia.resx">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
     </EmbeddedResource>

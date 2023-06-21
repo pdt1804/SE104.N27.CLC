@@ -35,10 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboSach = new System.Windows.Forms.ComboBox();
-            this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.customPanel1 = new GUI.CustomPanel();
             this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,10 @@
             this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboSach = new System.Windows.Forms.ComboBox();
+            this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtSoLuongNhap = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.dateNgayNhap = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.labelTongTien = new System.Windows.Forms.Label();
@@ -57,13 +59,11 @@
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.controlPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.customPanel1 = new GUI.CustomPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
             this.controlPanel.SuspendLayout();
-            this.customPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -98,63 +98,29 @@
             this.mainPanel.Size = new System.Drawing.Size(813, 722);
             this.mainPanel.TabIndex = 9;
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label3.Location = new System.Drawing.Point(398, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(370, 20);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "*Chọn và nhấn phím Delete để xoá sách khỏi danh sách";
+            this.pictureBox1.Image = global::GUI.Properties.Resources.add_contact;
+            this.pictureBox1.Location = new System.Drawing.Point(176, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
-            // comboSach
+            // customPanel1
             // 
-            this.comboSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboSach.FormattingEnabled = true;
-            this.comboSach.Location = new System.Drawing.Point(48, 569);
-            this.comboSach.Name = "comboSach";
-            this.comboSach.Size = new System.Drawing.Size(241, 35);
-            this.comboSach.TabIndex = 19;
-            // 
-            // butOK
-            // 
-            this.butOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.butOK.BorderRadius = 15;
-            this.butOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butOK.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(317, 647);
-            this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(176, 45);
-            this.butOK.TabIndex = 18;
-            this.butOK.Text = "Lưu";
-            // 
-            // butAdd
-            // 
-            this.butAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.butAdd.BorderRadius = 15;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.Location = new System.Drawing.Point(623, 569);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(145, 35);
-            this.butAdd.TabIndex = 12;
-            this.butAdd.Text = "Thêm";
+            this.customPanel1.BackColor = System.Drawing.Color.White;
+            this.customPanel1.BorderRadius = 40;
+            this.customPanel1.Controls.Add(this.SachGrid);
+            this.customPanel1.ForeColor = System.Drawing.Color.Black;
+            this.customPanel1.GradientAngle = 90F;
+            this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
+            this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
+            this.customPanel1.Location = new System.Drawing.Point(48, 166);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Size = new System.Drawing.Size(720, 301);
+            this.customPanel1.TabIndex = 21;
             // 
             // SachGrid
             // 
@@ -275,6 +241,64 @@
             this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label3.Location = new System.Drawing.Point(398, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(370, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "*Chọn và nhấn phím Delete để xoá sách khỏi danh sách";
+            // 
+            // comboSach
+            // 
+            this.comboSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSach.FormattingEnabled = true;
+            this.comboSach.Location = new System.Drawing.Point(48, 569);
+            this.comboSach.Name = "comboSach";
+            this.comboSach.Size = new System.Drawing.Size(241, 35);
+            this.comboSach.TabIndex = 19;
+            // 
+            // butOK
+            // 
+            this.butOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.butOK.BorderRadius = 15;
+            this.butOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butOK.FillColor = System.Drawing.Color.RoyalBlue;
+            this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butOK.ForeColor = System.Drawing.Color.White;
+            this.butOK.Location = new System.Drawing.Point(317, 647);
+            this.butOK.Name = "butOK";
+            this.butOK.Size = new System.Drawing.Size(176, 45);
+            this.butOK.TabIndex = 18;
+            this.butOK.Text = "Lưu";
+            // 
+            // butAdd
+            // 
+            this.butAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.butAdd.BorderRadius = 15;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.Location = new System.Drawing.Point(623, 569);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(145, 35);
+            this.butAdd.TabIndex = 12;
+            this.butAdd.Text = "Thêm";
             // 
             // txtSoLuongNhap
             // 
@@ -419,30 +443,6 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.White;
-            this.customPanel1.BorderRadius = 40;
-            this.customPanel1.Controls.Add(this.SachGrid);
-            this.customPanel1.ForeColor = System.Drawing.Color.Black;
-            this.customPanel1.GradientAngle = 90F;
-            this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
-            this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
-            this.customPanel1.Location = new System.Drawing.Point(48, 166);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(720, 301);
-            this.customPanel1.TabIndex = 21;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.add_contact;
-            this.pictureBox1.Location = new System.Drawing.Point(176, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
             // fAddSachDaCo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -456,10 +456,10 @@
             this.Text = "fAddSachDaCo";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).EndInit();
             this.controlPanel.ResumeLayout(false);
-            this.customPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

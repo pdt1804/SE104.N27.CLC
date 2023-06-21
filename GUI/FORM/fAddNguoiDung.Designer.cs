@@ -51,8 +51,10 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneControlBox3 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox4 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneDragControl1
@@ -166,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(147, 34);
+            this.label1.Location = new System.Drawing.Point(176, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(403, 53);
             this.label1.TabIndex = 5;
@@ -305,6 +307,7 @@
             this.siticonePanel1.BorderColor = System.Drawing.Color.RoyalBlue;
             this.siticonePanel1.BorderRadius = 50;
             this.siticonePanel1.BorderThickness = 2;
+            this.siticonePanel1.Controls.Add(this.pictureBox1);
             this.siticonePanel1.Controls.Add(this.txtUserpwd);
             this.siticonePanel1.Controls.Add(this.txtUsername);
             this.siticonePanel1.Controls.Add(this.comboNhomND);
@@ -360,6 +363,16 @@
             this.siticoneControlBox4.Size = new System.Drawing.Size(59, 52);
             this.siticoneControlBox4.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.add_user1;
+            this.pictureBox1.Location = new System.Drawing.Point(127, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
             // fAddNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,6 +389,7 @@
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,5 +418,6 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox3;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

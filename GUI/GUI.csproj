@@ -98,6 +98,12 @@
     <Compile Include="FORM\fEditDocGia.Designer.cs">
       <DependentUpon>fEditDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fEditTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fEditTuaSach.Designer.cs">
+      <DependentUpon>fEditTuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fInfoDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fEditNguoiDung.resx">
       <DependentUpon>fEditNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fEditTuaSach.resx">
+      <DependentUpon>fEditTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fInfoDocGia.resx">
       <DependentUpon>fInfoDocGia.cs</DependentUpon>
@@ -289,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

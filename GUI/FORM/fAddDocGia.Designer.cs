@@ -65,9 +65,11 @@ namespace GUI.FORM
             this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nHOMNGUOIDUNGBindingSource)).BeginInit();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneEmailValidatingTool1
@@ -465,11 +467,11 @@ namespace GUI.FORM
             this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 22F, System.Drawing.FontStyle.Bold);
             this.labelTitle.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelTitle.Location = new System.Drawing.Point(104, 43);
+            this.labelTitle.Location = new System.Drawing.Point(148, 43);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(393, 53);
+            this.labelTitle.Size = new System.Drawing.Size(365, 49);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "THÊM THẺ ĐỘC GIẢ";
             // 
@@ -481,6 +483,7 @@ namespace GUI.FORM
             this.mainPanel.BorderColor = System.Drawing.Color.RoyalBlue;
             this.mainPanel.BorderRadius = 50;
             this.mainPanel.BorderThickness = 2;
+            this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Controls.Add(this.comboNND);
             this.mainPanel.Controls.Add(this.labelEmailError);
             this.mainPanel.Controls.Add(this.dateNgayHetHan);
@@ -506,7 +509,7 @@ namespace GUI.FORM
             this.mainPanel.Controls.Add(this.txtDiaChi);
             this.mainPanel.Controls.Add(this.txtHoTen);
             this.mainPanel.Controls.Add(this.labelTitle);
-            this.mainPanel.Location = new System.Drawing.Point(88, 111);
+            this.mainPanel.Location = new System.Drawing.Point(92, 111);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShadowDecoration.Color = System.Drawing.Color.MediumSlateBlue;
             this.mainPanel.ShadowDecoration.CustomizableEdges.BottomLeft = false;
@@ -514,6 +517,16 @@ namespace GUI.FORM
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopRight = false;
             this.mainPanel.Size = new System.Drawing.Size(594, 721);
             this.mainPanel.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.phone_book;
+            this.pictureBox1.Location = new System.Drawing.Point(98, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // fAddDocGia
             // 
@@ -530,6 +543,7 @@ namespace GUI.FORM
             this.controlPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -569,5 +583,6 @@ namespace GUI.FORM
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtHoTen;
         private System.Windows.Forms.Label labelTitle;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
+        private PictureBox pictureBox1;
     }
 }

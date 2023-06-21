@@ -154,6 +154,9 @@
     <EmbeddedResource Include="FORM\fEditNguoiDung.resx">
       <DependentUpon>fEditNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fInfoDocGia.resx">
+      <DependentUpon>fInfoDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\fInfoNguoiDung.resx">
       <DependentUpon>fInfoNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lib.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

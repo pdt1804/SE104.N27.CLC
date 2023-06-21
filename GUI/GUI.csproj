@@ -148,6 +148,9 @@
     <EmbeddedResource Include="FORM\fAddNguoiDung.resx">
       <DependentUpon>fAddNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fEditDocGia.resx">
+      <DependentUpon>fEditDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\fEditNguoiDung.resx">
       <DependentUpon>fEditNguoiDung.cs</DependentUpon>
     </EmbeddedResource>

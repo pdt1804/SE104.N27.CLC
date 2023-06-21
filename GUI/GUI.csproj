@@ -134,6 +134,12 @@
     <Compile Include="FORM\fHome.Designer.cs">
       <DependentUpon>fHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fInfoTuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fInfoTuaSach.Designer.cs">
+      <DependentUpon>fInfoTuaSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fHome.resx">
       <DependentUpon>fHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fInfoTuaSach.resx">
+      <DependentUpon>fInfoTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fManager.resx">
       <DependentUpon>fManager.cs</DependentUpon>

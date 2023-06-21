@@ -56,8 +56,12 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // messDia
@@ -216,6 +220,7 @@
             // controlPanel
             // 
             this.controlPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.controlPanel.Controls.Add(this.siticonePanel1);
             this.controlPanel.Controls.Add(this.miniControlBox);
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -393,14 +398,14 @@
             this.mainPanel.Controls.Add(this.txtDiaChi);
             this.mainPanel.Controls.Add(this.txtHoTen);
             this.mainPanel.Controls.Add(this.labelTitle);
-            this.mainPanel.Location = new System.Drawing.Point(93, 109);
+            this.mainPanel.Location = new System.Drawing.Point(89, 99);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShadowDecoration.Color = System.Drawing.Color.MediumSlateBlue;
             this.mainPanel.ShadowDecoration.CustomizableEdges.BottomLeft = false;
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopLeft = false;
             this.mainPanel.ShadowDecoration.CustomizableEdges.TopRight = false;
-            this.mainPanel.Size = new System.Drawing.Size(629, 630);
+            this.mainPanel.Size = new System.Drawing.Size(629, 646);
             this.mainPanel.TabIndex = 3;
             // 
             // siticoneBorderlessForm1
@@ -409,11 +414,46 @@
             this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.siticonePanel1.Controls.Add(this.siticoneControlBox1);
+            this.siticonePanel1.Controls.Add(this.siticoneControlBox2);
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Size = new System.Drawing.Size(811, 54);
+            this.siticonePanel1.TabIndex = 3;
+            // 
+            // siticoneControlBox1
+            // 
+            this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneControlBox1.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneControlBox1.IconColor = System.Drawing.Color.Lavender;
+            this.siticoneControlBox1.Location = new System.Drawing.Point(687, 0);
+            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneControlBox1.Name = "siticoneControlBox1";
+            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 54);
+            this.siticoneControlBox1.TabIndex = 0;
+            // 
+            // siticoneControlBox2
+            // 
+            this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneControlBox2.IconColor = System.Drawing.Color.Lavender;
+            this.siticoneControlBox2.Location = new System.Drawing.Point(749, 0);
+            this.siticoneControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneControlBox2.Name = "siticoneControlBox2";
+            this.siticoneControlBox2.Size = new System.Drawing.Size(61, 54);
+            this.siticoneControlBox2.TabIndex = 0;
+            // 
             // fEditDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 793);
+            this.ClientSize = new System.Drawing.Size(811, 796);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -423,6 +463,7 @@
             this.controlPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.siticonePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -456,5 +497,8 @@
         private System.Windows.Forms.Label labelTitle;
         private Siticone.Desktop.UI.WinForms.SiticonePanel mainPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
+        private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
     }
 }

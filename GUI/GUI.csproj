@@ -256,6 +256,18 @@
     <Compile Include="UserControls\ucNhomND.Designer.cs">
       <DependentUpon>ucNhomND.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucQLDG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLDG.Designer.cs">
+      <DependentUpon>ucQLDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQLND.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLND.Designer.cs">
+      <DependentUpon>ucQLND.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucQLSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -273,6 +285,12 @@
     </Compile>
     <Compile Include="UserControls\ucSachTraTre.Designer.cs">
       <DependentUpon>ucSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTacGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTacGia.Designer.cs">
+      <DependentUpon>ucTacGia.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucTuaSach.cs">
       <SubType>UserControl</SubType>
@@ -383,6 +401,12 @@
     <EmbeddedResource Include="UserControls\ucNhomND.resx">
       <DependentUpon>ucNhomND.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLDG.resx">
+      <DependentUpon>ucQLDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLND.resx">
+      <DependentUpon>ucQLND.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLSach.resx">
       <DependentUpon>ucQLSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucSachTraTre.resx">
       <DependentUpon>ucSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTacGia.resx">
+      <DependentUpon>ucTacGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTuaSach.resx">
       <DependentUpon>ucTuaSach.cs</DependentUpon>

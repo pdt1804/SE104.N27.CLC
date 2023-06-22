@@ -16,5 +16,10 @@ namespace GUI.UserControls
         {
             InitializeComponent();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

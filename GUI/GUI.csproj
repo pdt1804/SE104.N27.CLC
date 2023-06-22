@@ -122,6 +122,12 @@
     <Compile Include="FORM\fEditNhomND.Designer.cs">
       <DependentUpon>fEditNhomND.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fEditPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fEditPhieuMuon.Designer.cs">
+      <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fEditTacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fEditNhomND.resx">
       <DependentUpon>fEditNhomND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fEditPhieuMuon.resx">
+      <DependentUpon>fEditPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fEditTacGia.resx">
       <DependentUpon>fEditTacGia.cs</DependentUpon>
@@ -421,6 +430,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\writer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qualitative-research.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

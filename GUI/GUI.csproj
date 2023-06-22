@@ -250,6 +250,12 @@
     <Compile Include="UserControls\ucDocGia.Designer.cs">
       <DependentUpon>ucDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHome_TCS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHome_TCS.Designer.cs">
+      <DependentUpon>ucHome_TCS.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucLoaiDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -415,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucDocGia.resx">
       <DependentUpon>ucDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHome_TCS.resx">
+      <DependentUpon>ucHome_TCS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLoaiDG.resx">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>

@@ -244,6 +244,12 @@
     <Compile Include="UserControls\ucLoaiDG.Designer.cs">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNguoiDung.Designer.cs">
+      <DependentUpon>ucNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucQLSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLoaiDG.resx">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucNguoiDung.resx">
+      <DependentUpon>ucNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLSach.resx">
       <DependentUpon>ucQLSach.cs</DependentUpon>

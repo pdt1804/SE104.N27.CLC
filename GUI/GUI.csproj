@@ -346,6 +346,12 @@
     <Compile Include="UserControls\ucThayDoiQuyDinh.Designer.cs">
       <DependentUpon>ucThayDoiQuyDinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTheLoai.Designer.cs">
+      <DependentUpon>ucTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucThongTinTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -505,6 +511,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThayDoiQuyDinh.resx">
       <DependentUpon>ucThayDoiQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTheLoai.resx">
+      <DependentUpon>ucTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongTinTaiKhoan.resx">
       <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>

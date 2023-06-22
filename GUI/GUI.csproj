@@ -256,6 +256,12 @@
     <Compile Include="UserControls\ucSachTraTre.Designer.cs">
       <DependentUpon>ucSachTraTre.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucTuaSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTuaSach.Designer.cs">
+      <DependentUpon>ucTuaSach.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FORM\fAddDocGia.resx">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucSachTraTre.resx">
       <DependentUpon>ucSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTuaSach.resx">
+      <DependentUpon>ucTuaSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

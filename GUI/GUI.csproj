@@ -238,6 +238,12 @@
     <Compile Include="UserControls\ucDocGia.Designer.cs">
       <DependentUpon>ucDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucQLSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLSach.Designer.cs">
+      <DependentUpon>ucQLSach.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FORM\fAddDocGia.resx">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +334,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\ucCuonSach.resx">
       <DependentUpon>ucCuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLSach.resx">
+      <DependentUpon>ucQLSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

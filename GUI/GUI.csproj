@@ -286,6 +286,12 @@
     <Compile Include="UserControls\ucNhomND.Designer.cs">
       <DependentUpon>ucNhomND.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPhieuNhap.Designer.cs">
+      <DependentUpon>ucPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucQLDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -457,6 +463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucNhomND.resx">
       <DependentUpon>ucNhomND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucPhieuNhap.resx">
+      <DependentUpon>ucPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLDG.resx">
       <DependentUpon>ucQLDG.cs</DependentUpon>

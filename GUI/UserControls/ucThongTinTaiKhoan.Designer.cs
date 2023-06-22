@@ -52,8 +52,8 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
             this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
-            this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.customPanel1 = new GUI.CustomPanel();
+            this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.topPanel.SuspendLayout();
             this.siticonePanel6.SuspendLayout();
             this.siticonePanel5.SuspendLayout();
@@ -65,8 +65,8 @@
             this.BotPanel.SuspendLayout();
             this.parentPanel.SuspendLayout();
             this.tableLayoutTen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
             this.customPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -233,8 +233,8 @@
             // 
             // featPanel
             // 
-            this.featPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.featPanel.BorderRadius = 5;
+            this.featPanel.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.featPanel.BorderRadius = 30;
             this.featPanel.BorderThickness = 2;
             this.featPanel.Controls.Add(this.customPanel1);
             this.featPanel.Controls.Add(this.siticoneSeparator2);
@@ -302,8 +302,8 @@
             // 
             // infoPanel
             // 
-            this.infoPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.infoPanel.BorderRadius = 5;
+            this.infoPanel.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.infoPanel.BorderRadius = 30;
             this.infoPanel.BorderThickness = 2;
             this.infoPanel.Controls.Add(this.butChangePass);
             this.infoPanel.Controls.Add(this.siticonePanel6);
@@ -334,6 +334,7 @@
             this.botTableLayout.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.botTableLayout.RowCount = 1;
             this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.botTableLayout.Size = new System.Drawing.Size(973, 578);
             this.botTableLayout.TabIndex = 0;
             this.botTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.botTableLayout_Paint);
@@ -407,19 +408,6 @@
             this.tableLayoutTen.Size = new System.Drawing.Size(770, 193);
             this.tableLayoutTen.TabIndex = 1;
             // 
-            // siticoneCirclePictureBox1
-            // 
-            this.siticoneCirclePictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneCirclePictureBox1.ImageRotate = 0F;
-            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.siticoneCirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneCirclePictureBox1.Name = "siticoneCirclePictureBox1";
-            this.siticoneCirclePictureBox1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.siticoneCirclePictureBox1.Size = new System.Drawing.Size(199, 193);
-            this.siticoneCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.siticoneCirclePictureBox1.TabIndex = 2;
-            this.siticoneCirclePictureBox1.TabStop = false;
-            // 
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.White;
@@ -433,6 +421,19 @@
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(411, 431);
             this.customPanel1.TabIndex = 3;
+            // 
+            // siticoneCirclePictureBox1
+            // 
+            this.siticoneCirclePictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneCirclePictureBox1.ImageRotate = 0F;
+            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.siticoneCirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneCirclePictureBox1.Name = "siticoneCirclePictureBox1";
+            this.siticoneCirclePictureBox1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.siticoneCirclePictureBox1.Size = new System.Drawing.Size(199, 193);
+            this.siticoneCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.siticoneCirclePictureBox1.TabIndex = 2;
+            this.siticoneCirclePictureBox1.TabStop = false;
             // 
             // ucThongTinTaiKhoan
             // 
@@ -459,8 +460,8 @@
             this.parentPanel.ResumeLayout(false);
             this.tableLayoutTen.ResumeLayout(false);
             this.tableLayoutTen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).EndInit();
             this.customPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

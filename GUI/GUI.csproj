@@ -322,6 +322,12 @@
     <Compile Include="UserControls\ucTacGia.Designer.cs">
       <DependentUpon>ucTacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucThongTinTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucTuaSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -463,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTacGia.resx">
       <DependentUpon>ucTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucThongTinTaiKhoan.resx">
+      <DependentUpon>ucThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTuaSach.resx">
       <DependentUpon>ucTuaSach.cs</DependentUpon>

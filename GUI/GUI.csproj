@@ -304,6 +304,12 @@
     <Compile Include="UserControls\ucQLND.Designer.cs">
       <DependentUpon>ucQLND.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucQLPhieuMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQLPhieuMuon.Designer.cs">
+      <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucQLSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -472,6 +478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLND.resx">
       <DependentUpon>ucQLND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQLPhieuMuon.resx">
+      <DependentUpon>ucQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLSach.resx">
       <DependentUpon>ucQLSach.cs</DependentUpon>

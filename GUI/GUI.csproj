@@ -256,6 +256,12 @@
     <Compile Include="UserControls\ucHome_TCS.Designer.cs">
       <DependentUpon>ucHome_TCS.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHome_TTTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHome_TTTK.Designer.cs">
+      <DependentUpon>ucHome_TTTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucLoaiDG.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -425,6 +431,9 @@
     <EmbeddedResource Include="UserControls\ucHome_TCS.resx">
       <DependentUpon>ucHome_TCS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHome_TTTK.resx">
+      <DependentUpon>ucHome_TTTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLoaiDG.resx">
       <DependentUpon>ucLoaiDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -574,6 +583,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

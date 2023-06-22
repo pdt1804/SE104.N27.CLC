@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -44,15 +43,16 @@
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // butFind
@@ -74,20 +74,6 @@
             this.butFind.TabIndex = 18;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextOffset = new System.Drawing.Point(3, 0);
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(36, 15);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 67);
-            this.butRefresh.TabIndex = 9;
             // 
             // TopPanel
             // 
@@ -218,10 +204,6 @@
             this.id.Name = "id";
             this.id.Visible = false;
             // 
-            // dOCGIABindingSource
-            // 
-            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
-            // 
             // AskDia
             // 
             this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
@@ -271,10 +253,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DocGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DocGiaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -325,6 +307,24 @@
             this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(36, 15);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 67);
+            this.butRefresh.TabIndex = 9;
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
+            // 
             // ucDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,8 +334,8 @@
             this.Name = "ucDocGia";
             this.Size = new System.Drawing.Size(1233, 767);
             this.TopPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

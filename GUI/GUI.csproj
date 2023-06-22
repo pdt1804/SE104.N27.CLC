@@ -353,6 +353,9 @@
     <EmbeddedResource Include="UserControls\ucCuonSach.resx">
       <DependentUpon>ucCuonSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDocGia.resx">
+      <DependentUpon>ucDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQLSach.resx">
       <DependentUpon>ucQLSach.cs</DependentUpon>
     </EmbeddedResource>

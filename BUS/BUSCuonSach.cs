@@ -38,12 +38,12 @@ namespace BUS
             return CuonSachList;
         }
         // Lấy ra cuốn sách dựa trên mã cuốn sách
-        public SACH GetCuonSachByMa(string MaCuonSach)
+        public CUONSACH GetCuonSachByMa(string MaCuonSach)
         {
             CUONSACH cs;
             cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
 
-            return DALSach.Instance.GetSachById((int)cs.idSach);
+            return DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
         }
         public List<CUONSACH> FindCuonSach(SACH name, int? tinhtrang)
         {

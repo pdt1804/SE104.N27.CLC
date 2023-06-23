@@ -43,6 +43,7 @@
             this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.customPictureBox1 = new GUI.CustomPictureBox();
             this.customPanel1 = new GUI.CustomPanel();
+            this.QMK = new System.Windows.Forms.Label();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
@@ -97,6 +98,7 @@
             this.siticoneCustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneCustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.siticoneCustomGradientPanel1.BorderRadius = 90;
+            this.siticoneCustomGradientPanel1.Controls.Add(this.QMK);
             this.siticoneCustomGradientPanel1.Controls.Add(this.butLogin);
             this.siticoneCustomGradientPanel1.Controls.Add(this.txtUserpwd);
             this.siticoneCustomGradientPanel1.Controls.Add(this.txtUsername);
@@ -244,6 +246,18 @@
             this.customPanel1.Size = new System.Drawing.Size(473, 431);
             this.customPanel1.TabIndex = 12;
             // 
+            // QMK
+            // 
+            this.QMK.AutoSize = true;
+            this.QMK.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.QMK.ForeColor = System.Drawing.Color.White;
+            this.QMK.Location = new System.Drawing.Point(317, 298);
+            this.QMK.Name = "QMK";
+            this.QMK.Size = new System.Drawing.Size(114, 20);
+            this.QMK.TabIndex = 12;
+            this.QMK.Text = "Quên mật khẩu";
+            this.QMK.Click += new System.EventHandler(this.QMK_Click);
+            // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,5 +297,6 @@
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
         private CustomPanel customPanel1;
+        private System.Windows.Forms.Label QMK;
     }
 }

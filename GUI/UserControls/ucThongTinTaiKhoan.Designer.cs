@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
+            this.labelRole = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.butChangePass = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.labelUsrName = new System.Windows.Forms.Label();
@@ -41,6 +45,7 @@
             this.labelNgaySinh = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.featPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.customPanel1 = new GUI.CustomPanel();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.labelMaND = new System.Windows.Forms.Label();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
@@ -49,24 +54,19 @@
             this.botTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.BotPanel = new System.Windows.Forms.Panel();
             this.parentPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelRole = new System.Windows.Forms.Label();
-            this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
-            this.customPanel1 = new GUI.CustomPanel();
-            this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.topPanel.SuspendLayout();
+            this.tableLayoutTen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
             this.siticonePanel6.SuspendLayout();
             this.siticonePanel5.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
             this.featPanel.SuspendLayout();
+            this.customPanel1.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.botTableLayout.SuspendLayout();
             this.BotPanel.SuspendLayout();
             this.parentPanel.SuspendLayout();
-            this.tableLayoutTen.SuspendLayout();
-            this.customPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -84,6 +84,65 @@
             this.topPanel.Padding = new System.Windows.Forms.Padding(5);
             this.topPanel.Size = new System.Drawing.Size(979, 203);
             this.topPanel.TabIndex = 2;
+            // 
+            // tableLayoutTen
+            // 
+            this.tableLayoutTen.BackColor = System.Drawing.Color.AliceBlue;
+            this.tableLayoutTen.ColumnCount = 1;
+            this.tableLayoutTen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutTen.Controls.Add(this.labelRole, 0, 2);
+            this.tableLayoutTen.Controls.Add(this.labelName, 0, 3);
+            this.tableLayoutTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutTen.Location = new System.Drawing.Point(204, 5);
+            this.tableLayoutTen.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutTen.Name = "tableLayoutTen";
+            this.tableLayoutTen.RowCount = 6;
+            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutTen.Size = new System.Drawing.Size(770, 193);
+            this.tableLayoutTen.TabIndex = 1;
+            // 
+            // labelRole
+            // 
+            this.labelRole.AutoSize = true;
+            this.labelRole.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelRole.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRole.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelRole.Location = new System.Drawing.Point(3, 43);
+            this.labelRole.Name = "labelRole";
+            this.labelRole.Size = new System.Drawing.Size(764, 32);
+            this.labelRole.TabIndex = 3;
+            this.labelRole.Text = "Vai trò";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI Variable Display", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelName.Location = new System.Drawing.Point(3, 75);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(489, 78);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "Họ Tên Người Dùng";
+            // 
+            // siticoneCirclePictureBox1
+            // 
+            this.siticoneCirclePictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneCirclePictureBox1.ImageRotate = 0F;
+            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.siticoneCirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneCirclePictureBox1.Name = "siticoneCirclePictureBox1";
+            this.siticoneCirclePictureBox1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.siticoneCirclePictureBox1.Size = new System.Drawing.Size(199, 193);
+            this.siticoneCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.siticoneCirclePictureBox1.TabIndex = 2;
+            this.siticoneCirclePictureBox1.TabStop = false;
+            this.siticoneCirclePictureBox1.Click += new System.EventHandler(this.siticoneCirclePictureBox1_Click);
             // 
             // butChangePass
             // 
@@ -223,7 +282,7 @@
             this.listView1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(-1, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(417, 431);
@@ -246,6 +305,20 @@
             this.featPanel.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.featPanel.Size = new System.Drawing.Size(447, 534);
             this.featPanel.TabIndex = 0;
+            // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.White;
+            this.customPanel1.BorderRadius = 50;
+            this.customPanel1.Controls.Add(this.listView1);
+            this.customPanel1.ForeColor = System.Drawing.Color.Black;
+            this.customPanel1.GradientAngle = 90F;
+            this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
+            this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
+            this.customPanel1.Location = new System.Drawing.Point(22, 80);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Size = new System.Drawing.Size(411, 431);
+            this.customPanel1.TabIndex = 3;
             // 
             // siticonePanel3
             // 
@@ -334,7 +407,7 @@
             this.botTableLayout.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.botTableLayout.RowCount = 1;
             this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 558F));
             this.botTableLayout.Size = new System.Drawing.Size(973, 578);
             this.botTableLayout.TabIndex = 0;
             this.botTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.botTableLayout_Paint);
@@ -363,78 +436,6 @@
             this.parentPanel.Size = new System.Drawing.Size(989, 795);
             this.parentPanel.TabIndex = 5;
             // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelName.Font = new System.Drawing.Font("Segoe UI Variable Display", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelName.Location = new System.Drawing.Point(3, 75);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(489, 78);
-            this.labelName.TabIndex = 1;
-            this.labelName.Text = "Họ Tên Người Dùng";
-            // 
-            // labelRole
-            // 
-            this.labelRole.AutoSize = true;
-            this.labelRole.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelRole.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRole.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelRole.Location = new System.Drawing.Point(3, 43);
-            this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(764, 32);
-            this.labelRole.TabIndex = 3;
-            this.labelRole.Text = "Vai trò";
-            // 
-            // tableLayoutTen
-            // 
-            this.tableLayoutTen.BackColor = System.Drawing.Color.AliceBlue;
-            this.tableLayoutTen.ColumnCount = 1;
-            this.tableLayoutTen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutTen.Controls.Add(this.labelRole, 0, 2);
-            this.tableLayoutTen.Controls.Add(this.labelName, 0, 3);
-            this.tableLayoutTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutTen.Location = new System.Drawing.Point(204, 5);
-            this.tableLayoutTen.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutTen.Name = "tableLayoutTen";
-            this.tableLayoutTen.RowCount = 6;
-            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutTen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutTen.Size = new System.Drawing.Size(770, 193);
-            this.tableLayoutTen.TabIndex = 1;
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.White;
-            this.customPanel1.BorderRadius = 50;
-            this.customPanel1.Controls.Add(this.listView1);
-            this.customPanel1.ForeColor = System.Drawing.Color.Black;
-            this.customPanel1.GradientAngle = 90F;
-            this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
-            this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
-            this.customPanel1.Location = new System.Drawing.Point(22, 80);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(411, 431);
-            this.customPanel1.TabIndex = 3;
-            // 
-            // siticoneCirclePictureBox1
-            // 
-            this.siticoneCirclePictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneCirclePictureBox1.ImageRotate = 0F;
-            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.siticoneCirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneCirclePictureBox1.Name = "siticoneCirclePictureBox1";
-            this.siticoneCirclePictureBox1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.siticoneCirclePictureBox1.Size = new System.Drawing.Size(199, 193);
-            this.siticoneCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.siticoneCirclePictureBox1.TabIndex = 2;
-            this.siticoneCirclePictureBox1.TabStop = false;
-            // 
             // ucThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -443,6 +444,9 @@
             this.Name = "ucThongTinTaiKhoan";
             this.Size = new System.Drawing.Size(989, 795);
             this.topPanel.ResumeLayout(false);
+            this.tableLayoutTen.ResumeLayout(false);
+            this.tableLayoutTen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).EndInit();
             this.siticonePanel6.ResumeLayout(false);
             this.siticonePanel6.PerformLayout();
             this.siticonePanel5.ResumeLayout(false);
@@ -451,6 +455,7 @@
             this.siticonePanel4.PerformLayout();
             this.featPanel.ResumeLayout(false);
             this.featPanel.PerformLayout();
+            this.customPanel1.ResumeLayout(false);
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
             this.infoPanel.ResumeLayout(false);
@@ -458,10 +463,6 @@
             this.botTableLayout.ResumeLayout(false);
             this.BotPanel.ResumeLayout(false);
             this.parentPanel.ResumeLayout(false);
-            this.tableLayoutTen.ResumeLayout(false);
-            this.tableLayoutTen.PerformLayout();
-            this.customPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

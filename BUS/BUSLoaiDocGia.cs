@@ -29,6 +29,18 @@ namespace BUS
         {
             return DALLoaiDocGia.Instance.GetLoaiDocGiaById(id);    
         }
+        public bool AddLoaiDocGia(string tenLoaiDocGia)
+        {
+            return DALLoaiDocGia.Instance.AddLoaiDocGia(tenLoaiDocGia);
+        }
+        public bool UpdLoaiDocGia(int id, string tenLoaiDocGia)
+        {
+            return DALLoaiDocGia.Instance.UpdLoaiDocGia(id, tenLoaiDocGia);
 
+        }
+        public bool DelLoaiDocGia(int id)
+        {
+            return DALLoaiDocGia.Instance.DelLoaiDocGia(id);
+        }
     }
 }

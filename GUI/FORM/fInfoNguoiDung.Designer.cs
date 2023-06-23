@@ -38,6 +38,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableInfo = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.labelMaNd = new System.Windows.Forms.Label();
@@ -49,10 +50,9 @@
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticonePanel1.SuspendLayout();
-            this.tableInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // errorDia
@@ -68,7 +68,13 @@
             // 
             this.butChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.butChange.BorderColor = System.Drawing.Color.Transparent;
             this.butChange.BorderRadius = 15;
+            this.butChange.BorderThickness = 2;
+            this.butChange.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butChange.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butChange.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butChange.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -76,12 +82,16 @@
             this.butChange.FillColor = System.Drawing.Color.RoyalBlue;
             this.butChange.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butChange.ForeColor = System.Drawing.Color.White;
-            this.butChange.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butChange.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butChange.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butChange.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butChange.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butChange.Location = new System.Drawing.Point(257, 415);
             this.butChange.Name = "butChange";
             this.butChange.Size = new System.Drawing.Size(183, 46);
             this.butChange.TabIndex = 4;
             this.butChange.Text = "Sửa thông tin";
+            this.butChange.Click += new System.EventHandler(this.butChange_Click);
             // 
             // label1
             // 
@@ -165,6 +175,16 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(696, 513);
             this.siticonePanel1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.log_in;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
             // 
             // tableInfo
             // 
@@ -306,16 +326,6 @@
             this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.log_in;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            // 
             // fInfoNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,12 +338,11 @@
             this.Name = "fInfoNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fInfoNguoiDung";
-            this.Load += new System.EventHandler(this.fInfoNguoiDung_Load);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableInfo.ResumeLayout(false);
             this.tableInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

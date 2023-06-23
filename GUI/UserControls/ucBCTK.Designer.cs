@@ -98,6 +98,7 @@
             this.butTraTre.Size = new System.Drawing.Size(239, 50);
             this.butTraTre.TabIndex = 1;
             this.butTraTre.Text = "Sách trả trễ";
+            this.butTraTre.Click += new System.EventHandler(this.butTraTre_Click);
             // 
             // butTheLoai
             // 
@@ -128,6 +129,7 @@
             this.butTheLoai.Size = new System.Drawing.Size(239, 50);
             this.butTheLoai.TabIndex = 0;
             this.butTheLoai.Text = "Mượn theo thể loại";
+            this.butTheLoai.Click += new System.EventHandler(this.butTheLoai_Click);
             // 
             // ucBCTK
             // 

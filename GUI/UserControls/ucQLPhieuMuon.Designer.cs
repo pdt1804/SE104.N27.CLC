@@ -150,7 +150,7 @@
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(997, 138);
+            this.siticonePanel1.Size = new System.Drawing.Size(997, 146);
             this.siticonePanel1.TabIndex = 4;
             // 
             // butFil
@@ -340,16 +340,16 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PhieuMuonGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.PhieuMuonGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhieuMuonGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PhieuMuonGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.PhieuMuonGrid.Location = new System.Drawing.Point(0, 0);
+            this.PhieuMuonGrid.Location = new System.Drawing.Point(0, 144);
             this.PhieuMuonGrid.Name = "PhieuMuonGrid";
             this.PhieuMuonGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.PhieuMuonGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.PhieuMuonGrid.RowHeadersVisible = false;
             this.PhieuMuonGrid.RowHeadersWidth = 51;
             this.PhieuMuonGrid.RowTemplate.Height = 30;
-            this.PhieuMuonGrid.Size = new System.Drawing.Size(997, 596);
+            this.PhieuMuonGrid.Size = new System.Drawing.Size(997, 452);
             this.PhieuMuonGrid.TabIndex = 5;
             this.PhieuMuonGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.PhieuMuonGrid.ThemeStyle.AlternatingRowsStyle.Font = null;

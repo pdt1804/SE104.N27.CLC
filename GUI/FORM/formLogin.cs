@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,47 +26,47 @@ namespace GUI
 
         private void butLogin_Click(object sender, EventArgs e)
         {
-            //string username = txtUsername.Text;
-            //string userpwd = txtUserpwd.Text;
-            ////BUSLogin bLogin = new BUSLogin();
-            ////int id = bLogin.checkValidLogin(username, userpwd);
-            //if (username == "" || userpwd == "")
-            //{
-            //    MessageBox.Show("Thông tin đăng nhập không đầy đủ!", "Thông báo", MessageBoxButtons.OK,
-            //                    MessageBoxIcon.Warning);
-            //    this.resetTextboxs();
-            //}
-            //else if (id != -1)
-            //{
-            //    MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
-            //                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string username = txtUsername.Text;
+            string userpwd = txtUserpwd.Text;
+            BUSLogin bLogin = new BUSLogin();
+            int id = bLogin.checkValidLogin(username, userpwd);
+            if (username == "" || userpwd == "")
+            {
+                MessageBox.Show("Thông tin đăng nhập không đầy đủ!", "Thông báo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                this.resetTextboxs();
+            }
+            else if (id != -1)
+            {
+                MessageBox.Show("Đăng nhập thành công!\nChào mừng " + username + "!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //    //var user = BUSNguoiDung.Instance.GetNguoiDungById(id);
-            //    bool isDG = false;
-            //    //foreach (var cn in user.NHOMNGUOIDUNG.CHUCNANGs)
-            //    //{
-            //    //    if (cn.TenChucNang == "DG") { isDG = true; break; }
-            //    //}
-            //    this.Hide();
-            //    if (isDG)
-            //    {
-            //        //var f = new fHome(id);
-            //        //f.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        //var f = new fManager(id);
-            //        //f.ShowDialog();
-            //    }
-            //    this.resetTextboxs();
-            //    this.Show();
-            //}
-            this.Hide();
-            Form loginForm = new fManager(1);
-            loginForm.Show();
-           
-            
-
+                var user = BUSNguoiDung.Instance.GetNguoiDungById(id);
+                bool isDG = false;
+                foreach (var cn in user.NHOMNGUOIDUNG.CHUCNANGs)
+                {
+                    if (cn.TenChucNang == "DG") { isDG = true; break; }
+                }
+                this.Hide();
+                if (isDG)
+                {
+                    var f = new fHome(id);
+                    f.ShowDialog();
+                }
+                else
+                {
+                    var f = new fManager(id);
+                    f.ShowDialog();
+                }
+                this.resetTextboxs();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                this.resetTextboxs();
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -73,46 +74,10 @@ namespace GUI
             Application.Exit();
         }
 
-        private void siticonePanel1_Paint(object sender, PaintEventArgs e)
+        private void QMK_Click(object sender, EventArgs e)
         {
-
+            var f = new fQMK();
+            f.ShowDialog();
         }
-
-        private void siticoneControlBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void siticoneSeparator1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserpwd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void siticonePanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

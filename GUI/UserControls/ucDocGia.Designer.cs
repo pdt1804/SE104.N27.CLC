@@ -94,7 +94,7 @@
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1233, 99);
+            this.TopPanel.Size = new System.Drawing.Size(1233, 107);
             this.TopPanel.TabIndex = 6;
             // 
             // txtFind
@@ -305,9 +305,9 @@
             this.TongNo,
             this.Edit});
             this.DocGiaGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DocGiaGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocGiaGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DocGiaGrid.Location = new System.Drawing.Point(0, 0);
+            this.DocGiaGrid.Location = new System.Drawing.Point(0, 111);
             this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocGiaGrid.Name = "DocGiaGrid";
             this.DocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -315,7 +315,7 @@
             this.DocGiaGrid.RowHeadersVisible = false;
             this.DocGiaGrid.RowHeadersWidth = 51;
             this.DocGiaGrid.RowTemplate.Height = 30;
-            this.DocGiaGrid.Size = new System.Drawing.Size(1233, 767);
+            this.DocGiaGrid.Size = new System.Drawing.Size(1233, 656);
             this.DocGiaGrid.TabIndex = 7;
             this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;

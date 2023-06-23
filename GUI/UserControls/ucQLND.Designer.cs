@@ -97,6 +97,7 @@
             this.butNhomND.Size = new System.Drawing.Size(285, 50);
             this.butNhomND.TabIndex = 1;
             this.butNhomND.Text = "Nhóm người dùng";
+            this.butNhomND.Click += new System.EventHandler(this.butNhomND_Click);
             // 
             // butNguoiDung
             // 
@@ -129,6 +130,7 @@
             this.butNguoiDung.Size = new System.Drawing.Size(199, 50);
             this.butNguoiDung.TabIndex = 0;
             this.butNguoiDung.Text = "Người dùng";
+            this.butNguoiDung.Click += new System.EventHandler(this.butNguoiDung_Click);
             // 
             // ucQLND
             // 

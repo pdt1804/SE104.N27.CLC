@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneDragControl2 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
@@ -90,7 +91,6 @@
             this.siticoneControlBox2.Name = "siticoneControlBox2";
             this.siticoneControlBox2.Size = new System.Drawing.Size(68, 60);
             this.siticoneControlBox2.TabIndex = 1;
-            this.siticoneControlBox2.Click += new System.EventHandler(this.siticoneControlBox2_Click);
             // 
             // siticoneCustomGradientPanel1
             // 
@@ -162,7 +162,6 @@
             this.txtUserpwd.Size = new System.Drawing.Size(361, 50);
             this.txtUserpwd.TabIndex = 1;
             this.txtUserpwd.UseSystemPasswordChar = true;
-            this.txtUserpwd.TextChanged += new System.EventHandler(this.txtUserpwd_TextChanged);
             // 
             // txtUsername
             // 
@@ -190,7 +189,6 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(361, 50);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label1
             // 
@@ -203,7 +201,6 @@
             this.label1.Size = new System.Drawing.Size(247, 59);
             this.label1.TabIndex = 3;
             this.label1.Text = "Đăng Nhập";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // siticonePictureBox1
             // 
@@ -259,6 +256,7 @@
             this.Controls.Add(this.siticoneControlBox2);
             this.Controls.Add(this.siticonePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLogin";

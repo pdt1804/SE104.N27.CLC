@@ -1,4 +1,4 @@
-﻿namespace GUI.FORM
+﻿namespace GUI
 {
     partial class fChangePassword
     {

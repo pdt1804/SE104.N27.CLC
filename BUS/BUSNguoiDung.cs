@@ -89,6 +89,11 @@ namespace BUS
                 return true;
             }    
         }
+
+        public bool UpdMK(int id, string MatKhau)
+        {
+            return DALNguoiDung.Instance.UpdPassword(id, MatKhau);
+        }
     }
 }
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Quản Lý Độc Giả");
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tableLayoutTen = new System.Windows.Forms.TableLayoutPanel();
             this.labelRole = new System.Windows.Forms.Label();
@@ -142,7 +142,6 @@
             this.siticoneCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.siticoneCirclePictureBox1.TabIndex = 2;
             this.siticoneCirclePictureBox1.TabStop = false;
-            this.siticoneCirclePictureBox1.Click += new System.EventHandler(this.siticoneCirclePictureBox1_Click);
             // 
             // butChangePass
             // 
@@ -161,6 +160,7 @@
             this.butChangePass.Size = new System.Drawing.Size(185, 38);
             this.butChangePass.TabIndex = 6;
             this.butChangePass.Text = "Đổi mật khẩu";
+            this.butChangePass.Click += new System.EventHandler(this.butChangePass_Click);
             // 
             // siticonePanel6
             // 
@@ -282,7 +282,7 @@
             this.listView1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(-1, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(417, 431);
@@ -410,7 +410,6 @@
             this.botTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 558F));
             this.botTableLayout.Size = new System.Drawing.Size(973, 578);
             this.botTableLayout.TabIndex = 0;
-            this.botTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.botTableLayout_Paint);
             // 
             // BotPanel
             // 

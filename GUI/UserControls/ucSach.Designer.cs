@@ -304,7 +304,6 @@
             this.comboTinhTrang.Name = "comboTinhTrang";
             this.comboTinhTrang.Size = new System.Drawing.Size(250, 36);
             this.comboTinhTrang.TabIndex = 15;
-            this.comboTinhTrang.SelectedIndexChanged += new System.EventHandler(this.comboTinhTrang_SelectedIndexChanged);
             // 
             // butTenSach
             // 

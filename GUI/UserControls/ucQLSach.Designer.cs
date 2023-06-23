@@ -49,9 +49,9 @@
             this.container.BorderThickness = 3;
             this.container.Controls.Add(this.siticoneContainerControl1);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(0, 60);
+            this.container.Location = new System.Drawing.Point(0, 42);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1121, 633);
+            this.container.Size = new System.Drawing.Size(1121, 651);
             this.container.TabIndex = 5;
             this.container.Text = "siticoneContainerControl2";
             // 
@@ -80,7 +80,7 @@
             this.siticoneGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
-            this.siticoneGradientPanel1.Size = new System.Drawing.Size(1121, 60);
+            this.siticoneGradientPanel1.Size = new System.Drawing.Size(1121, 42);
             this.siticoneGradientPanel1.TabIndex = 4;
             // 
             // butPhieuNhap
@@ -110,9 +110,10 @@
             this.butPhieuNhap.Location = new System.Drawing.Point(788, 0);
             this.butPhieuNhap.Name = "butPhieuNhap";
             this.butPhieuNhap.PressedColor = System.Drawing.Color.Transparent;
-            this.butPhieuNhap.Size = new System.Drawing.Size(218, 60);
+            this.butPhieuNhap.Size = new System.Drawing.Size(218, 42);
             this.butPhieuNhap.TabIndex = 5;
             this.butPhieuNhap.Text = "Phiếu Nhập Sách";
+            this.butPhieuNhap.Click += new System.EventHandler(this.butPhieuNhap_Click);
             // 
             // butTheLoai
             // 
@@ -141,9 +142,10 @@
             this.butTheLoai.Location = new System.Drawing.Point(632, 0);
             this.butTheLoai.Name = "butTheLoai";
             this.butTheLoai.PressedColor = System.Drawing.Color.Transparent;
-            this.butTheLoai.Size = new System.Drawing.Size(156, 60);
+            this.butTheLoai.Size = new System.Drawing.Size(156, 42);
             this.butTheLoai.TabIndex = 4;
             this.butTheLoai.Text = "Thể Loại";
+            this.butTheLoai.Click += new System.EventHandler(this.butTheLoai_Click);
             // 
             // butTacGia
             // 
@@ -172,9 +174,10 @@
             this.butTacGia.Location = new System.Drawing.Point(474, 0);
             this.butTacGia.Name = "butTacGia";
             this.butTacGia.PressedColor = System.Drawing.Color.Transparent;
-            this.butTacGia.Size = new System.Drawing.Size(158, 60);
+            this.butTacGia.Size = new System.Drawing.Size(158, 42);
             this.butTacGia.TabIndex = 3;
             this.butTacGia.Text = "Tác Giả";
+            this.butTacGia.Click += new System.EventHandler(this.butTacGia_Click);
             // 
             // butCuonsach
             // 
@@ -203,9 +206,10 @@
             this.butCuonsach.Location = new System.Drawing.Point(312, 0);
             this.butCuonsach.Name = "butCuonsach";
             this.butCuonsach.PressedColor = System.Drawing.Color.Transparent;
-            this.butCuonsach.Size = new System.Drawing.Size(162, 60);
+            this.butCuonsach.Size = new System.Drawing.Size(162, 42);
             this.butCuonsach.TabIndex = 2;
             this.butCuonsach.Text = "Cuốn sách";
+            this.butCuonsach.Click += new System.EventHandler(this.butCuonsach_Click);
             // 
             // butSach
             // 
@@ -234,9 +238,10 @@
             this.butSach.Location = new System.Drawing.Point(156, 0);
             this.butSach.Name = "butSach";
             this.butSach.PressedColor = System.Drawing.Color.Transparent;
-            this.butSach.Size = new System.Drawing.Size(156, 60);
+            this.butSach.Size = new System.Drawing.Size(156, 42);
             this.butSach.TabIndex = 0;
             this.butSach.Text = "Sách";
+            this.butSach.Click += new System.EventHandler(this.butSach_Click);
             // 
             // butTuaSach
             // 
@@ -266,9 +271,10 @@
             this.butTuaSach.Location = new System.Drawing.Point(0, 0);
             this.butTuaSach.Name = "butTuaSach";
             this.butTuaSach.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.butTuaSach.Size = new System.Drawing.Size(156, 60);
+            this.butTuaSach.Size = new System.Drawing.Size(156, 42);
             this.butTuaSach.TabIndex = 1;
             this.butTuaSach.Text = "Tựa sách";
+            this.butTuaSach.Click += new System.EventHandler(this.butTuaSach_Click);
             // 
             // ucQLSach
             // 

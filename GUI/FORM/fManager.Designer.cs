@@ -324,7 +324,7 @@ namespace GUI
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private CustomPanel customPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private static ucBanAccess ucBan;
+        //private static ucBanAccess ucBan;
         private static ucQLDG ucqldg;
         private static ucQLSach ucqlsach;
         private static ucQLPhieuMuon ucphieumuontra;

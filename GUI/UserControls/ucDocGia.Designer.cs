@@ -137,7 +137,9 @@
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
+            this.butAdd.BorderColor = System.Drawing.Color.Transparent;
             this.butAdd.BorderRadius = 19;
+            this.butAdd.BorderThickness = 2;
             this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.CheckedState.FillColor = System.Drawing.Color.Lavender;

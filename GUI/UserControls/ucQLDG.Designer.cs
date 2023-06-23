@@ -38,11 +38,14 @@
             // 
             // container
             // 
+            this.container.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.container.BorderRadius = 30;
+            this.container.BorderThickness = 2;
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.FillColor = System.Drawing.Color.AliceBlue;
-            this.container.Location = new System.Drawing.Point(0, 50);
+            this.container.Location = new System.Drawing.Point(0, 38);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(997, 602);
+            this.container.Size = new System.Drawing.Size(997, 614);
             this.container.TabIndex = 5;
             this.container.Text = "siticoneContainerControl2";
             // 
@@ -57,7 +60,7 @@
             this.siticoneGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
-            this.siticoneGradientPanel1.Size = new System.Drawing.Size(997, 50);
+            this.siticoneGradientPanel1.Size = new System.Drawing.Size(997, 38);
             this.siticoneGradientPanel1.TabIndex = 4;
             // 
             // siticoneContainerControl1
@@ -72,7 +75,7 @@
             // 
             this.butLoaiDG.BackColor = System.Drawing.Color.Transparent;
             this.butLoaiDG.BorderColor = System.Drawing.Color.GhostWhite;
-            this.butLoaiDG.BorderRadius = 25;
+            this.butLoaiDG.BorderRadius = 20;
             this.butLoaiDG.BorderThickness = 2;
             this.butLoaiDG.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butLoaiDG.CheckedState.CustomBorderColor = System.Drawing.Color.Lavender;
@@ -95,15 +98,16 @@
             this.butLoaiDG.Location = new System.Drawing.Point(180, 0);
             this.butLoaiDG.Name = "butLoaiDG";
             this.butLoaiDG.PressedColor = System.Drawing.Color.Transparent;
-            this.butLoaiDG.Size = new System.Drawing.Size(180, 50);
+            this.butLoaiDG.Size = new System.Drawing.Size(180, 38);
             this.butLoaiDG.TabIndex = 1;
             this.butLoaiDG.Text = "Loại độc giả";
+            this.butLoaiDG.Click += new System.EventHandler(this.butLoaiDG_Click);
             // 
             // butDocGia
             // 
             this.butDocGia.BackColor = System.Drawing.Color.Transparent;
             this.butDocGia.BorderColor = System.Drawing.Color.GhostWhite;
-            this.butDocGia.BorderRadius = 25;
+            this.butDocGia.BorderRadius = 20;
             this.butDocGia.BorderThickness = 2;
             this.butDocGia.ButtonMode = Siticone.Desktop.UI.WinForms.Enums.ButtonMode.RadioButton;
             this.butDocGia.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -126,9 +130,10 @@
             this.butDocGia.Location = new System.Drawing.Point(0, 0);
             this.butDocGia.Name = "butDocGia";
             this.butDocGia.PressedColor = System.Drawing.Color.Transparent;
-            this.butDocGia.Size = new System.Drawing.Size(180, 50);
+            this.butDocGia.Size = new System.Drawing.Size(180, 38);
             this.butDocGia.TabIndex = 0;
             this.butDocGia.Text = "Độc giả";
+            this.butDocGia.Click += new System.EventHandler(this.butDocGia_Click);
             // 
             // ucQLDG
             // 

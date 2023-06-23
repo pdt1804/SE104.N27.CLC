@@ -193,6 +193,7 @@
             this.siticoneButton1.TabIndex = 29;
             this.siticoneButton1.Text = "Lọc ngày nhập";
             this.siticoneButton1.TextOffset = new System.Drawing.Point(3, 0);
+            this.siticoneButton1.Click += new System.EventHandler(this.butFindDay_Click);
             // 
             // txtNam
             // 
@@ -295,6 +296,7 @@
             this.butFind.TabIndex = 16;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextOffset = new System.Drawing.Point(3, 0);
+            this.butFind.Click += new System.EventHandler(this.butFind_Click);
             // 
             // txtFind
             // 
@@ -334,6 +336,7 @@
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(59, 56);
             this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // ucPhieuNhap
             // 

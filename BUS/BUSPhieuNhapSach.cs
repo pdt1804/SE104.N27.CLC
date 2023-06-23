@@ -28,6 +28,13 @@ namespace BUS
             return DALPhieuNhapSach.Instance.GetAllPhieuNhapSach();
         }
 
+        public PHIEUNHAPSACH GetPhieuNhap(int MaPhieuNhap)
+        {
+            PHIEUNHAPSACH pn;
+            pn = DALPhieuNhapSach.Instance.GetPhieuById(MaPhieuNhap);
+            return pn;
+        }
+
         public PHIEUNHAPSACH GetPhieuById(int id)
         {
             PHIEUNHAPSACH p = DALPhieuNhapSach.Instance.GetPhieuById(id);

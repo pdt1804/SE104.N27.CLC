@@ -193,7 +193,7 @@
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(64, 54);
             this.butRefresh.TabIndex = 10;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+//            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // txtMaSach
             // 

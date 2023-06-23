@@ -171,6 +171,7 @@
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(58, 58);
             this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // txtHoTen
             // 
@@ -224,6 +225,7 @@
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tác Giả";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // ucTacGia
             // 

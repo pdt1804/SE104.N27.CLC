@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL;
 using DTO;
 namespace BUS
@@ -20,35 +21,55 @@ namespace BUS
             set => instance = value;
         }
 
-        // Lấy ra tất cả thể loại
         public List<THELOAI> GetAllTheLoai()
         {
             return DALTheLoai.Instance.GetAllTheLoai();
         }
-        // Lấy thể loại bằng id
+
         public THELOAI GetTheLoai(int id)
         {
-            return DALTheLoai.Instance.GetTheLoaiById(id);
+            THELOAI tl = DALTheLoai.Instance.GetTheLoaiById(id);
+            if (tl == null) return null;
+            else return tl;
         }
-        // Tìm kiếm thể loại 
+
         public List<THELOAI> FindTheLoai(string name)
         {
             return DALTheLoai.Instance.FindTheLoai(name);
         }
-        // Thêm thể loại mới
+
         public bool AddTheLoai(string name)
         {
-            return DALTheLoai.Instance.AddTheLoai(name);
+            if (!DALTheLoai.Instance.AddTheLoai(name))
+            {
+                MessageBox.Show("Thêm thể loại không thành công");
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("Thêm thành công");
+                return true;
+            }
         }
-        // Cập nhật tên thể loại
+
         public bool UpdTheLoai(int id, string name)
         {
-            return DALTheLoai.Instance.UpdTheLoai(id, name);
+            if (!DALTheLoai.Instance.UpdTheLoai(id, name))
+            {
+                MessageBox.Show("Cập nhật thông tin thể loại không thành công");
+                return false;
+            }
+            return true;
         }
-        //Xóa thể loại
+
         public bool DelTheLoai(int id)
         {
-            return DALTheLoai.Instance.DelTheLoai(id);
+            if (!DALTheLoai.Instance.DelTheLoai(id))
+            {
+                MessageBox.Show("Xoá thể loại không thành công");
+                return false;
+            }
+            return true;
         }
     }
 }

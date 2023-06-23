@@ -54,8 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALBCLuotMuonTheoTheLoai.cs" />
+    <Compile Include="DALBCSachTraTre.cs" />
+    <Compile Include="DALChucNang.cs" />
+    <Compile Include="DALCTPhieuNhap.cs" />
+    <Compile Include="DALCT_BCLuotMuonTheoTheLoai.cs" />
+    <Compile Include="DALCuonSach.cs" />
+    <Compile Include="DALDocGia.cs" />
+    <Compile Include="DALLoaiDocGia.cs" />
+    <Compile Include="DALNguoiDung.cs" />
+    <Compile Include="DALNhomNguoiDung.cs" />
+    <Compile Include="DALPhieuMuonTra.cs" />
+    <Compile Include="DALPhieuNhapSach.cs" />
+    <Compile Include="DALPhieuThu.cs" />
+    <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />
+    <Compile Include="DALThamSo.cs" />
     <Compile Include="DALTheLoai.cs" />
+    <Compile Include="DALTuaSach.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,7 +83,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\DAL.dll.config" />
+    <None Include="bin\Debug\DTO.dll.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DAL.dll" />
+    <Content Include="bin\Debug\DAL.pdb" />
+    <Content Include="bin\Debug\DTO.dll" />
+    <Content Include="bin\Debug\DTO.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

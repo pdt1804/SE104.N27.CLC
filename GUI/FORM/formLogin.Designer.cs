@@ -72,9 +72,9 @@
             this.exit.FillColor = System.Drawing.Color.Transparent;
             this.exit.ForeColor = System.Drawing.Color.Black;
             this.exit.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.exit.Location = new System.Drawing.Point(1038, 2);
+            this.exit.Location = new System.Drawing.Point(1027, -1);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(59, 60);
+            this.exit.Size = new System.Drawing.Size(73, 60);
             this.exit.TabIndex = 2;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -86,9 +86,9 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox2.ForeColor = System.Drawing.Color.Black;
             this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(963, 3);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(953, 0);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.Size = new System.Drawing.Size(57, 60);
+            this.siticoneControlBox2.Size = new System.Drawing.Size(68, 60);
             this.siticoneControlBox2.TabIndex = 1;
             this.siticoneControlBox2.Click += new System.EventHandler(this.siticoneControlBox2_Click);
             // 
@@ -123,6 +123,11 @@
             this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLogin.ForeColor = System.Drawing.SystemColors.Window;
+            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.butLogin.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.butLogin.HoverState.FillColor = System.Drawing.Color.White;
+            this.butLogin.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.butLogin.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.butLogin.Location = new System.Drawing.Point(127, 335);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(240, 51);
@@ -133,9 +138,9 @@
             // txtUserpwd
             // 
             this.txtUserpwd.BackColor = System.Drawing.Color.Transparent;
-            this.txtUserpwd.BorderColor = System.Drawing.Color.DarkBlue;
+            this.txtUserpwd.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtUserpwd.BorderRadius = 15;
-            this.txtUserpwd.BorderThickness = 2;
+            this.txtUserpwd.BorderThickness = 3;
             this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserpwd.DefaultText = "";
             this.txtUserpwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -146,7 +151,8 @@
             this.txtUserpwd.FocusedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserpwd.ForeColor = System.Drawing.Color.MediumPurple;
-            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtUserpwd.HoverState.FillColor = System.Drawing.Color.White;
             this.txtUserpwd.Location = new System.Drawing.Point(70, 245);
             this.txtUserpwd.Name = "txtUserpwd";
             this.txtUserpwd.PasswordChar = '●';
@@ -161,9 +167,9 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
-            this.txtUsername.BorderColor = System.Drawing.Color.Navy;
+            this.txtUsername.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtUsername.BorderRadius = 15;
-            this.txtUsername.BorderThickness = 2;
+            this.txtUsername.BorderThickness = 3;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -174,7 +180,8 @@
             this.txtUsername.FocusedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.MediumPurple;
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtUsername.HoverState.FillColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(70, 159);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';

@@ -34,6 +34,7 @@
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +49,6 @@
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).BeginInit();
@@ -59,6 +59,10 @@
             // 
             this.butFind.AutoRoundedCorners = true;
             this.butFind.BorderRadius = 19;
+            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -66,6 +70,10 @@
             this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butFind.ForeColor = System.Drawing.Color.White;
+            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFind.Location = new System.Drawing.Point(1019, 30);
@@ -112,10 +120,28 @@
             this.txtFind.Size = new System.Drawing.Size(299, 41);
             this.txtFind.TabIndex = 19;
             // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(36, 15);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 67);
+            this.butRefresh.TabIndex = 9;
+            // 
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
             this.butAdd.BorderRadius = 19;
+            this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -123,6 +149,10 @@
             this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(171, 30);
@@ -306,20 +336,6 @@
             this.DocGiaGrid.ThemeStyle.RowsStyle.Height = 30;
             this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(36, 15);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 67);
-            this.butRefresh.TabIndex = 9;
             // 
             // dOCGIABindingSource
             // 

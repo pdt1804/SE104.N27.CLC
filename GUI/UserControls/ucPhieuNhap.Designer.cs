@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PhieuNhapgrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.SoPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHIEUNHAPSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtNam = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -40,14 +44,10 @@
             this.txtNgay = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.SoPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pHIEUNHAPSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapgrid)).BeginInit();
-            this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPSACHBindingSource)).BeginInit();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PhieuNhapgrid
@@ -120,6 +120,34 @@
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // SoPhieuNhap
+            // 
+            this.SoPhieuNhap.DataPropertyName = "SoPhieuNhap";
+            this.SoPhieuNhap.HeaderText = "Số phiếu nhập ";
+            this.SoPhieuNhap.MinimumWidth = 6;
+            this.SoPhieuNhap.Name = "SoPhieuNhap";
+            this.SoPhieuNhap.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            // 
+            // NgayNhap
+            // 
+            this.NgayNhap.DataPropertyName = "NgayNhap";
+            this.NgayNhap.HeaderText = "Ngày nhập ";
+            this.NgayNhap.MinimumWidth = 6;
+            this.NgayNhap.Name = "NgayNhap";
+            this.NgayNhap.ReadOnly = true;
+            // 
+            // pHIEUNHAPSACHBindingSource
+            // 
+            this.pHIEUNHAPSACHBindingSource.DataSource = typeof(DTO.PHIEUNHAPSACH);
+            // 
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.AliceBlue;
@@ -139,7 +167,13 @@
             // siticoneButton1
             // 
             this.siticoneButton1.AutoRoundedCorners = true;
+            this.siticoneButton1.BorderColor = System.Drawing.Color.Transparent;
             this.siticoneButton1.BorderRadius = 18;
+            this.siticoneButton1.BorderThickness = 2;
+            this.siticoneButton1.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.siticoneButton1.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.siticoneButton1.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.siticoneButton1.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -147,6 +181,10 @@
             this.siticoneButton1.FillColor = System.Drawing.Color.RoyalBlue;
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.siticoneButton1.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.siticoneButton1.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.siticoneButton1.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.siticoneButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton1.ImageOffset = new System.Drawing.Point(3, 0);
             this.siticoneButton1.Location = new System.Drawing.Point(651, 76);
@@ -231,7 +269,13 @@
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
+            this.butFind.BorderColor = System.Drawing.Color.Transparent;
             this.butFind.BorderRadius = 18;
+            this.butFind.BorderThickness = 2;
+            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -239,6 +283,10 @@
             this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFind.ForeColor = System.Drawing.Color.White;
+            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFind.Location = new System.Drawing.Point(651, 19);
@@ -273,34 +321,6 @@
             this.txtFind.Size = new System.Drawing.Size(297, 39);
             this.txtFind.TabIndex = 17;
             // 
-            // SoPhieuNhap
-            // 
-            this.SoPhieuNhap.DataPropertyName = "SoPhieuNhap";
-            this.SoPhieuNhap.HeaderText = "Số phiếu nhập ";
-            this.SoPhieuNhap.MinimumWidth = 6;
-            this.SoPhieuNhap.Name = "SoPhieuNhap";
-            this.SoPhieuNhap.ReadOnly = true;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            // 
-            // NgayNhap
-            // 
-            this.NgayNhap.DataPropertyName = "NgayNhap";
-            this.NgayNhap.HeaderText = "Ngày nhập ";
-            this.NgayNhap.MinimumWidth = 6;
-            this.NgayNhap.Name = "NgayNhap";
-            this.NgayNhap.ReadOnly = true;
-            // 
-            // pHIEUNHAPSACHBindingSource
-            // 
-            this.pHIEUNHAPSACHBindingSource.DataSource = typeof(DTO.PHIEUNHAPSACH);
-            // 
             // butRefresh
             // 
             this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
@@ -324,8 +344,8 @@
             this.Name = "ucPhieuNhap";
             this.Size = new System.Drawing.Size(932, 662);
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapgrid)).EndInit();
-            this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPSACHBindingSource)).EndInit();
+            this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

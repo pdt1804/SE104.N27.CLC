@@ -25,6 +25,7 @@ namespace GUI.UserControls
         {
             var f = new fChangePassword(usr.id);
             f.Show();
+            f.BringToFront();
         }
         private void init()
         {
@@ -42,5 +43,14 @@ namespace GUI.UserControls
                 listView1.Items.Add(cn.TenManHinh);
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNgaySinh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

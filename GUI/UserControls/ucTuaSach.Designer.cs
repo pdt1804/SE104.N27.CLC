@@ -40,6 +40,7 @@
             this.comboTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butAn = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TuaSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
@@ -54,7 +55,6 @@
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.tUASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuaSachGrid)).BeginInit();
@@ -81,7 +81,13 @@
             // butHien
             // 
             this.butHien.AutoRoundedCorners = true;
+            this.butHien.BorderColor = System.Drawing.Color.Transparent;
             this.butHien.BorderRadius = 20;
+            this.butHien.BorderThickness = 2;
+            this.butHien.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butHien.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butHien.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butHien.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -89,6 +95,10 @@
             this.butHien.FillColor = System.Drawing.Color.RoyalBlue;
             this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butHien.ForeColor = System.Drawing.Color.White;
+            this.butHien.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butHien.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butHien.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butHien.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
             this.butHien.Location = new System.Drawing.Point(311, 18);
@@ -101,7 +111,13 @@
             // butFil
             // 
             this.butFil.AutoRoundedCorners = true;
+            this.butFil.BorderColor = System.Drawing.Color.Transparent;
             this.butFil.BorderRadius = 17;
+            this.butFil.BorderThickness = 2;
+            this.butFil.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFil.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFil.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFil.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -109,6 +125,10 @@
             this.butFil.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFil.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFil.ForeColor = System.Drawing.Color.White;
+            this.butFil.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFil.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFil.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFil.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFil.Location = new System.Drawing.Point(804, 18);
@@ -137,7 +157,13 @@
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
+            this.butFind.BorderColor = System.Drawing.Color.Transparent;
             this.butFind.BorderRadius = 17;
+            this.butFind.BorderThickness = 2;
+            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -145,6 +171,10 @@
             this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFind.ForeColor = System.Drawing.Color.White;
+            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFind.Location = new System.Drawing.Point(804, 75);
@@ -177,10 +207,30 @@
             this.txtFind.Size = new System.Drawing.Size(227, 37);
             this.txtFind.TabIndex = 15;
             // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(15, 7);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 9;
+            // 
             // butAn
             // 
             this.butAn.AutoRoundedCorners = true;
+            this.butAn.BorderColor = System.Drawing.Color.Transparent;
             this.butAn.BorderRadius = 20;
+            this.butAn.BorderThickness = 2;
+            this.butAn.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAn.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAn.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAn.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -188,6 +238,10 @@
             this.butAn.FillColor = System.Drawing.Color.RoyalBlue;
             this.butAn.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAn.ForeColor = System.Drawing.Color.White;
+            this.butAn.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAn.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAn.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAn.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAn.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAn.Location = new System.Drawing.Point(311, 75);
@@ -200,7 +254,13 @@
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
+            this.butAdd.BorderColor = System.Drawing.Color.Transparent;
             this.butAdd.BorderRadius = 20;
+            this.butAdd.BorderThickness = 2;
+            this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -208,6 +268,10 @@
             this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(25, 75);
@@ -381,20 +445,6 @@
             this.SuccDia.Parent = null;
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(15, 7);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
-            this.butRefresh.TabIndex = 9;
             // 
             // tUASACHBindingSource
             // 

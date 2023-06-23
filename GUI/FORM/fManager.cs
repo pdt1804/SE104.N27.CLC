@@ -36,6 +36,7 @@ namespace GUI
 
             uctaikhoan = new UserControls.ucThongTinTaiKhoan(user.id);
             uctaikhoan.Dock = DockStyle.Fill;
+
             this.tabAccount.Controls.Clear();
             this.tabAccount.Controls.Add(uctaikhoan);
 
@@ -92,7 +93,7 @@ namespace GUI
                 }
                 if (cn.TenChucNang == "TDQD")
                 {
-                    ucquidinh = new UserControls.ucThayDoiQuyDinh();
+                    ucquidinh = new UserControls.ucThayDoiQuiDinh();
                     ucquidinh.Dock = DockStyle.Fill;
                     this.tabTDQD.Controls.Clear();
                     this.tabTDQD.Controls.Add(ucquidinh);
@@ -111,6 +112,8 @@ namespace GUI
             res = MessageBox.Show("Bạn có chắc muốn thoát?", "Thoát",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes) this.Close();
+            Form frm = new formLogin();
+            frm.Show();
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)

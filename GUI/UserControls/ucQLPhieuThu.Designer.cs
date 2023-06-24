@@ -44,8 +44,8 @@
             this.txtNgay = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.pHIEUTHUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PhieuThuGrid)).BeginInit();
             this.topPanel.SuspendLayout();
@@ -169,7 +169,13 @@
             // butFindNgay
             // 
             this.butFindNgay.AutoRoundedCorners = true;
+            this.butFindNgay.BorderColor = System.Drawing.Color.Transparent;
             this.butFindNgay.BorderRadius = 20;
+            this.butFindNgay.BorderThickness = 2;
+            this.butFindNgay.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFindNgay.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFindNgay.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFindNgay.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFindNgay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFindNgay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFindNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -177,6 +183,10 @@
             this.butFindNgay.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFindNgay.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFindNgay.ForeColor = System.Drawing.Color.White;
+            this.butFindNgay.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFindNgay.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFindNgay.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFindNgay.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFindNgay.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFindNgay.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFindNgay.Location = new System.Drawing.Point(728, 79);
@@ -261,7 +271,13 @@
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
+            this.butFind.BorderColor = System.Drawing.Color.Transparent;
             this.butFind.BorderRadius = 21;
+            this.butFind.BorderThickness = 2;
+            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -269,6 +285,10 @@
             this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFind.ForeColor = System.Drawing.Color.White;
+            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFind.Location = new System.Drawing.Point(728, 19);
@@ -303,26 +323,6 @@
             this.txtFind.Size = new System.Drawing.Size(317, 44);
             this.txtFind.TabIndex = 17;
             // 
-            // butAdd
-            // 
-            this.butAdd.AutoRoundedCorners = true;
-            this.butAdd.BorderRadius = 24;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(123, 48);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(151, 50);
-            this.butAdd.TabIndex = 5;
-            this.butAdd.Text = "Thêm Phiếu";
-            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            // 
             // butRefresh
             // 
             this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
@@ -336,6 +336,36 @@
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(62, 56);
             this.butRefresh.TabIndex = 9;
+            // 
+            // butAdd
+            // 
+            this.butAdd.AutoRoundedCorners = true;
+            this.butAdd.BorderColor = System.Drawing.Color.Transparent;
+            this.butAdd.BorderRadius = 24;
+            this.butAdd.BorderThickness = 2;
+            this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(123, 48);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(151, 50);
+            this.butAdd.TabIndex = 5;
+            this.butAdd.Text = "Thêm Phiếu";
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // pHIEUTHUBindingSource
             // 

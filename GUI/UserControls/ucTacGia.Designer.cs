@@ -33,17 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TacGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mATACGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).BeginInit();
-            this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
+            this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TacGiaGrid
@@ -116,62 +116,6 @@
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TacGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // siticonePanel1
-            // 
-            this.siticonePanel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.siticonePanel1.Controls.Add(this.butRefresh);
-            this.siticonePanel1.Controls.Add(this.txtHoTen);
-            this.siticonePanel1.Controls.Add(this.butAdd);
-            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(1037, 90);
-            this.siticonePanel1.TabIndex = 4;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.BorderColor = System.Drawing.Color.Gray;
-            this.txtHoTen.BorderRadius = 15;
-            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoTen.DefaultText = "";
-            this.txtHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(144, 24);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(5);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.PasswordChar = '\0';
-            this.txtHoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtHoTen.PlaceholderText = "Họ Tên Tác Giả";
-            this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(294, 42);
-            this.txtHoTen.TabIndex = 7;
-            // 
-            // butAdd
-            // 
-            this.butAdd.BorderRadius = 15;
-            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAdd.ForeColor = System.Drawing.Color.White;
-            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(519, 23);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(207, 43);
-            this.butAdd.TabIndex = 6;
-            this.butAdd.Text = "Thêm Tác Giả";
-            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            // 
             // id
             // 
             this.id.DataPropertyName = "id";
@@ -201,6 +145,19 @@
             // 
             this.tACGIABindingSource.DataSource = typeof(DTO.TACGIA);
             // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.siticonePanel1.Controls.Add(this.butRefresh);
+            this.siticonePanel1.Controls.Add(this.txtHoTen);
+            this.siticonePanel1.Controls.Add(this.butAdd);
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Size = new System.Drawing.Size(1037, 90);
+            this.siticonePanel1.TabIndex = 4;
+            // 
             // butRefresh
             // 
             this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
@@ -214,6 +171,61 @@
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(58, 58);
             this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.BorderColor = System.Drawing.Color.Gray;
+            this.txtHoTen.BorderRadius = 15;
+            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoTen.DefaultText = "";
+            this.txtHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoTen.Location = new System.Drawing.Point(144, 24);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(5);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.PasswordChar = '\0';
+            this.txtHoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtHoTen.PlaceholderText = "Họ Tên Tác Giả";
+            this.txtHoTen.SelectedText = "";
+            this.txtHoTen.Size = new System.Drawing.Size(294, 42);
+            this.txtHoTen.TabIndex = 7;
+            // 
+            // butAdd
+            // 
+            this.butAdd.BorderColor = System.Drawing.Color.Transparent;
+            this.butAdd.BorderRadius = 15;
+            this.butAdd.BorderThickness = 2;
+            this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
+            this.butAdd.Location = new System.Drawing.Point(519, 23);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Name = "butAdd";
+            this.butAdd.Size = new System.Drawing.Size(207, 43);
+            this.butAdd.TabIndex = 6;
+            this.butAdd.Text = "Thêm Tác Giả";
+            this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // ucTacGia
             // 
@@ -225,8 +237,8 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(1037, 660);
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).EndInit();
-            this.siticonePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
+            this.siticonePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

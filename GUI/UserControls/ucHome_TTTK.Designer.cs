@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTenDangNhap = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.SoPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,18 +66,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PhieuMuonGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.siticonePanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).BeginInit();
             this.siticonePanel2.SuspendLayout();
-            this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTenDangNhap
@@ -103,6 +103,17 @@
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Size = new System.Drawing.Size(1328, 54);
             this.siticonePanel3.TabIndex = 12;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.book__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(453, -14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(63, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // label12
             // 
@@ -299,7 +310,13 @@
             // butChange
             // 
             this.butChange.BackColor = System.Drawing.Color.Transparent;
+            this.butChange.BorderColor = System.Drawing.Color.Transparent;
             this.butChange.BorderRadius = 20;
+            this.butChange.BorderThickness = 2;
+            this.butChange.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butChange.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butChange.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butChange.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -308,7 +325,10 @@
             this.butChange.FillColor = System.Drawing.Color.RoyalBlue;
             this.butChange.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
             this.butChange.ForeColor = System.Drawing.Color.White;
-            this.butChange.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butChange.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butChange.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butChange.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butChange.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butChange.Location = new System.Drawing.Point(1136, 0);
             this.butChange.Name = "butChange";
             this.butChange.Size = new System.Drawing.Size(167, 51);
@@ -551,6 +571,16 @@
             this.siticonePanel2.Size = new System.Drawing.Size(1328, 51);
             this.siticonePanel2.TabIndex = 11;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.employee;
+            this.pictureBox2.Location = new System.Drawing.Point(31, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // siticonePanel1
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.AliceBlue;
@@ -563,16 +593,6 @@
             this.siticonePanel1.Size = new System.Drawing.Size(1328, 61);
             this.siticonePanel1.TabIndex = 9;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GUI.Properties.Resources.employee;
-            this.pictureBox2.Location = new System.Drawing.Point(31, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.resume;
@@ -582,17 +602,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::GUI.Properties.Resources.book__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(453, -14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(63, 56);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // ucHome_TTTK
             // 
@@ -607,16 +616,16 @@
             this.Size = new System.Drawing.Size(1328, 709);
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableInfo.ResumeLayout(false);
             this.tableInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,4 @@
-﻿namespace GUI.FORM
+﻿namespace GUI
 {
     partial class fEditTacGia
     {
@@ -34,13 +34,13 @@
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.labelMa = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,11 +105,27 @@
             this.siticonePanel1.Size = new System.Drawing.Size(402, 401);
             this.siticonePanel1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.writer;
+            this.pictureBox1.Location = new System.Drawing.Point(63, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // butOK
             // 
             this.butOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.butOK.BorderColor = System.Drawing.Color.Transparent;
             this.butOK.BorderRadius = 15;
+            this.butOK.BorderThickness = 2;
+            this.butOK.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butOK.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butOK.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butOK.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -117,12 +133,17 @@
             this.butOK.FillColor = System.Drawing.Color.RoyalBlue;
             this.butOK.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
+            this.butOK.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butOK.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butOK.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butOK.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butOK.Location = new System.Drawing.Point(135, 312);
             this.butOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(137, 48);
             this.butOK.TabIndex = 6;
             this.butOK.Text = "Lưu";
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // labelMa
             // 
@@ -191,16 +212,6 @@
             this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.writer;
-            this.pictureBox1.Location = new System.Drawing.Point(63, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // fEditTacGia
             // 

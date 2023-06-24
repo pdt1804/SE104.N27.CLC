@@ -224,6 +224,12 @@
     <Compile Include="FORM\fPhieuThu.Designer.cs">
       <DependentUpon>fPhieuThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fQMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fQMK.Designer.cs">
+      <DependentUpon>fQMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\ucBanAccess.cs">
@@ -442,6 +448,9 @@
     <EmbeddedResource Include="FORM\fPhieuThu.resx">
       <DependentUpon>fPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fQMK.resx">
+      <DependentUpon>fQMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -539,6 +548,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{9fdf541a-1a17-486b-8b57-15d9aead3849}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{B80EFBFF-FD54-44AE-A667-F291C779D98E}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{12282328-bd74-4368-8637-16335f4ddbb5}</Project>
@@ -640,6 +653,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\features.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +14,41 @@ namespace GUI.UserControls
 {
     public partial class ucThongTinTaiKhoan : UserControl
     {
-        public ucThongTinTaiKhoan()
+        private NGUOIDUNG usr;
+        public ucThongTinTaiKhoan(int id)
         {
             InitializeComponent();
+            usr = BUSNguoiDung.Instance.GetNguoiDungById(id);
+            init();
+        }
+        private void butChangePass_Click(object sender, EventArgs e)
+        {
+            var f = new fChangePassword(usr.id);
+            f.Show();
+            f.BringToFront();
+        }
+        private void init()
+        {
+
+            labelName.Text = usr.TenNguoiDung;
+            labelRole.Text = usr.NHOMNGUOIDUNG.TenNhomNguoiDung;
+            if (usr.ChucVu != null)
+                labelChucVu.Text += " " + usr.ChucVu;
+            if (usr.NgaySinh != null)
+                labelNgaySinh.Text += " " + ((DateTime)usr.NgaySinh).ToShortDateString();
+            labelMaND.Text += usr.MaNguoiDung;
+            labelUsrName.Text += usr.TenDangNhap;
+            listView1.Clear();
+            foreach (CHUCNANG cn in usr.NHOMNGUOIDUNG.CHUCNANGs)
+                listView1.Items.Add(cn.TenManHinh);
         }
 
-        private void botTableLayout_Paint(object sender, PaintEventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNgaySinh_Click(object sender, EventArgs e)
         {
 
         }

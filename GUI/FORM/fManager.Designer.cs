@@ -77,7 +77,7 @@ namespace GUI
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.White;
-            this.customPanel1.BorderRadius = 50;
+            this.customPanel1.BorderRadius = 65;
             this.customPanel1.Controls.Add(this.pictureBox1);
             this.customPanel1.Controls.Add(this.label2);
             this.customPanel1.Controls.Add(this.tabControl);
@@ -135,7 +135,7 @@ namespace GUI
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(0, 0);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1942, 1100);
+            this.tabControl.Size = new System.Drawing.Size(2045, 1024);
             this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.Lavender;
             this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -158,7 +158,6 @@ namespace GUI
             this.tabControl.TabButtonTextOffset = new System.Drawing.Point(10, 0);
             this.tabControl.TabIndex = 4;
             this.tabControl.TabMenuBackColor = System.Drawing.Color.RoyalBlue;
-            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabAccount
             // 
@@ -168,7 +167,7 @@ namespace GUI
             this.tabAccount.Location = new System.Drawing.Point(264, 4);
             this.tabAccount.Margin = new System.Windows.Forms.Padding(0);
             this.tabAccount.Name = "tabAccount";
-            this.tabAccount.Size = new System.Drawing.Size(1674, 1092);
+            this.tabAccount.Size = new System.Drawing.Size(1777, 1016);
             this.tabAccount.TabIndex = 0;
             this.tabAccount.Text = "Tài khoản";
             // 
@@ -180,7 +179,7 @@ namespace GUI
             this.tabQLDG.Location = new System.Drawing.Point(264, 4);
             this.tabQLDG.Margin = new System.Windows.Forms.Padding(0);
             this.tabQLDG.Name = "tabQLDG";
-            this.tabQLDG.Size = new System.Drawing.Size(1674, 1092);
+            this.tabQLDG.Size = new System.Drawing.Size(1777, 1016);
             this.tabQLDG.TabIndex = 1;
             this.tabQLDG.Text = "Độc giả";
             this.tabQLDG.Click += new System.EventHandler(this.tabQLDG_Click);
@@ -193,7 +192,7 @@ namespace GUI
             this.tabQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabQLS.Name = "tabQLS";
             this.tabQLS.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLS.Size = new System.Drawing.Size(1674, 1092);
+            this.tabQLS.Size = new System.Drawing.Size(1777, 1016);
             this.tabQLS.TabIndex = 2;
             this.tabQLS.Text = "Sách";
             // 
@@ -205,7 +204,7 @@ namespace GUI
             this.tabQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabQLMT.Name = "tabQLMT";
             this.tabQLMT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLMT.Size = new System.Drawing.Size(1674, 1092);
+            this.tabQLMT.Size = new System.Drawing.Size(1777, 1016);
             this.tabQLMT.TabIndex = 3;
             this.tabQLMT.Text = "Phiếu mượn trả";
             // 
@@ -217,7 +216,7 @@ namespace GUI
             this.tabQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabQLPT.Name = "tabQLPT";
             this.tabQLPT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLPT.Size = new System.Drawing.Size(1674, 1092);
+            this.tabQLPT.Size = new System.Drawing.Size(1777, 1016);
             this.tabQLPT.TabIndex = 4;
             this.tabQLPT.Text = "Phiếu thu";
             // 
@@ -229,7 +228,7 @@ namespace GUI
             this.tabBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabBC.Name = "tabBC";
             this.tabBC.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabBC.Size = new System.Drawing.Size(1674, 1092);
+            this.tabBC.Size = new System.Drawing.Size(1777, 1016);
             this.tabBC.TabIndex = 5;
             this.tabBC.Text = "Báo cáo thống kê";
             // 
@@ -241,7 +240,7 @@ namespace GUI
             this.tabQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabQLND.Name = "tabQLND";
             this.tabQLND.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLND.Size = new System.Drawing.Size(1674, 1092);
+            this.tabQLND.Size = new System.Drawing.Size(1777, 1016);
             this.tabQLND.TabIndex = 6;
             this.tabQLND.Text = "Người dùng";
             // 
@@ -253,7 +252,7 @@ namespace GUI
             this.tabTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabTDQD.Name = "tabTDQD";
             this.tabTDQD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabTDQD.Size = new System.Drawing.Size(1674, 1092);
+            this.tabTDQD.Size = new System.Drawing.Size(1777, 1016);
             this.tabTDQD.TabIndex = 7;
             this.tabTDQD.Text = "Thay đổi quy định";
             // 
@@ -265,10 +264,10 @@ namespace GUI
             this.exitControlBox.FillColor = System.Drawing.Color.Transparent;
             this.exitControlBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.exitControlBox.IconColor = System.Drawing.Color.White;
-            this.exitControlBox.Location = new System.Drawing.Point(1849, 2);
+            this.exitControlBox.Location = new System.Drawing.Point(1845, 5);
             this.exitControlBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.exitControlBox.Name = "exitControlBox";
-            this.exitControlBox.Size = new System.Drawing.Size(61, 63);
+            this.exitControlBox.Size = new System.Drawing.Size(60, 63);
             this.exitControlBox.TabIndex = 0;
             this.exitControlBox.Click += new System.EventHandler(this.exitControlBox_Click);
             // 
@@ -280,10 +279,10 @@ namespace GUI
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(1777, 2);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(1774, 4);
             this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(73, 63);
+            this.siticoneControlBox1.Size = new System.Drawing.Size(72, 63);
             this.siticoneControlBox1.TabIndex = 0;
             // 
             // fManager
@@ -295,6 +294,7 @@ namespace GUI
             this.Controls.Add(this.customPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
@@ -326,12 +326,13 @@ namespace GUI
         private CustomPanel customPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         //private static ucBanAccess ucBan;
-        //private static ucQLDG ucqldg;
-        //private static ucQLSach ucqlsach;
-        //private static ucQLPhieuMuon ucphieumuontra;
-        //private static ucQLPhieuThu ucphieuthu;
-        //private static ucBCTK ucbaocao;
-        //private static ucThongTinTaiKhoan uctaikhoan;
-        //private static ucThayDoiQuiDinh ucquidinh;
+        private static ucQLDG ucqldg;
+        private static ucQLSach ucqlsach;
+        private static ucQLPhieuMuon ucphieumuontra;
+        private static ucQLPhieuThu ucphieuthu;
+        private static ucBCTK ucbaocao;
+        private static ucQLND ucnguoidung;
+        private static ucThongTinTaiKhoan uctaikhoan;
+        private static ucThayDoiQuiDinh ucquidinh;
     }
 }

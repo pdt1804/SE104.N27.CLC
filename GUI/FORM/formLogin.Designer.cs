@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneDragControl2 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
@@ -42,6 +43,7 @@
             this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.customPictureBox1 = new GUI.CustomPictureBox();
             this.customPanel1 = new GUI.CustomPanel();
+            this.QMK = new System.Windows.Forms.Label();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
@@ -72,9 +74,9 @@
             this.exit.FillColor = System.Drawing.Color.Transparent;
             this.exit.ForeColor = System.Drawing.Color.Black;
             this.exit.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.exit.Location = new System.Drawing.Point(1038, 2);
+            this.exit.Location = new System.Drawing.Point(1027, -1);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(59, 60);
+            this.exit.Size = new System.Drawing.Size(73, 60);
             this.exit.TabIndex = 2;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -86,17 +88,17 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox2.ForeColor = System.Drawing.Color.Black;
             this.siticoneControlBox2.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(963, 3);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(953, 0);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.Size = new System.Drawing.Size(57, 60);
+            this.siticoneControlBox2.Size = new System.Drawing.Size(68, 60);
             this.siticoneControlBox2.TabIndex = 1;
-            this.siticoneControlBox2.Click += new System.EventHandler(this.siticoneControlBox2_Click);
             // 
             // siticoneCustomGradientPanel1
             // 
             this.siticoneCustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneCustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.siticoneCustomGradientPanel1.BorderRadius = 90;
+            this.siticoneCustomGradientPanel1.Controls.Add(this.QMK);
             this.siticoneCustomGradientPanel1.Controls.Add(this.butLogin);
             this.siticoneCustomGradientPanel1.Controls.Add(this.txtUserpwd);
             this.siticoneCustomGradientPanel1.Controls.Add(this.txtUsername);
@@ -123,6 +125,11 @@
             this.butLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLogin.ForeColor = System.Drawing.SystemColors.Window;
+            this.butLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.butLogin.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.butLogin.HoverState.FillColor = System.Drawing.Color.White;
+            this.butLogin.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.butLogin.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.butLogin.Location = new System.Drawing.Point(127, 335);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(240, 51);
@@ -133,9 +140,9 @@
             // txtUserpwd
             // 
             this.txtUserpwd.BackColor = System.Drawing.Color.Transparent;
-            this.txtUserpwd.BorderColor = System.Drawing.Color.DarkBlue;
+            this.txtUserpwd.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtUserpwd.BorderRadius = 15;
-            this.txtUserpwd.BorderThickness = 2;
+            this.txtUserpwd.BorderThickness = 3;
             this.txtUserpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserpwd.DefaultText = "";
             this.txtUserpwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -146,7 +153,8 @@
             this.txtUserpwd.FocusedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.txtUserpwd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserpwd.ForeColor = System.Drawing.Color.MediumPurple;
-            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtUserpwd.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtUserpwd.HoverState.FillColor = System.Drawing.Color.White;
             this.txtUserpwd.Location = new System.Drawing.Point(70, 245);
             this.txtUserpwd.Name = "txtUserpwd";
             this.txtUserpwd.PasswordChar = '●';
@@ -156,14 +164,13 @@
             this.txtUserpwd.Size = new System.Drawing.Size(361, 50);
             this.txtUserpwd.TabIndex = 1;
             this.txtUserpwd.UseSystemPasswordChar = true;
-            this.txtUserpwd.TextChanged += new System.EventHandler(this.txtUserpwd_TextChanged);
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
-            this.txtUsername.BorderColor = System.Drawing.Color.Navy;
+            this.txtUsername.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtUsername.BorderRadius = 15;
-            this.txtUsername.BorderThickness = 2;
+            this.txtUsername.BorderThickness = 3;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -174,7 +181,8 @@
             this.txtUsername.FocusedState.ForeColor = System.Drawing.Color.SlateBlue;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.MediumPurple;
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtUsername.HoverState.FillColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(70, 159);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -183,7 +191,6 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(361, 50);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label1
             // 
@@ -196,7 +203,6 @@
             this.label1.Size = new System.Drawing.Size(247, 59);
             this.label1.TabIndex = 3;
             this.label1.Text = "Đăng Nhập";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // siticonePictureBox1
             // 
@@ -240,6 +246,18 @@
             this.customPanel1.Size = new System.Drawing.Size(473, 431);
             this.customPanel1.TabIndex = 12;
             // 
+            // QMK
+            // 
+            this.QMK.AutoSize = true;
+            this.QMK.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.QMK.ForeColor = System.Drawing.Color.White;
+            this.QMK.Location = new System.Drawing.Point(317, 298);
+            this.QMK.Name = "QMK";
+            this.QMK.Size = new System.Drawing.Size(114, 20);
+            this.QMK.TabIndex = 12;
+            this.QMK.Text = "Quên mật khẩu";
+            this.QMK.Click += new System.EventHandler(this.QMK_Click);
+            // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,6 +270,7 @@
             this.Controls.Add(this.siticoneControlBox2);
             this.Controls.Add(this.siticonePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLogin";
@@ -278,5 +297,6 @@
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
         private CustomPanel customPanel1;
+        private System.Windows.Forms.Label QMK;
     }
 }

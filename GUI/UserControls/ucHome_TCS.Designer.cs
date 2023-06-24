@@ -44,9 +44,9 @@
             this.butFilTT = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.comboTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.butFilTL = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -209,7 +209,13 @@
             // butFilTT
             // 
             this.butFilTT.AutoRoundedCorners = true;
+            this.butFilTT.BorderColor = System.Drawing.Color.Transparent;
             this.butFilTT.BorderRadius = 21;
+            this.butFilTT.BorderThickness = 2;
+            this.butFilTT.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFilTT.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFilTT.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFilTT.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFilTT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFilTT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFilTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -217,6 +223,10 @@
             this.butFilTT.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFilTT.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFilTT.ForeColor = System.Drawing.Color.White;
+            this.butFilTT.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFilTT.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFilTT.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFilTT.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFilTT.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFilTT.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFilTT.Location = new System.Drawing.Point(934, 82);
@@ -247,7 +257,13 @@
             // butFilTL
             // 
             this.butFilTL.AutoRoundedCorners = true;
+            this.butFilTL.BorderColor = System.Drawing.Color.Transparent;
             this.butFilTL.BorderRadius = 21;
+            this.butFilTL.BorderThickness = 2;
+            this.butFilTL.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFilTL.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butFilTL.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butFilTL.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butFilTL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butFilTL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butFilTL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -255,6 +271,10 @@
             this.butFilTL.FillColor = System.Drawing.Color.RoyalBlue;
             this.butFilTL.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFilTL.ForeColor = System.Drawing.Color.White;
+            this.butFilTL.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFilTL.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butFilTL.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butFilTL.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFilTL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFilTL.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFilTL.Location = new System.Drawing.Point(934, 18);
@@ -264,10 +284,30 @@
             this.butFilTL.Text = "Lọc thể loại";
             this.butFilTL.TextOffset = new System.Drawing.Point(3, 0);
             // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(17, 39);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.TabIndex = 8;
+            // 
             // butMaSach
             // 
             this.butMaSach.AutoRoundedCorners = true;
+            this.butMaSach.BorderColor = System.Drawing.Color.Transparent;
             this.butMaSach.BorderRadius = 19;
+            this.butMaSach.BorderThickness = 2;
+            this.butMaSach.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butMaSach.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butMaSach.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butMaSach.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -275,6 +315,10 @@
             this.butMaSach.FillColor = System.Drawing.Color.RoyalBlue;
             this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butMaSach.ForeColor = System.Drawing.Color.White;
+            this.butMaSach.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butMaSach.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butMaSach.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butMaSach.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
             this.butMaSach.Location = new System.Drawing.Point(405, 47);
@@ -308,20 +352,6 @@
             this.txtMaSach.SelectedText = "";
             this.txtMaSach.Size = new System.Drawing.Size(265, 40);
             this.txtMaSach.TabIndex = 13;
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(17, 39);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
-            this.butRefresh.TabIndex = 8;
             // 
             // ucHome_TCS
             // 

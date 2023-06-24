@@ -49,6 +49,8 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneControlBox3 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox4 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.txtEmail = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +72,7 @@
             this.butReset.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butReset.ForeColor = System.Drawing.Color.White;
             this.butReset.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butReset.Location = new System.Drawing.Point(250, 457);
+            this.butReset.Location = new System.Drawing.Point(250, 513);
             this.butReset.Name = "butReset";
             this.butReset.Size = new System.Drawing.Size(185, 44);
             this.butReset.TabIndex = 51;
@@ -82,7 +84,7 @@
             this.labelNhomNND.BackColor = System.Drawing.Color.Transparent;
             this.labelNhomNND.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNhomNND.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelNhomNND.Location = new System.Drawing.Point(135, 272);
+            this.labelNhomNND.Location = new System.Drawing.Point(134, 272);
             this.labelNhomNND.Name = "labelNhomNND";
             this.labelNhomNND.Size = new System.Drawing.Size(165, 24);
             this.labelNhomNND.TabIndex = 31;
@@ -106,7 +108,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label5.Location = new System.Drawing.Point(134, 324);
+            this.label5.Location = new System.Drawing.Point(134, 407);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 22);
             this.label5.TabIndex = 47;
@@ -123,7 +125,7 @@
             this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSave.ForeColor = System.Drawing.Color.White;
             this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butSave.Location = new System.Drawing.Point(250, 547);
+            this.butSave.Location = new System.Drawing.Point(250, 582);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(185, 44);
             this.butSave.TabIndex = 4;
@@ -193,7 +195,7 @@
             this.txtChucVu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtChucVu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChucVu.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtChucVu.Location = new System.Drawing.Point(139, 355);
+            this.txtChucVu.Location = new System.Drawing.Point(135, 432);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.PasswordChar = '\0';
             this.txtChucVu.PlaceholderText = "";
@@ -261,6 +263,8 @@
             this.siticonePanel1.BorderColor = System.Drawing.Color.RoyalBlue;
             this.siticonePanel1.BorderRadius = 50;
             this.siticonePanel1.BorderThickness = 2;
+            this.siticonePanel1.Controls.Add(this.label6);
+            this.siticonePanel1.Controls.Add(this.txtEmail);
             this.siticonePanel1.Controls.Add(this.butReset);
             this.siticonePanel1.Controls.Add(this.labelNhomNND);
             this.siticonePanel1.Controls.Add(this.label3);
@@ -320,6 +324,38 @@
             this.siticoneControlBox4.Size = new System.Drawing.Size(59, 52);
             this.siticoneControlBox4.TabIndex = 0;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderRadius = 15;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.txtEmail.Location = new System.Drawing.Point(135, 352);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(427, 40);
+            this.txtEmail.TabIndex = 52;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label6.Location = new System.Drawing.Point(134, 327);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 22);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Email";
+            // 
             // fEditNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,7 +369,6 @@
             this.Name = "fEditNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEditNguoiDung";
-            this.Load += new System.EventHandler(this.fEditNguoiDung_Load);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
@@ -363,5 +398,7 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox3;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox4;
+        private System.Windows.Forms.Label label6;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtEmail;
     }
 }

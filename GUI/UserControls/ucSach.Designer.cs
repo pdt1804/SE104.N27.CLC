@@ -261,7 +261,13 @@
             // butHien
             // 
             this.butHien.AutoRoundedCorners = true;
+            this.butHien.BorderColor = System.Drawing.Color.Transparent;
             this.butHien.BorderRadius = 20;
+            this.butHien.BorderThickness = 2;
+            this.butHien.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butHien.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butHien.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butHien.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -269,6 +275,10 @@
             this.butHien.FillColor = System.Drawing.Color.RoyalBlue;
             this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butHien.ForeColor = System.Drawing.Color.White;
+            this.butHien.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butHien.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butHien.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butHien.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
             this.butHien.Location = new System.Drawing.Point(496, 24);
@@ -294,12 +304,17 @@
             this.comboTinhTrang.Name = "comboTinhTrang";
             this.comboTinhTrang.Size = new System.Drawing.Size(250, 36);
             this.comboTinhTrang.TabIndex = 15;
-            this.comboTinhTrang.SelectedIndexChanged += new System.EventHandler(this.comboTinhTrang_SelectedIndexChanged);
             // 
             // butTenSach
             // 
             this.butTenSach.AutoRoundedCorners = true;
+            this.butTenSach.BorderColor = System.Drawing.Color.Transparent;
             this.butTenSach.BorderRadius = 20;
+            this.butTenSach.BorderThickness = 2;
+            this.butTenSach.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butTenSach.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butTenSach.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butTenSach.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butTenSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butTenSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -307,6 +322,10 @@
             this.butTenSach.FillColor = System.Drawing.Color.RoyalBlue;
             this.butTenSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butTenSach.ForeColor = System.Drawing.Color.White;
+            this.butTenSach.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butTenSach.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butTenSach.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butTenSach.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
             this.butTenSach.Location = new System.Drawing.Point(1043, 24);
@@ -319,7 +338,13 @@
             // butMaSach
             // 
             this.butMaSach.AutoRoundedCorners = true;
+            this.butMaSach.BorderColor = System.Drawing.Color.Transparent;
             this.butMaSach.BorderRadius = 20;
+            this.butMaSach.BorderThickness = 2;
+            this.butMaSach.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butMaSach.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butMaSach.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butMaSach.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -327,6 +352,10 @@
             this.butMaSach.FillColor = System.Drawing.Color.RoyalBlue;
             this.butMaSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butMaSach.ForeColor = System.Drawing.Color.White;
+            this.butMaSach.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butMaSach.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butMaSach.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butMaSach.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
             this.butMaSach.Location = new System.Drawing.Point(1043, 95);
@@ -339,7 +368,13 @@
             // butDel
             // 
             this.butDel.AutoRoundedCorners = true;
+            this.butDel.BorderColor = System.Drawing.Color.Transparent;
             this.butDel.BorderRadius = 20;
+            this.butDel.BorderThickness = 2;
+            this.butDel.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butDel.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butDel.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butDel.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -347,6 +382,10 @@
             this.butDel.FillColor = System.Drawing.Color.RoyalBlue;
             this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butDel.ForeColor = System.Drawing.Color.White;
+            this.butDel.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butDel.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butDel.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butDel.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
             this.butDel.Location = new System.Drawing.Point(496, 95);
@@ -359,7 +398,13 @@
             // butAddOld
             // 
             this.butAddOld.AutoRoundedCorners = true;
+            this.butAddOld.BorderColor = System.Drawing.Color.Transparent;
             this.butAddOld.BorderRadius = 20;
+            this.butAddOld.BorderThickness = 2;
+            this.butAddOld.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAddOld.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAddOld.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAddOld.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butAddOld.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAddOld.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAddOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -367,6 +412,10 @@
             this.butAddOld.FillColor = System.Drawing.Color.RoyalBlue;
             this.butAddOld.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butAddOld.ForeColor = System.Drawing.Color.White;
+            this.butAddOld.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAddOld.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAddOld.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAddOld.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAddOld.Location = new System.Drawing.Point(158, 24);
@@ -379,7 +428,13 @@
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
+            this.butAdd.BorderColor = System.Drawing.Color.Transparent;
             this.butAdd.BorderRadius = 20;
+            this.butAdd.BorderThickness = 2;
+            this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.butAdd.CheckedState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -387,6 +442,10 @@
             this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold);
             this.butAdd.ForeColor = System.Drawing.Color.White;
+            this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.butAdd.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(158, 95);

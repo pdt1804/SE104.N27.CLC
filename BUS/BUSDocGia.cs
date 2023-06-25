@@ -58,26 +58,27 @@ namespace BUS
             catch
             { return null; }
         }
-        public string AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi,
+        public bool AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi,
             DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai, int idND)
         {
-            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
-            int gap = ngayLapThe.Year - ngaySinh.Year;
-            if (ngayLapThe.Month < ngaySinh.Month || (ngayLapThe.Month == ngaySinh.Month && ngayLapThe.Day < ngaySinh.Day))
-                gap -= 1;
+            //THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            //int gap = ngayLapThe.Year - ngaySinh.Year;
+            //if (ngayLapThe.Month < ngaySinh.Month || (ngayLapThe.Month == ngaySinh.Month && ngayLapThe.Day < ngaySinh.Day))
+            //    gap -= 1;
 
-            if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
-                return "Tuổi không hợp lệ!";
+            //if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
+            //    return "Tuổi không hợp lệ!";
 
-            var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLoaiDocGia);
-            if (ldg == null) return "Loai Doc Gia khong hop le";
+            //var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLoaiDocGia);
+            //if (ldg == null) return "Loai Doc Gia khong hop le";
 
-            int IdND = Convert.ToInt32(DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, tongNoHienTai, idND));
-            if (idND == -1) return "Tên đăng nhập đã tồn tại";
-            if (DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, 0, idND))
-                return "";
-            DALNguoiDung.Instance.DelNguoiDung(idND);
-            return "Lỗi khi thêm độc giả";
+            //int IdND = Convert.ToInt32(DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, tongNoHienTai, idND));
+            //if (idND == -1) return "Tên đăng nhập đã tồn tại";
+            //if (DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, 0, idND))
+            //    return "";
+            //DALNguoiDung.Instance.DelNguoiDung(idND);
+            //return "Lỗi khi thêm độc giả";
+            return DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, tongNoHienTai, idND);
         }
 
         public string UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi,

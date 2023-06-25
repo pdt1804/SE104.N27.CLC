@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.DocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoSachDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.TenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
@@ -89,6 +89,7 @@
             this.txtFind.SelectedText = "";
             this.txtFind.Size = new System.Drawing.Size(224, 33);
             this.txtFind.TabIndex = 19;
+            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
             // butRefresh
             // 
@@ -104,6 +105,7 @@
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(48, 54);
             this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // butAdd
             // 
@@ -136,6 +138,105 @@
             this.butAdd.Text = "Thêm Độc Giả";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
             this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = "Bạn có chắc chắn xoá?";
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // DocGiaGrid
+            // 
+            this.DocGiaGrid.AllowUserToAddRows = false;
+            this.DocGiaGrid.AllowUserToDeleteRows = false;
+            this.DocGiaGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DocGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DocGiaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DocGiaGrid.ColumnHeadersHeight = 35;
+            this.DocGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DocGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.isChosen,
+            this.MaDocGia,
+            this.TenDocGia,
+            this.LoaiDocGia,
+            this.SoSachDangMuon,
+            this.NgayHetHan,
+            this.TongNo,
+            this.Edit});
+            this.DocGiaGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DocGiaGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DocGiaGrid.Location = new System.Drawing.Point(0, 90);
+            this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.DocGiaGrid.Name = "DocGiaGrid";
+            this.DocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DocGiaGrid.RowHeadersVisible = false;
+            this.DocGiaGrid.RowHeadersWidth = 51;
+            this.DocGiaGrid.RowTemplate.Height = 30;
+            this.DocGiaGrid.Size = new System.Drawing.Size(925, 533);
+            this.DocGiaGrid.TabIndex = 7;
+            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DocGiaGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DocGiaGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DocGiaGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DocGiaGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DocGiaGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocGiaGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DocGiaGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DocGiaGrid.ThemeStyle.HeaderStyle.Height = 35;
+            this.DocGiaGrid.ThemeStyle.ReadOnly = false;
+            this.DocGiaGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DocGiaGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DocGiaGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocGiaGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DocGiaGrid.ThemeStyle.RowsStyle.Height = 30;
+            this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
             // 
             // Edit
             // 
@@ -178,6 +279,14 @@
             this.LoaiDocGia.ReadOnly = true;
             this.LoaiDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // TenDocGia
+            // 
+            this.TenDocGia.HeaderText = "Tên độc giả";
+            this.TenDocGia.MinimumWidth = 6;
+            this.TenDocGia.Name = "TenDocGia";
+            this.TenDocGia.ReadOnly = true;
+            this.TenDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // MaDocGia
             // 
             this.MaDocGia.HeaderText = "Mã độc giả";
@@ -208,113 +317,6 @@
             this.id.Name = "id";
             this.id.Visible = false;
             // 
-            // AskDia
-            // 
-            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
-            this.AskDia.Caption = null;
-            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
-            this.AskDia.Parent = null;
-            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.AskDia.Text = "Bạn có chắc chắn xoá?";
-            // 
-            // ErrorDia
-            // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
-            // 
-            // TenDocGia
-            // 
-            this.TenDocGia.HeaderText = "Tên độc giả";
-            this.TenDocGia.MinimumWidth = 6;
-            this.TenDocGia.Name = "TenDocGia";
-            this.TenDocGia.ReadOnly = true;
-            this.TenDocGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // DocGiaGrid
-            // 
-            this.DocGiaGrid.AllowUserToAddRows = false;
-            this.DocGiaGrid.AllowUserToDeleteRows = false;
-            this.DocGiaGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DocGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DocGiaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DocGiaGrid.ColumnHeadersHeight = 35;
-            this.DocGiaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DocGiaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.isChosen,
-            this.MaDocGia,
-            this.TenDocGia,
-            this.LoaiDocGia,
-            this.SoSachDangMuon,
-            this.NgayHetHan,
-            this.TongNo,
-            this.Edit});
-            this.DocGiaGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DocGiaGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DocGiaGrid.Location = new System.Drawing.Point(0, 90);
-            this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(2);
-            this.DocGiaGrid.Name = "DocGiaGrid";
-            this.DocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DocGiaGrid.RowHeadersVisible = false;
-            this.DocGiaGrid.RowHeadersWidth = 51;
-            this.DocGiaGrid.RowTemplate.Height = 30;
-            this.DocGiaGrid.Size = new System.Drawing.Size(925, 533);
-            this.DocGiaGrid.TabIndex = 7;
-            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DocGiaGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DocGiaGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DocGiaGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DocGiaGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DocGiaGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocGiaGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DocGiaGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DocGiaGrid.ThemeStyle.HeaderStyle.Height = 35;
-            this.DocGiaGrid.ThemeStyle.ReadOnly = false;
-            this.DocGiaGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DocGiaGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DocGiaGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocGiaGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DocGiaGrid.ThemeStyle.RowsStyle.Height = 30;
-            this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // dOCGIABindingSource
-            // 
-            this.dOCGIABindingSource.DataSource = typeof(DTO.DOCGIA);
-            // 
             // ucDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,19 +338,19 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel TopPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoSachDangMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.BindingSource dOCGIABindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDocGia;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView DocGiaGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoSachDangMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongNo;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
     }
 }

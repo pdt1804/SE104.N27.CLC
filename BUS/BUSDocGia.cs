@@ -35,6 +35,16 @@ namespace BUS
         {
             return DALDocGia.Instance.FindDocGiaByIdND(idnguoidung);
         }
+        public int GetSoSachDangMuon(int id)
+        {
+            int cnt = 0;
+            DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
+            foreach (PHIEUMUONTRA pmt in dg.PHIEUMUONTRAs)
+                if (pmt.NgayTra == null)
+                    cnt++;
+            return cnt;
+        }
+
         // Lấy ra đọc giả theo số id của đọc giả
         public DOCGIA GetDocGiaById(int id)
         {

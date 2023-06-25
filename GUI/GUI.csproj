@@ -74,6 +74,12 @@
     <Compile Include="FORM\fAddDocGia.Designer.cs">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\fAddLoaiDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\fAddLoaiDG.Designer.cs">
+      <DependentUpon>fAddLoaiDG.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\fAddNhomND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     </Compile>
     <EmbeddedResource Include="FORM\fAddDocGia.resx">
       <DependentUpon>fAddDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\fAddLoaiDG.resx">
+      <DependentUpon>fAddLoaiDG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\fAddNguoiDung.resx">
       <DependentUpon>fAddNguoiDung.cs</DependentUpon>

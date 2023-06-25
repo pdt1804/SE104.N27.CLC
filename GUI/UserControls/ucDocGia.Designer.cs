@@ -58,7 +58,7 @@
             // butFind
             // 
             this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderRadius = 19;
+            this.butFind.BorderRadius = 15;
             this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
             this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
@@ -68,7 +68,7 @@
             this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.butFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
             this.butFind.ForeColor = System.Drawing.Color.White;
             this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -76,9 +76,10 @@
             this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(1019, 30);
+            this.butFind.Location = new System.Drawing.Point(764, 24);
+            this.butFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(163, 41);
+            this.butFind.Size = new System.Drawing.Size(122, 33);
             this.butFind.TabIndex = 18;
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextOffset = new System.Drawing.Point(3, 0);
@@ -92,15 +93,15 @@
             this.TopPanel.Controls.Add(this.butAdd);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1233, 107);
+            this.TopPanel.Size = new System.Drawing.Size(925, 87);
             this.TopPanel.TabIndex = 6;
             // 
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 19;
+            this.txtFind.BorderRadius = 15;
             this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.DefaultText = "";
             this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -108,16 +109,16 @@
             this.txtFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFind.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFind.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
+            this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(668, 30);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFind.Location = new System.Drawing.Point(501, 24);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderText = "Mã, tên độc giả";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(299, 41);
+            this.txtFind.Size = new System.Drawing.Size(224, 33);
             this.txtFind.TabIndex = 19;
             // 
             // butRefresh
@@ -128,17 +129,18 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(36, 15);
+            this.butRefresh.Location = new System.Drawing.Point(27, 12);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 67);
+            this.butRefresh.Size = new System.Drawing.Size(48, 54);
             this.butRefresh.TabIndex = 9;
             // 
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
             this.butAdd.BorderColor = System.Drawing.Color.Transparent;
-            this.butAdd.BorderRadius = 19;
+            this.butAdd.BorderRadius = 15;
             this.butAdd.BorderThickness = 2;
             this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -149,7 +151,7 @@
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -157,13 +159,14 @@
             this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(171, 30);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Location = new System.Drawing.Point(128, 24);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(200, 41);
+            this.butAdd.Size = new System.Drawing.Size(150, 33);
             this.butAdd.TabIndex = 0;
             this.butAdd.Text = "Thêm Độc Giả";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // Edit
             // 
@@ -227,7 +230,7 @@
             this.isChosen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.isChosen.TrueValue = "1";
             this.isChosen.Visible = false;
-            this.isChosen.Width = 21;
+            this.isChosen.Width = 17;
             // 
             // id
             // 
@@ -286,7 +289,7 @@
             this.DocGiaGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -307,15 +310,15 @@
             this.DocGiaGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.DocGiaGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DocGiaGrid.Location = new System.Drawing.Point(0, 111);
-            this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DocGiaGrid.Location = new System.Drawing.Point(0, 90);
+            this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DocGiaGrid.Name = "DocGiaGrid";
             this.DocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DocGiaGrid.RowHeadersVisible = false;
             this.DocGiaGrid.RowHeadersWidth = 51;
             this.DocGiaGrid.RowTemplate.Height = 30;
-            this.DocGiaGrid.Size = new System.Drawing.Size(1233, 656);
+            this.DocGiaGrid.Size = new System.Drawing.Size(925, 533);
             this.DocGiaGrid.TabIndex = 7;
             this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DocGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -345,12 +348,13 @@
             // 
             // ucDocGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.DocGiaGrid);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucDocGia";
-            this.Size = new System.Drawing.Size(1233, 767);
+            this.Size = new System.Drawing.Size(925, 623);
             this.TopPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DocGiaGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();

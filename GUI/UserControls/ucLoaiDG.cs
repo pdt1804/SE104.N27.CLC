@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.FORM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace GUI.UserControls
         public ucLoaiDG()
         {
             InitializeComponent();
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var fAddLoaidg = new fAddLoaiDG();
+            fAddLoaidg.Show();
+            fAddLoaidg.BringToFront();
         }
     }
 }

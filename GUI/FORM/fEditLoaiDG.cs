@@ -16,5 +16,10 @@ namespace GUI.FORM
         {
             InitializeComponent();
         }
+
+        private void butOK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

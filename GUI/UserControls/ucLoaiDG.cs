@@ -26,12 +26,36 @@ namespace GUI.UserControls
             LoaiDocGiaGrid.DataSource = list;
         }
 
+        public void GetLoaiDocGiaByTenLoaiDocGia()
+        {
+            string ten = txtTenLoaiDG.Text;
+            if (String.IsNullOrEmpty(ten))
+            {
+                LoadLoaiDocGia();
+            }
+            else
+            {
+                List<LOAIDOCGIA> list = BUSLoaiDocGia.Instance.GetLoaiDocGiaByTen(ten);
+                LoaiDocGiaGrid.DataSource = list;
+            }    
+        }
+
         private void butAdd_Click(object sender, EventArgs e)
         {
             var fAddLoaidg = new fAddLoaiDG();
             fAddLoaidg.BringToFront();
             fAddLoaidg.ShowDialog();
             LoadLoaiDocGia();
+        }
+
+        private void txtTenLoaiDG_TextChanged(object sender, EventArgs e)
+        {
+            GetLoaiDocGiaByTenLoaiDocGia();
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            txtTenLoaiDG.Text = "";
         }
     }
 }

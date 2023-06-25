@@ -33,20 +33,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LoaiDocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtTenLoaiDG = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).BeginInit();
-            this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).BeginInit();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoaiDocGiaGrid
@@ -87,7 +87,7 @@
             this.LoaiDocGiaGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoaiDocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.LoaiDocGiaGrid.Location = new System.Drawing.Point(0, 78);
-            this.LoaiDocGiaGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoaiDocGiaGrid.Margin = new System.Windows.Forms.Padding(2);
             this.LoaiDocGiaGrid.Name = "LoaiDocGiaGrid";
             this.LoaiDocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.LoaiDocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -118,6 +118,37 @@
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // maLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tenLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lOAIDOCGIABindingSource
+            // 
+            this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
+            // 
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.AliceBlue;
@@ -126,11 +157,27 @@
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
             this.topPanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 16);
             this.topPanel.Size = new System.Drawing.Size(653, 78);
             this.topPanel.TabIndex = 7;
+            // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(12, 15);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(46, 45);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // txtTenLoaiDG
             // 
@@ -178,9 +225,9 @@
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(405, 23);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(154, 35);
+            this.butAdd.Size = new System.Drawing.Size(196, 35);
             this.butAdd.TabIndex = 2;
             this.butAdd.Text = "Thêm Loại Độc Giả";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
@@ -213,65 +260,18 @@
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
             // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(12, 15);
-            this.butRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(46, 45);
-            this.butRefresh.TabIndex = 9;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // maLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tenLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lOAIDOCGIABindingSource
-            // 
-            this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
-            // 
             // ucLoaiDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.LoaiDocGiaGrid);
             this.Controls.Add(this.topPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucLoaiDG";
             this.Size = new System.Drawing.Size(653, 509);
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).EndInit();
-            this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).EndInit();
+            this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

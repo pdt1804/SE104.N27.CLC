@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
@@ -55,45 +54,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // butFind
-            // 
-            this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderRadius = 15;
-            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
-            this.butFind.ForeColor = System.Drawing.Color.White;
-            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(764, 24);
-            this.butFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(122, 33);
-            this.butFind.TabIndex = 18;
-            this.butFind.Text = "Tìm kiếm";
-            this.butFind.TextOffset = new System.Drawing.Point(3, 0);
-            // 
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.AliceBlue;
-            this.TopPanel.Controls.Add(this.butFind);
             this.TopPanel.Controls.Add(this.txtFind);
             this.TopPanel.Controls.Add(this.butRefresh);
             this.TopPanel.Controls.Add(this.butAdd);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TopPanel.Margin = new System.Windows.Forms.Padding(2);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(925, 87);
             this.TopPanel.TabIndex = 6;
@@ -112,8 +81,8 @@
             this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(501, 24);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFind.Location = new System.Drawing.Point(121, 24);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(2);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderText = "Mã, tên độc giả";
@@ -130,7 +99,7 @@
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
             this.butRefresh.Location = new System.Drawing.Point(27, 12);
-            this.butRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(48, 54);
@@ -159,8 +128,8 @@
             this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(128, 24);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butAdd.Location = new System.Drawing.Point(386, 24);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(150, 33);
             this.butAdd.TabIndex = 0;
@@ -311,7 +280,7 @@
             this.DocGiaGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DocGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DocGiaGrid.Location = new System.Drawing.Point(0, 90);
-            this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DocGiaGrid.Margin = new System.Windows.Forms.Padding(2);
             this.DocGiaGrid.Name = "DocGiaGrid";
             this.DocGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DocGiaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -352,7 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.DocGiaGrid);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucDocGia";
             this.Size = new System.Drawing.Size(925, 623);
             this.TopPanel.ResumeLayout(false);
@@ -363,8 +332,6 @@
         }
 
         #endregion
-
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butFind;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private Siticone.Desktop.UI.WinForms.SiticonePanel TopPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;

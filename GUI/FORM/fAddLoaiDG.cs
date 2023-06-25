@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI.FORM
 {
@@ -26,7 +27,7 @@ namespace GUI.FORM
         {
             try
             {
-                if (DAL.DALLoaiDocGia.Instance.AddLoaiDocGia(txtTenLoai.Text.ToString()))
+                if (BUSLoaiDocGia.Instance.AddLoaiDocGia(txtTenLoai.Text.ToString()))
                 {
                     MessageBox.Show("Thêm thành công loại độc giả");
                 }

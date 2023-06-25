@@ -31,6 +31,12 @@ namespace BUS
             else return nd;
         }
 
+        public NGUOIDUNG GetNguoiDungByUsername(string username)
+        {
+            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByUsername(username);
+            return nd;
+        }
+
         public NGUOIDUNG GetNguoiDungByMa(string maNguoiDung)
         {
             NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByMa(maNguoiDung);
@@ -88,6 +94,11 @@ namespace BUS
                 MessageBox.Show("Đổi mật khẩu thành công");
                 return true;
             }    
+        }
+
+        public bool UpdMK(int id, string MatKhau)
+        {
+            return DALNguoiDung.Instance.UpdPassword(id, MatKhau);
         }
     }
 }

@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -62,12 +65,16 @@
     <Compile Include="BUSNhomNguoiDung.cs" />
     <Compile Include="BUSNguoiDung.cs" />
     <Compile Include="BUSTacGia.cs" />
+    <Compile Include="BUSBCSachTraTre.cs" />
     <Compile Include="BUSThamSo.cs" />
     <Compile Include="BUSTheLoai.cs" />
     <Compile Include="BUSTuaSach.cs" />
     <Compile Include="BUSPhieuNhapSach.cs" />
-    <Compile Include="BUSSach.cs" />
-
+    <Compile Include="BUSSach.cs" />	
+    <Compile Include="BUSLogin.cs" />	
+    <Compile Include="BUSPhieuThu.cs" />
+    <Compile Include="BUSPhieuMuonTra.cs" />
+		
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

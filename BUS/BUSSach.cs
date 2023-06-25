@@ -11,13 +11,13 @@ namespace BUS
 {
     public class BUSSach
     {
-        private static DALSach instance;
+        private static BUSSach instance;
 
-        public static DALSach Instance
+        public static BUSSach Instance
         {
             get 
             { 
-                if (instance == null) instance = new DALSach();
+                if (instance == null) instance = new BUSSach();
                 return instance; 
             }
             set { instance = value; }

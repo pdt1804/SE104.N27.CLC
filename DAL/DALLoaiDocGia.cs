@@ -28,6 +28,18 @@ namespace DAL
         {
             return QLTVEntities.Instance.LOAIDOCGIAs.Find(id);
         }
+        public List<LOAIDOCGIA> GetLoaiDocGiaByTen(string ten)
+        {
+            List<LOAIDOCGIA> list = new List<LOAIDOCGIA>();
+            foreach(var p in GetAllLoaiDocGia())
+            {
+                if (p.TenLoaiDocGia.Contains(ten))
+                {
+                    list.Add(p);
+                }    
+            }    
+            return list;
+        }
         public bool AddLoaiDocGia(string tenLoaiDocGia)
         {
             try

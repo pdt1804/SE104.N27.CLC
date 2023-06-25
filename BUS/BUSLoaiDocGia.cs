@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -37,16 +38,35 @@ namespace BUS
         }
         public bool AddLoaiDocGia(string tenLoaiDocGia)
         {
-            return DALLoaiDocGia.Instance.AddLoaiDocGia(tenLoaiDocGia);
+            bool ldg = DALLoaiDocGia.Instance.AddLoaiDocGia(tenLoaiDocGia);
+            if (ldg == false)
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể thêm sách mới.");
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("Thêm thành công");
+                return ldg;
+            }
         }
         public bool UpdLoaiDocGia(int id, string tenLoaiDocGia)
         {
-            return DALLoaiDocGia.Instance.UpdLoaiDocGia(id, tenLoaiDocGia);
-
+            if (!DALLoaiDocGia.Instance.UpdLoaiDocGia(id, tenLoaiDocGia))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể cập nhật thông tin.");
+                return false;
+            }
+            return true;
         }
         public bool DelLoaiDocGia(int id)
         {
-            return DALLoaiDocGia.Instance.DelLoaiDocGia(id);
+            if(!DALLoaiDocGia.Instance.DelLoaiDocGia(id))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể cập nhật thông tin.");
+                return false;
+            }
+            return true;
         }
     }
 }

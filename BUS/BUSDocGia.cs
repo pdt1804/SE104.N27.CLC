@@ -6,6 +6,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -26,6 +27,18 @@ namespace BUS
         {
             return DALDocGia.Instance.GetAllDocGia();
         }
+        public DOCGIA GetDocGiaById(int id)
+        {
+            DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
+            if (dg == null) return null; 
+            else return dg;
+        }
+        public DOCGIA GetDocGiaByMa(string ma)
+        {
+            DOCGIA dg = DALDocGia.Instance.GetDocGiaByMa(ma);
+            if (dg == null) return null;
+            else return dg;
+        }
         // Tìm kiếm đọc giả dựa theo tên, email, id loại đọc giả
         public List<DOCGIA> FindDocGia(string tenDocGia, string email, int? idLoaiDocGia)
         {
@@ -34,29 +47,6 @@ namespace BUS
         public DOCGIA FindDocGiaByIdND(int idnguoidung)
         {
             return DALDocGia.Instance.FindDocGiaByIdND(idnguoidung);
-        }
-        // Lấy ra đọc giả theo số id của đọc giả
-        public DOCGIA GetDocGiaById(int id)
-        {
-            DOCGIA dg;
-            try
-            {
-                dg = DALDocGia.Instance.GetDocGiaById(id);
-                return dg;
-            }
-            catch
-            { return null; }
-        }
-        // Lấy ra đọc giả theo số mã của đọc giả
-        public DOCGIA GetDocGiaByMa(string ma) {
-            DOCGIA dg;
-            try
-            {
-                dg = DALDocGia.Instance.GetDocGiaByMa(ma);
-                return dg;
-            }
-            catch
-            { return null; }
         }
         public string AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi,
             DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai, int idND)
@@ -105,6 +95,15 @@ namespace BUS
             if (DALDocGia.Instance.UpdDocGia(idDocGia, tenDocGia, ngaySinh, diaChi, null, idLoaiDocGia))
                 return "";
             return "Sửa thông tin thất bại";
+        }
+        public bool DelDocGia(int idDocGia)
+        {
+            if (!DALDocGia.Instance.DelDocGia(idDocGia))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể xoá.");
+                return false;
+            }
+            return true;
         }
     }
 }

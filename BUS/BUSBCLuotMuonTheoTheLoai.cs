@@ -28,9 +28,9 @@ namespace BUS
         public BCLUOTMUONTHEOTHELOAI GetBaoCaoById(int id)
         {
             return DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoById(id);
-        }public BCLUOTMUONTHEOTHELOAI GetBaoCaoByMa(int ma)
+        }public BCLUOTMUONTHEOTHELOAI GetBaoCaoByMa(string ma)
         {
-            return DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoById(Convert.ToInt32(ma));
+            return DALBCLuotMuonTheoTheLoai.Instance.GetBaoCaoByMa(ma);
         }
         public BCLUOTMUONTHEOTHELOAI FindBaoCaoByDate(int month, int year)
         {

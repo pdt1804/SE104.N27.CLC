@@ -19,6 +19,7 @@ namespace GUI
         public fManager(int id)
         {
             InitializeComponent();
+            this.TopMost = false;
             user = BUSNguoiDung.Instance.GetNguoiDungById(id);
             InitializeUCs();
         }

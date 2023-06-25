@@ -47,7 +47,5 @@ namespace GUI
         {
 
         }
-
-        
     }
 }

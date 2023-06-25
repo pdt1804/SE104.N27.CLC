@@ -89,17 +89,19 @@ namespace GUI
             this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
             this.customPanel1.GradientTopColor = System.Drawing.Color.RoyalBlue;
             this.customPanel1.Location = new System.Drawing.Point(0, 0);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(1942, 1102);
+            this.customPanel1.Size = new System.Drawing.Size(1040, 640);
             this.customPanel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.lib;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 61);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -110,9 +112,10 @@ namespace GUI
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(69, 15);
+            this.label2.Location = new System.Drawing.Point(52, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 41);
+            this.label2.Size = new System.Drawing.Size(195, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "Library Manager";
             // 
@@ -130,12 +133,12 @@ namespace GUI
             this.tabControl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.ImageList = this.iconList;
             this.tabControl.ItemSize = new System.Drawing.Size(260, 65);
-            this.tabControl.Location = new System.Drawing.Point(0, 69);
+            this.tabControl.Location = new System.Drawing.Point(0, 56);
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(0, 0);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(2045, 1024);
+            this.tabControl.Size = new System.Drawing.Size(1534, 832);
             this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.Lavender;
             this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -167,7 +170,7 @@ namespace GUI
             this.tabAccount.Location = new System.Drawing.Point(264, 4);
             this.tabAccount.Margin = new System.Windows.Forms.Padding(0);
             this.tabAccount.Name = "tabAccount";
-            this.tabAccount.Size = new System.Drawing.Size(1777, 1016);
+            this.tabAccount.Size = new System.Drawing.Size(1266, 824);
             this.tabAccount.TabIndex = 0;
             this.tabAccount.Text = "Tài khoản";
             // 
@@ -179,7 +182,7 @@ namespace GUI
             this.tabQLDG.Location = new System.Drawing.Point(264, 4);
             this.tabQLDG.Margin = new System.Windows.Forms.Padding(0);
             this.tabQLDG.Name = "tabQLDG";
-            this.tabQLDG.Size = new System.Drawing.Size(1777, 1016);
+            this.tabQLDG.Size = new System.Drawing.Size(1266, 824);
             this.tabQLDG.TabIndex = 1;
             this.tabQLDG.Text = "Độc giả";
             this.tabQLDG.Click += new System.EventHandler(this.tabQLDG_Click);
@@ -189,10 +192,10 @@ namespace GUI
             this.tabQLS.BackColor = System.Drawing.Color.White;
             this.tabQLS.ImageIndex = 2;
             this.tabQLS.Location = new System.Drawing.Point(264, 4);
-            this.tabQLS.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabQLS.Name = "tabQLS";
-            this.tabQLS.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLS.Size = new System.Drawing.Size(1777, 1016);
+            this.tabQLS.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabQLS.Size = new System.Drawing.Size(1266, 824);
             this.tabQLS.TabIndex = 2;
             this.tabQLS.Text = "Sách";
             // 
@@ -201,10 +204,10 @@ namespace GUI
             this.tabQLMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.tabQLMT.ImageIndex = 3;
             this.tabQLMT.Location = new System.Drawing.Point(264, 4);
-            this.tabQLMT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLMT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabQLMT.Name = "tabQLMT";
-            this.tabQLMT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLMT.Size = new System.Drawing.Size(1777, 1016);
+            this.tabQLMT.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabQLMT.Size = new System.Drawing.Size(1266, 824);
             this.tabQLMT.TabIndex = 3;
             this.tabQLMT.Text = "Phiếu mượn trả";
             // 
@@ -213,10 +216,10 @@ namespace GUI
             this.tabQLPT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.tabQLPT.ImageIndex = 6;
             this.tabQLPT.Location = new System.Drawing.Point(264, 4);
-            this.tabQLPT.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLPT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabQLPT.Name = "tabQLPT";
-            this.tabQLPT.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLPT.Size = new System.Drawing.Size(1777, 1016);
+            this.tabQLPT.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabQLPT.Size = new System.Drawing.Size(1266, 824);
             this.tabQLPT.TabIndex = 4;
             this.tabQLPT.Text = "Phiếu thu";
             // 
@@ -225,10 +228,10 @@ namespace GUI
             this.tabBC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.tabBC.ImageIndex = 5;
             this.tabBC.Location = new System.Drawing.Point(264, 4);
-            this.tabBC.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabBC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBC.Name = "tabBC";
-            this.tabBC.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabBC.Size = new System.Drawing.Size(1777, 1016);
+            this.tabBC.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabBC.Size = new System.Drawing.Size(1266, 824);
             this.tabBC.TabIndex = 5;
             this.tabBC.Text = "Báo cáo thống kê";
             // 
@@ -237,10 +240,10 @@ namespace GUI
             this.tabQLND.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.tabQLND.ImageIndex = 7;
             this.tabQLND.Location = new System.Drawing.Point(264, 4);
-            this.tabQLND.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tabQLND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabQLND.Name = "tabQLND";
-            this.tabQLND.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabQLND.Size = new System.Drawing.Size(1777, 1016);
+            this.tabQLND.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabQLND.Size = new System.Drawing.Size(1266, 824);
             this.tabQLND.TabIndex = 6;
             this.tabQLND.Text = "Người dùng";
             // 
@@ -249,10 +252,10 @@ namespace GUI
             this.tabTDQD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.tabTDQD.ImageIndex = 8;
             this.tabTDQD.Location = new System.Drawing.Point(264, 4);
-            this.tabTDQD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabTDQD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabTDQD.Name = "tabTDQD";
-            this.tabTDQD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabTDQD.Size = new System.Drawing.Size(1777, 1016);
+            this.tabTDQD.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTDQD.Size = new System.Drawing.Size(1266, 824);
             this.tabTDQD.TabIndex = 7;
             this.tabTDQD.Text = "Thay đổi quy định";
             // 
@@ -264,10 +267,10 @@ namespace GUI
             this.exitControlBox.FillColor = System.Drawing.Color.Transparent;
             this.exitControlBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.exitControlBox.IconColor = System.Drawing.Color.White;
-            this.exitControlBox.Location = new System.Drawing.Point(1845, 5);
-            this.exitControlBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.exitControlBox.Location = new System.Drawing.Point(968, 4);
+            this.exitControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitControlBox.Name = "exitControlBox";
-            this.exitControlBox.Size = new System.Drawing.Size(60, 63);
+            this.exitControlBox.Size = new System.Drawing.Size(45, 51);
             this.exitControlBox.TabIndex = 0;
             this.exitControlBox.Click += new System.EventHandler(this.exitControlBox_Click);
             // 
@@ -279,22 +282,23 @@ namespace GUI
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(1774, 4);
-            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(914, 3);
+            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(72, 63);
+            this.siticoneControlBox1.Size = new System.Drawing.Size(54, 51);
             this.siticoneControlBox1.TabIndex = 0;
             // 
             // fManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.customPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;

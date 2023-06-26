@@ -111,5 +111,20 @@ namespace DAL
                 return false;
             }
         }
+        public bool UpdTongNoDocGia(int idDocGia, int tongNoMoi)
+        {
+            try
+            {
+                DOCGIA dg = GetDocGiaById(idDocGia);
+                if (dg == null) return false;
+                dg.TongNoHienTai = tongNoMoi;
+                QLTVEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

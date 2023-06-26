@@ -29,19 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTuaSach));
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butHien = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butFil = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.comboTheLoai = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.butAn = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TuaSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -64,55 +61,23 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.AliceBlue;
-            this.topPanel.Controls.Add(this.butHien);
             this.topPanel.Controls.Add(this.butFil);
             this.topPanel.Controls.Add(this.comboTheLoai);
-            this.topPanel.Controls.Add(this.butFind);
             this.topPanel.Controls.Add(this.txtFind);
             this.topPanel.Controls.Add(this.butRefresh);
-            this.topPanel.Controls.Add(this.butAn);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(997, 130);
+            this.topPanel.Size = new System.Drawing.Size(748, 106);
             this.topPanel.TabIndex = 4;
-            // 
-            // butHien
-            // 
-            this.butHien.AutoRoundedCorners = true;
-            this.butHien.BorderColor = System.Drawing.Color.Transparent;
-            this.butHien.BorderRadius = 20;
-            this.butHien.BorderThickness = 2;
-            this.butHien.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butHien.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butHien.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butHien.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butHien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butHien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butHien.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butHien.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butHien.ForeColor = System.Drawing.Color.White;
-            this.butHien.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butHien.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butHien.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butHien.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butHien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butHien.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butHien.Location = new System.Drawing.Point(311, 18);
-            this.butHien.Name = "butHien";
-            this.butHien.Size = new System.Drawing.Size(172, 42);
-            this.butHien.TabIndex = 18;
-            this.butHien.Text = "Hiện Tựa Sách";
-            this.butHien.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // butFil
             // 
             this.butFil.AutoRoundedCorners = true;
             this.butFil.BorderColor = System.Drawing.Color.Transparent;
-            this.butFil.BorderRadius = 17;
+            this.butFil.BorderRadius = 12;
             this.butFil.BorderThickness = 2;
             this.butFil.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butFil.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -123,7 +88,7 @@
             this.butFil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butFil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butFil.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butFil.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butFil.ForeColor = System.Drawing.Color.White;
             this.butFil.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.butFil.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -131,9 +96,10 @@
             this.butFil.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFil.Location = new System.Drawing.Point(804, 18);
+            this.butFil.Location = new System.Drawing.Point(582, 14);
+            this.butFil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butFil.Name = "butFil";
-            this.butFil.Size = new System.Drawing.Size(152, 37);
+            this.butFil.Size = new System.Drawing.Size(143, 26);
             this.butFil.TabIndex = 17;
             this.butFil.Text = "Lọc Thể Loại";
             this.butFil.TextOffset = new System.Drawing.Point(3, 0);
@@ -149,45 +115,16 @@
             this.comboTheLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTheLoai.ItemHeight = 30;
-            this.comboTheLoai.Location = new System.Drawing.Point(556, 18);
+            this.comboTheLoai.Location = new System.Drawing.Point(368, 14);
+            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboTheLoai.Name = "comboTheLoai";
-            this.comboTheLoai.Size = new System.Drawing.Size(227, 36);
+            this.comboTheLoai.Size = new System.Drawing.Size(194, 36);
             this.comboTheLoai.TabIndex = 16;
-            // 
-            // butFind
-            // 
-            this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderColor = System.Drawing.Color.Transparent;
-            this.butFind.BorderRadius = 17;
-            this.butFind.BorderThickness = 2;
-            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butFind.ForeColor = System.Drawing.Color.White;
-            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(804, 75);
-            this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(152, 37);
-            this.butFind.TabIndex = 14;
-            this.butFind.Text = "Tìm kiếm";
-            this.butFind.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 17;
+            this.txtFind.BorderRadius = 11;
             this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.DefaultText = "";
             this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -198,13 +135,14 @@
             this.txtFind.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(556, 75);
+            this.txtFind.Location = new System.Drawing.Point(368, 55);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtFind.PlaceholderText = "Mã, tên, tác giả";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(227, 37);
+            this.txtFind.Size = new System.Drawing.Size(194, 25);
             this.txtFind.TabIndex = 15;
             // 
             // butRefresh
@@ -215,47 +153,18 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(15, 7);
+            this.butRefresh.Location = new System.Drawing.Point(16, 28);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(64, 54);
+            this.butRefresh.Size = new System.Drawing.Size(48, 52);
             this.butRefresh.TabIndex = 9;
-            // 
-            // butAn
-            // 
-            this.butAn.AutoRoundedCorners = true;
-            this.butAn.BorderColor = System.Drawing.Color.Transparent;
-            this.butAn.BorderRadius = 20;
-            this.butAn.BorderThickness = 2;
-            this.butAn.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butAn.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butAn.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butAn.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butAn.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAn.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAn.ForeColor = System.Drawing.Color.White;
-            this.butAn.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butAn.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butAn.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butAn.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butAn.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAn.Location = new System.Drawing.Point(311, 75);
-            this.butAn.Name = "butAn";
-            this.butAn.Size = new System.Drawing.Size(172, 42);
-            this.butAn.TabIndex = 5;
-            this.butAn.Text = "Ẩn Tựa Sách";
-            this.butAn.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
             this.butAdd.BorderColor = System.Drawing.Color.Transparent;
-            this.butAdd.BorderRadius = 20;
+            this.butAdd.BorderRadius = 16;
             this.butAdd.BorderThickness = 2;
             this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -266,7 +175,7 @@
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -274,32 +183,34 @@
             this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(25, 75);
+            this.butAdd.Location = new System.Drawing.Point(94, 38);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(181, 42);
+            this.butAdd.Size = new System.Drawing.Size(147, 34);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tựa Sách";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // TuaSachGrid
             // 
             this.TuaSachGrid.AllowUserToAddRows = false;
             this.TuaSachGrid.AllowUserToDeleteRows = false;
             this.TuaSachGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.TuaSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TuaSachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TuaSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TuaSachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.TuaSachGrid.ColumnHeadersHeight = 35;
             this.TuaSachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TuaSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -311,24 +222,25 @@
             this.TacGia,
             this.DaAn,
             this.Edit});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TuaSachGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TuaSachGrid.DefaultCellStyle = dataGridViewCellStyle16;
             this.TuaSachGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TuaSachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.TuaSachGrid.Location = new System.Drawing.Point(0, 142);
+            this.TuaSachGrid.Location = new System.Drawing.Point(0, 115);
+            this.TuaSachGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TuaSachGrid.Name = "TuaSachGrid";
             this.TuaSachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TuaSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.TuaSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.TuaSachGrid.RowHeadersVisible = false;
             this.TuaSachGrid.RowHeadersWidth = 51;
             this.TuaSachGrid.RowTemplate.Height = 30;
-            this.TuaSachGrid.Size = new System.Drawing.Size(997, 454);
+            this.TuaSachGrid.Size = new System.Drawing.Size(748, 369);
             this.TuaSachGrid.TabIndex = 5;
             this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -409,10 +321,10 @@
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle15.NullValue")));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle15;
             this.Edit.HeaderText = "";
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
@@ -452,12 +364,13 @@
             // 
             // ucTuaSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.TuaSachGrid);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucTuaSach";
-            this.Size = new System.Drawing.Size(997, 596);
+            this.Size = new System.Drawing.Size(748, 484);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TuaSachGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUASACHBindingSource)).EndInit();
@@ -468,13 +381,10 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butHien;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butFil;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTheLoai;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butFind;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butAn;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView TuaSachGrid;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;

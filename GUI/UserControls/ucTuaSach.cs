@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using GUI.FORM;
+
 namespace GUI.UserControls
 {
     public partial class ucTuaSach : UserControl
@@ -44,8 +46,12 @@ namespace GUI.UserControls
             Binding(BUSTuaSach.Instance.GetAllTuaSach());
         }
 
-       
-
-
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            fAddTuaSach f = new fAddTuaSach();
+            f.ShowDialog();
+            f.BringToFront();
+            ucTuaSach_Load(sender, e);
+        }
     }
 }

@@ -15,16 +15,27 @@ namespace GUI.UserControls
 {
     public partial class ucTuaSach : UserControl
     {
+        public List<THELOAI> listTL { get; set; }
+        public List<TUASACH> listTS { get; set; }
+
         public ucTuaSach()
         {
+            listTL = new List<THELOAI>();
+            listTS = new List<TUASACH>();
             InitializeComponent();
-            comboTheLoai.DataSource = BUSTheLoai.Instance.GetAllTheLoai();
-            comboTheLoai.DisplayMember = "TenTheLoai";
-            comboTheLoai.ValueMember = "id";
+            foreach(var p in BUSTheLoai.Instance.GetAllTheLoai())
+            {
+                listTL.Add(p);
+                comboTheLoai.Items.Add(p.TenTheLoai);
+            }    
+            //comboTheLoai.DataSource = listTL;
+            //comboTheLoai.DisplayMember = "TenTheLoai";
+            //comboTheLoai.ValueMember = "id";
 
         }
         public void Binding(List<TUASACH> TuaSachList)
         {
+
             Image img = Properties.Resources.edit_icon;
             img = (Image)(new Bitmap(img, new Size(20, 20)));
 
@@ -43,7 +54,8 @@ namespace GUI.UserControls
         }
         private void ucTuaSach_Load(object sender, EventArgs e)
         {
-            Binding(BUSTuaSach.Instance.GetAllTuaSach());
+            listTS = BUSTuaSach.Instance.GetAllTuaSach();
+            Binding(listTS);
         }
 
         private void butAdd_Click(object sender, EventArgs e)
@@ -52,6 +64,20 @@ namespace GUI.UserControls
             f.ShowDialog();
             f.BringToFront();
             ucTuaSach_Load(sender, e);
+        }
+
+        private void comboTheLoai_SelectedValueChanged(object sender, EventArgs e)
+        {
+            listTS.Clear();
+            string seletedValued = comboTheLoai.SelectedItem.ToString();
+            foreach(var p in BUSTuaSach.Instance.GetAllTuaSach())
+            {
+                if (p.THELOAI.TenTheLoai.Equals(seletedValued))
+                {
+                    listTS.Add(p);
+                }    
+            }
+            Binding(listTS);
         }
     }
 }

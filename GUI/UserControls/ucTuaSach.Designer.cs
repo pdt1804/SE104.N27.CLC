@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTuaSach));
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butFil = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -68,7 +68,7 @@
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(748, 106);
             this.topPanel.TabIndex = 4;
@@ -97,7 +97,7 @@
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
             this.butFil.Location = new System.Drawing.Point(582, 14);
-            this.butFil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butFil.Margin = new System.Windows.Forms.Padding(2);
             this.butFil.Name = "butFil";
             this.butFil.Size = new System.Drawing.Size(143, 26);
             this.butFil.TabIndex = 17;
@@ -116,10 +116,11 @@
             this.comboTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTheLoai.ItemHeight = 30;
             this.comboTheLoai.Location = new System.Drawing.Point(368, 14);
-            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.comboTheLoai.Name = "comboTheLoai";
             this.comboTheLoai.Size = new System.Drawing.Size(194, 36);
             this.comboTheLoai.TabIndex = 16;
+            this.comboTheLoai.SelectedValueChanged += new System.EventHandler(this.comboTheLoai_SelectedValueChanged);
             // 
             // txtFind
             // 
@@ -154,7 +155,7 @@
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
             this.butRefresh.Location = new System.Drawing.Point(16, 28);
-            this.butRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.butRefresh.Size = new System.Drawing.Size(48, 52);
@@ -184,7 +185,7 @@
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
             this.butAdd.Location = new System.Drawing.Point(94, 38);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(147, 34);
             this.butAdd.TabIndex = 6;
@@ -197,20 +198,20 @@
             this.TuaSachGrid.AllowUserToAddRows = false;
             this.TuaSachGrid.AllowUserToDeleteRows = false;
             this.TuaSachGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.TuaSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TuaSachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TuaSachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TuaSachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.TuaSachGrid.ColumnHeadersHeight = 35;
             this.TuaSachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TuaSachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -222,21 +223,21 @@
             this.TacGia,
             this.DaAn,
             this.Edit});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TuaSachGrid.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TuaSachGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.TuaSachGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TuaSachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TuaSachGrid.Location = new System.Drawing.Point(0, 115);
-            this.TuaSachGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TuaSachGrid.Margin = new System.Windows.Forms.Padding(2);
             this.TuaSachGrid.Name = "TuaSachGrid";
             this.TuaSachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TuaSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.TuaSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TuaSachGrid.RowHeadersVisible = false;
             this.TuaSachGrid.RowHeadersWidth = 51;
             this.TuaSachGrid.RowTemplate.Height = 30;
@@ -321,10 +322,10 @@
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle15.NullValue")));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.DefaultCellStyle = dataGridViewCellStyle3;
             this.Edit.HeaderText = "";
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
@@ -368,7 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.TuaSachGrid);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucTuaSach";
             this.Size = new System.Drawing.Size(748, 484);
             this.topPanel.ResumeLayout(false);

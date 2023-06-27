@@ -58,7 +58,8 @@ namespace GUI.FORM
             {
                 if (tg.TenTacGia.Equals(comboTacGia.SelectedItem.ToString()))
                 {
-                    listTG.Add(tg);
+                    //listTG.Add(tg);
+                    TacGiaGrid.Rows.Add(tg.TenTacGia); 
                 }
             }    
         }
@@ -67,6 +68,12 @@ namespace GUI.FORM
         {
             string tentheloai = comboTheLoai.SelectedItem.ToString();
             THELOAI theloai = new THELOAI();
+            foreach (DataGridViewRow row in TacGiaGrid.Rows)
+            {
+                if (ListTG.Contains(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value))))
+                    continue;
+                ListTG.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));
+            }
             foreach (var p in BUSTheLoai.Instance.GetAllTheLoai())
             {
                 if (p.TenTheLoai.Equals(tentheloai))

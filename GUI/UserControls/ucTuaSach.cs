@@ -23,7 +23,9 @@ namespace GUI.UserControls
             listTL = new List<THELOAI>();
             listTS = new List<TUASACH>();
             InitializeComponent();
-            foreach(var p in BUSTheLoai.Instance.GetAllTheLoai())
+            comboTheLoai.Items.Add("Tất cả");
+            comboTheLoai.Text = "Tất cả";
+            foreach (var p in BUSTheLoai.Instance.GetAllTheLoai())
             {
                 listTL.Add(p);
                 comboTheLoai.Items.Add(p.TenTheLoai);
@@ -70,14 +72,27 @@ namespace GUI.UserControls
         {
             listTS.Clear();
             string seletedValued = comboTheLoai.SelectedItem.ToString();
-            foreach(var p in BUSTuaSach.Instance.GetAllTuaSach())
+            if (seletedValued.Equals("Tất cả"))
             {
-                if (p.THELOAI.TenTheLoai.Equals(seletedValued))
-                {
-                    listTS.Add(p);
-                }    
+                listTS = BUSTuaSach.Instance.GetAllTuaSach();
+                Binding(listTS);
             }
-            Binding(listTS);
+            else
+            {
+                foreach (var p in BUSTuaSach.Instance.GetAllTuaSach())
+                {
+                    if (p.THELOAI.TenTheLoai.Equals(seletedValued))
+                    {
+                        listTS.Add(p);
+                    }
+                }
+                Binding(listTS);
+            }
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            txtFind.Text = "";
         }
     }
 }

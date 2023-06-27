@@ -94,5 +94,25 @@ namespace GUI.UserControls
         {
             txtFind.Text = "";
         }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtFind.Text))
+            {
+                Binding(listTS);
+            }    
+            else
+            {
+                List<TUASACH> listTSSearching = new List<TUASACH>();
+                foreach (var p in listTS)
+                {
+                    if (p.TenTuaSach.Contains(txtFind.Text))
+                    {
+                        listTSSearching.Add(p);
+                    }    
+                }
+                Binding(listTSSearching);
+            }    
+        }
     }
 }

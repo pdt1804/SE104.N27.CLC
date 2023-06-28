@@ -92,26 +92,36 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
             txtFind.Text = "";
         }
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtFind.Text))
+            if (!String.IsNullOrEmpty(txtFind.Text))
             {
-                Binding(listTS);
+                List<TUASACH> Res = new List<TUASACH>();
+                string pat = txtFind.Text.ToLower();
+                foreach (TUASACH ts in BUSTuaSach.Instance.GetAllTuaSach())
+                {
+                    if (ts.TenTuaSach.ToLower().Contains(pat) || ts.MaTuaSach.ToLower().Contains(pat))
+                        Res.Add(ts);
+                    else
+                    {
+                        foreach (TACGIA tg in ts.TACGIAs)
+                            if (tg.TenTacGia.ToLower().Contains(pat))
+                            {
+                                Res.Add(ts);
+                                break;
+                            }
+                    }
+                }
+                Binding(Res);
+               
             }    
             else
             {
-                List<TUASACH> listTSSearching = new List<TUASACH>();
-                foreach (var p in listTS)
-                {
-                    if (p.TenTuaSach.Contains(txtFind.Text))
-                    {
-                        listTSSearching.Add(p);
-                    }    
-                }
-                Binding(listTSSearching);
+                Binding(listTS);
             }    
         }
     }

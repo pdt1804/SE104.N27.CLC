@@ -49,5 +49,12 @@ namespace GUI.FORM
 
             labelTacGia.Text = tacgia;
         }
+
+        private void butChange_Click(object sender, EventArgs e)
+        {
+            var f = new fEditTuaSach(tuasach.id);
+            f.ShowDialog();
+            init();
+        }
     }
 }

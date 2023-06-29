@@ -55,7 +55,52 @@ namespace GUI.FORM
 
         private void butOK_Click(object sender, EventArgs e)
         {
+            List<TACGIA> TgList = new List<TACGIA>();
+            string TenTuaSach = txtTenTuaSach.Text;
+            if (TenTuaSach == "")
+            {
+                MessageBox.Show("Tên tựa sách không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int TheLoai = Convert.ToInt32(comboTheLoai.SelectedValue);
+            THELOAI tl = BUSTheLoai.Instance.GetTheLoai(TheLoai);
+            foreach (DataGridViewRow row in TacGiaGrid.Rows)
+            {
+                if (TgList.Contains(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value))))
+                    continue;
+                TgList.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));
+            }
+            Boolean err = BUSTuaSach.Instance.UpdTuaSach(tuasach.id, TenTuaSach, tl, TgList);
+            if (err == false)
+            {
+                MessageBox.Show("Cập nhật không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Chỉnh sửa tựa sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
 
+        private void butAddTacGia_Click(object sender, EventArgs e)
+        {
+            bool check = false;
+            int id = Convert.ToInt32(comboTacGia.SelectedValue);
+            string newTg = comboTacGia.Text;
+            foreach (TACGIA tg in TacGiaList)
+                if (tg.TenTacGia == newTg)
+                    check = true;
+            if (check == false)
+            {
+                var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thêm tác giả",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ask == DialogResult.Yes)
+                {
+                    id = BUSTacGia.Instance.AddTacGia(newTg);
+                    Binding();
+                }
+                else return;
+            }
+
+            TacGiaGrid.Rows.Add(newTg, id);
         }
     }
 }

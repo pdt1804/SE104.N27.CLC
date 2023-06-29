@@ -83,7 +83,7 @@
             this.comboTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTheLoai.ItemHeight = 30;
             this.comboTheLoai.Location = new System.Drawing.Point(109, 200);
-            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.comboTheLoai.Name = "comboTheLoai";
             this.comboTheLoai.Size = new System.Drawing.Size(300, 36);
             this.comboTheLoai.TabIndex = 7;
@@ -157,7 +157,7 @@
             this.txtTenTuaSach.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenTuaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenTuaSach.Location = new System.Drawing.Point(109, 135);
-            this.txtTenTuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenTuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenTuaSach.Name = "txtTenTuaSach";
             this.txtTenTuaSach.PasswordChar = '\0';
             this.txtTenTuaSach.PlaceholderText = "";
@@ -186,7 +186,7 @@
             this.mainPanel.Controls.Add(this.txtTenTuaSach);
             this.mainPanel.Controls.Add(this.labelTitle);
             this.mainPanel.Location = new System.Drawing.Point(50, 93);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(517, 526);
             this.mainPanel.TabIndex = 8;
@@ -195,7 +195,7 @@
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.edit;
             this.pictureBox1.Location = new System.Drawing.Point(56, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@
             this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
             this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
             this.customPanel1.Location = new System.Drawing.Point(109, 271);
-            this.customPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.customPanel1.Name = "customPanel1";
             this.customPanel1.Size = new System.Drawing.Size(299, 95);
             this.customPanel1.TabIndex = 14;
@@ -246,7 +246,7 @@
             this.TacGiaGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.TacGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TacGiaGrid.Location = new System.Drawing.Point(0, 0);
-            this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(2);
             this.TacGiaGrid.Name = "TacGiaGrid";
             this.TacGiaGrid.ReadOnly = true;
             this.TacGiaGrid.RowHeadersVisible = false;
@@ -298,7 +298,7 @@
             this.comboTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTacGia.FormattingEnabled = true;
             this.comboTacGia.Location = new System.Drawing.Point(110, 395);
-            this.comboTacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTacGia.Margin = new System.Windows.Forms.Padding(2);
             this.comboTacGia.Name = "comboTacGia";
             this.comboTacGia.Size = new System.Drawing.Size(168, 23);
             this.comboTacGia.TabIndex = 13;
@@ -317,7 +317,7 @@
             this.butOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
             this.butOK.Location = new System.Drawing.Point(184, 462);
-            this.butOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butOK.Margin = new System.Windows.Forms.Padding(2);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(136, 36);
             this.butOK.TabIndex = 10;
@@ -338,11 +338,12 @@
             this.butAddTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAddTacGia.ForeColor = System.Drawing.Color.White;
             this.butAddTacGia.Location = new System.Drawing.Point(306, 395);
-            this.butAddTacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butAddTacGia.Margin = new System.Windows.Forms.Padding(2);
             this.butAddTacGia.Name = "butAddTacGia";
             this.butAddTacGia.Size = new System.Drawing.Size(103, 35);
             this.butAddTacGia.TabIndex = 10;
             this.butAddTacGia.Text = "Thêm tác giả";
+            this.butAddTacGia.Click += new System.EventHandler(this.butAddTacGia_Click);
             // 
             // labelTitle
             // 
@@ -392,7 +393,7 @@
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.White;
             this.miniControlBox.Location = new System.Drawing.Point(522, 0);
-            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(45, 44);
             this.miniControlBox.TabIndex = 0;
@@ -403,7 +404,7 @@
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.White;
             this.closeControlBox.Location = new System.Drawing.Point(568, 0);
-            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(46, 44);
             this.closeControlBox.TabIndex = 0;
@@ -415,7 +416,7 @@
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(2);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(614, 44);
             this.controlPanel.TabIndex = 7;
@@ -435,7 +436,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fEditTuaSach";
             this.Text = "fEditTuaSach";
             this.mainPanel.ResumeLayout(false);

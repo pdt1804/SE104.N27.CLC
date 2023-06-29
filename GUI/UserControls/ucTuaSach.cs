@@ -98,31 +98,40 @@ namespace GUI.UserControls
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtFind.Text))
-            {
-                List<TUASACH> Res = new List<TUASACH>();
-                string pat = txtFind.Text.ToLower();
-                foreach (TUASACH ts in BUSTuaSach.Instance.GetAllTuaSach())
-                {
-                    if (ts.TenTuaSach.ToLower().Contains(pat) || ts.MaTuaSach.ToLower().Contains(pat))
-                        Res.Add(ts);
-                    else
-                    {
-                        foreach (TACGIA tg in ts.TACGIAs)
-                            if (tg.TenTacGia.ToLower().Contains(pat))
-                            {
-                                Res.Add(ts);
-                                break;
-                            }
-                    }
-                }
-                Binding(Res);
-               
-            }    
-            else
+            if (String.IsNullOrEmpty(txtFind.Text))
             {
                 Binding(listTS);
-            }    
+            }
+            else
+            {
+                List<TUASACH> listTSSearching = new List<TUASACH>();
+                foreach (var p in listTS)
+                {
+                    if (p.TenTuaSach.ToLower().Contains(txtFind.Text.ToLower()))
+                    {
+                        listTSSearching.Add(p);
+                    }
+                }
+                Binding(listTSSearching);
+            }
+        }
+
+        private void TuaSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            if (e.ColumnIndex == 0) return;
+            if (e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
+            {
+                var f = new fEditTuaSach((Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value)));
+                f.ShowDialog();
+                Binding(BUSTuaSach.Instance.GetAllTuaSach());
+                return;
+            }
+            var fInfor = new fInfoTuaSach(Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value));
+            fInfor.ShowDialog();
+            Binding(BUSTuaSach.Instance.GetAllTuaSach());
+            return;
         }
     }
 }

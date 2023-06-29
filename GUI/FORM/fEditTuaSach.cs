@@ -14,13 +14,13 @@ namespace GUI.FORM
 {
     public partial class fEditTuaSach : Form
     {
+
+        TUASACH tuasach;
+        List<TACGIA> TacGiaList;
         public fEditTuaSach()
         {
             InitializeComponent();
         }
-
-        TUASACH tuasach;
-        List<TACGIA> TacGiaList;
 
         public fEditTuaSach(int id)
         {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -68,7 +69,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+                MessageBox.Show(ex.InnerException.ToString());
                 return -1;
             }
         }

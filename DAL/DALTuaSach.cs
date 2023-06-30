@@ -76,9 +76,8 @@ namespace DAL
 
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
-
                 return false;
             }
         }

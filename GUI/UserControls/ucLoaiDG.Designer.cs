@@ -33,10 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LoaiDocGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtTenLoaiDG = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -44,9 +40,13 @@
             this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOAIDOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).BeginInit();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LoaiDocGiaGrid
@@ -117,37 +117,7 @@
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.Height = 30;
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.LoaiDocGiaGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // maLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tenLoaiDocGiaDataGridViewTextBoxColumn
-            // 
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
-            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lOAIDOCGIABindingSource
-            // 
-            this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
+            this.LoaiDocGiaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoaiDocGiaGrid_CellClick);
             // 
             // topPanel
             // 
@@ -260,6 +230,37 @@
             this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.SuccDia.Text = null;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // maLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaLoaiDocGia";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã loại độc giả";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Name = "maLoaiDocGiaDataGridViewTextBoxColumn";
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maLoaiDocGiaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tenLoaiDocGiaDataGridViewTextBoxColumn
+            // 
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.DataPropertyName = "TenLoaiDocGia";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.FillWeight = 109.893F;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.HeaderText = "Tên loại độc giả";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.Name = "tenLoaiDocGiaDataGridViewTextBoxColumn";
+            this.tenLoaiDocGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lOAIDOCGIABindingSource
+            // 
+            this.lOAIDOCGIABindingSource.DataSource = typeof(DTO.LOAIDOCGIA);
+            // 
             // ucLoaiDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,8 +271,8 @@
             this.Name = "ucLoaiDG";
             this.Size = new System.Drawing.Size(653, 509);
             ((System.ComponentModel.ISupportInitialize)(this.LoaiDocGiaGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).EndInit();
             this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lOAIDOCGIABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

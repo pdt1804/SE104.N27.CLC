@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using GUI.FORM;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,11 @@ namespace GUI.UserControls
             LoadDocGia();
         }
 
+
         private void LoadDocGia()
         {
             List<DOCGIA> list = new List<DOCGIA>();
+            list = BUSDocGia.Instance.GetAllDocGia();
             DocGiaGrid.DataSource = list;
         }
 
@@ -32,6 +35,31 @@ namespace GUI.UserControls
             fAdddg.BringToFront();
             fAdddg.ShowDialog();
             LoadDocGia();
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtFind.Text))
+            {
+                LoadDocGia();
+            }    
+            else
+            {
+                List<DOCGIA> list = new List<DOCGIA>();
+                foreach(DOCGIA docGia in BUSDocGia.Instance.GetAllDocGia())
+                {
+                    if (docGia.TenDocGia.Contains(txtFind.Text))
+                    {
+                        list.Add(docGia);
+                    }    
+                }
+                DocGiaGrid.DataSource = list;
+            }    
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            txtFind.Text = "";
         }
     }
 }

@@ -46,5 +46,17 @@ namespace GUI.UserControls
             f.ShowDialog();
             Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
         }
+
+        private void PhieuMuonGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (e.ColumnIndex == 0) return;
+            if (idx == -1) return;
+            var f = new fEditPhieuMuon((Convert.ToInt32(PhieuMuonGrid.Rows[idx].Cells["SoPhieuMuon"].Value)));
+            f.ShowDialog();
+            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
+
+            return;
+        }
     }
 }

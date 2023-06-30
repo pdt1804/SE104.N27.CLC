@@ -14,9 +14,6 @@ namespace GUI.UserControls
             Binding(BUSSach.Instance.GetAllSach());
             comboTinhTrang.Items.Add("Còn");
             comboTinhTrang.Items.Add("Hết");
-            comboTinhTrang.Items.Add("Chưa ẩn");
-            comboTinhTrang.Items.Add("Đã ẩn");
-
         }
         private List<SACH> SachList;
 

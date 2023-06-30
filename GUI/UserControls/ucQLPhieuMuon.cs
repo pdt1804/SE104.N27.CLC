@@ -64,6 +64,23 @@ namespace GUI.UserControls
             Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
             txtFind.Text = "";
         }
+
+        private void butFil_Click(object sender, EventArgs e)
+        {
+            string pat = comboTinhTrang.SelectedValue.ToString();
+
+            List<PHIEUMUONTRA> list = new List<PHIEUMUONTRA>();
+
+            foreach (PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra())
+            {
+                if (pmt.NgayTra != null && pat == "Đã trả")
+                    list.Add(pmt);
+                Console.Write(pmt.NgayTra.ToString());
+                if (pmt.NgayTra == null && pat == "Chưa trả")
+                    list.Add(pmt);
+            }
+            Binding(list);
+        }
     }
 }
     

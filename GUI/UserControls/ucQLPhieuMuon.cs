@@ -26,8 +26,8 @@ namespace GUI.UserControls
         public void Binding(List<PHIEUMUONTRA> PhieuMuonList)
         {
             PhieuMuonGrid.Rows.Clear();
-            /*Image img = Properties.Resources.edit_icon;
-            img = (Image)(new Bitmap(img, new Size(20, 20)));*/
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(20, 20)));
             foreach (PHIEUMUONTRA pmt in PhieuMuonList)
             {
                 string NgayTra = (pmt.NgayTra != null) ? (((DateTime)pmt.NgayTra).ToShortDateString()) : ("Chưa trả");
@@ -57,6 +57,12 @@ namespace GUI.UserControls
             Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
 
             return;
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
+            txtFind.Text = "";
         }
     }
 }

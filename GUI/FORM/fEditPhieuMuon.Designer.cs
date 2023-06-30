@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelNgayTra = new System.Windows.Forms.Label();
             this.isDaTra = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.siticoneVSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
@@ -61,10 +65,6 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -120,6 +120,46 @@
             this.mainPanel.Size = new System.Drawing.Size(981, 778);
             this.mainPanel.TabIndex = 76;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GUI.Properties.Resources.receipt__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(279, 389);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(70, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 182;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GUI.Properties.Resources.book__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(48, 112);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 77);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 181;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.qualitative_research;
+            this.pictureBox2.Location = new System.Drawing.Point(562, 114);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 180;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.receipts;
+            this.pictureBox1.Location = new System.Drawing.Point(279, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 179;
+            this.pictureBox1.TabStop = false;
+            // 
             // labelNgayTra
             // 
             this.labelNgayTra.AutoSize = true;
@@ -142,7 +182,7 @@
             this.isDaTra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.isDaTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F);
             this.isDaTra.ForeColor = System.Drawing.Color.MediumBlue;
-            this.isDaTra.Location = new System.Drawing.Point(315, 565);
+            this.isDaTra.Location = new System.Drawing.Point(348, 614);
             this.isDaTra.Name = "isDaTra";
             this.isDaTra.Size = new System.Drawing.Size(97, 35);
             this.isDaTra.TabIndex = 177;
@@ -194,6 +234,7 @@
             this.dateNgayTra.Size = new System.Drawing.Size(168, 50);
             this.dateNgayTra.TabIndex = 174;
             this.dateNgayTra.Value = new System.DateTime(2023, 2, 6, 22, 44, 0, 0);
+            this.dateNgayTra.ValueChanged += new System.EventHandler(this.dateNgayTra_ValueChanged);
             // 
             // labelNgayMuon
             // 
@@ -461,46 +502,6 @@
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox1.TabIndex = 75;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GUI.Properties.Resources.receipt__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(279, 389);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(70, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 182;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GUI.Properties.Resources.book__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(48, 112);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 77);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 181;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GUI.Properties.Resources.qualitative_research;
-            this.pictureBox2.Location = new System.Drawing.Point(562, 114);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 180;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.receipts;
-            this.pictureBox1.Location = new System.Drawing.Point(279, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 179;
-            this.pictureBox1.TabStop = false;
             // 
             // fEditPhieuMuon
             // 

@@ -54,5 +54,18 @@ namespace GUI.FORM
             labelTongNoMoi.Text = "Tổng nợ mới: " + ((int)PhieuMuon.DOCGIA.TongNoHienTai + thamso.DonGiaPhat * TienPhat).ToString();
         }
 
+        private void dateNgayTra_ValueChanged(object sender, EventArgs e)
+        {
+            if (isDaTra.Checked == true)
+            {
+                THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+                int TienPhat = 0;
+                if (dateNgayTra.Value > PhieuMuon.HanTra)
+                    TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
+                labelSoNgayTre.Text = "Số ngày trả trễ: " + TienPhat.ToString();
+                labelTienPhat.Text = "Tiền phạt: " + (thamso.DonGiaPhat * TienPhat).ToString();
+                labelTongNoMoi.Text = "Tổng nợ mới: " + ((int)PhieuMuon.DOCGIA.TongNoHienTai + thamso.DonGiaPhat * TienPhat).ToString();
+            }
+        }
     }
 }

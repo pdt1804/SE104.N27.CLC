@@ -24,14 +24,14 @@ namespace DAL
         {
             return QLTVEntities.Instance.DOCGIAs.AsNoTracking().ToList();
         }
-        public DOCGIA GetDocGiaById(int id) 
+        public DOCGIA GetDocGiaById(int id)
         {
             return QLTVEntities.Instance.DOCGIAs.Find(id);
         }
         public DOCGIA GetDocGiaByMa(string ma)
         {
             var res = QLTVEntities.Instance.DOCGIAs.AsNoTracking().Where(m => m.MaDocGia == ma);
-            if(res.Any())
+            if (res.Any())
             {
                 return res.FirstOrDefault();
             }
@@ -40,7 +40,7 @@ namespace DAL
         public List<DOCGIA> FindDocGia(string ten, string email, int? idLoaiDocGia)
         {
             var res = QLTVEntities.Instance.DOCGIAs.ToList();
-            if(ten != null) res = res.Where(t => t.TenDocGia == ten).Select(t => t).ToList();
+            if (ten != null) res = res.Where(t => t.TenDocGia == ten).Select(t => t).ToList();
             if (email != null) res = res.Where(e => e.TenDocGia == email).Select(e => e).ToList();
             if (idLoaiDocGia != null) res = res.Where(d => d.idLoaiDocGia == idLoaiDocGia).Select(d => d).ToList();
             return res;
@@ -74,7 +74,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi, 
+        public bool UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi,
             DateTime? ngayHetHan, int? idLoaiDocGia)
         {
             try
@@ -103,6 +103,21 @@ namespace DAL
                 DOCGIA dg = GetDocGiaById(idDocGia);
                 if (dg == null) return false;
                 QLTVEntities.Instance.DOCGIAs.Remove(dg);
+                QLTVEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool UpdTongNoDocGia(int idDocGia, int tongNoMoi)
+        {
+            try
+            {
+                DOCGIA dg = GetDocGiaById(idDocGia);
+                if (dg == null) return false;
+                dg.TongNoHienTai = tongNoMoi;
                 QLTVEntities.Instance.SaveChanges();
                 return true;
             }

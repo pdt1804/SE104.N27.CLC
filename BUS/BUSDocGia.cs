@@ -105,5 +105,17 @@ namespace BUS
             }
             return true;
         }
+
+        // Thêm value tổng nợ của đọc giả
+        public string UpdTongNo(int id, int TongNo)
+        {
+            DOCGIA dg = DALDocGia.Instance.GetDocGiaById(id);
+            if (dg == null) return "Mã độc giả không hợp lệ";
+            if (TongNo < 0)
+                return "Nợ không hợp lệ";
+            DALDocGia.Instance.UpdTongNoDocGia(id, TongNo);
+            return "";
+
+        }
     }
 }

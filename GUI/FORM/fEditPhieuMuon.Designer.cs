@@ -217,6 +217,7 @@
             this.butSave.Size = new System.Drawing.Size(201, 50);
             this.butSave.TabIndex = 165;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // dateNgayTra
             // 

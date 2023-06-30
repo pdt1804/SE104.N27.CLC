@@ -67,5 +67,29 @@ namespace GUI.FORM
                 labelTongNoMoi.Text = "Tổng nợ mới: " + ((int)PhieuMuon.DOCGIA.TongNoHienTai + thamso.DonGiaPhat * TienPhat).ToString();
             }
         }
+
+        private void butSave_Click(object sender, EventArgs e)
+        {
+            if (isDaTra.Checked == false) return;
+            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            if (dateNgayTra.Value < PhieuMuon.NgayMuon)
+            {
+                MessageBox.Show("Ngày trả không được trước ngày mượn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string err = (BUSPhieuMuonTra.Instance.UpdPhieuMuonTra(PhieuMuon.SoPhieuMuonTra, PhieuMuon.NgayMuon, PhieuMuon.HanTra, dateNgayTra.Value.Date, PhieuMuon.SoTienPhat)).ToString();
+
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int TienPhat = 0;
+            if (dateNgayTra.Value > PhieuMuon.HanTra)
+                TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
+            err = BUSDocGia.Instance.UpdTongNo(PhieuMuon.DOCGIA.ID, (int)PhieuMuon.DOCGIA.TongNoHienTai + (int)(thamso.DonGiaPhat * TienPhat));
+            MessageBox.Show("Đã cập nhật phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
     }
 }

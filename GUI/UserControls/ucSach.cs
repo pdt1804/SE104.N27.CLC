@@ -10,8 +10,11 @@ namespace GUI.UserControls
     {
         public ucSach()
         {
+            SachList = new List<SACH> (BUSSach.Instance.GetAllSach());
             InitializeComponent();
-            Binding(BUSSach.Instance.GetAllSach());
+            Binding(SachList);
+            comboTinhTrang.Text = "Tất cả";
+            comboTinhTrang.Items.Add("Tất cả");
             comboTinhTrang.Items.Add("Còn");
             comboTinhTrang.Items.Add("Hết");
         }
@@ -32,7 +35,43 @@ namespace GUI.UserControls
             Binding(BUSSach.Instance.GetAllSach());
         }
 
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            txtMaSach.Text = "";
+        }
 
-        
+        private void comboTinhTrang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string selectedTT = comboTinhTrang.SelectedItem.ToString();
+            if (selectedTT.Equals("Hết"))
+            {
+                List<SACH> listSachHet = new List<SACH>();
+                foreach(var p in SachList)
+                {
+                    if (p.SoLuongConLai == 0)
+                    {
+                        listSachHet.Add(p);
+                    }    
+                }
+                Binding(listSachHet);
+            }   
+            else if (selectedTT.Equals("Còn"))
+            {
+                List<SACH> listSachChuaHet = new List<SACH>();
+                foreach (var p in SachList)
+                {
+                    if (p.SoLuongConLai > 0)
+                    {
+                        listSachChuaHet.Add(p);
+                    }
+                }
+                Binding(listSachChuaHet);
+            }
+            else
+            {
+                SachList = BUSSach.Instance.GetAllSach();
+                Binding(SachList);
+            }    
+        }
     }
 }

@@ -81,6 +81,20 @@ namespace GUI.UserControls
             }
             Binding(list);
         }
+
+        private void butFind_Click(object sender, EventArgs e)
+        {
+            string str = txtFind.Text.ToString();
+            List<PHIEUMUONTRA> list = new List<PHIEUMUONTRA>();
+            foreach(PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra())
+            {
+                if(pmt.CUONSACH.MaCuonSach.ToLower().Contains(str) || pmt.DOCGIA.MaDocGia.ToLower().Contains(str) || pmt.SoPhieuMuonTra.ToString().Contains(str))
+                {
+                    list.Add(pmt);
+                }
+            }
+            Binding(list);
+        }
     }
 }
     

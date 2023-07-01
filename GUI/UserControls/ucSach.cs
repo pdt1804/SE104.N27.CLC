@@ -42,36 +42,55 @@ namespace GUI.UserControls
 
         private void comboTinhTrang_SelectedValueChanged(object sender, EventArgs e)
         {
+            SachList.Clear();
             string selectedTT = comboTinhTrang.SelectedItem.ToString();
             if (selectedTT.Equals("Hết"))
             {
-                List<SACH> listSachHet = new List<SACH>();
-                foreach(var p in SachList)
+                foreach(var p in BUSSach.Instance.GetAllSach())
                 {
                     if (p.SoLuongConLai == 0)
                     {
-                        listSachHet.Add(p);
+                        SachList.Add(p);
                     }    
                 }
-                Binding(listSachHet);
+                Binding(SachList);
             }   
             else if (selectedTT.Equals("Còn"))
             {
-                List<SACH> listSachChuaHet = new List<SACH>();
-                foreach (var p in SachList)
+                foreach (var p in BUSSach.Instance.GetAllSach())
                 {
                     if (p.SoLuongConLai > 0)
                     {
-                        listSachChuaHet.Add(p);
+                        SachList.Add(p);
                     }
                 }
-                Binding(listSachChuaHet);
+                Binding(SachList);
             }
             else
             {
                 SachList = BUSSach.Instance.GetAllSach();
                 Binding(SachList);
             }    
+        }
+
+        private void txtMaSach_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtMaSach.Text))
+            {
+                Binding(SachList);
+            }
+            else
+            {
+                List<SACH> list = new List<SACH>();
+                foreach (var p in SachList)
+                {
+                    if (p.MaSach.ToLower().Contains(txtMaSach.Text.ToLower()))
+                    {
+                        list.Add(p);
+                    }
+                }
+                Binding(list);
+            }
         }
     }
 }

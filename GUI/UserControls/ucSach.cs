@@ -98,7 +98,18 @@ namespace GUI.UserControls
         {
             fAddSachMoi f = new fAddSachMoi();
             f.ShowDialog();
-            Binding(BUSSach.Instance.GetAllSach());
+            SachList = BUSSach.Instance.GetAllSach();
+            Binding(SachList);
+            comboTinhTrang.Text = "Tất cả";
+            txtMaSach.Text = "";
+        }
+
+        private void butAddOld_Click(object sender, EventArgs e)
+        {
+            fAddSachDaCo f = new fAddSachDaCo();
+            f.ShowDialog();
+            SachList = BUSSach.Instance.GetAllSach();
+            Binding(SachList);
             comboTinhTrang.Text = "Tất cả";
             txtMaSach.Text = "";
         }

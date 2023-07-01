@@ -46,8 +46,9 @@ namespace GUI.FORM
                     break;
                 }    
             }
-            BUSSach.Instance.AddSachMoi(tuaSach, int.Parse(txtDonGia.Text), int.Parse(txtNamXB.Text), txtNhaXB.Text);
-            BUSPhieuNhapSach.Instance.AddPhieuNhap(DateTime.Now, int.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text));
+            int s = BUSSach.Instance.AddSachMoi(tuaSach, int.Parse(txtDonGia.Text), int.Parse(txtNamXB.Text), txtNhaXB.Text);
+            int ph = BUSPhieuNhapSach.Instance.AddPhieuNhap(DateTime.Now);
+            BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, int.Parse(txtDonGia.Text), int.Parse(txtSoLuongNhap.Text));
             this.Close();
         }
 

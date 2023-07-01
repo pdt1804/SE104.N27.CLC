@@ -67,6 +67,27 @@ namespace DAL
             }
         }
 
+        public int AddPhieuNhap(DateTime ngayNhap, int tongtien)
+        {
+            try
+            {
+                var phieu = new PHIEUNHAPSACH
+                {
+                    NgayNhap = ngayNhap,
+                    TongTien = tongtien
+                };
+
+                QLTVEntities.Instance.PHIEUNHAPSACHes.Add(phieu);
+                QLTVEntities.Instance.SaveChanges();
+                return phieu.SoPhieuNhap;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return -1;
+            }
+        }
+
         public bool UpdPhieuNhap(int id, DateTime? ngayNhap, int? tongTien)
         {
             try

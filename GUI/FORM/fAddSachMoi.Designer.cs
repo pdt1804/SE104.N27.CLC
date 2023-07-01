@@ -35,7 +35,6 @@
             this.comboTuaSach = new System.Windows.Forms.ComboBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtSoLuongNhap = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.dateNgayNhap = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDonGia = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -44,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelThanhTien = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,6 +55,7 @@
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
+            this.txtThanhtien = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.controlPanel.SuspendLayout();
@@ -76,11 +75,11 @@
             this.mainPanel.BorderColor = System.Drawing.Color.RoyalBlue;
             this.mainPanel.BorderRadius = 50;
             this.mainPanel.BorderThickness = 2;
+            this.mainPanel.Controls.Add(this.txtThanhtien);
             this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Controls.Add(this.comboTuaSach);
             this.mainPanel.Controls.Add(this.butOK);
             this.mainPanel.Controls.Add(this.txtSoLuongNhap);
-            this.mainPanel.Controls.Add(this.dateNgayNhap);
             this.mainPanel.Controls.Add(this.siticoneSeparator2);
             this.mainPanel.Controls.Add(this.label6);
             this.mainPanel.Controls.Add(this.txtDonGia);
@@ -89,7 +88,6 @@
             this.mainPanel.Controls.Add(this.label5);
             this.mainPanel.Controls.Add(this.labelThanhTien);
             this.mainPanel.Controls.Add(this.label8);
-            this.mainPanel.Controls.Add(this.label7);
             this.mainPanel.Controls.Add(this.label4);
             this.mainPanel.Controls.Add(this.label9);
             this.mainPanel.Controls.Add(this.label3);
@@ -146,6 +144,7 @@
             this.butOK.Size = new System.Drawing.Size(123, 32);
             this.butOK.TabIndex = 17;
             this.butOK.Text = "Lưu";
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // txtSoLuongNhap
             // 
@@ -161,33 +160,15 @@
             this.txtSoLuongNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuongNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoLuongNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLuongNhap.Location = new System.Drawing.Point(230, 340);
+            this.txtSoLuongNhap.Location = new System.Drawing.Point(85, 338);
             this.txtSoLuongNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSoLuongNhap.Name = "txtSoLuongNhap";
             this.txtSoLuongNhap.PasswordChar = '\0';
             this.txtSoLuongNhap.PlaceholderText = "";
             this.txtSoLuongNhap.SelectedText = "";
-            this.txtSoLuongNhap.Size = new System.Drawing.Size(140, 29);
+            this.txtSoLuongNhap.Size = new System.Drawing.Size(165, 29);
             this.txtSoLuongNhap.TabIndex = 16;
-            // 
-            // dateNgayNhap
-            // 
-            this.dateNgayNhap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateNgayNhap.BorderRadius = 15;
-            this.dateNgayNhap.Checked = true;
-            this.dateNgayNhap.FillColor = System.Drawing.Color.RoyalBlue;
-            this.dateNgayNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgayNhap.ForeColor = System.Drawing.Color.White;
-            this.dateNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayNhap.Location = new System.Drawing.Point(85, 340);
-            this.dateNgayNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateNgayNhap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateNgayNhap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateNgayNhap.Name = "dateNgayNhap";
-            this.dateNgayNhap.Size = new System.Drawing.Size(123, 29);
-            this.dateNgayNhap.TabIndex = 15;
-            this.dateNgayNhap.Value = new System.DateTime(2022, 12, 16, 21, 3, 20, 621);
+            this.txtSoLuongNhap.TextChanged += new System.EventHandler(this.txtSoLuongNhap_TextChanged);
             // 
             // siticoneSeparator2
             // 
@@ -319,26 +300,12 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label8.Location = new System.Drawing.Point(226, 320);
+            this.label8.Location = new System.Drawing.Point(81, 318);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 17);
             this.label8.TabIndex = 9;
             this.label8.Text = "Số Lượng Nhập*";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label7.Location = new System.Drawing.Point(83, 319);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 17);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Ngày Nhập*";
             // 
             // label4
             // 
@@ -476,6 +443,19 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
+            // txtThanhtien
+            // 
+            this.txtThanhtien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtThanhtien.AutoSize = true;
+            this.txtThanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhtien.ForeColor = System.Drawing.Color.MediumBlue;
+            this.txtThanhtien.Location = new System.Drawing.Point(166, 381);
+            this.txtThanhtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtThanhtien.Name = "txtThanhtien";
+            this.txtThanhtien.Size = new System.Drawing.Size(0, 17);
+            this.txtThanhtien.TabIndex = 20;
+            // 
             // fAddSachMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,7 +483,6 @@
         private System.Windows.Forms.ComboBox comboTuaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butOK;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtSoLuongNhap;
-        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dateNgayNhap;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
         private System.Windows.Forms.Label label6;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtDonGia;
@@ -512,7 +491,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelThanhTien;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
@@ -526,5 +504,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl siticoneDragControl1;
         private Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow siticoneAnimateWindow1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label txtThanhtien;
     }
 }

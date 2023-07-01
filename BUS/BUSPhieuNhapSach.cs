@@ -68,6 +68,22 @@ namespace BUS
                 
         }
 
+        public int AddPhieuNhap(DateTime ngayNhap, int tongtien)
+        {
+            int i = DALPhieuNhapSach.Instance.AddPhieuNhap(ngayNhap, tongtien); // Hàm trả về số lượng phiếu đã được thêm
+            if (i > 0)
+            {
+                //MessageBox.Show("Thêm thành công");
+                return i;
+            }
+            else
+            {
+                MessageBox.Show("Không thành công");
+                return 0;
+            }
+
+        }
+
         public bool UpdPhieuNhap(int id, DateTime? ngayNhap, int? tongTien)
         {
             if (!DALPhieuNhapSach.Instance.UpdPhieuNhap(id, ngayNhap, tongTien))

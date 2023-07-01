@@ -1,6 +1,7 @@
 ﻿using BUS;
 using DTO;
 using GUI;
+using GUI.FORM;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace GUI.UserControls
             SachList = new List<SACH> (BUSSach.Instance.GetAllSach());
             InitializeComponent();
             Binding(SachList);
-            comboTinhTrang.Text = "Tất cả";
+            comboTinhTrang.SelectedItem = "Tất cả";
             comboTinhTrang.Items.Add("Tất cả");
             comboTinhTrang.Items.Add("Còn");
             comboTinhTrang.Items.Add("Hết");
@@ -91,6 +92,15 @@ namespace GUI.UserControls
                 }
                 Binding(list);
             }
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            fAddSachMoi f = new fAddSachMoi();
+            f.ShowDialog();
+            Binding(BUSSach.Instance.GetAllSach());
+            comboTinhTrang.Text = "Tất cả";
+            txtMaSach.Text = "";
         }
     }
 }

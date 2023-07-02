@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.txtThanhtien = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboTuaSach = new System.Windows.Forms.ComboBox();
             this.butOK = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -55,7 +56,7 @@
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
-            this.txtThanhtien = new System.Windows.Forms.Label();
+            this.btnCapNhat = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.controlPanel.SuspendLayout();
@@ -75,6 +76,7 @@
             this.mainPanel.BorderColor = System.Drawing.Color.RoyalBlue;
             this.mainPanel.BorderRadius = 50;
             this.mainPanel.BorderThickness = 2;
+            this.mainPanel.Controls.Add(this.btnCapNhat);
             this.mainPanel.Controls.Add(this.txtThanhtien);
             this.mainPanel.Controls.Add(this.pictureBox1);
             this.mainPanel.Controls.Add(this.comboTuaSach);
@@ -96,16 +98,29 @@
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.labelTitle);
             this.mainPanel.Location = new System.Drawing.Point(70, 80);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(454, 474);
             this.mainPanel.TabIndex = 8;
+            // 
+            // txtThanhtien
+            // 
+            this.txtThanhtien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtThanhtien.AutoSize = true;
+            this.txtThanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhtien.ForeColor = System.Drawing.Color.MediumBlue;
+            this.txtThanhtien.Location = new System.Drawing.Point(166, 381);
+            this.txtThanhtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtThanhtien.Name = "txtThanhtien";
+            this.txtThanhtien.Size = new System.Drawing.Size(0, 17);
+            this.txtThanhtien.TabIndex = 20;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.bookadd;
             this.pictureBox1.Location = new System.Drawing.Point(85, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,7 +136,7 @@
             this.comboTuaSach.FormattingEnabled = true;
             this.comboTuaSach.ItemHeight = 17;
             this.comboTuaSach.Location = new System.Drawing.Point(85, 130);
-            this.comboTuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.comboTuaSach.Name = "comboTuaSach";
             this.comboTuaSach.Size = new System.Drawing.Size(156, 25);
             this.comboTuaSach.TabIndex = 18;
@@ -139,7 +154,7 @@
             this.butOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
             this.butOK.Location = new System.Drawing.Point(171, 415);
-            this.butOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butOK.Margin = new System.Windows.Forms.Padding(2);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(123, 32);
             this.butOK.TabIndex = 17;
@@ -161,7 +176,7 @@
             this.txtSoLuongNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoLuongNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuongNhap.Location = new System.Drawing.Point(85, 338);
-            this.txtSoLuongNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuongNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuongNhap.Name = "txtSoLuongNhap";
             this.txtSoLuongNhap.PasswordChar = '\0';
             this.txtSoLuongNhap.PlaceholderText = "";
@@ -176,7 +191,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.siticoneSeparator2.FillColor = System.Drawing.Color.DarkSlateBlue;
             this.siticoneSeparator2.Location = new System.Drawing.Point(207, 283);
-            this.siticoneSeparator2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneSeparator2.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneSeparator2.Name = "siticoneSeparator2";
             this.siticoneSeparator2.Size = new System.Drawing.Size(162, 18);
             this.siticoneSeparator2.TabIndex = 14;
@@ -211,7 +226,7 @@
             this.txtDonGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGia.Location = new System.Drawing.Point(85, 247);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.PlaceholderText = "";
@@ -234,7 +249,7 @@
             this.txtNhaXB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNhaXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhaXB.Location = new System.Drawing.Point(85, 193);
-            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(2);
             this.txtNhaXB.Name = "txtNhaXB";
             this.txtNhaXB.PasswordChar = '\0';
             this.txtNhaXB.PlaceholderText = "";
@@ -257,7 +272,7 @@
             this.txtNamXB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNamXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamXB.Location = new System.Drawing.Point(269, 130);
-            this.txtNamXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamXB.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamXB.Name = "txtNamXB";
             this.txtNamXB.PasswordChar = '\0';
             this.txtNamXB.PlaceholderText = "";
@@ -369,7 +384,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.siticoneSeparator1.FillColor = System.Drawing.Color.DarkSlateBlue;
             this.siticoneSeparator1.Location = new System.Drawing.Point(196, 76);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(162, 18);
             this.siticoneSeparator1.TabIndex = 7;
@@ -409,7 +424,7 @@
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.Lavender;
             this.miniControlBox.Location = new System.Drawing.Point(504, 2);
-            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(45, 41);
             this.miniControlBox.TabIndex = 0;
@@ -421,7 +436,7 @@
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(2);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(596, 44);
             this.controlPanel.TabIndex = 7;
@@ -432,7 +447,7 @@
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.Lavender;
             this.closeControlBox.Location = new System.Drawing.Point(550, 2);
-            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(46, 41);
             this.closeControlBox.TabIndex = 0;
@@ -443,18 +458,25 @@
             this.siticoneDragControl1.TargetControl = this.controlPanel;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // txtThanhtien
+            // btnCapNhat
             // 
-            this.txtThanhtien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtThanhtien.AutoSize = true;
-            this.txtThanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhtien.ForeColor = System.Drawing.Color.MediumBlue;
-            this.txtThanhtien.Location = new System.Drawing.Point(166, 381);
-            this.txtThanhtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtThanhtien.Name = "txtThanhtien";
-            this.txtThanhtien.Size = new System.Drawing.Size(0, 17);
-            this.txtThanhtien.TabIndex = 20;
+            this.btnCapNhat.BorderRadius = 15;
+            this.btnCapNhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCapNhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCapNhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCapNhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCapNhat.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Location = new System.Drawing.Point(169, 415);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(123, 32);
+            this.btnCapNhat.TabIndex = 21;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // fAddSachMoi
             // 
@@ -465,7 +487,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fAddSachMoi";
             this.Text = "fAddSachMoi";
             this.mainPanel.ResumeLayout(false);
@@ -505,5 +527,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow siticoneAnimateWindow1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label txtThanhtien;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnCapNhat;
     }
 }

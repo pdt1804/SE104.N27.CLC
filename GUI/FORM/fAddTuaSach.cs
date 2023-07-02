@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,35 +18,32 @@ namespace GUI.FORM
     {
         private List<TACGIA> listTG;
 
-        public List<TACGIA> ListTG
-        {
-            get { return listTG; }
-            set { listTG = value; }
-        }
 
         public fAddTuaSach()
         {
             InitializeComponent();
             LoadTheLoai();
             LoadTacGia();
-            listTG = new List<TACGIA>();
         }
 
         private void LoadTheLoai()
         {
-            foreach(var p in BUSTheLoai.Instance.GetAllTheLoai())
+            foreach (var p in BUSTheLoai.Instance.GetAllTheLoai())
             {
                 comboTheLoai.Items.Add(p.TenTheLoai);
-            }    
+            }
 
         }
         private void LoadTacGia()
         {
-            foreach (var p in BUSTacGia.Instance.GetAllTacGia())
+            comboTacGia.DataSource = null;
+            if (listTG == null)
             {
-                comboTacGia.Items.Add(p.TenTacGia);
+                listTG = BUSTacGia.Instance.GetAllTacGia();
             }
-
+            comboTacGia.DataSource = listTG;
+            comboTacGia.DisplayMember = "TenTacGia";
+            comboTacGia.ValueMember = "id";
         }
 
         private void TacGiaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,37 +53,54 @@ namespace GUI.FORM
 
         private void butAddTacGia_Click(object sender, EventArgs e)
         {
-            foreach(var tg in BUSTacGia.Instance.GetAllTacGia())
+            bool check = false;
+            int selectedValue = Convert.ToInt32(comboTacGia.SelectedValue);
+            string newtg = comboTacGia.Text;
+            foreach (var tg in BUSTacGia.Instance.GetAllTacGia())
             {
-                if (tg.TenTacGia.Equals(comboTacGia.SelectedItem.ToString()))
+                if (tg.id == selectedValue)
                 {
-                    //listTG.Add(tg);
-                    TacGiaGrid.Rows.Add(tg.TenTacGia); 
+                   check = true;
+                   listTG.RemoveAll(tacgia => tacgia.id == selectedValue);
+                   LoadTacGia();
+                   break;
                 }
-            }    
+            }
+            if (check == false)
+            {
+                var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ask == DialogResult.Yes)
+                {
+                    selectedValue = BUSTacGia.Instance.AddTacGia(newtg);
+                    LoadTacGia() ;
+                }
+                else return;
+            }
+            TacGiaGrid.Rows.Add(newtg, selectedValue);
         }
 
         private void butOK_Click(object sender, EventArgs e)
         {
             string tentheloai = comboTheLoai.SelectedItem.ToString();
             THELOAI theloai = new THELOAI();
+            List<TACGIA> tglist = new List<TACGIA>();
             foreach (DataGridViewRow row in TacGiaGrid.Rows)
             {
-                if (ListTG.Contains(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value))))
+                if (tglist.Contains(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value))))
                     continue;
-                ListTG.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));
+                tglist.Add(BUSTacGia.Instance.GetTacGia(Convert.ToInt32(row.Cells["id"].Value)));
             }
             foreach (var p in BUSTheLoai.Instance.GetAllTheLoai())
             {
                 if (p.TenTheLoai.Equals(tentheloai))
                 {
                     theloai = p;
-                }    
+                }
             }
-            if (BUSTuaSach.Instance.AddTuaSach(txtTenTuaSach.Text, theloai, ListTG))
+            if (BUSTuaSach.Instance.AddTuaSach(txtTenTuaSach.Text, theloai, tglist))
             {
                 this.Close();
-            }     
+            }
         }
     }
 }

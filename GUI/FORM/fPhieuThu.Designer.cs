@@ -88,6 +88,7 @@
             this.textTienThu.SelectedText = "";
             this.textTienThu.Size = new System.Drawing.Size(378, 37);
             this.textTienThu.TabIndex = 96;
+            this.textTienThu.TextChanged += new System.EventHandler(this.textTienThu_TextChanged);
             // 
             // labelNoMoi
             // 

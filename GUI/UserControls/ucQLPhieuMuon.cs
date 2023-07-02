@@ -19,6 +19,7 @@ namespace GUI.UserControls
         public ucQLPhieuMuon()
         {
             InitializeComponent();
+            // Lấy data từ database hiển thị lên datagridview
             Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
             List<string> comboList = new List<string> { "Chưa trả", "Đã trả" };
             comboTinhTrang.DataSource = comboList;
@@ -34,12 +35,6 @@ namespace GUI.UserControls
                 PhieuMuonGrid.Rows.Add(0, pmt.SoPhieuMuonTra, pmt.CUONSACH.MaCuonSach, pmt.CUONSACH.SACH.TUASACH.TenTuaSach, pmt.DOCGIA.MaDocGia, ((DateTime)pmt.NgayMuon).ToShortDateString(), ((DateTime)pmt.HanTra).ToShortDateString(), NgayTra, pmt.SoTienPhat);
             }
         }
-
-        private void ucQLPhieuMuon_Load(object sender, EventArgs e)
-        {
-            Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
-        }
-
         private void butAdd_Click(object sender, EventArgs e)
         {
             var f = new fPhieuMuonSach();

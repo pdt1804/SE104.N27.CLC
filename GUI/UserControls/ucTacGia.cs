@@ -35,7 +35,7 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Binding();
+            txtHoTen.Text = "";
         }
 
         private void TacGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -48,6 +48,24 @@ namespace GUI.UserControls
 
         }
 
-
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtHoTen.Text))
+            {
+                Binding();
+            }    
+            else
+            {
+                List<TACGIA> listTacGia = new List<TACGIA>();
+                foreach (var p in BUSTacGia.Instance.GetAllTacGia())
+                {
+                    if (p.TenTacGia.ToLower().Contains(txtHoTen.Text.ToLower()))
+                    {
+                        listTacGia.Add(p);
+                    }    
+                }
+                TacGiaGrid.DataSource = listTacGia;
+            }    
+        }
     }
 }

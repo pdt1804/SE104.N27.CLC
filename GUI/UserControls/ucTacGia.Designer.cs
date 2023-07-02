@@ -52,7 +52,7 @@
             this.TacGiaGrid.AllowUserToDeleteRows = false;
             this.TacGiaGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -60,7 +60,7 @@
             this.TacGiaGrid.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -83,8 +83,8 @@
             this.TacGiaGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.TacGiaGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TacGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.TacGiaGrid.Location = new System.Drawing.Point(0, 90);
-            this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TacGiaGrid.Location = new System.Drawing.Point(0, 73);
+            this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TacGiaGrid.Name = "TacGiaGrid";
             this.TacGiaGrid.ReadOnly = true;
             this.TacGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -92,7 +92,7 @@
             this.TacGiaGrid.RowHeadersVisible = false;
             this.TacGiaGrid.RowHeadersWidth = 51;
             this.TacGiaGrid.RowTemplate.Height = 30;
-            this.TacGiaGrid.Size = new System.Drawing.Size(1037, 570);
+            this.TacGiaGrid.Size = new System.Drawing.Size(778, 463);
             this.TacGiaGrid.TabIndex = 5;
             this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -153,9 +153,9 @@
             this.siticonePanel1.Controls.Add(this.butAdd);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(1037, 90);
+            this.siticonePanel1.Size = new System.Drawing.Size(778, 73);
             this.siticonePanel1.TabIndex = 4;
             // 
             // butRefresh
@@ -166,10 +166,11 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(21, 15);
+            this.butRefresh.Location = new System.Drawing.Point(16, 12);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(58, 58);
+            this.butRefresh.Size = new System.Drawing.Size(44, 47);
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
@@ -184,17 +185,18 @@
             this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(144, 24);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(5);
+            this.txtHoTen.Location = new System.Drawing.Point(108, 20);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtHoTen.PlaceholderText = "Họ Tên Tác Giả";
             this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(294, 42);
+            this.txtHoTen.Size = new System.Drawing.Size(220, 34);
             this.txtHoTen.TabIndex = 7;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // butAdd
             // 
@@ -210,7 +212,7 @@
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -218,10 +220,10 @@
             this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(519, 23);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Location = new System.Drawing.Point(389, 19);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(207, 43);
+            this.butAdd.Size = new System.Drawing.Size(155, 35);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tác Giả";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
@@ -229,13 +231,14 @@
             // 
             // ucTacGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TacGiaGrid);
             this.Controls.Add(this.siticonePanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucTacGia";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Size = new System.Drawing.Size(1037, 660);
+            this.Size = new System.Drawing.Size(778, 536);
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
             this.siticonePanel1.ResumeLayout(false);

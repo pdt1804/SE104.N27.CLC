@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneButtonCN = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -181,6 +182,7 @@
             this.siticonePanel1.BorderColor = System.Drawing.Color.RoyalBlue;
             this.siticonePanel1.BorderRadius = 50;
             this.siticonePanel1.BorderThickness = 2;
+            this.siticonePanel1.Controls.Add(this.label2);
             this.siticonePanel1.Controls.Add(this.siticoneButtonCN);
             this.siticonePanel1.Controls.Add(this.pictureBox1);
             this.siticonePanel1.Controls.Add(this.butOK);
@@ -229,6 +231,20 @@
             this.siticoneButtonCN.Size = new System.Drawing.Size(95, 39);
             this.siticoneButtonCN.TabIndex = 8;
             this.siticoneButtonCN.Text = "Cập nhật";
+            this.siticoneButtonCN.Click += new System.EventHandler(this.siticoneButtonCN_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label2.Location = new System.Drawing.Point(137, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 9;
             // 
             // fEditTheLoai
             // 
@@ -265,5 +281,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButtonCN;
+        private System.Windows.Forms.Label label2;
     }
 }

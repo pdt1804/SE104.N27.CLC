@@ -63,5 +63,42 @@ namespace GUI.UserControls
             f.ShowDialog();
             Binding(BUSTheLoai.Instance.GetAllTheLoai());
         }
+
+        private void txtTenTL_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtTenTL.Text))
+            {
+                Binding(BUSTheLoai.Instance.GetAllTheLoai());
+            }    
+            else
+            {
+                List<THELOAI> list = new List<THELOAI>();
+                foreach (var p in BUSTheLoai.Instance.GetAllTheLoai())
+                {
+                    if (p.TenTheLoai.ToLower().Contains(txtTenTL.Text.ToLower()))
+                    {
+                        list.Add(p);
+                    }    
+                }
+                Binding(list);
+            }    
+        }
+
+        private void TheLoaiGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            if (e.ColumnIndex == 0) return;
+            //if (e.ColumnIndex == SachGrid.Columns["Edit"].Index)
+            //{
+            //    var f = new fAddSachMoi((Convert.ToInt32(SachGrid.Rows[idx].Cells["id"].Value)))
+            //    f.ShowDialog();
+            //    return;
+            //}
+            var fInfor = new fEditTheLoai(Convert.ToInt32(TheLoaiGrid.Rows[idx].Cells["id"].Value));
+            fInfor.ShowDialog();
+            Binding(BUSTheLoai.Instance.GetAllTheLoai());
+            txtTenTL.Text = "";
+        }
     }
 }

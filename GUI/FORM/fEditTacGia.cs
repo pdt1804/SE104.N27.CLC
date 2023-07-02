@@ -21,6 +21,14 @@ namespace GUI
             tacgia = BUSTacGia.Instance.GetTacGia(id);
             labelMa.Text += tacgia.MATACGIA;
             txtTen.Text = tacgia.TenTacGia;
+            siticoneButton1.Visible = false;
+        }
+
+        public fEditTacGia()
+        {
+            InitializeComponent();
+            labelMa.Visible = false;
+            butOK.Visible = false;
         }
 
         private void butOK_Click(object sender, EventArgs e)
@@ -39,6 +47,26 @@ namespace GUI
             else
                 MessageBox.Show("Lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            var tentg = txtTen.Text;
+            if (String.IsNullOrEmpty(tentg)) return;
+            var tglist = BUSTacGia.Instance.GetAllTacGia();
+            //Tác giả có thể trùng tên
+            //foreach (var tg in tglist)
+            //{
+            //    if (tg.TenTacGia == tentg)
+            //        if (MessageBox.Show("Tên tác giả này đã có, bạn có chắc muốn thêm?",
+            //            "Thêm tác giả", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) break;
+            //        else return;
+            //}
+            int id = BUSTacGia.Instance.AddTacGia(tentg);
+            if (id == -1) MessageBox.Show("Có lỗi xảy ra. Không thể thêm tác giả. Vui lòng kiểm tra lại!", "Lỗi",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Thêm tác giả mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

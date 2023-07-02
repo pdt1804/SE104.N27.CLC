@@ -27,20 +27,8 @@ namespace GUI.UserControls
         }
         private void butAdd_Click(object sender, EventArgs e)
         {
-            var tentg = txtHoTen.Text;
-            if (tentg == "") return;
-            var tglist = BUSTacGia.Instance.GetAllTacGia();
-            foreach (var tg in tglist)
-            {
-                if (tg.TenTacGia == tentg)
-                    if (MessageBox.Show("Tên tác giả này đã có, bạn có chắc muốn thêm?",
-                        "Thêm tác giả", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) break;
-                    else return;
-            }
-            int id = BUSTacGia.Instance.AddTacGia(tentg);
-            if (id == -1) MessageBox.Show("Có lỗi xảy ra. Không thể thêm tác giả. Vui lòng kiểm tra lại!", "Lỗi",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else MessageBox.Show("Thêm tác giả mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fEditTacGia f = new fEditTacGia();
+            f.ShowDialog();
             Binding();
         }
 

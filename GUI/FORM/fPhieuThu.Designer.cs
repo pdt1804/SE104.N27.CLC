@@ -207,6 +207,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 42);
             this.butSave.TabIndex = 70;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // siticoneControlBox1
             // 

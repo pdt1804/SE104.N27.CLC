@@ -73,5 +73,32 @@ namespace GUI.FORM
             labelNoMoi.Text = "";
             textTienThu.Text = "";
         }
+
+        private void butSave_Click(object sender, EventArgs e)
+        {
+            if(textTienThu.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số tiền thu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            TienThu = Convert.ToInt32(textTienThu.Text);
+            
+            if(dateNgayLap.Value> DateTime.Now.Date || dateNgayLap.Value.Date < docgia.NgayLapThe)
+            {
+                MessageBox.Show("Ngày lập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Console.WriteLine(TienThu);
+            string err = Convert.ToString(BUSPhieuThu.Instance.AddPhieuThu(docgia.ID, TienThu, dateNgayLap.Value.Date));
+
+            if (err != "")
+            {
+                MessageBox.Show(err);
+                return;
+            }
+
+            MessageBox.Show("Thêm phiếu thu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
     }
 }

@@ -113,7 +113,7 @@
             this.SachGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.Location = new System.Drawing.Point(0, 358);
-            this.SachGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SachGrid.Margin = new System.Windows.Forms.Padding(2);
             this.SachGrid.Name = "SachGrid";
             this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -150,6 +150,7 @@
             this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
             this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SachGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SachGrid_CellContentClick);
             // 
             // isChosen
             // 
@@ -166,7 +167,7 @@
             this.siticoneSeparator3.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneSeparator3.FillThickness = 2;
             this.siticoneSeparator3.Location = new System.Drawing.Point(133, 42);
-            this.siticoneSeparator3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneSeparator3.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneSeparator3.Name = "siticoneSeparator3";
             this.siticoneSeparator3.Size = new System.Drawing.Size(422, 8);
             this.siticoneSeparator3.TabIndex = 5;
@@ -191,7 +192,7 @@
             this.siticonePanel3.Controls.Add(this.label7);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel3.Location = new System.Drawing.Point(0, 303);
-            this.siticonePanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel3.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Size = new System.Drawing.Size(688, 55);
             this.siticonePanel3.TabIndex = 15;
@@ -200,7 +201,7 @@
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.books__1_;
             this.pictureBox1.Location = new System.Drawing.Point(173, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,7 +223,7 @@
             this.butChange.ForeColor = System.Drawing.Color.White;
             this.butChange.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.butChange.Location = new System.Drawing.Point(528, 0);
-            this.butChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butChange.Margin = new System.Windows.Forms.Padding(2);
             this.butChange.Name = "butChange";
             this.butChange.Size = new System.Drawing.Size(141, 41);
             this.butChange.TabIndex = 5;
@@ -235,7 +236,7 @@
             this.siticonePanel2.Controls.Add(this.butChange);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 262);
-            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 0, 19, 0);
             this.siticonePanel2.Size = new System.Drawing.Size(688, 41);
@@ -372,7 +373,7 @@
             this.siticoneSeparator1.FillColor = System.Drawing.Color.SlateBlue;
             this.siticoneSeparator1.FillThickness = 2;
             this.siticoneSeparator1.Location = new System.Drawing.Point(128, 42);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(428, 8);
             this.siticoneSeparator1.TabIndex = 5;
@@ -399,7 +400,7 @@
             this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 44);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(688, 55);
             this.siticonePanel1.TabIndex = 12;
@@ -408,7 +409,7 @@
             // 
             this.pictureBox2.Image = global::GUI.Properties.Resources.book__1_;
             this.pictureBox2.Location = new System.Drawing.Point(173, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -422,7 +423,7 @@
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.White;
             this.miniControlBox.Location = new System.Drawing.Point(596, 0);
-            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2);
             this.miniControlBox.Name = "miniControlBox";
             this.miniControlBox.Size = new System.Drawing.Size(45, 44);
             this.miniControlBox.TabIndex = 0;
@@ -433,7 +434,7 @@
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.White;
             this.closeControlBox.Location = new System.Drawing.Point(642, 0);
-            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2);
             this.closeControlBox.Name = "closeControlBox";
             this.closeControlBox.Size = new System.Drawing.Size(46, 44);
             this.closeControlBox.TabIndex = 0;
@@ -445,7 +446,7 @@
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(2);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(688, 44);
             this.controlPanel.TabIndex = 11;
@@ -462,7 +463,7 @@
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.controlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fInfoTuaSach";
             this.Text = "fInfoTuaSach";
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).EndInit();

@@ -56,5 +56,10 @@ namespace GUI.FORM
             f.ShowDialog();
             init();
         }
+
+        private void SachGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

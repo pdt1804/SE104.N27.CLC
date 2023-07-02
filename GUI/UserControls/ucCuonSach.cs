@@ -20,11 +20,13 @@ namespace GUI.UserControls
         {
             InitializeComponent();
             comboList = new List<string> { "Đã được mượn", "Còn", "Bị ẩn" };
-            comboTinhTrang.DataSource = comboList;
-            Binding(BUSCuonSach.Instance.GetAllCuonSach());
+            listCuonSach = BUSCuonSach.Instance.GetAllCuonSach();
+            Binding(listCuonSach);
         }
         List<int> tt;
         List<string> comboList;
+        List<CUONSACH> listCuonSach;
+
         public void Binding(List<CUONSACH> CuonSachList)
         {
             CuonSachGrid.Rows.Clear();
@@ -40,6 +42,31 @@ namespace GUI.UserControls
             Binding(BUSCuonSach.Instance.GetAllCuonSach());
         }
 
-        
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            txtMaSach.Text = "";
+        }
+
+        private void txtMaSach_TextChanged(object sender, EventArgs e)
+        {
+            listCuonSach.Clear();
+            if (String.IsNullOrEmpty(txtMaSach.Text))
+            {
+                listCuonSach = BUSCuonSach.Instance.GetAllCuonSach();
+                Binding(listCuonSach);
+            }    
+            else
+            {
+                List<CUONSACH> listSearching = new List<CUONSACH>();
+                foreach(var p in BUSCuonSach.Instance.GetAllCuonSach())
+                {
+                    if (p.MaCuonSach.ToLower().Contains(txtMaSach.Text.ToLower()))
+                    {
+                        listSearching.Add(p);
+                    }    
+                }
+                Binding(listSearching);
+            }    
+        }
     }
 }

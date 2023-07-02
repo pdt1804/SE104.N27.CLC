@@ -131,6 +131,26 @@ namespace DAL
             }
         }
 
+        public bool UpdSach(int id, int dongia, TUASACH tuasach, int? namXB, string nhaXB)
+        {
+            try
+            {
+                SACH sach = GetSachById(id);
+                if (sach == null) return false;
+                if (namXB != null) sach.NamXB = (int)namXB;
+                if (nhaXB != null) sach.NhaXB = nhaXB;
+                if (dongia != null) sach.DonGia = dongia;
+                if (tuasach != null) sach.idTuaSach = tuasach.id;
+                QLTVEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
+
 
         /// <summary>
         /// Xóa sách

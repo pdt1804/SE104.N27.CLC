@@ -18,6 +18,29 @@ namespace GUI.FORM
         {
             InitializeComponent();
             LoadTuaSach();
+            btnCapNhat.Visible = false;
+        }
+
+        public SACH sach { get; set; }
+        // Gọi tới để chỉnh sửa thông tin sách
+        public fAddSachMoi(int i)
+        {
+            InitializeComponent();
+            LoadTuaSach();
+            sach = BUSSach.Instance.GetSachById(i);
+            //Load dữ liệu
+            comboTuaSach.SelectedItem = sach.TUASACH.TenTuaSach;
+            txtNamXB.Text = sach.NamXB.ToString();
+            txtNhaXB.Text = sach.NhaXB;
+            txtDonGia.Text = sach.DonGia.ToString();
+            //Unseen những trường không dùng đến
+            txtSoLuongNhap.Visible = false;
+            txtThanhtien.Visible = false;
+            label6.Visible = false;
+            label8.Visible = false;
+            labelThanhTien.Visible = false;
+            siticoneSeparator2.Visible = false;
+            butOK.Visible = false;
         }
 
         private void LoadTuaSach()
@@ -62,6 +85,28 @@ namespace GUI.FORM
             {
                 txtThanhtien.Text = (int.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text)).ToString();
             }    
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            string tentuasach = comboTuaSach.SelectedItem.ToString();
+            foreach (var p in BUSTuaSach.Instance.GetAllTuaSach())
+            {
+                if (p.TenTuaSach.ToLower().Equals(tentuasach.ToLower()))
+                {
+                    if (BUSSach.Instance.UpdSach(sach.id, int.Parse(txtDonGia.Text), p, int.Parse(txtNamXB.Text), txtNhaXB.Text))
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        break;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật không thành công");
+                        break;
+                    }    
+                }    
+            }
+            this.Close();
         }
     }
 }

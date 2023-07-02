@@ -71,6 +71,10 @@ namespace BUS
             }    
         }
 
+        public bool UpdSach(int id, int dongia, TUASACH tuasach, int? namXB, string nhaXB)
+        {
+            return DALSach.Instance.UpdSach(id, dongia, tuasach, namXB, nhaXB);
+        }
         public bool UpdSach(int id, int? namXB, string nhaXB)
         {
             if (!DALSach.Instance.UpdSach(id, namXB, nhaXB))

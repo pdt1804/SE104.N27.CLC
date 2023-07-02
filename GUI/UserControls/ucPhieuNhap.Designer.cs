@@ -33,9 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PhieuNhapgrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.SoPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHIEUNHAPSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -45,6 +42,9 @@
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.SoPhieuNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapgrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPSACHBindingSource)).BeginInit();
             this.topPanel.SuspendLayout();
@@ -120,30 +120,6 @@
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.Height = 30;
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuNhapgrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // SoPhieuNhap
-            // 
-            this.SoPhieuNhap.DataPropertyName = "SoPhieuNhap";
-            this.SoPhieuNhap.HeaderText = "Số phiếu nhập ";
-            this.SoPhieuNhap.MinimumWidth = 6;
-            this.SoPhieuNhap.Name = "SoPhieuNhap";
-            this.SoPhieuNhap.ReadOnly = true;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            // 
-            // NgayNhap
-            // 
-            this.NgayNhap.DataPropertyName = "NgayNhap";
-            this.NgayNhap.HeaderText = "Ngày nhập ";
-            this.NgayNhap.MinimumWidth = 6;
-            this.NgayNhap.Name = "NgayNhap";
-            this.NgayNhap.ReadOnly = true;
             // 
             // pHIEUNHAPSACHBindingSource
             // 
@@ -340,6 +316,30 @@
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
+            // SoPhieuNhap
+            // 
+            this.SoPhieuNhap.DataPropertyName = "SoPhieuNhap";
+            this.SoPhieuNhap.HeaderText = "Số phiếu ";
+            this.SoPhieuNhap.MinimumWidth = 6;
+            this.SoPhieuNhap.Name = "SoPhieuNhap";
+            this.SoPhieuNhap.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            // 
+            // NgayNhap
+            // 
+            this.NgayNhap.DataPropertyName = "NgayNhap";
+            this.NgayNhap.HeaderText = "Ngày nhập ";
+            this.NgayNhap.MinimumWidth = 6;
+            this.NgayNhap.Name = "NgayNhap";
+            this.NgayNhap.ReadOnly = true;
+            // 
             // ucPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,9 +359,6 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView PhieuNhapgrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoPhieuNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
         private System.Windows.Forms.BindingSource pHIEUNHAPSACHBindingSource;
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
         private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
@@ -371,5 +368,8 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton butFind;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoPhieuNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
     }
 }

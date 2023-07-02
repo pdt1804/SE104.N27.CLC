@@ -261,6 +261,7 @@
             this.comboDocGia.Size = new System.Drawing.Size(378, 35);
             this.comboDocGia.TabIndex = 99;
             this.comboDocGia.ValueMember = "ID";
+            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
             // 
             // siticonePanel1
             // 

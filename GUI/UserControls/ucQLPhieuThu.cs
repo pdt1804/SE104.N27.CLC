@@ -55,5 +55,24 @@ namespace GUI.UserControls
             Binding(list);
         }
 
+        private void butFindNgay_Click(object sender, EventArgs e)
+        {
+            int? Ngay = null, Thang = null, Nam = null;
+            try
+            {
+                if (txtNgay.Text != "")
+                    Ngay = (Convert.ToInt32(txtNgay.Text));
+                if (txtThang.Text != "")
+                    Thang = (Convert.ToInt32(txtThang.Text));
+                if (txtNam.Text != "")
+                    Nam = (Convert.ToInt32(txtNam.Text));
+            }
+            catch 
+            {
+                MessageBox.Show("Ngày tháng năm sai format!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;                    
+            }
+            Binding(BUSPhieuThu.Instance.FindPhieuThuByNgay(Ngay, Thang, Nam));
+        }
     }
 }

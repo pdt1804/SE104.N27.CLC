@@ -18,6 +18,7 @@ namespace GUI.UserControls
         public ucQLPhieuThu()
         {
             InitializeComponent();
+            // Binding data từ database
             Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
         }
         public void Binding(List<PHIEUTHU> PhieuThuList)
@@ -28,5 +29,11 @@ namespace GUI.UserControls
                 PhieuThuGrid.Rows.Add(pt.SoPhieuThu, pt.DOCGIA.MaDocGia, pt.SoTienThu, ((DateTime)pt.NgayLap).ToShortDateString());
             }
         }
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
+            txtNam.Text = txtThang.Text = txtNgay.Text = txtFind.Text = "";
+        }
+
     }
 }

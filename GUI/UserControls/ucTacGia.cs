@@ -67,5 +67,22 @@ namespace GUI.UserControls
                 TacGiaGrid.DataSource = listTacGia;
             }    
         }
+
+        private void TacGiaGrid_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            if (e.ColumnIndex == 0) return;
+            //if (e.ColumnIndex == SachGrid.Columns["Edit"].Index)
+            //{
+            //    var f = new fAddSachMoi((Convert.ToInt32(SachGrid.Rows[idx].Cells["id"].Value)))
+            //    f.ShowDialog();
+            //    return;
+            //}
+            var fInfor = new fEditTacGia(Convert.ToInt32(TacGiaGrid.Rows[idx].Cells["id"].Value));
+            fInfor.ShowDialog();
+            Binding();
+            txtHoTen.Text = "";
+        }
     }
 }

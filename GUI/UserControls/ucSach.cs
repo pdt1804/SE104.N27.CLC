@@ -131,7 +131,6 @@ namespace GUI.UserControls
             Binding(SachList);
             comboTinhTrang.SelectedItem = "Tất cả";
             txtMaSach.Text = "";
-            return;
         }
     }
 }

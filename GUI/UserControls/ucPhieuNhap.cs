@@ -14,11 +14,12 @@ namespace GUI.UserControls
 {
     public partial class ucPhieuNhap : UserControl
     {
-
+        public List<PHIEUNHAPSACH> listPNS { get; set; }
         public ucPhieuNhap()
         {
             InitializeComponent();
-            Binding(BUSPhieuNhapSach.Instance.GetAllPhieuNhapSach());
+            listPNS = new List<PHIEUNHAPSACH>(BUSPhieuNhapSach.Instance.GetAllPhieuNhapSach());  
+            Binding(listPNS);
         }
         public void Binding(List<PHIEUNHAPSACH> PhieuNhapList)
         {
@@ -78,6 +79,27 @@ namespace GUI.UserControls
                 return;
             }
             Binding(BUSPhieuNhapSach.Instance.FindPhieuByNgayNhap(Ngay, Thang, Nam));
+            txtFind.Text = "";
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtFind.Text))
+            {
+                Binding(listPNS);
+            }    
+            else
+            {
+                List<PHIEUNHAPSACH> listSearching = new List<PHIEUNHAPSACH>();
+                foreach (var p in listPNS)
+                {
+                    if (p.SoPhieuNhap.ToString().ToLower().Contains(txtFind.Text.ToString().ToLower()))
+                    {
+                        listSearching.Add(p);
+                    }    
+                }    
+                Binding(listSearching);
+            }    
         }
     }
 }

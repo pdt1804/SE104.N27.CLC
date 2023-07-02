@@ -367,6 +367,7 @@
             this.butAdd.TabIndex = 5;
             this.butAdd.Text = "Thêm Phiếu";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // pHIEUTHUBindingSource
             // 

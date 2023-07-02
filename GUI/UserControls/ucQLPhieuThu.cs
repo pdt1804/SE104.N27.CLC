@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using GUI.FORM;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,5 +36,11 @@ namespace GUI.UserControls
             txtNam.Text = txtThang.Text = txtNgay.Text = txtFind.Text = "";
         }
 
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var f = new fPhieuThu();
+            f.ShowDialog();
+            Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
+        }
     }
 }

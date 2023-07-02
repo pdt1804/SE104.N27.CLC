@@ -390,7 +390,6 @@
             this.Controls.Add(this.PhieuMuonGrid);
             this.Name = "ucQLPhieuMuon";
             this.Size = new System.Drawing.Size(997, 596);
-            this.Load += new System.EventHandler(this.ucQLPhieuMuon_Load);
             this.siticonePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONTRABindingSource)).EndInit();

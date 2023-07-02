@@ -42,5 +42,18 @@ namespace GUI.UserControls
             f.ShowDialog();
             Binding(BUSPhieuThu.Instance.GetAllPhieuThu());
         }
+
+        private void butFind_Click(object sender, EventArgs e)
+        {
+            string pat = txtFind.Text.ToLower();
+            List<PHIEUTHU> list = new List<PHIEUTHU>();
+            foreach (PHIEUTHU pt in BUSPhieuThu.Instance.GetAllPhieuThu())
+            {
+                if(pt.DOCGIA.MaDocGia.ToLower().Contains(pat) || pt.SoPhieuThu.ToString().Contains(pat) || pt.NgayLap.ToShortDateString().Contains(pat))
+                { list.Add(pt); }
+            }
+            Binding(list);
+        }
+
     }
 }

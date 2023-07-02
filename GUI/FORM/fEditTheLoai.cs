@@ -46,12 +46,16 @@ namespace GUI.FORM
         private void butOK_Click(object sender, EventArgs e)
         {
             if (BUSTheLoai.Instance.AddTheLoai(txtTen.Text))
-            this.Close();
+                 this.Close();
         }
 
         private void siticoneButtonCN_Click(object sender, EventArgs e)
         {
-
+            if (BUSTheLoai.Instance.UpdTheLoai(theloai.id, txtTen.Text))
+            {
+                MessageBox.Show("Cập nhật thành công");
+                this.Close();
+            }    
         }
     }
 }

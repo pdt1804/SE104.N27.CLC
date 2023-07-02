@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace GUI.FORM
         public fEditTheLoai()
         {
             InitializeComponent();
+            siticoneButtonCN.Visible = false;
+            labelMaTheLoai.Visible = false;
+        }
+
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butOK_Click(object sender, EventArgs e)
+        {
+            if (BUSTheLoai.Instance.AddTheLoai(txtTen.Text))
+            this.Close();
         }
     }
 }

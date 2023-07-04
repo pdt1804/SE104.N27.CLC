@@ -43,6 +43,17 @@ namespace GUI.UserControls
                 labelNgaySinh.Text = docgia.NgaySinh.ToString();
                 labelTenDangNhap.Text = user.TenDangNhap;
                 labelTongNo.Text = docgia.TongNoHienTai.ToString();
+
+                var phieumuonList = BUSPhieuMuonTra.Instance.FindPhieuMuonByDocGia(docgia.ID);
+                if (phieumuonList.Any())
+                    foreach (var pm in phieumuonList)
+                    {
+                        string ngayTra = (pm.NgayTra != null ? pm.NgayTra.Value.ToShortDateString() : "Chưa trả");
+                        string soTienPhat = (pm.SoTienPhat != null ? pm.SoTienPhat.Value.ToString() : "");
+                        PhieuMuonDataGrid.Rows.Add(pm.SoPhieuMuonTra, pm.CUONSACH.MaCuonSach,
+                            pm.CUONSACH.SACH.TUASACH.TenTuaSach, pm.NgayMuon.ToShortDateString(), pm.HanTra.ToShortDateString(),
+                            ngayTra, soTienPhat);
+                    }
             }    
         }
 
@@ -50,6 +61,16 @@ namespace GUI.UserControls
         {
             fChangePassword f = new fChangePassword(user.id);
             f.ShowDialog();
+        }
+
+        private void siticonePanel3_Paint(object sender, PaintEventArgs e)
+        {
+                  
+        }
+
+        private void siticoneDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

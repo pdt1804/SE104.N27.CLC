@@ -45,5 +45,11 @@ namespace GUI.UserControls
                 labelTongNo.Text = docgia.TongNoHienTai.ToString();
             }    
         }
+
+        private void butChange_Click(object sender, EventArgs e)
+        {
+            fChangePassword f = new fChangePassword(user.id);
+            f.ShowDialog();
+        }
     }
 }

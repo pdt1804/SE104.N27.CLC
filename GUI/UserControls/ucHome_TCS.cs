@@ -52,7 +52,7 @@ namespace GUI.UserControls
 
         private void comboTheLoai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void butFilTL_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace GUI.UserControls
             List<SACH> Res = new List<SACH>();
             foreach (SACH sach in BUSSach.Instance.GetAllSach())
             {
-                if (sach.TUASACH.THELOAI.TenTheLoai.Equals(comboTheLoai.SelectedText))
+                if (sach.TUASACH.THELOAI.TenTheLoai.Equals(comboTheLoai.SelectedItem.ToString()))
                     Res.Add(sach);
             }
             Binding(Res);
@@ -81,6 +81,329 @@ namespace GUI.UserControls
                         Res.Add(sach);
                 }
             Binding(Res);
+        }
+
+        private void comboTheLoai_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == true && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == true)
+            {
+                list = BUSSach.Instance.GetAllSach();
+                Binding(list);
+            }
+            else if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == false && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == true)
+            {
+                if (String.IsNullOrEmpty(comboTheLoai.SelectedItem.ToString()))
+                {
+                    list = BUSSach.Instance.GetAllSach();
+                    Binding(list);
+                }
+                else
+                {
+                    list.Clear();
+                    foreach (var p in BUSSach.Instance.GetAllSach())
+                    {
+                        if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()))
+                        {
+                            list.Add(p);
+                        }
+                    }
+                    Binding(list);
+                }
+            }
+            else if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == true && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == false)
+            {
+                if (String.IsNullOrEmpty(comboTinhTrang.SelectedItem.ToString()))
+                {
+                    list = BUSSach.Instance.GetAllSach();
+                    Binding(list);
+                }
+                else
+                {
+                    if (comboTinhTrang.SelectedItem.ToString().Contains("n"))
+                    {
+                        list.Clear();
+                        foreach (var p in BUSSach.Instance.GetAllSach())
+                        {
+                            if (p.SoLuongConLai > 0)
+                            {
+                                list.Add(p);
+                            }
+                        }
+                        Binding(list);
+                    }
+                    else
+                    {
+                        list.Clear();
+                        foreach (var p in BUSSach.Instance.GetAllSach())
+                        {
+                            if (p.SoLuongConLai == 0)
+                            {
+                                list.Add(p);
+                            }
+                        }
+                        Binding(list);
+                    }
+                }
+            }
+            else if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == false && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == false)
+            {
+                if (String.IsNullOrEmpty(comboTheLoai.SelectedItem.ToString()))
+                {
+                    if (String.IsNullOrEmpty(comboTinhTrang.SelectedItem.ToString()))
+                    {
+                        list = BUSSach.Instance.GetAllSach();
+                        Binding(list);
+                    }
+                    else
+                    {
+                        if (comboTinhTrang.SelectedItem.ToString().Contains("n"))
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.SoLuongConLai > 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                        else
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.SoLuongConLai == 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                    }
+                }
+                else if (!String.IsNullOrEmpty(comboTheLoai.SelectedItem.ToString()))
+                {
+                    if (String.IsNullOrEmpty(comboTinhTrang.SelectedItem.ToString()) == true)
+                    {
+                        list.Clear();
+                        foreach (var p in BUSSach.Instance.GetAllSach())
+                        {
+                            if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()))
+                            {
+                                list.Add(p);
+                            }
+                        }
+                        Binding(list);
+                    }
+                    else
+                    {
+                        if (comboTinhTrang.SelectedItem.ToString().Contains("n"))
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()) == true && p.SoLuongConLai > 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                        else
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()) == true && p.SoLuongConLai == 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                list = BUSSach.Instance.GetAllSach();
+                Binding(list);
+            }
+        }
+
+        private void comboTinhTrang_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == true && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == true)
+            {
+                list = BUSSach.Instance.GetAllSach();
+                Binding(list);
+            }
+            else if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == false && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == true)
+            {
+                if (String.IsNullOrEmpty(comboTheLoai.SelectedItem.ToString()))
+                {
+                    list = BUSSach.Instance.GetAllSach();
+                    Binding(list);
+                }
+                else
+                {
+                    list.Clear();
+                    foreach (var p in BUSSach.Instance.GetAllSach())
+                    {
+                        if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()))
+                        {
+                            list.Add(p);
+                        }
+                    }
+                    Binding(list);
+                }
+            }
+            else if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == true && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == false)
+            {
+                if (String.IsNullOrEmpty(comboTinhTrang.SelectedItem.ToString()))
+                {
+                    list = BUSSach.Instance.GetAllSach();
+                    Binding(list);
+                }
+                else
+                {
+                    if (comboTinhTrang.SelectedItem.ToString().ToLower().Contains("n"))
+                    {
+                        list.Clear();
+                        foreach (var p in BUSSach.Instance.GetAllSach())
+                        {
+                            if (p.SoLuongConLai > 0)
+                            {
+                                list.Add(p);
+                            }
+                        }
+                        Binding(list);
+                    }
+                    else
+                    {
+                        list.Clear();
+                        foreach (var p in BUSSach.Instance.GetAllSach())
+                        {
+                            if (p.SoLuongConLai == 0)
+                            {
+                                list.Add(p);
+                            }
+                        }
+                        Binding(list);
+                    }
+                }
+            }
+            else if (comboTheLoai.SelectedItem.ToString().Equals("Tất cả") == false && comboTinhTrang.SelectedItem.ToString().Equals("Tất cả") == false)
+            {
+                if (String.IsNullOrEmpty(comboTheLoai.SelectedItem.ToString()))
+                {
+                    if (String.IsNullOrEmpty(comboTinhTrang.SelectedItem.ToString()))
+                    {
+                        list = BUSSach.Instance.GetAllSach();
+                        Binding(list);
+                    }
+                    else
+                    {
+                        if (comboTinhTrang.SelectedItem.ToString().Contains("n"))
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.SoLuongConLai > 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                        else
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.SoLuongConLai == 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                    }
+                }
+                else if (!String.IsNullOrEmpty(comboTheLoai.SelectedItem.ToString()))
+                {
+                    if (String.IsNullOrEmpty(comboTinhTrang.SelectedItem.ToString()) == true)
+                    {
+                        list.Clear();
+                        foreach (var p in BUSSach.Instance.GetAllSach())
+                        {
+                            if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()))
+                            {
+                                list.Add(p);
+                            }
+                        }
+                        Binding(list);
+                    }
+                    else
+                    {
+                        if (comboTinhTrang.SelectedItem.ToString().Contains("n"))
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()) == true && p.SoLuongConLai > 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                        else
+                        {
+                            list.Clear();
+                            foreach (var p in BUSSach.Instance.GetAllSach())
+                            {
+                                if (p.TUASACH.THELOAI.TenTheLoai.ToLower().Equals(comboTheLoai.SelectedItem.ToString().ToLower()) == true && p.SoLuongConLai == 0)
+                                {
+                                    list.Add(p);
+                                }
+                            }
+                            Binding(list);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                list = BUSSach.Instance.GetAllSach();
+                Binding(list);
+            }
+        }
+
+        private void txtMaSach_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtMaSach.Text))
+            {
+                Binding(list);
+            }    
+            else
+            {
+                List<SACH> listSachSearching = new List<SACH>();
+                foreach (var p in list)
+                {
+                    if (p.TUASACH.TenTuaSach.ToLower().Contains(txtMaSach.Text))
+                    {
+                        listSachSearching.Add(p);
+                    }    
+                }
+                Binding(listSachSearching);
+            }    
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            txtMaSach.Text = "";
         }
     }
 }

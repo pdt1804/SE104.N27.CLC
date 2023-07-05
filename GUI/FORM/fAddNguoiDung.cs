@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace GUI
         public fAddNguoiDung()
         {
             InitializeComponent();
+        }
+        private void Bind()
+        {
+            var dsNND = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
+            foreach(var n in dsNND)
+            {
+                n.TenNhomNguoiDung = n.TenNhomNguoiDung + "(" + n.MaNhomNguoiDung + ")";
+            }
+            comboNhomND.DataSource = dsNND;
+            comboNhomND.ValueMember = "id";
+            comboNhomND.DisplayMember = "TenNhomNguoiDung";
         }
     }
 }

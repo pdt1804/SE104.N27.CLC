@@ -57,10 +57,8 @@ namespace GUI.FORM
 
             foreach (DataGridViewRow row in this.dsChucNang.Rows)
             {
-                //Console.WriteLine(row.Cells["isChoosen"].Value);
                 if (row.Cells["isChoosen"].Value.ToString() == "1")
                 {
-                    //Console.WriteLine(row.Cells["MaChucNang"].Value.ToString());
                     dsCn.Add(row.Cells["MaChucNang"].Value.ToString());
                     if (row.Cells["TenChucNang"].Value.ToString() == "DG") hasIsDGPost = true;
                 }

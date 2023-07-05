@@ -1,4 +1,5 @@
 ﻿using BUS;
+using GUI.FORM;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,13 @@ namespace GUI.UserControls
             {
                 row.Cells["Edit"].Value = img;
             }
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            var f = new fAddNhomND();
+            f.ShowDialog();
+            Bind();
         }
     }
 }

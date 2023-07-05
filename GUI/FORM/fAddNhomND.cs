@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace GUI.FORM
         public fAddNhomND()
         {
             InitializeComponent();
+            Bind();
+        }
+        private void Bind()
+        {
+            var dscn = BUSChucNang.Instance.GetAllChucNang();
+            foreach(var cn in dscn)
+            {
+                dsChucNang.Rows.Add("0", cn.MaChucNang, cn.TenChucNang, cn.TenManHinh);
+            }
         }
     }
 }

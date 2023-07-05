@@ -19,7 +19,7 @@ namespace GUI.UserControls
             InitializeComponent();
 
         }
-        private void Bind()
+        public void Bind()
         {
             Image img = Properties.Resources.edit_icon;
             img = (Image)(new Bitmap(img, new Size(20, 20)));
@@ -34,6 +34,11 @@ namespace GUI.UserControls
         {
             var f = new fAddNhomND();
             f.ShowDialog();
+            Bind();
+        }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
             Bind();
         }
     }

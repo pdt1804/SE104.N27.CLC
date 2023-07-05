@@ -17,7 +17,7 @@ namespace GUI.UserControls
         public ucNhomND()
         {
             InitializeComponent();
-
+            Bind();
         }
         public void Bind()
         {

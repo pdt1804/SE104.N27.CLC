@@ -17,6 +17,7 @@ namespace GUI
         public fAddNguoiDung()
         {
             InitializeComponent();
+            Bind();
         }
         private void Bind()
         {

@@ -71,14 +71,25 @@ namespace BUS
             return true;
         }
 
-        public bool DelNguoiDung(int id)
+        public string DelNguoiDung(string maNguoiDung)
         {
-            if (!DALNguoiDung.Instance.DelNguoiDung(id))
+            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByMa(maNguoiDung);
+            if (nd == null)
             {
-                MessageBox.Show("Xoá không thành công");
-                return false;
+                return "Mã người dùng không hợp lệ";
             }
-            return true;
+            if (nd.TenDangNhap == "admin")
+            {
+                return "Không thể xoá người dùng này";
+            }
+            bool isDG = false;
+            foreach (CHUCNANG cn in nd.NHOMNGUOIDUNG.CHUCNANGs)
+            {
+                if (cn.TenChucNang == "DG") isDG = true;
+            }
+            if (isDG) return "Không thể xóa người dùng là độc giả";
+            if (DALNguoiDung.Instance.DelNguoiDung(nd.id)) return "";
+            return "Không thể xoá người dùng";
         }
 
         public bool UpdPassword(int id, string password)

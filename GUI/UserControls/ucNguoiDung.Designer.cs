@@ -43,10 +43,10 @@
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.nGUOIDUNGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.siticonePanel1.SuspendLayout();
@@ -232,6 +232,20 @@
             this.butFind.Text = "Tìm kiếm";
             this.butFind.TextOffset = new System.Drawing.Point(3, 0);
             // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(19, 32);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(62, 56);
+            this.butRefresh.TabIndex = 9;
+            // 
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
@@ -315,20 +329,6 @@
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Người Dùng";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
-            // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(14, 20);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(62, 56);
-            this.butRefresh.TabIndex = 9;
             // 
             // nGUOIDUNGBindingSource
             // 

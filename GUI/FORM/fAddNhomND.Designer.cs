@@ -34,25 +34,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.customPanel1 = new GUI.CustomPanel();
             this.dsChucNang = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.isChoosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenManHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.butSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenNhom = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cHUCNANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customPanel1 = new GUI.CustomPanel();
             this.siticonePanel1.SuspendLayout();
+            this.customPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsChucNang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCNANGBindingSource)).BeginInit();
-            this.customPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -78,6 +78,20 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(696, 650);
             this.siticonePanel1.TabIndex = 18;
+            // 
+            // customPanel1
+            // 
+            this.customPanel1.BackColor = System.Drawing.Color.White;
+            this.customPanel1.BorderRadius = 30;
+            this.customPanel1.Controls.Add(this.dsChucNang);
+            this.customPanel1.ForeColor = System.Drawing.Color.Black;
+            this.customPanel1.GradientAngle = 90F;
+            this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
+            this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
+            this.customPanel1.Location = new System.Drawing.Point(69, 237);
+            this.customPanel1.Name = "customPanel1";
+            this.customPanel1.Size = new System.Drawing.Size(561, 280);
+            this.customPanel1.TabIndex = 42;
             // 
             // dsChucNang
             // 
@@ -179,6 +193,16 @@
             this.TenManHinh.Name = "TenManHinh";
             this.TenManHinh.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.add_group;
+            this.pictureBox1.Location = new System.Drawing.Point(70, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
             // butSave
             // 
             this.butSave.BorderRadius = 15;
@@ -195,6 +219,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 43);
             this.butSave.TabIndex = 4;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // label1
             // 
@@ -264,33 +289,9 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(57, 45);
             this.siticoneControlBox1.TabIndex = 17;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.add_group;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
             // cHUCNANGBindingSource
             // 
             this.cHUCNANGBindingSource.DataSource = typeof(DTO.CHUCNANG);
-            // 
-            // customPanel1
-            // 
-            this.customPanel1.BackColor = System.Drawing.Color.White;
-            this.customPanel1.BorderRadius = 30;
-            this.customPanel1.Controls.Add(this.dsChucNang);
-            this.customPanel1.ForeColor = System.Drawing.Color.Black;
-            this.customPanel1.GradientAngle = 90F;
-            this.customPanel1.GradientBottomColor = System.Drawing.Color.CadetBlue;
-            this.customPanel1.GradientTopColor = System.Drawing.Color.DodgerBlue;
-            this.customPanel1.Location = new System.Drawing.Point(69, 237);
-            this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(561, 280);
-            this.customPanel1.TabIndex = 42;
             // 
             // fAddNhomND
             // 
@@ -306,10 +307,10 @@
             this.Text = "fAddNhomND";
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
+            this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dsChucNang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCNANGBindingSource)).EndInit();
-            this.customPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

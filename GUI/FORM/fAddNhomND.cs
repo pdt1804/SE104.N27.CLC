@@ -26,5 +26,31 @@ namespace GUI.FORM
                 dsChucNang.Rows.Add("0", cn.MaChucNang, cn.TenChucNang, cn.TenManHinh);
             }
         }
+
+        private void butSave_Click(object sender, EventArgs e)
+        {
+            string ten = txtTenNhom.Text;
+            if(ten == "")
+            {
+                MessageBox.Show("Tên nhóm người dùng không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            int id = BUSNhomNguoiDung.Instance.AddNhomNguoiDung(ten);
+            if (id == -1)
+            {
+                return;
+            }
+            List<String> dsCn = new List<String>();
+            foreach (DataGridViewRow row in this.dsChucNang.Rows)
+            {
+                if (row.Cells["isChoosen"].Value.ToString() == "1")
+                {
+                    dsCn.Add(row.Cells["MaChucNang"].Value.ToString());
+                }
+            }
+            string res = BUSNhomNguoiDung.Instance.AddChucNangNhom(id, dsCn);
+            if (res == "") MessageBox.Show("Thêm nhóm người dùng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(res, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.Close();
+        }
     }
 }

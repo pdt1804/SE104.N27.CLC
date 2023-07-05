@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace GUI.UserControls
         public ucNhomND()
         {
             InitializeComponent();
+
+        }
+        private void Bind()
+        {
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(20, 20)));
+            this.NDGrid.DataSource = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
+            foreach (DataGridViewRow row in NDGrid.Rows)
+            {
+                row.Cells["Edit"].Value = img;
+            }
         }
     }
 }

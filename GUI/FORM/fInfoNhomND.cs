@@ -27,5 +27,11 @@ namespace GUI.FORM
             this.labelMaNhom.Text = "Mã Nhóm Người Dùng: " + nnd.MaNhomNguoiDung.ToString();
             this.labelTenNhom.Text = "Tên Nhóm Người Dùng: " + nnd.TenNhomNguoiDung;
         }
+        private void butChange_Click(object sender, EventArgs e)
+        {
+            var f = new fEditNhomND(id);
+            f.ShowDialog();
+            Bind();
+        }
     }
 }

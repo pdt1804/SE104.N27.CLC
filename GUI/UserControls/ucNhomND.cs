@@ -76,5 +76,22 @@ namespace GUI.UserControls
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             Bind();
         }
+
+        private void NDGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int stt = e.RowIndex;
+            if (e.ColumnIndex == 0) return;
+            if (e.ColumnIndex == NDGrid.Columns["Edit"].Index)
+            {
+                var fEdit = new fEditNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
+                fEdit.ShowDialog();
+                Bind();
+                return;
+            }
+            if (stt == -1) return;
+            var fInfor = new fInfoNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
+            fInfor.ShowDialog();
+            Bind();
+        }
     }
 }

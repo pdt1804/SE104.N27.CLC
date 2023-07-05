@@ -49,5 +49,29 @@ namespace GUI
                 return;
             }
         }
+
+        private void butSave_Click(object sender, EventArgs e)
+        {
+            string ten = txtHoTen.Text;
+            DateTime ngaysinh = dateNgaySinh.Value;
+            string chucvu = txtChucVu.Text;
+            string email = "";
+            if (ten == "")
+            {
+                MessageBox.Show("Tên không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (ngaysinh > DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày sinh không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var nd = BUSNguoiDung.Instance.GetNguoiDungById(id);
+            string err = Convert.ToString(BUSNguoiDung.Instance.UpdNguoiDung(id, ten, ngaysinh, chucvu, nd.NHOMNGUOIDUNG.id, email));
+
+            if (err == "")
+                MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

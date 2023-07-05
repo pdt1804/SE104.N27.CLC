@@ -91,5 +91,22 @@ namespace BUS
             return "Không thể thêm chức năng cho nhóm người dùng.";
 
         }
+        public string DelChucNangNhom(int id, List<String> dsChucNang)
+        {
+            List<CHUCNANG> ds = new List<CHUCNANG>();
+            foreach (var ma in dsChucNang)
+            {
+                var cn = DALChucNang.Instance.GetChucNangByMa(ma);
+                if (cn == null) return "Danh sách các mã chức năng không hợp lệ.";
+                ds.Add(cn);
+            }
+            var nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
+            if (nnd == null) return "Mã nhóm người dùng không đúng.";
+            if (nnd.id == 1)
+                return "Không thể chỉnh sửa nhóm người dùng này";
+            if (DALNhomNguoiDung.Instance.DelChucNangNhom(nnd.id, ds))
+                return "";
+            return "Không thể thêm chức năng cho nhóm người dùng.";
+        }
     }
 }

@@ -31,7 +31,9 @@ namespace BUS
         // Lấy ra thông tin chi tiết phiếu nhập dựa trên số phiếu và ID sách
         public CT_PHIEUNHAP GetCT_PHIEUNHAP(int soPhieu, int idSach)
         {
-            return DALCTPhieuNhap.Instance.GetCT_PHIEUNHAP(soPhieu,idSach);
+            CT_PHIEUNHAP cT_PHIEUNHAP = DALCTPhieuNhap.Instance.GetCT_PHIEUNHAP(soPhieu, idSach);
+            if(cT_PHIEUNHAP == null) return null;
+            else return cT_PHIEUNHAP;
         }
 
         public string AddCtPhieuNhap(int soPhieu, int idSach, int donGia, int soLuongNhap)

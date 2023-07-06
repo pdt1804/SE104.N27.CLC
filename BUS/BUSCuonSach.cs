@@ -7,6 +7,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -38,12 +39,17 @@ namespace BUS
             return CuonSachList;
         }
         // Lấy ra cuốn sách dựa trên mã cuốn sách
-        public SACH GetCuonSachByMa(string MaCuonSach)
+        public CUONSACH GetCuonSachById(int id)
         {
-            CUONSACH cs;
-            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
-
-            return DALSach.Instance.GetSachById((int)cs.idSach);
+            CUONSACH cuonsach = DALCuonSach.Instance.GetCuonSachById(id);
+            if (cuonsach == null) return null;
+            else return cuonsach;
+        }
+        public CUONSACH GetCuonSachByMa(string MaCuonSach)
+        {
+            CUONSACH cuonsach = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            if (cuonsach == null) return null;
+            else return cuonsach;
         }
         public List<CUONSACH> FindCuonSach(SACH name, int? tinhtrang)
         {
@@ -51,37 +57,36 @@ namespace BUS
         }
         public bool AddCuonSach(SACH sach, int tinhTrang = 0)
         {
-            return DALCuonSach.Instance.AddCuonSach(sach, tinhTrang);
+            bool i = DALCuonSach.Instance.AddCuonSach(sach, tinhTrang);
+            if (i == false)
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể thêm sách mới.");
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("Thêm thành công");
+                return i;
+            }
         }
-        public string UpdCuonSach(string id, int data)
+        public bool UpdCuonSach(int id, int data)
         {
-            CUONSACH cs = DALCuonSach.Instance.GetCuonSachByMa(id);
-            if (data == 1 && cs.TinhTrang == 0)
-                return "Không thể ẩn vì còn sách đang được mượn";
-            if (cs.TinhTrang == 0) return "";
-            if (DALCuonSach.Instance.UpdCuonSach(cs.id, data))
-                return "";
-            return "Lỗi";
+            if (!DALCuonSach.Instance.UpdCuonSach(id, data))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể cập nhật thông tin.");
+                return false;
+            }
+            return true;
         }
 
-        public string DelCuonSach(string MaCuonSach)
+        public bool DelCuonSach(int idCuonSach)
         {
-            CUONSACH cs;
-            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
-            if (cs == null)
+            if (!DALCuonSach.Instance.DelCuonSach(idCuonSach))
             {
-                return "Mã cuốn sách không hợp lệ";
+                MessageBox.Show("Có lỗi xảy ra, không thể xoá.");
+                return false;
             }
-            if (cs.TinhTrang == 0)
-                return "Cuốn sách đang được mượn không thể xoá";
-            if (DALCuonSach.Instance.DelCuonSach(cs.id))
-                return "";
-            return "Không thể xoá cuốn sách";
-        }
-        // Lấy ra cuốn sách dựa trên ID của sách
-        public CUONSACH GetCuonSachById(int id)
-        {
-            return DALCuonSach.Instance.GetCuonSachById(id);
+            return true;
         }
     }
 }

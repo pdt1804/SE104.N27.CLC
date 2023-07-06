@@ -88,6 +88,7 @@
             this.textTienThu.SelectedText = "";
             this.textTienThu.Size = new System.Drawing.Size(378, 37);
             this.textTienThu.TabIndex = 96;
+            this.textTienThu.TextChanged += new System.EventHandler(this.textTienThu_TextChanged);
             // 
             // labelNoMoi
             // 
@@ -206,6 +207,7 @@
             this.butSave.Size = new System.Drawing.Size(150, 42);
             this.butSave.TabIndex = 70;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // siticoneControlBox1
             // 
@@ -260,6 +262,7 @@
             this.comboDocGia.Size = new System.Drawing.Size(378, 35);
             this.comboDocGia.TabIndex = 99;
             this.comboDocGia.ValueMember = "ID";
+            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
             // 
             // siticonePanel1
             // 

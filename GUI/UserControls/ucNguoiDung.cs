@@ -78,6 +78,36 @@ namespace GUI.UserControls
             Bind(Res);
         }
 
-       
+        private void butDel_Click(object sender, EventArgs e)
+        {
+            List<string> idDel = new List<string>();
+            foreach (DataGridViewRow row in dataGrid.Rows)
+            {
+                if (row.Cells["isChosen"].Value == "1")
+                {
+                    idDel.Add((string)row.Cells["MaNguoiDung"].Value);
+
+                }
+            }
+            if (idDel.Count == 0) { return; }
+            int cnt = 0;
+            if (MessageBox.Show("Bạn có chắc muốn xoá " + idDel.Count + " người dùng?", "Xóa người dùng",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
+            foreach (string id in idDel)
+            {
+            Retry:
+                string error = (BUSNguoiDung.Instance.DelNguoiDung(id));
+                if (error != "")
+                {
+                    if (MessageBox.Show(error, "Lỗi", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                        goto Retry;
+                    else continue;
+                }
+                else cnt++;
+            }
+
+            MessageBox.Show("Đã xoá thành công " + cnt + " người dùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Bind(BUSNguoiDung.Instance.GetAllNguoiDung());
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -42,6 +43,24 @@ namespace BUS
                 return "";
             return "Lỗi";
 
+        }
+        public bool UpdCTBC(int idBC, int idTL, int soLuotMuon)
+        {
+            if (!DALCT_BCLuotMuonTheoTheLoai.Instance.UpdCTBC(idBC, idTL, soLuotMuon))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể cập nhật thông tin.");
+                return false;
+            }
+            return true;
+        }
+        public bool DelCTBC(int idBC, int idTL)
+        {
+            if (!DALCT_BCLuotMuonTheoTheLoai.Instance.DelCTBC(idBC, idTL))
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể xoá.");
+                return false;
+            }
+            return true;
         }
     }
 }

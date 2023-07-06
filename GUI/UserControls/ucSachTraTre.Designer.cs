@@ -222,6 +222,7 @@
             this.butAdd.TabIndex = 4;
             this.butAdd.Text = "Tạo Báo Cáo";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // ucSachTraTre
             // 

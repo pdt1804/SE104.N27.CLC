@@ -41,18 +41,20 @@ namespace BUS
             return DALBCSachTraTre.Instance.FindBaoCaoByCuonSach(idCuonSach);
         }
 
-        public bool AddBaoCao(DateTime ngayBC, int idCuonSach, DateTime ngayMuon, int soNgayTre)
+        public string AddBaoCao(DateTime NgayBC)
         {
-            if (!DALBCSachTraTre.Instance.AddBaoCao(ngayBC, idCuonSach, ngayMuon, soNgayTre))
+            if (NgayBC > DateTime.Now) return "Ngày báo cáo không hợp lệ";
+            List<PHIEUMUONTRA> lpmt = DALPhieuMuonTra.Instance.FindPhieuMuonTre(NgayBC);
+            if (!lpmt.Any()) return "Không có sách trả trễ trong ngày này";
+            foreach (PHIEUMUONTRA pmt in lpmt)
             {
-                MessageBox.Show("Thêm báo cáo không thành công");
-                return false;
-            }    
-            else
-            {
-                MessageBox.Show("Thêm báo cáo thành công");
-                return false;
-            }    
+                if (pmt.NgayTra == null)
+                {
+                    int SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
+                    DALBCSachTraTre.Instance.AddBaoCao(NgayBC, (int)pmt.idCuonSach, (DateTime)pmt.NgayMuon, SoNgayTraTre);
+                }
+            }
+            return "";
         }
 
         public bool DelBaoCao(DateTime ngayBC, int idCuonSach)

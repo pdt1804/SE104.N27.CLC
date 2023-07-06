@@ -29,7 +29,15 @@ namespace BUS
 
         public CHUCNANG GetChucNangById(int id)
         {
-            return DALChucNang.Instance.GetChucNangById(id);
+            CHUCNANG CN = DALChucNang.Instance.GetChucNangById(id);
+            if(CN == null) return null;
+            else return CN;
+        }
+        public CHUCNANG GetChucNangByMa(string ma)
+        {
+            CHUCNANG CN = DALChucNang.Instance.GetChucNangByMa(ma);
+            if (CN == null) return null;
+            else return CN;
         }
     }
 }

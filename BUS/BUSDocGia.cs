@@ -117,5 +117,16 @@ namespace BUS
                 return "";
             return "Sửa thông tin thất bại";
         }
+        public string UpdTongNo(int id, int TongNo)
+        {
+            DOCGIA docgia = DALDocGia.Instance.GetDocGiaById(id);
+            if (docgia == null) 
+                return "Mã độc giả không hợp lệ";
+            if (TongNo < 0)
+                return "Nợ không hợp lệ";
+            DALDocGia.Instance.UpdTongNoDocGia(id, TongNo);
+            return "";
+
+        }
     }
 }

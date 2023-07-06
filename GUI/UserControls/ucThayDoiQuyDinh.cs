@@ -37,70 +37,70 @@ namespace GUI.UserControls
 
         private void butSave_Click(object sender, EventArgs e)
         {
-            //int tuoiMin = (int)numTuoiMin.Value;
-            //string err = BUSThamSo.Instance.UpdTuoiToiThieu(tuoiMin);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
+            int tuoiMin = (int)numTuoiMin.Value;
+            string err = BUSThamSo.Instance.UpdTuoiToiThieu(tuoiMin);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
 
-            //int tuoiMax = (int)numTuoiMax.Value;
-            //err = BUSThamSo.Instance.UpTuoiToiDa(tuoiMax);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
+            int tuoiMax = (int)numTuoiMax.Value;
+            err = BUSThamSo.Instance.UpTuoiToiDa(tuoiMax);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
 
-            //int soNgayMuon = (int)numNgayMuon.Value;
-            //err = BUSThamSo.Instance.UpdSoNgayMuon(soNgayMuon);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
-            //int kc = (int)numKcNam.Value;
-            //err = BUSThamSo.Instance.UpdKCXB(kc);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
+            int soNgayMuon = (int)numNgayMuon.Value;
+            err = BUSThamSo.Instance.UpdSoNgayMuonToiDa(soNgayMuon);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
+            int kc = (int)numKcNam.Value;
+            err = BUSThamSo.Instance.UpdKhoangCachXB(kc);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
 
-            //int soSach = (int)numSoSach.Value;
-            //err = BUSThamSo.Instance.UpdSoSachToiDa(soSach);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
+            int soSach = (int)numSoSach.Value;
+            err = BUSThamSo.Instance.UpdSoSachMuonToiDa(soSach);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
 
-            //int thoiHan = (int)numThoiHan.Value;
-            //err = BUSThamSo.Instance.UpdThoiHanThe(thoiHan);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
+            int thoiHan = (int)numThoiHan.Value;
+            err = BUSThamSo.Instance.UpdThoiHanThe(thoiHan);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
 
-            //int donGia = Convert.ToInt32(txtDonGia.Text);
-            //err = BUSThamSo.Instance.UpdDonGiaPhat(donGia);
-            //if (err != "")
-            //{
-            //    MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Bind();
-            //    return;
-            //}
+            int donGia = Convert.ToInt32(txtDonGia.Text);
+            err = BUSThamSo.Instance.UpdDonGiaPhat(donGia);
+            if (err != "")
+            {
+                MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Bind();
+                return;
+            }
 
-            //if (checkQDThu.Checked) BUSThamSo.Instance.UpdADQDTienPhat(1);
-            //else BUSThamSo.Instance.UpdADQDTienPhat(0);
+            if (checkQDThu.Checked) BUSThamSo.Instance.UpdQDKTTienPhat(1);
+            else BUSThamSo.Instance.UpdQDKTTienPhat(0);
 
             MessageBox.Show("Đã lưu thay đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Bind();

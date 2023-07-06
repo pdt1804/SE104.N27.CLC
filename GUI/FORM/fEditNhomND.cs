@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,15 +42,19 @@ namespace GUI.FORM
         private void butSave_Click(object sender, EventArgs e)
         {
             string ten = txtTenNhom.Text;
+            var nnd = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
             if (ten == "")
             {
                 MessageBox.Show("Tên nhóm người dùng không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else
+            {
+                nnd.TenNhomNguoiDung = txtTenNhom.Text;
+            }
             List<String> dsCn = new List<String>();
             bool hasIsDGPre = false;
             bool hasIsDGPost = false;
-            var nnd = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
             foreach (var cn in nnd.CHUCNANGs)
             {
                 if (cn.TenChucNang == "DG") { hasIsDGPre = true; break; }
@@ -79,6 +84,7 @@ namespace GUI.FORM
                 "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show(res, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Close();
+            Bind();
         }
     }
 }

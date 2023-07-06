@@ -442,6 +442,7 @@
             this.butSave.Size = new System.Drawing.Size(151, 38);
             this.butSave.TabIndex = 75;
             this.butSave.Text = "Lưu thay đổi";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // siticonePanel2
             // 
@@ -558,6 +559,7 @@
             this.txtDonGia.ForeColor = System.Drawing.Color.Black;
             this.txtDonGia.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtDonGia.Location = new System.Drawing.Point(198, 2);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.PlaceholderText = "";

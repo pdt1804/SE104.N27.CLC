@@ -2,8 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -31,27 +30,32 @@ namespace DAL
         public List<LOAIDOCGIA> GetLoaiDocGiaByTen(string ten)
         {
             List<LOAIDOCGIA> list = new List<LOAIDOCGIA>();
-            foreach(var p in GetAllLoaiDocGia())
+            foreach (var p in GetAllLoaiDocGia())
             {
                 if (p.TenLoaiDocGia.Contains(ten))
                 {
                     list.Add(p);
-                }    
-            }    
+                }
+            }
             return list;
         }
         public bool AddLoaiDocGia(string tenLoaiDocGia)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                LOAIDOCGIA obj = new LOAIDOCGIA { TenLoaiDocGia = tenLoaiDocGia };
-                QLTVEntities.Instance.LOAIDOCGIAs.Add(obj);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
+                try
+                {
+                    LOAIDOCGIA obj = new LOAIDOCGIA { TenLoaiDocGia = tenLoaiDocGia };
+                    QLTVEntities.Instance.LOAIDOCGIAs.Add(obj);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
         public bool UpdLoaiDocGia(int id, string tenLoaiDocGia)
@@ -71,17 +75,22 @@ namespace DAL
         }
         public bool DelLoaiDocGia(int id)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                LOAIDOCGIA ldg = GetLoaiDocGiaById(id);
-                if (ldg == null) return false;
-                QLTVEntities.Instance.LOAIDOCGIAs.Remove(ldg);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
+                try
+                {
+                    LOAIDOCGIA ldg = GetLoaiDocGiaById(id);
+                    if (ldg == null) return false;
+                    QLTVEntities.Instance.LOAIDOCGIAs.Remove(ldg);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
     }

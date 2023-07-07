@@ -19,6 +19,8 @@ namespace GUI.FORM
         {
             InitializeComponent();
             ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(id);
+            txtTenLoai.Text = ldg.TenLoaiDocGia;
+            label2.Text = ldg.MaLoaiDocGia;
         }
         public fEditLoaiDG()
         {
@@ -35,6 +37,19 @@ namespace GUI.FORM
             Boolean err = BUSLoaiDocGia.Instance.UpdLoaiDocGia(ldg.id, txtTenLoai.Text);
             if (err == true) MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Cập nhật không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.Close();
+        }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            if (BUSLoaiDocGia.Instance.DelLoaiDocGia(ldg.id))
+            {
+                MessageBox.Show("Xoá thành công");
+            }    
+            else
+            {
+                MessageBox.Show("Không thể xoá, cần xoá hết độc giả có loại độc giả muốn xoá trước khi xoá loại độc giả");
+            }
             this.Close();
         }
     }

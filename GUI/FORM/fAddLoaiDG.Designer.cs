@@ -152,7 +152,6 @@
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(357, 44);
             this.controlPanel.TabIndex = 8;
-            this.controlPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.controlPanel_Paint);
             // 
             // miniControlBox
             // 

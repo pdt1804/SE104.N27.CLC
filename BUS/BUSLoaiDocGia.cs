@@ -41,7 +41,7 @@ namespace BUS
             bool ldg = DALLoaiDocGia.Instance.AddLoaiDocGia(tenLoaiDocGia);
             if (ldg == false)
             {
-                MessageBox.Show("Có lỗi xảy ra, không thể thêm sách mới.");
+                MessageBox.Show("Có lỗi xảy ra, không thể thêm.");
                 return false;
             }
             else
@@ -61,6 +61,14 @@ namespace BUS
         }
         public bool DelLoaiDocGia(int id)
         {
+            var list = BUSDocGia.Instance.GetAllDocGia();
+            foreach (var p in list)
+            {
+                if (p.LOAIDOCGIA.id == id)
+                {
+                    return false;
+                }    
+            }    
             if(!DALLoaiDocGia.Instance.DelLoaiDocGia(id))
             {
                 MessageBox.Show("Có lỗi xảy ra, không thể cập nhật thông tin.");

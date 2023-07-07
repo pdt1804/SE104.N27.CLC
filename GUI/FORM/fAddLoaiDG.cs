@@ -18,10 +18,7 @@ namespace GUI.FORM
             InitializeComponent();
         }
 
-        private void controlPanel_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void butOK_Click(object sender, EventArgs e)
         {
@@ -37,7 +34,7 @@ namespace GUI.FORM
                 }
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Vui lòng nhập tên loại độc giả");
             }

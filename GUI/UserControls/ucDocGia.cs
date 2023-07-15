@@ -24,9 +24,16 @@ namespace GUI.UserControls
 
         private void LoadDocGia()
         {
-            List<DOCGIA> list = new List<DOCGIA>();
-            list = BUSDocGia.Instance.GetAllDocGia();
-            DocGiaGrid.DataSource = list;
+            DocGiaGrid.Rows.Clear();
+            DocGiaGrid.Refresh();
+            List<DOCGIA> DocGiaList = BUSDocGia.Instance.GetAllDocGia();
+            Image img = Properties.Resources.edit_icon;
+            img = (Image)(new Bitmap(img, new Size(25, 25)));   
+            foreach (DOCGIA docgia in DocGiaList)
+            {
+                int SachMuon = BUSDocGia.Instance.GetSoSachDangMuon(docgia.ID);
+                DocGiaGrid.Rows.Add(docgia.ID, 0, docgia.MaDocGia, docgia.TenDocGia, docgia.LOAIDOCGIA.TenLoaiDocGia, SachMuon, docgia.NgayHetHan.ToShortDateString(), docgia.TongNoHienTai, img);
+            }
         }
 
         private void butAdd_Click(object sender, EventArgs e)

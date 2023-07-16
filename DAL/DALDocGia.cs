@@ -98,17 +98,22 @@ namespace DAL
         }
         public bool DelDocGia(int idDocGia)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                DOCGIA dg = GetDocGiaById(idDocGia);
-                if (dg == null) return false;
-                QLTVEntities.Instance.DOCGIAs.Remove(dg);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
+                try
+                {
+                    DOCGIA dg = GetDocGiaById(idDocGia);
+                    if (dg == null) return false;
+                    QLTVEntities.Instance.DOCGIAs.Remove(dg);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
         public bool UpdTongNoDocGia(int idDocGia, int tongNoMoi)

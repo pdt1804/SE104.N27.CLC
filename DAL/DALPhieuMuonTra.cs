@@ -31,6 +31,11 @@ namespace DAL
             return QLTVEntities.Instance.PHIEUMUONTRAs.Find(id);
         }
 
+        public PHIEUMUONTRA GetPhieuMuonTraByIdDG(int idDG)
+        {
+            return QLTVEntities.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => p.idDocGia == idDG).FirstOrDefault();
+        }
+
         public List<PHIEUMUONTRA> FindTheoNgayMuon(int? ngay, int? thang, int? nam)
         {
             List<PHIEUMUONTRA> res = GetAllPhieuMuonTra();

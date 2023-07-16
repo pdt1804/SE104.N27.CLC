@@ -6,6 +6,8 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BUS
 {
@@ -68,27 +70,41 @@ namespace BUS
             catch
             { return null; }
         }
-        public bool AddDocGia(string tenDocGia, DateTime ngaySinh, string diaChi,
-            DateTime ngayLapThe, DateTime ngayHetHan, int idLoaiDocGia, int tongNoHienTai, int idND)
+        public bool AddDocGia(string ten, int idLDG, DateTime NgayLapThe, string Email, string DiaChi, DateTime NgaySinh, DateTime NgayHetHan,
+            string username, string userpwd, string chucVu, int idNND)
         {
-            //THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
-            //int gap = ngayLapThe.Year - ngaySinh.Year;
-            //if (ngayLapThe.Month < ngaySinh.Month || (ngayLapThe.Month == ngaySinh.Month && ngayLapThe.Day < ngaySinh.Day))
-            //    gap -= 1;
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            int gap = NgayLapThe.Year - NgaySinh.Year;
+            if (NgayLapThe.Month < NgaySinh.Month || (NgayLapThe.Month == NgaySinh.Month && NgayLapThe.Day < NgaySinh.Day))
+                gap -= 1;
 
-            //if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
-            //    return "Tuổi không hợp lệ!";
+            if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
+            {
+               MessageBox.Show("Tuổi không hợp lệ!");
+               return false;
+            }
+               
 
-            //var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLoaiDocGia);
-            //if (ldg == null) return "Loai Doc Gia khong hop le";
+            var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById(idLDG);
+            if (ldg == null)
+            {              
+                MessageBox.Show("Loại độc giả không hợp lệ");
+                return false;
+            }
 
-            //int IdND = Convert.ToInt32(DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, tongNoHienTai, idND));
-            //if (idND == -1) return "Tên đăng nhập đã tồn tại";
-            //if (DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, 0, idND))
-            //    return "";
-            //DALNguoiDung.Instance.DelNguoiDung(idND);
-            //return "Lỗi khi thêm độc giả";
-            return DALDocGia.Instance.AddDocGia(tenDocGia, ngaySinh, diaChi, ngayLapThe, ngayHetHan, idLoaiDocGia, tongNoHienTai, idND);
+            int idND = DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, chucVu, username, userpwd, Email, idNND);
+            if (idND == -1)
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại");
+                return false;   
+            }
+            if (DALDocGia.Instance.AddDocGia(ten, NgaySinh, DiaChi, NgayLapThe, NgayHetHan, idLDG, 0, idND))
+            {
+                MessageBox.Show("Thêm độc giả thành công");
+                return true;
+            }
+            DALNguoiDung.Instance.DelNguoiDung(idND);
+            return false;
         }
 
         public string UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi,
@@ -127,6 +143,25 @@ namespace BUS
             DALDocGia.Instance.UpdTongNoDocGia(id, TongNo);
             return "";
 
+        }
+        public string DelDocGia(int idDocGia)
+        {
+            DOCGIA dg;
+            try
+            {
+                dg = DALDocGia.Instance.GetDocGiaById(idDocGia);
+            }
+            catch
+            {
+                return "Mã độc giả không hợp lệ";
+            }
+            PHIEUMUONTRA pmt = DALPhieuMuonTra.Instance.GetPhieuMuonTraByIdDG(idDocGia);
+            if (pmt != null)
+            {
+                return "Độc giả " + dg.MaDocGia + " không thể xóa";
+            }
+            DALDocGia.Instance.DelDocGia(dg.ID);
+            return "";
         }
     }
 }

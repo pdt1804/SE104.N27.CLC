@@ -77,6 +77,19 @@ namespace GUI.UserControls
                 f.ShowDialog();
                 LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
                 return;
+            }else if(e.ColumnIndex == DocGiaGrid.Columns["Delete"].Index)
+            {
+                string result = BUSDocGia.Instance.DelDocGia(Convert.ToInt32(DocGiaGrid.Rows[e.RowIndex].Cells["id"].Value));
+                if(result == "") 
+                {
+                    MessageBox.Show("Xóa độc giả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
+                }
+                else
+                {
+                    MessageBox.Show(result, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                return;
             }
             var fInfor = new fInfoDocGia(Convert.ToInt32(DocGiaGrid.Rows[e.RowIndex].Cells["id"].Value));
             fInfor.ShowDialog();

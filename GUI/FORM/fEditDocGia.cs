@@ -26,11 +26,12 @@ namespace GUI
             try
             {
                 var dg = BUSDocGia.Instance.GetDocGiaById(id);
+                var dgnd = BUSNguoiDung.Instance.GetNguoiDungById(dg.ID);
                 labelMaDG.Text = "Mã Độc Giả: " + dg.MaDocGia;
                 txtHoTen.Text = dg.TenDocGia;
                 if (dg.NgaySinh != null) dateNgaySinh.Value = dg.NgaySinh;
                 txtDiaChi.Text = dg.DiaChi;
-                txtEmail.Text = dg.EMAIL;
+                txtEmail.Text = dgnd.EMAIL;
                 labelNgayLap.Text = dg.NgayLapThe.Date.ToShortDateString();
                 labelHan.Text = dg.NgayHetHan.ToShortDateString();
                 List<LOAIDOCGIA> LoaiDocGiaList;

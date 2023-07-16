@@ -31,9 +31,9 @@ namespace BUS
             else return nd;
         }
 
-        public NGUOIDUNG GetNguoiDungByUsername(string username)
+        public NGUOIDUNG GetNguoiDungByUsernameAndEmail(string username, string email)
         {
-            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByUsername(username);
+            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByUsernameAndEmail(username, email);
             return nd;
         }
 

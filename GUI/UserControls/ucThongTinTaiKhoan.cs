@@ -23,7 +23,7 @@ namespace GUI.UserControls
         }
         private void butChangePass_Click(object sender, EventArgs e)
         {
-            var f = new fChangePassword(usr.id);
+            var f = new fChangePassword(usr.id, null);
             f.Show();
             f.BringToFront();
         }

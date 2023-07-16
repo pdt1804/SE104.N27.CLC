@@ -26,13 +26,32 @@ namespace GUI
 
         private void butGet_Click(object sender, EventArgs e)
         {
-            if (txtUN.Text == "" || txtEMAIL.Text == "")
+            try
             {
-                MessageBox.Show("Chưa điền đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (txtUN.Text == "" || txtEMAIL.Text == "")
+                {
+                    MessageBox.Show("Chưa điền đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                usr = BUSNguoiDung.Instance.GetNguoiDungByUsernameAndEmail(txtUN.Text, txtEMAIL.Text);
+                if(usr == null)
+                {
+                    MessageBox.Show("Thông tin không trùng khớp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                int code = sendEmail(usr.EMAIL);
+                if(code == -1)
+                {
+                    MessageBox.Show("Gửi mã xác nhận không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                var f = new fChangePassword(usr.id, code);
+                f.ShowDialog();
+            }catch
+            {
+
             }
-            usr = BUSNguoiDung.Instance.GetNguoiDungByUsername(txtUN.Text.ToString());
-            int code = sendEmail(usr.EMAIL);
+           
         }
 
         private int sendEmail(string mail)
@@ -54,12 +73,13 @@ namespace GUI
             {
                 smtpClient.Send(mailMessage);
                 MessageBox.Show("Đã gửi mã xác nhận");
+                return code;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return -1;
             }
-            return code;
         }
     }
 }

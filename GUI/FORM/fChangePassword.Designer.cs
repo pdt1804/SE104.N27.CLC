@@ -60,20 +60,20 @@
             this.siticoneContainerControl1.Controls.Add(this.txtMKHT);
             this.siticoneContainerControl1.Controls.Add(this.label1);
             this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(38, 47);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl1.Location = new System.Drawing.Point(51, 58);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(392, 422);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(523, 519);
             this.siticoneContainerControl1.TabIndex = 10;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.password;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(80, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(61, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -84,12 +84,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label3.Location = new System.Drawing.Point(69, 110);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(92, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 17);
+            this.label3.Size = new System.Drawing.Size(141, 20);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Nhập mật khẩu hiện tại*";
+            this.label3.Text = "Nhập mã hiện tại*";
             // 
             // label2
             // 
@@ -97,10 +96,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(69, 197);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(92, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 17);
+            this.label2.Size = new System.Drawing.Size(253, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Nhập và xác nhận mật khẩu mới*";
             // 
@@ -115,10 +113,10 @@
             this.butSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSave.ForeColor = System.Drawing.Color.White;
             this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butSave.Location = new System.Drawing.Point(72, 349);
-            this.butSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butSave.Location = new System.Drawing.Point(96, 430);
+            this.butSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butSave.Name = "butSave";
-            this.butSave.Size = new System.Drawing.Size(253, 41);
+            this.butSave.Size = new System.Drawing.Size(337, 50);
             this.butSave.TabIndex = 11;
             this.butSave.Text = "Lưu thay đổi";
             this.butSave.Click += new System.EventHandler(this.butSave_Click);
@@ -138,13 +136,13 @@
             this.txtRMKM.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRMKM.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtRMKM.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtRMKM.Location = new System.Drawing.Point(72, 280);
-            this.txtRMKM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRMKM.Location = new System.Drawing.Point(96, 345);
+            this.txtRMKM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRMKM.Name = "txtRMKM";
             this.txtRMKM.PasswordChar = '*';
             this.txtRMKM.PlaceholderText = "Xác nhận mật khẩu mới";
             this.txtRMKM.SelectedText = "";
-            this.txtRMKM.Size = new System.Drawing.Size(253, 41);
+            this.txtRMKM.Size = new System.Drawing.Size(337, 50);
             this.txtRMKM.TabIndex = 10;
             // 
             // txtMKM
@@ -162,13 +160,13 @@
             this.txtMKM.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMKM.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtMKM.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtMKM.Location = new System.Drawing.Point(72, 217);
-            this.txtMKM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMKM.Location = new System.Drawing.Point(96, 267);
+            this.txtMKM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMKM.Name = "txtMKM";
             this.txtMKM.PasswordChar = '*';
             this.txtMKM.PlaceholderText = "Mật khẩu mới";
             this.txtMKM.SelectedText = "";
-            this.txtMKM.Size = new System.Drawing.Size(253, 41);
+            this.txtMKM.Size = new System.Drawing.Size(337, 50);
             this.txtMKM.TabIndex = 7;
             // 
             // txtMKHT
@@ -186,13 +184,13 @@
             this.txtMKHT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMKHT.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtMKHT.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.txtMKHT.Location = new System.Drawing.Point(72, 131);
-            this.txtMKHT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMKHT.Location = new System.Drawing.Point(96, 161);
+            this.txtMKHT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMKHT.Name = "txtMKHT";
             this.txtMKHT.PasswordChar = '*';
-            this.txtMKHT.PlaceholderText = "Mật khẩu hiện tại";
+            this.txtMKHT.PlaceholderText = "Mã hiện tại";
             this.txtMKHT.SelectedText = "";
-            this.txtMKHT.Size = new System.Drawing.Size(253, 41);
+            this.txtMKHT.Size = new System.Drawing.Size(337, 50);
             this.txtMKHT.TabIndex = 6;
             // 
             // label1
@@ -201,10 +199,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(100, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(133, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 45);
+            this.label1.Size = new System.Drawing.Size(321, 54);
             this.label1.TabIndex = 4;
             this.label1.Text = "ĐỔI MẬT KHẨU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,10 +213,10 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.siticoneControlBox2.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(386, -1);
-            this.siticoneControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(515, -1);
+            this.siticoneControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.Size = new System.Drawing.Size(45, 49);
+            this.siticoneControlBox2.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox2.TabIndex = 11;
             // 
             // siticoneControlBox1
@@ -228,10 +225,10 @@
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(430, -1);
-            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(573, -1);
+            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(45, 49);
+            this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox1.TabIndex = 12;
             // 
             // siticoneDragControl1
@@ -242,16 +239,17 @@
             // 
             // fChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(476, 522);
+            this.ClientSize = new System.Drawing.Size(635, 642);
             this.Controls.Add(this.siticoneContainerControl1);
             this.Controls.Add(this.siticoneControlBox2);
             this.Controls.Add(this.siticoneControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fChangePassword";
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl1.PerformLayout();

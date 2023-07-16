@@ -59,7 +59,7 @@ namespace GUI.UserControls
 
         private void butChange_Click(object sender, EventArgs e)
         {
-            fChangePassword f = new fChangePassword(user.id);
+            fChangePassword f = new fChangePassword(user.id, null);
             f.ShowDialog();
         }
 

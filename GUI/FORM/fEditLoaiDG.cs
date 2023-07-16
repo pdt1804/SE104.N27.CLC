@@ -39,18 +39,5 @@ namespace GUI.FORM
             else MessageBox.Show("Cập nhật không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Close();
         }
-
-        private void siticoneButton1_Click(object sender, EventArgs e)
-        {
-            if (BUSLoaiDocGia.Instance.DelLoaiDocGia(ldg.id))
-            {
-                MessageBox.Show("Xoá thành công");
-            }    
-            else
-            {
-                MessageBox.Show("Không thể xoá, cần xoá hết độc giả có loại độc giả muốn xoá trước khi xoá loại độc giả");
-            }
-            this.Close();
-        }
     }
 }

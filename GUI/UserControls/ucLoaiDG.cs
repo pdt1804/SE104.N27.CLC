@@ -17,13 +17,20 @@ namespace GUI.UserControls
         public ucLoaiDG()
         {
             InitializeComponent();
-            LoadLoaiDocGia();
+            LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
         }
 
-        public void LoadLoaiDocGia()
+        public void LoadLoaiDocGia(List<LOAIDOCGIA> LoaiDocGiaList)
         {
-            List<LOAIDOCGIA> list = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
-            LoaiDocGiaGrid.DataSource = list;
+            LoaiDocGiaGrid.Rows.Clear();
+            LoaiDocGiaGrid.Refresh();
+            Image del_img = Properties.Resources.delete;
+            del_img = (Image)(new Bitmap(del_img, new Size(25, 25)));
+            foreach (LOAIDOCGIA loaidocgia in LoaiDocGiaList)
+            {
+
+                LoaiDocGiaGrid.Rows.Add(loaidocgia.id, loaidocgia.MaLoaiDocGia, loaidocgia.TenLoaiDocGia, del_img);
+            }
         }
 
         public void GetLoaiDocGiaByTenLoaiDocGia()
@@ -31,12 +38,12 @@ namespace GUI.UserControls
             string ten = txtTenLoaiDG.Text;
             if (String.IsNullOrEmpty(ten))
             {
-                LoadLoaiDocGia();
+                LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
             }
             else
             {
                 List<LOAIDOCGIA> list = BUSLoaiDocGia.Instance.GetLoaiDocGiaByTen(ten);
-                LoaiDocGiaGrid.DataSource = list;
+                LoadLoaiDocGia(list);
             }    
         }
 
@@ -45,7 +52,7 @@ namespace GUI.UserControls
             var fAddLoaidg = new fAddLoaiDG();
             fAddLoaidg.BringToFront();
             fAddLoaidg.ShowDialog();
-            LoadLoaiDocGia();
+            LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
         }
 
         private void txtTenLoaiDG_TextChanged(object sender, EventArgs e)
@@ -62,9 +69,23 @@ namespace GUI.UserControls
         {
             int idx = e.RowIndex;
             if (idx < 0) return;
+            if(e.ColumnIndex == LoaiDocGiaGrid.Columns["Delete"].Index)
+            {
+                if (BUSLoaiDocGia.Instance.DelLoaiDocGia(Convert.ToInt32(LoaiDocGiaGrid.Rows[idx].Cells["id"].Value)))
+                {
+                    MessageBox.Show("Xoá thành công");
+                    LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xoá, cần xoá hết độc giả có loại độc giả muốn xoá trước khi xoá loại độc giả");
+                }
+                return;
+            }
             var f = new fEditLoaiDG(Convert.ToInt32(LoaiDocGiaGrid.Rows[idx].Cells["id"].Value));
             f.ShowDialog();
-            LoadLoaiDocGia();
+            LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
+            return;
         }
     }
 }

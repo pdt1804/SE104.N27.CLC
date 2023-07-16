@@ -1,6 +1,7 @@
 ﻿using BUS;
 using DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,37 +18,43 @@ namespace GUI.FORM
         public fAddDocGia()
         {
             InitializeComponent();
-            var listDG = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
-            foreach (var item in listDG)
-            {
-                comboLoaiDG.Items.Add(item.TenLoaiDocGia);
-            }
         }
 
         private void butOK_Click(object sender, EventArgs e)
         {
             try
             {
-                string loaidg = comboLoaiDG.SelectedItem.ToString();
-                var list = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
-                int id = -1;
-                foreach(var p in list)
+                string username = txtUsername.Text;
+                string userpwd = txtUserpwd.Text;
+                string chucVu = txtChucVu.Text;
+                string tenDG = txtHoTen.Text;
+                string email = txtEmail.Text;
+                string DiaChi = txtDiaChi.Text;
+                int idLDG = (int)comboLoaiDG.SelectedValue;
+                DateTime NgaySinh = dateNgaySinh.Value.Date;
+                DateTime NgayLapThe = dateNgayLap.Value.Date;
+                THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+                DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
+
+                if (tenDG == "" || username == "" || userpwd == "" || comboNND.SelectedItem == null || comboLoaiDG.SelectedItem == null)
                 {
-                    if (p.TenLoaiDocGia.Equals(loaidg))
-                    {
-                        id = p.id;
-                    }    
+                    MessageBox.Show("Chưa điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
-                if (id > 0)
+                int idNhom = (int)comboNND.SelectedValue;
+
+                bool addDG = BUSDocGia.Instance.AddDocGia(tenDG, idLDG, NgayLapThe, email, DiaChi, NgaySinh, NgayHetHan,
+                username, userpwd, chucVu, idNhom);
+
+                if (!addDG)
                 {
-                    // mặc định id nhóm người dùng là 3 (độc giả)
-                    int idUser = BUSNguoiDung.Instance.AddNguoiDung(txtHoTen.Text, dateNgaySinh.Value, txtChucVu.Text, 
-                                                       txtUsername.Text, txtUserpwd.Text, txtEmail.Text, 3);
+                    MessageBox.Show("Thêm độc giả không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    BUSDocGia.Instance.AddDocGia(txtHoTen.Text, dateNgaySinh.Value, txtDiaChi.Text, DateTime.Now,
-                                                 DateTime.Now.AddMonths(6), id, 0, idUser);
-
+                }
+                else
+                {
+                    MessageBox.Show("Thêm độc giả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
@@ -55,6 +62,43 @@ namespace GUI.FORM
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ");
             }
+        }
+
+        private void dateNgayLap_ValueChanged(object sender, EventArgs e)
+        {
+            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            DateTime NgayLapThe = dateNgayLap.Value.Date;
+            DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
+            dateNgayHetHan.Text = NgayHetHan.Date.ToShortDateString();
+        }
+
+        private void fAddDocGia_Load(object sender, EventArgs e)
+        {
+            // Load Loại độc giả
+            var listLDG = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
+            comboLoaiDG.DataSource = listLDG;
+            comboLoaiDG.DisplayMember = "TenLoaiDocGia";
+            comboLoaiDG.SelectedIndex = 0;
+            comboLoaiDG.ValueMember = "id";
+            // Load Nhóm người dùng được xem là độc giả
+            var listNND = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
+            List<NHOMNGUOIDUNG> listDG_NND = new List<NHOMNGUOIDUNG>();
+            foreach (var nnd in listNND)
+            {
+                bool isDG = false;
+                foreach (CHUCNANG cn in nnd.CHUCNANGs)
+                    if (cn.TenChucNang == "DG")
+                    {
+                        isDG = true;
+                        break;
+                    }
+                if (isDG) listDG_NND.Add(nnd);
+            }
+            comboNND.DataSource = listDG_NND;
+            comboNND.DisplayMember = "TenNhomNguoiDung";
+            comboNND.ValueMember = "id";
+            //
+            dateNgayLap.Value = DateTime.Now;
         }
     }
 }

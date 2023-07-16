@@ -18,55 +18,70 @@ namespace GUI.UserControls
         public ucDocGia()
         {
             InitializeComponent();
-            LoadDocGia();
+            LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
         }
 
+        // Lỗi hiển thị sau mỗi lần tìm kiếm
 
-        private void LoadDocGia()
+        private void LoadDocGia(List<DOCGIA> DocGiaList)
         {
             DocGiaGrid.Rows.Clear();
             DocGiaGrid.Refresh();
-            List<DOCGIA> DocGiaList = BUSDocGia.Instance.GetAllDocGia();
-            Image img = Properties.Resources.edit_icon;
-            img = (Image)(new Bitmap(img, new Size(25, 25)));   
+            Image edit_img = Properties.Resources.edit_icon;
+            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
+            Image del_img = Properties.Resources.delete;
+            del_img = (Image)(new Bitmap(del_img, new Size(25, 25)));
             foreach (DOCGIA docgia in DocGiaList)
             {
                 int SachMuon = BUSDocGia.Instance.GetSoSachDangMuon(docgia.ID);
-                DocGiaGrid.Rows.Add(docgia.ID, 0, docgia.MaDocGia, docgia.TenDocGia, docgia.LOAIDOCGIA.TenLoaiDocGia, SachMuon, docgia.NgayHetHan.ToShortDateString(), docgia.TongNoHienTai, img);
+                DocGiaGrid.Rows.Add(docgia.ID, 0, docgia.MaDocGia, docgia.TenDocGia, docgia.LOAIDOCGIA.TenLoaiDocGia, SachMuon, docgia.NgayHetHan.ToShortDateString(), docgia.TongNoHienTai, edit_img, del_img);
             }
         }
 
         private void butAdd_Click(object sender, EventArgs e)
         {
             var fAdddg = new fAddDocGia();
-            fAdddg.BringToFront();
+            //fAdddg.BringToFront();
             fAdddg.ShowDialog();
-            LoadDocGia();
+            LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
         }
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtFind.Text))
+            List<DOCGIA> list = new List<DOCGIA>();
+            foreach(DOCGIA docGia in BUSDocGia.Instance.GetAllDocGia())
             {
-                LoadDocGia();
-            }    
-            else
-            {
-                List<DOCGIA> list = new List<DOCGIA>();
-                foreach(DOCGIA docGia in BUSDocGia.Instance.GetAllDocGia())
+                if (docGia.TenDocGia.ToLower().Contains(txtFind.Text))
                 {
-                    if (docGia.TenDocGia.Contains(txtFind.Text))
-                    {
-                        list.Add(docGia);
-                    }    
-                }
-                DocGiaGrid.DataSource = list;
-            }    
+                    list.Add(docGia);
+                }    
+            }
+            LoadDocGia(list);
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
+            LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
             txtFind.Text = "";
+        }
+
+        private void DocGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex == -1)
+            {
+                return;
+            }
+            if (e.ColumnIndex == DocGiaGrid.Columns["Edit"].Index)
+            {
+                var f = new fEditDocGia((Convert.ToInt32(DocGiaGrid.Rows[e.RowIndex].Cells["id"].Value)));
+                f.ShowDialog();
+                LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
+                return;
+            }
+            var fInfor = new fInfoDocGia(Convert.ToInt32(DocGiaGrid.Rows[e.RowIndex].Cells["id"].Value));
+            fInfor.ShowDialog();
+            LoadDocGia(BUSDocGia.Instance.GetAllDocGia());
+            return;
         }
     }
 }

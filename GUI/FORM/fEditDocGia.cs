@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,38 @@ namespace GUI
 {
     public partial class fEditDocGia : Form
     {
-        public fEditDocGia()
+        private static int id;
+        public fEditDocGia(int _id)
         {
             InitializeComponent();
+            id = _id;
+            Binding();
         }
+        private void Binding()
+        {
+            try
+            {
+                var dg = BUSDocGia.Instance.GetDocGiaById(id);
+                labelMaDG.Text = "Mã Độc Giả: " + dg.MaDocGia;
+                txtHoTen.Text = dg.TenDocGia;
+                if (dg.NgaySinh != null) dateNgaySinh.Value = dg.NgaySinh;
+                txtDiaChi.Text = dg.DiaChi;
+                txtEmail.Text = dg.EMAIL;
+                labelNgayLap.Text = dg.NgayLapThe.Date.ToShortDateString();
+                labelHan.Text = dg.NgayHetHan.ToShortDateString();
+                List<LOAIDOCGIA> LoaiDocGiaList;
+                LoaiDocGiaList = BUSLoaiDocGia.Instance.GetAllLoaiDocGia();
+                this.comboLoaiDG.DataSource = LoaiDocGiaList;
+                comboLoaiDG.DisplayMember = "TenLoaiDocGia";
+                comboLoaiDG.ValueMember = "id";
+                comboLoaiDG.SelectedIndex = comboLoaiDG.FindString(dg.LOAIDOCGIA.TenLoaiDocGia);
+            }
+            catch
+            {
+
+            }
+           
+        }
+
     }
 }

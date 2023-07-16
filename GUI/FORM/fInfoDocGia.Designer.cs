@@ -36,6 +36,7 @@
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.closeControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableInfo = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,10 +60,9 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butChange = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.PhieuMuonGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SoPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,12 +72,12 @@
             this.SoTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableInfo.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // controlPanel
@@ -123,6 +123,16 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1500, 61);
             this.siticonePanel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.resume;
+            this.pictureBox1.Location = new System.Drawing.Point(554, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -407,6 +417,7 @@
             this.butChange.Size = new System.Drawing.Size(167, 44);
             this.butChange.TabIndex = 6;
             this.butChange.Text = "Sửa thông tin";
+            this.butChange.Click += new System.EventHandler(this.butChange_Click);
             // 
             // siticonePanel3
             // 
@@ -419,6 +430,16 @@
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Size = new System.Drawing.Size(1500, 62);
             this.siticonePanel3.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.books__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(555, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 47);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // label12
             // 
@@ -510,26 +531,6 @@
             this.PhieuMuonGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuMuonGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.resume;
-            this.pictureBox1.Location = new System.Drawing.Point(554, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GUI.Properties.Resources.books__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(555, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 47);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // SoPhieuMuon
             // 
             this.SoPhieuMuon.DividerWidth = 2;
@@ -598,14 +599,14 @@
             this.controlPanel.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableInfo.ResumeLayout(false);
             this.tableInfo.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhieuMuonGrid)).EndInit();
             this.ResumeLayout(false);
 
         }

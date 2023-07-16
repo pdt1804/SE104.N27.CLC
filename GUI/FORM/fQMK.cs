@@ -32,6 +32,7 @@ namespace GUI
                 return;
             }
             usr = BUSNguoiDung.Instance.GetNguoiDungByUsername(txtUN.Text.ToString());
+            int code = sendEmail(usr.EMAIL);
         }
 
         private int sendEmail(string mail)

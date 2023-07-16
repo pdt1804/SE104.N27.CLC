@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.butGet = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -39,7 +40,6 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,16 @@
             this.siticoneContainerControl1.Size = new System.Drawing.Size(600, 520);
             this.siticoneContainerControl1.TabIndex = 13;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.password1;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -113,6 +123,7 @@
             this.butGet.Size = new System.Drawing.Size(337, 50);
             this.butGet.TabIndex = 11;
             this.butGet.Text = "Lấy mã xác nhận";
+            this.butGet.Click += new System.EventHandler(this.butGet_Click);
             // 
             // txtEMAIL
             // 
@@ -168,7 +179,7 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(136, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 60);
+            this.label1.Size = new System.Drawing.Size(326, 59);
             this.label1.TabIndex = 4;
             this.label1.Text = "Quên mật khẩu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,16 +214,6 @@
             this.siticoneDragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneDragControl1.UseTransparentDrag = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.password1;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // fQMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,6 +225,7 @@
             this.Controls.Add(this.siticoneControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fQMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fQMK";
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl1.PerformLayout();

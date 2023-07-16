@@ -67,9 +67,9 @@ namespace BUS
                 if (p.LOAIDOCGIA.id == id)
                 {
                     return false;
-                }    
-            }    
-            if(!DALLoaiDocGia.Instance.DelLoaiDocGia(id))
+                }
+            }
+            if (!DALLoaiDocGia.Instance.DelLoaiDocGia(id))
             {
                 MessageBox.Show("Có lỗi xảy ra, không thể cập nhật thông tin.");
                 return false;

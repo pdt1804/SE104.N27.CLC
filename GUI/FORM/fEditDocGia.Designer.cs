@@ -58,8 +58,8 @@
             this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -167,6 +167,7 @@
             this.butOK.Size = new System.Drawing.Size(159, 46);
             this.butOK.TabIndex = 5;
             this.butOK.Text = "Lưu";
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // comboLoaiDG
             // 
@@ -446,12 +447,6 @@
             this.mainPanel.Size = new System.Drawing.Size(629, 646);
             this.mainPanel.TabIndex = 3;
             // 
-            // siticoneBorderlessForm1
-            // 
-            this.siticoneBorderlessForm1.ContainerControl = this;
-            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.credit_card;
@@ -461,6 +456,12 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // siticoneBorderlessForm1
+            // 
+            this.siticoneBorderlessForm1.ContainerControl = this;
+            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
             // fEditDocGia
             // 

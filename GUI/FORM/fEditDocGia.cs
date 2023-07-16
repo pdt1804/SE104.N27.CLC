@@ -26,7 +26,7 @@ namespace GUI
             try
             {
                 var dg = BUSDocGia.Instance.GetDocGiaById(id);
-                var dgnd = BUSNguoiDung.Instance.GetNguoiDungById(dg.ID);
+                var dgnd = BUSNguoiDung.Instance.GetNguoiDungById(dg.idNguoiDung);
                 labelMaDG.Text = "Mã Độc Giả: " + dg.MaDocGia;
                 txtHoTen.Text = dg.TenDocGia;
                 if (dg.NgaySinh != null) dateNgaySinh.Value = dg.NgaySinh;
@@ -45,8 +45,25 @@ namespace GUI
             {
 
             }
-           
         }
 
+        private void butOK_Click(object sender, EventArgs e)
+        {
+            string tenDG = txtHoTen.Text;
+            int idLDG = (int)comboLoaiDG.SelectedValue;
+            if (tenDG == "")
+            {
+                MessageBox.Show("Tên độc giả không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string email = txtEmail.Text;
+            string DiaChi = txtDiaChi.Text;
+            DateTime NgaySinh = dateNgaySinh.Value.Date;
+
+            string err = BUSDocGia.Instance.UpdDocGia(id, tenDG, idLDG, email, DiaChi, NgaySinh);
+            if (err == "") MessageBox.Show("Sửa thông tin độc giả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.Close();
+        }
     }
 }

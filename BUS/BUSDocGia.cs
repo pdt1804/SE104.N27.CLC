@@ -107,10 +107,10 @@ namespace BUS
             return false;
         }
 
-        public string UpdDocGia(int idDocGia, string tenDocGia, DateTime? ngaySinh, string diaChi,
-            DateTime? ngayHetHan, int? idLoaiDocGia)
+        public string UpdDocGia(int idDocGia, string tenDocGia, int? idLoaiDocGia, string Email, string diaChi, DateTime? ngaySinh)
         {
-            var dg = GetDocGiaById(idDocGia);
+            DOCGIA dg = GetDocGiaById(idDocGia);
+            NGUOIDUNG nd = BUSNguoiDung.Instance.GetNguoiDungById(dg.idNguoiDung);
             if (ngaySinh != null)
             {
                 var ngayLapThe = dg.NgayLapThe;
@@ -121,15 +121,13 @@ namespace BUS
 
                 if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
                     return "Tuổi không hợp lệ";
-                if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
-                    return "Tuổi không hợp lệ";
             }
             if (idLoaiDocGia != null)
             {
                 var ldg = BUSLoaiDocGia.Instance.GetLoaiDocGiaById((int)idLoaiDocGia);
                 if (ldg == null) return "Loại độc giả không hợp lệ";
             }
-            if (DALDocGia.Instance.UpdDocGia(idDocGia, tenDocGia, ngaySinh, diaChi, null, idLoaiDocGia))
+            if (DALDocGia.Instance.UpdDocGia(idDocGia, tenDocGia, ngaySinh, diaChi, null, idLoaiDocGia) && DALNguoiDung.Instance.UpdNguoiDung(nd.id, nd.TenNguoiDung, nd.NgaySinh, nd.ChucVu, Email, nd.idNhomNguoiDung))
                 return "";
             return "Sửa thông tin thất bại";
         }

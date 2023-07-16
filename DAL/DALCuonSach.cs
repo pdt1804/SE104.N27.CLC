@@ -19,31 +19,6 @@ namespace DAL
             }
             set => instance = value;
         }
-        public bool UpdAnCuonSach(int id, int data)
-        {
-            try
-            {
-                CUONSACH cuonsach = QLTVEntities.Instance.CUONSACHes.Find(id);
-                SACH sach = cuonsach.SACH;
-                if (data != cuonsach.DaAn)
-                {
-                    if (data == 1) sach.SoLuongConLai--;
-                    if (data == 0) sach.SoLuongConLai++;
-                }
-                if (data == 1) cuonsach.TinhTrang = 2;
-                else
-                    if (cuonsach.TinhTrang == 2)
-                    cuonsach.TinhTrang = 1;
-                cuonsach.DaAn = data;
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
-        }
         public List<CUONSACH> GetAllCuonSach()
         {
             return QLTVEntities.Instance.CUONSACHes.AsNoTracking().ToList();

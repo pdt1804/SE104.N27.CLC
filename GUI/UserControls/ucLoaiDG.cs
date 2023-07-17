@@ -33,19 +33,7 @@ namespace GUI.UserControls
             }
         }
 
-        public void GetLoaiDocGiaByTenLoaiDocGia()
-        {
-            string ten = txtTenLoaiDG.Text;
-            if (String.IsNullOrEmpty(ten))
-            {
-                LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
-            }
-            else
-            {
-                List<LOAIDOCGIA> list = BUSLoaiDocGia.Instance.GetLoaiDocGiaByTen(ten);
-                LoadLoaiDocGia(list);
-            }    
-        }
+       
 
         private void butAdd_Click(object sender, EventArgs e)
         {
@@ -57,12 +45,21 @@ namespace GUI.UserControls
 
         private void txtTenLoaiDG_TextChanged(object sender, EventArgs e)
         {
-            GetLoaiDocGiaByTenLoaiDocGia();
+            List<LOAIDOCGIA> list = new List<LOAIDOCGIA>();
+            foreach (LOAIDOCGIA loaidocGia in BUSLoaiDocGia.Instance.GetAllLoaiDocGia())
+            {
+                if (loaidocGia.TenLoaiDocGia.ToLower().Contains(txtTenLoaiDG.Text.ToLower()))
+                {
+                    list.Add(loaidocGia);
+                }
+            }
+            LoadLoaiDocGia(list);
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
             txtTenLoaiDG.Text = "";
+            LoadLoaiDocGia(BUSLoaiDocGia.Instance.GetAllLoaiDocGia());
         }
 
         private void LoaiDocGiaGrid_CellClick(object sender, DataGridViewCellEventArgs e)

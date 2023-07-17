@@ -51,7 +51,7 @@ namespace GUI.UserControls
             List<DOCGIA> list = new List<DOCGIA>();
             foreach(DOCGIA docGia in BUSDocGia.Instance.GetAllDocGia())
             {
-                if (docGia.TenDocGia.ToLower().Contains(txtFind.Text))
+                if (docGia.TenDocGia.ToLower().Contains(txtFind.Text.ToLower()))
                 {
                     list.Add(docGia);
                 }    

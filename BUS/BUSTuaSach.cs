@@ -82,15 +82,5 @@ namespace BUS
             DALTuaSach.Instance.DelTuaSach(ts.id);
             return "";
         }
-
-        public bool UpdAnTuaSach(int id, int data)
-        {
-            if (!DALTuaSach.Instance.UpdAnTuaSach(id, data))
-            {
-                MessageBox.Show("Cập nhật không thành công");
-                return false;
-            }
-            return true;
-        }
     }
 }

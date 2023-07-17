@@ -79,17 +79,22 @@ namespace DAL
         // Xóa tác giả khi có id
         public bool DelTacGia(int id)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                TACGIA tacgia = GetTacGiaById(id);
-                if (tacgia == null) return false;
-                QLTVEntities.Instance.TACGIAs.Remove(tacgia);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
+                try
+                {
+                    TACGIA tacgia = GetTacGiaById(id);
+                    if (tacgia == null) return false;
+                    QLTVEntities.Instance.TACGIAs.Remove(tacgia);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
     }

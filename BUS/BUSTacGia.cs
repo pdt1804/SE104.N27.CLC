@@ -66,11 +66,25 @@ namespace BUS
 
         public string DelTacGia(int id)
         {
-            if (!DALTacGia.Instance.DelTacGia(id))
+            TACGIA tg;
+            try
             {
-                return "Xoá tác giả không thành công";
+                tg = BUSTacGia.Instance.GetTacGia(id);
             }
-            return "Xoá tác giả thành công";
+            catch
+            {
+                return "Mã tác giả không hợp lệ";
+            }
+            foreach(TUASACH tuasach in tg.TUASACHes)
+            {
+                if (tuasach.TACGIAs.Where(TG => TG.MATACGIA == tg.MATACGIA).Any())
+                {
+                    return "Không thể xóa tác giả";
+                } 
+                    
+            }
+            DALTacGia.Instance.DelTacGia(id);
+            return "";
         }
     }
 }

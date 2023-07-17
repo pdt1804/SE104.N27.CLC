@@ -17,10 +17,6 @@ namespace GUI.FORM
 
         TUASACH tuasach;
         List<TACGIA> TacGiaList;
-        public fEditTuaSach()
-        {
-            InitializeComponent();
-        }
 
         public fEditTuaSach(int id)
         {
@@ -40,7 +36,7 @@ namespace GUI.FORM
             }
             foreach (TACGIA tg in tuasach.TACGIAs)
             {
-                TacGiaGrid.Rows.Add(tg.TenTacGia, tg.id);
+                TacGiaGrid.Rows.Add(tg.id, tg.TenTacGia);
             }
             Binding();
         }
@@ -82,25 +78,38 @@ namespace GUI.FORM
 
         private void butAddTacGia_Click(object sender, EventArgs e)
         {
-            bool check = false;
-            int id = Convert.ToInt32(comboTacGia.SelectedValue);
-            string newTg = comboTacGia.Text;
-            foreach (TACGIA tg in TacGiaList)
-                if (tg.TenTacGia == newTg)
-                    check = true;
-            if (check == false)
+            bool check_tk = false;
+            bool check_tt = false;
+            int selectedValue = Convert.ToInt32(comboTacGia.SelectedValue);
+            string newtg = comboTacGia.Text;
+            foreach (var tg in BUSTacGia.Instance.GetAllTacGia())
             {
-                var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thêm tác giả",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (tg.id == selectedValue)
+                {
+                    check_tk = true;
+                    foreach (DataGridViewRow row in TacGiaGrid.Rows)
+                    {
+                        if (selectedValue == Convert.ToInt32(row.Cells[0].Value))
+                        {
+                            check_tt = true;
+                            MessageBox.Show("Tác giả bạn vừa chọn đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            if (check_tk == false)
+            {
+                var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ask == DialogResult.Yes)
                 {
-                    id = BUSTacGia.Instance.AddTacGia(newTg);
+                    selectedValue = BUSTacGia.Instance.AddTacGia(newtg);
                     Binding();
                 }
                 else return;
             }
-
-            TacGiaGrid.Rows.Add(newTg, id);
+            if (!check_tt) TacGiaGrid.Rows.Add(selectedValue, newtg);
         }
     }
 }

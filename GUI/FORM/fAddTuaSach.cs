@@ -46,27 +46,30 @@ namespace GUI.FORM
             comboTacGia.ValueMember = "id";
         }
 
-        private void TacGiaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void butAddTacGia_Click(object sender, EventArgs e)
         {
-            bool check = false;
+            bool check_tk = false;
+            bool check_tt = false;
             int selectedValue = Convert.ToInt32(comboTacGia.SelectedValue);
             string newtg = comboTacGia.Text;
             foreach (var tg in BUSTacGia.Instance.GetAllTacGia())
             {
                 if (tg.id == selectedValue)
                 {
-                   check = true;
-                   listTG.RemoveAll(tacgia => tacgia.id == selectedValue);
-                   LoadTacGia();
-                   break;
+                    check_tk = true;
+                   foreach(DataGridViewRow row in TacGiaGrid.Rows)
+                   {
+                        if(selectedValue == Convert.ToInt32(row.Cells[0].Value))
+                        {
+                            check_tt = true;
+                            MessageBox.Show("Tác giả bạn vừa chọn đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                   }
+                    break;
                 }
             }
-            if (check == false)
+            if (check_tk == false)
             {
                 var ask = MessageBox.Show("Tác giả chưa có, bạn có muốn thêm mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (ask == DialogResult.Yes)
@@ -76,7 +79,7 @@ namespace GUI.FORM
                 }
                 else return;
             }
-            TacGiaGrid.Rows.Add(newtg, selectedValue);
+            if(!check_tt) TacGiaGrid.Rows.Add(selectedValue,newtg);
         }
 
         private void butOK_Click(object sender, EventArgs e)

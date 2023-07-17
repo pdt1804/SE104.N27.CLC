@@ -62,14 +62,24 @@ namespace BUS
             return true;
         }
 
-        public bool DelTheLoai(int id)
+        public string DelTheLoai(int id)
         {
-            if (!DALTheLoai.Instance.DelTheLoai(id))
+            THELOAI tl;
+            try
             {
-                MessageBox.Show("Xoá thể loại không thành công");
-                return false;
+                tl = BUSTheLoai.Instance.GetTheLoai(id);
             }
-            return true;
+            catch
+            {
+                return "Mã thể loại không hợp lệ";
+            }
+            foreach (TUASACH tuasach in tl.TUASACHes)
+            {
+                if (tuasach.idTheLoai == id) return "Không thể xóa thể loại sách";
+
+            }
+            DALTheLoai.Instance.DelTheLoai(id);
+            return "";
         }
     }
 }

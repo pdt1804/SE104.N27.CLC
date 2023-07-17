@@ -83,17 +83,22 @@ namespace DAL
         // Xóa thể loại
         public bool DelTheLoai(int id)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                var theloai = GetTheLoaiById(id);
-                if (theloai == null) return false;
-                QLTVEntities.Instance.THELOAIs.Remove(theloai);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
+                try
+                {
+                    var theloai = GetTheLoaiById(id);
+                    if (theloai == null) return false;
+                    QLTVEntities.Instance.THELOAIs.Remove(theloai);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
     }

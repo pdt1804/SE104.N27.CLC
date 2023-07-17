@@ -90,13 +90,14 @@ namespace GUI.UserControls
         private void butTacGia_Click(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("tacgia", false);
-            uctacGia.Binding();
+            uctacGia.Binding(BUSTacGia.Instance.GetAllTacGia());
             con[0].BringToFront();
         }
 
         private void butTheLoai_Click(object sender, EventArgs e)
         {
             Control[] con = container.Controls.Find("theloai", false);
+            uctheLoai.Binding(BUSTheLoai.Instance.GetAllTheLoai());
             con[0].BringToFront();
         }
 

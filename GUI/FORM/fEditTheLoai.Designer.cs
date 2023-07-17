@@ -39,10 +39,10 @@
             this.txtTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.siticoneButtonCN = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
-            this.siticoneButtonCN = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,9 +61,9 @@
             this.controlPanel.Controls.Add(this.closeControlBox);
             this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.controlPanel.Location = new System.Drawing.Point(0, 0);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(388, 44);
+            this.controlPanel.Size = new System.Drawing.Size(517, 54);
             this.controlPanel.TabIndex = 7;
             // 
             // miniControlBox
@@ -72,10 +72,10 @@
             this.miniControlBox.ControlBoxType = Siticone.Desktop.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.miniControlBox.FillColor = System.Drawing.Color.Transparent;
             this.miniControlBox.IconColor = System.Drawing.Color.Lavender;
-            this.miniControlBox.Location = new System.Drawing.Point(296, 0);
-            this.miniControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.miniControlBox.Location = new System.Drawing.Point(395, 0);
+            this.miniControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.miniControlBox.Name = "miniControlBox";
-            this.miniControlBox.Size = new System.Drawing.Size(45, 44);
+            this.miniControlBox.Size = new System.Drawing.Size(60, 54);
             this.miniControlBox.TabIndex = 0;
             // 
             // closeControlBox
@@ -83,10 +83,10 @@
             this.closeControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeControlBox.FillColor = System.Drawing.Color.Transparent;
             this.closeControlBox.IconColor = System.Drawing.Color.Lavender;
-            this.closeControlBox.Location = new System.Drawing.Point(343, 0);
-            this.closeControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeControlBox.Location = new System.Drawing.Point(457, 0);
+            this.closeControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closeControlBox.Name = "closeControlBox";
-            this.closeControlBox.Size = new System.Drawing.Size(46, 44);
+            this.closeControlBox.Size = new System.Drawing.Size(61, 54);
             this.closeControlBox.TabIndex = 0;
             // 
             // butOK
@@ -101,10 +101,10 @@
             this.butOK.FillColor = System.Drawing.Color.RoyalBlue;
             this.butOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butOK.ForeColor = System.Drawing.Color.White;
-            this.butOK.Location = new System.Drawing.Point(108, 271);
-            this.butOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butOK.Location = new System.Drawing.Point(144, 334);
+            this.butOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(95, 39);
+            this.butOK.Size = new System.Drawing.Size(127, 48);
             this.butOK.TabIndex = 6;
             this.butOK.Text = "Thêm";
             this.butOK.Click += new System.EventHandler(this.butOK_Click);
@@ -116,10 +116,9 @@
             this.labelMaTheLoai.AutoSize = true;
             this.labelMaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaTheLoai.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelMaTheLoai.Location = new System.Drawing.Point(45, 119);
-            this.labelMaTheLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelMaTheLoai.Location = new System.Drawing.Point(60, 146);
             this.labelMaTheLoai.Name = "labelMaTheLoai";
-            this.labelMaTheLoai.Size = new System.Drawing.Size(98, 20);
+            this.labelMaTheLoai.Size = new System.Drawing.Size(126, 25);
             this.labelMaTheLoai.TabIndex = 5;
             this.labelMaTheLoai.Text = "Mã Thể loại: ";
             // 
@@ -130,10 +129,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(45, 150);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(60, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.Size = new System.Drawing.Size(133, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên Thể loại: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -152,13 +150,13 @@
             this.txtTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTen.Location = new System.Drawing.Point(49, 174);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen.Location = new System.Drawing.Point(65, 214);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
             this.txtTen.PasswordChar = '\0';
             this.txtTen.PlaceholderText = "";
             this.txtTen.SelectedText = "";
-            this.txtTen.Size = new System.Drawing.Size(202, 29);
+            this.txtTen.Size = new System.Drawing.Size(269, 36);
             this.txtTen.TabIndex = 4;
             this.txtTen.TextChanged += new System.EventHandler(this.txtTen_TextChanged);
             // 
@@ -169,12 +167,11 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.labelTitle.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelTitle.Location = new System.Drawing.Point(88, 49);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitle.Location = new System.Drawing.Point(111, 60);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(187, 29);
+            this.labelTitle.Size = new System.Drawing.Size(254, 36);
             this.labelTitle.TabIndex = 2;
-            this.labelTitle.Text = "SỬA THỂ LOẠI";
+            this.labelTitle.Text = "THỂ LOẠI SÁCH";
             // 
             // siticonePanel1
             // 
@@ -190,28 +187,23 @@
             this.siticonePanel1.Controls.Add(this.label1);
             this.siticonePanel1.Controls.Add(this.txtTen);
             this.siticonePanel1.Controls.Add(this.labelTitle);
-            this.siticonePanel1.Location = new System.Drawing.Point(43, 86);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel1.Location = new System.Drawing.Point(57, 106);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(302, 355);
+            this.siticonePanel1.Size = new System.Drawing.Size(403, 437);
             this.siticonePanel1.TabIndex = 8;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.sketch;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // siticoneBorderlessForm1
-            // 
-            this.siticoneBorderlessForm1.ContainerControl = this;
-            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label2.Location = new System.Drawing.Point(183, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.TabIndex = 9;
             // 
             // siticoneButtonCN
             // 
@@ -225,38 +217,43 @@
             this.siticoneButtonCN.FillColor = System.Drawing.Color.RoyalBlue;
             this.siticoneButtonCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButtonCN.ForeColor = System.Drawing.Color.White;
-            this.siticoneButtonCN.Location = new System.Drawing.Point(108, 271);
-            this.siticoneButtonCN.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneButtonCN.Location = new System.Drawing.Point(144, 334);
+            this.siticoneButtonCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneButtonCN.Name = "siticoneButtonCN";
-            this.siticoneButtonCN.Size = new System.Drawing.Size(95, 39);
+            this.siticoneButtonCN.Size = new System.Drawing.Size(127, 48);
             this.siticoneButtonCN.TabIndex = 8;
             this.siticoneButtonCN.Text = "Cập nhật";
             this.siticoneButtonCN.Click += new System.EventHandler(this.siticoneButtonCN_Click);
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(137, 119);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 9;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.sketch;
+            this.pictureBox1.Location = new System.Drawing.Point(59, 53);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // siticoneBorderlessForm1
+            // 
+            this.siticoneBorderlessForm1.ContainerControl = this;
+            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
             // fEditTheLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(388, 483);
+            this.ClientSize = new System.Drawing.Size(517, 594);
             this.Controls.Add(this.controlPanel);
             this.Controls.Add(this.siticonePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fEditTheLoai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEditTheLoai";
             this.controlPanel.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);

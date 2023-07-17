@@ -111,17 +111,22 @@ namespace DAL
         /// <returns></returns>
         public bool DelTuaSach(int id)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                TUASACH tuaSach = GetTuaSachById(id);
-                if (tuaSach == null) return false;
-                QLTVEntities.Instance.TUASACHes.Remove(tuaSach);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
+                try
+                {
+                    TUASACH tuaSach = GetTuaSachById(id);
+                    if (tuaSach == null) return false;
+                    QLTVEntities.Instance.TUASACHes.Remove(tuaSach);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
         // Cập nhật tình trạng sách (Ẩn tựa sách)

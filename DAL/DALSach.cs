@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -18,21 +19,6 @@ namespace DAL
                 return instance;
             }
             set { instance = value; }
-        }
-        public bool UpdAnSach(int id, int data)
-        {
-            try
-            {
-                SACH sach = QLTVEntities.Instance.SACHes.Find(id);
-                sach.DaAn = data;
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
-            }
         }
         public List<SACH> GetAllSach()
         {
@@ -54,6 +40,13 @@ namespace DAL
             if (res.Any())
                 return res.FirstOrDefault();
             return null;
+        }
+        public bool ChecKTS(int idTS)
+        {
+            var res = QLTVEntities.Instance.SACHes.AsNoTracking().Where(s => s.idTuaSach == idTS);
+            if (res.Any())
+                return true ;
+            return false;
         }
         /// <summary>
         /// Tìm kiếm sách

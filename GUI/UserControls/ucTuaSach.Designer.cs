@@ -41,18 +41,18 @@
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TuaSachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.tUASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DaAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.tUASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuaSachGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUASACHBindingSource)).BeginInit();
@@ -68,16 +68,16 @@
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(748, 106);
+            this.topPanel.Size = new System.Drawing.Size(997, 130);
             this.topPanel.TabIndex = 4;
             // 
             // butFil
             // 
             this.butFil.AutoRoundedCorners = true;
             this.butFil.BorderColor = System.Drawing.Color.Transparent;
-            this.butFil.BorderRadius = 12;
+            this.butFil.BorderRadius = 15;
             this.butFil.BorderThickness = 2;
             this.butFil.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butFil.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -96,10 +96,10 @@
             this.butFil.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butFil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butFil.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFil.Location = new System.Drawing.Point(582, 14);
-            this.butFil.Margin = new System.Windows.Forms.Padding(2);
+            this.butFil.Location = new System.Drawing.Point(776, 17);
+            this.butFil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butFil.Name = "butFil";
-            this.butFil.Size = new System.Drawing.Size(143, 26);
+            this.butFil.Size = new System.Drawing.Size(191, 32);
             this.butFil.TabIndex = 17;
             this.butFil.Text = "Lọc Thể Loại";
             this.butFil.TextOffset = new System.Drawing.Point(3, 0);
@@ -115,17 +115,17 @@
             this.comboTheLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTheLoai.ItemHeight = 30;
-            this.comboTheLoai.Location = new System.Drawing.Point(368, 14);
-            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(2);
+            this.comboTheLoai.Location = new System.Drawing.Point(491, 17);
+            this.comboTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboTheLoai.Name = "comboTheLoai";
-            this.comboTheLoai.Size = new System.Drawing.Size(194, 36);
+            this.comboTheLoai.Size = new System.Drawing.Size(257, 36);
             this.comboTheLoai.TabIndex = 16;
             this.comboTheLoai.SelectedValueChanged += new System.EventHandler(this.comboTheLoai_SelectedValueChanged);
             // 
             // txtFind
             // 
             this.txtFind.AutoRoundedCorners = true;
-            this.txtFind.BorderRadius = 11;
+            this.txtFind.BorderRadius = 14;
             this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.DefaultText = "";
             this.txtFind.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -136,14 +136,14 @@
             this.txtFind.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtFind.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtFind.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFind.Location = new System.Drawing.Point(368, 55);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtFind.Location = new System.Drawing.Point(491, 68);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtFind.PlaceholderText = "Mã, tên, tác giả";
             this.txtFind.SelectedText = "";
-            this.txtFind.Size = new System.Drawing.Size(194, 25);
+            this.txtFind.Size = new System.Drawing.Size(259, 31);
             this.txtFind.TabIndex = 15;
             this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
@@ -155,11 +155,11 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(16, 28);
-            this.butRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.butRefresh.Location = new System.Drawing.Point(21, 34);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(48, 52);
+            this.butRefresh.Size = new System.Drawing.Size(64, 64);
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
@@ -167,7 +167,7 @@
             // 
             this.butAdd.AutoRoundedCorners = true;
             this.butAdd.BorderColor = System.Drawing.Color.Transparent;
-            this.butAdd.BorderRadius = 16;
+            this.butAdd.BorderRadius = 20;
             this.butAdd.BorderThickness = 2;
             this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -186,10 +186,10 @@
             this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(94, 38);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.butAdd.Location = new System.Drawing.Point(125, 47);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(147, 34);
+            this.butAdd.Size = new System.Drawing.Size(196, 42);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tựa Sách";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
@@ -223,8 +223,8 @@
             this.TenTuaSach,
             this.TheLoai,
             this.TacGia,
-            this.DaAn,
-            this.Edit});
+            this.Edit,
+            this.Delete});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,15 +235,15 @@
             this.TuaSachGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.TuaSachGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TuaSachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.TuaSachGrid.Location = new System.Drawing.Point(0, 115);
-            this.TuaSachGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.TuaSachGrid.Location = new System.Drawing.Point(0, 144);
+            this.TuaSachGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TuaSachGrid.Name = "TuaSachGrid";
             this.TuaSachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.TuaSachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TuaSachGrid.RowHeadersVisible = false;
             this.TuaSachGrid.RowHeadersWidth = 51;
             this.TuaSachGrid.RowTemplate.Height = 30;
-            this.TuaSachGrid.Size = new System.Drawing.Size(748, 369);
+            this.TuaSachGrid.Size = new System.Drawing.Size(997, 452);
             this.TuaSachGrid.TabIndex = 5;
             this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.TuaSachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -267,6 +267,37 @@
             this.TuaSachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TuaSachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.TuaSachGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuaSachGrid_CellClick);
+            // 
+            // ErrorDia
+            // 
+            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
+            this.ErrorDia.Caption = null;
+            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
+            this.ErrorDia.Parent = null;
+            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.ErrorDia.Text = null;
+            // 
+            // AskDia
+            // 
+            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
+            this.AskDia.Caption = null;
+            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
+            this.AskDia.Parent = null;
+            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.AskDia.Text = null;
+            // 
+            // SuccDia
+            // 
+            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.SuccDia.Caption = null;
+            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
+            this.SuccDia.Parent = null;
+            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
+            this.SuccDia.Text = null;
+            // 
+            // tUASACHBindingSource
+            // 
+            this.tUASACHBindingSource.DataSource = typeof(DTO.TUASACH);
             // 
             // isChosen
             // 
@@ -314,14 +345,6 @@
             this.TacGia.Name = "TacGia";
             this.TacGia.ReadOnly = true;
             // 
-            // DaAn
-            // 
-            this.DaAn.DataPropertyName = "DaAn";
-            this.DaAn.HeaderText = "Đã ẩn";
-            this.DaAn.MinimumWidth = 6;
-            this.DaAn.Name = "DaAn";
-            this.DaAn.ReadOnly = true;
-            // 
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -335,46 +358,23 @@
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Edit.Width = 6;
             // 
-            // ErrorDia
+            // Delete
             // 
-            this.ErrorDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.RetryCancel;
-            this.ErrorDia.Caption = null;
-            this.ErrorDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Error;
-            this.ErrorDia.Parent = null;
-            this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.ErrorDia.Text = null;
-            // 
-            // AskDia
-            // 
-            this.AskDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.YesNo;
-            this.AskDia.Caption = null;
-            this.AskDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Question;
-            this.AskDia.Parent = null;
-            this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.AskDia.Text = null;
-            // 
-            // SuccDia
-            // 
-            this.SuccDia.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
-            this.SuccDia.Caption = null;
-            this.SuccDia.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.Information;
-            this.SuccDia.Parent = null;
-            this.SuccDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
-            this.SuccDia.Text = null;
-            // 
-            // tUASACHBindingSource
-            // 
-            this.tUASACHBindingSource.DataSource = typeof(DTO.TUASACH);
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Delete.HeaderText = "";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 6;
             // 
             // ucTuaSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.TuaSachGrid);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucTuaSach";
-            this.Size = new System.Drawing.Size(748, 484);
+            this.Size = new System.Drawing.Size(997, 596);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TuaSachGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUASACHBindingSource)).EndInit();
@@ -391,17 +391,17 @@
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView TuaSachGrid;
+        private System.Windows.Forms.BindingSource tUASACHBindingSource;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTuaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTuaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DaAn;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.BindingSource tUASACHBindingSource;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

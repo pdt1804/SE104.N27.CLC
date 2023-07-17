@@ -22,16 +22,6 @@ namespace BUS
             }
             set { instance = value; }
         }
-
-        public bool UpdAnSach(int id, int data)
-        {
-            if (!DALSach.Instance.UpdAnSach(id, data))
-            {
-                MessageBox.Show("Đã có lỗi xảy ra, không thể cập nhật những thay đổi.");
-                return false;
-            }
-            return true;
-        }
         public List<SACH> GetAllSach()
         {
             return DALSach.Instance.GetAllSach();
@@ -107,6 +97,12 @@ namespace BUS
                 MessageBox.Show("Thêm không thành công, vui lòng kiểm tra sách này đã có hay chưa nếu chưa có phải thêm sách mới đó vào trước");
                 return false;
             }    
+        }
+
+        public bool CheckTS(int id)
+        {
+            if (DALSach.Instance.ChecKTS(id)) return true;
+            return false;
         }
     }
 }

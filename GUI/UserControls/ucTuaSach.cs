@@ -30,19 +30,16 @@ namespace GUI.UserControls
                 listTL.Add(p);
                 comboTheLoai.Items.Add(p.TenTheLoai);
             }    
-            //comboTheLoai.DataSource = listTL;
-            //comboTheLoai.DisplayMember = "TenTheLoai";
-            //comboTheLoai.ValueMember = "id";
 
         }
         public void Binding(List<TUASACH> TuaSachList)
         {
-
-            Image img = Properties.Resources.edit_icon;
-            img = (Image)(new Bitmap(img, new Size(20, 20)));
-
+            Image edit_img = Properties.Resources.edit_icon;
+            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
+            Image del_img = Properties.Resources.delete;
+            del_img = (Image)(new Bitmap(del_img, new Size(25, 25)));
             TuaSachGrid.Rows.Clear();
-            // Icon myIcon = new Icon("F:\\QLTV\\GUI\\Resources\\edit_icon.png");
+            TuaSachGrid.Refresh();
             foreach (TUASACH tuasach in TuaSachList)
             {
                 string tacgia = "";
@@ -51,7 +48,7 @@ namespace GUI.UserControls
                     tacgia += tg.TenTacGia + ", ";
                 }
                 if (tacgia != "") tacgia = tacgia.Remove(tacgia.Length - 2, 2);
-                TuaSachGrid.Rows.Add(0, tuasach.id, tuasach.MaTuaSach, tuasach.TenTuaSach, tuasach.THELOAI.TenTheLoai, tacgia, tuasach.DaAn, img);
+                TuaSachGrid.Rows.Add(0, tuasach.id, tuasach.MaTuaSach, tuasach.TenTuaSach, tuasach.THELOAI.TenTheLoai, tacgia, edit_img, del_img);
             }
         }
         private void ucTuaSach_Load(object sender, EventArgs e)
@@ -98,34 +95,39 @@ namespace GUI.UserControls
 
         private void txtFind_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtFind.Text))
+            List<TUASACH> listTSSearching = new List<TUASACH>();
+            foreach (TUASACH TS in BUSTuaSach.Instance.GetAllTuaSach())
             {
-                Binding(listTS);
-            }
-            else
-            {
-                List<TUASACH> listTSSearching = new List<TUASACH>();
-                foreach (var p in listTS)
+                if (TS.TenTuaSach.ToLower().Contains(txtFind.Text.ToLower()))
                 {
-                    if (p.TenTuaSach.ToLower().Contains(txtFind.Text.ToLower()))
-                    {
-                        listTSSearching.Add(p);
-                    }
+                    listTSSearching.Add(TS);
                 }
-                Binding(listTSSearching);
             }
+            Binding(listTSSearching);
         }
 
         private void TuaSachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
             if (idx < 0) return;
-            if (e.ColumnIndex == 0) return;
             if (e.ColumnIndex == TuaSachGrid.Columns["Edit"].Index)
             {
                 var f = new fEditTuaSach((Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value)));
                 f.ShowDialog();
                 Binding(BUSTuaSach.Instance.GetAllTuaSach());
+                return;
+            }else if (e.ColumnIndex == TuaSachGrid.Columns["Delete"].Index)
+            {
+                string result = BUSTuaSach.Instance.DelTuaSach(Convert.ToInt32(TuaSachGrid.Rows[e.RowIndex].Cells["id"].Value));
+                if (result == "")
+                {
+                    MessageBox.Show("Xóa tựa sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Binding(BUSTuaSach.Instance.GetAllTuaSach());
+                }
+                else
+                {
+                    MessageBox.Show(result, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return;
             }
             var fInfor = new fInfoTuaSach(Convert.ToInt32(TuaSachGrid.Rows[idx].Cells["id"].Value));

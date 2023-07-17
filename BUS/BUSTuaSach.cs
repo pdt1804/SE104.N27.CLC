@@ -67,14 +67,20 @@ namespace BUS
             return true;
         }
 
-        public bool DelTuaSach(int id)
+        public string DelTuaSach(int id)
         {
-            if (!DALTuaSach.Instance.DelTuaSach(id))
+            TUASACH ts;
+            try
             {
-                MessageBox.Show("Xoá không thành công");
-                return false;
+                ts = DALTuaSach.Instance.GetTuaSachById(id);
             }
-            return true;
+            catch
+            {
+                return "Mã tựa sách không hợp lệ";
+            }
+            if (BUSSach.Instance.CheckTS(ts.id)) return "Không thể xóa tựa sách";
+            DALTuaSach.Instance.DelTuaSach(ts.id);
+            return "";
         }
 
         public bool UpdAnTuaSach(int id, int data)

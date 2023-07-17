@@ -237,7 +237,7 @@
             this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind.Name = "txtFind";
             this.txtFind.PasswordChar = '\0';
-            this.txtFind.PlaceholderText = "Mã, tên độc giả";
+            this.txtFind.PlaceholderText = "Tên độc giả";
             this.txtFind.SelectedText = "";
             this.txtFind.Size = new System.Drawing.Size(299, 41);
             this.txtFind.TabIndex = 19;

@@ -56,28 +56,67 @@ namespace BUS
         {
             return DALPhieuMuonTra.Instance.FindPhieuMuonByDocGia(idDocGia);
         }
-        public bool AddPhieuMuonTra(int idDocGia, int idCuonSach, DateTime ngayMuon, DateTime hanTra)
+        public string AddPhieuMuonTra(string MaCuonSach, string MaDocGia, DateTime NgayMuon)
         {
-            if (!DALPhieuMuonTra.Instance.AddPhieuMuonTra(idDocGia, idCuonSach, ngayMuon, hanTra))
+            CUONSACH cs;
+            DOCGIA dg;
+            if (NgayMuon > DateTime.Now) return "Ngày mượn không hợp lệ.";
+            cs = DALCuonSach.Instance.GetCuonSachByMa(MaCuonSach);
+            if (cs == null)
             {
-                MessageBox.Show("Thêm phiếu không thành công");
-                return false;
-            }    
-            else
+                return "Thông tin sách không hợp lệ";
+            }
+            dg = DALDocGia.Instance.GetDocGiaByMa(MaDocGia);
+            if (dg == null)
             {
-                MessageBox.Show("Thêm phiếu thành công");
-                return true;
-            }    
+                return "Thông tin độc giả không hợp lệ";
+            }
+
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            //System.TimeSpan duration = new System.TimeSpan(thamso.ThoiHanMuonSach, 0, 0, 0);
+            DateTime HanTra = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa);
+            if (NgayMuon > dg.NgayHetHan)
+                return "Thẻ đã hết hạn";
+            if (NgayMuon < dg.NgayLapThe)
+                return "Ngày mượn nhỏ hơn ngày lập thẻ!";
+            if (cs.TinhTrang == 0) return "Cuốn sách đã được mượn!";
+            int cnt = 0;
+
+            foreach (PHIEUMUONTRA pmt in dg.PHIEUMUONTRAs)
+            {
+                if (pmt.NgayTra == null && NgayMuon > pmt.HanTra)
+                    return "Độc giả đang có sách mượn trễ.";
+                if (pmt.NgayTra == null) cnt++;
+            }
+            if (thamso.SoSachMuonToiDa <= cnt)
+                return "Đã vượt quá số sách được mượn";
+            if (DALPhieuMuonTra.Instance.AddPhieuMuonTra(dg.ID, cs.id, NgayMuon, HanTra))
+                return "";
+            return "Không thể thêm phiếu mượn.";
         }
 
-        public bool UpdPhieuMuonTra(int soPhieu, DateTime? ngayMuon, DateTime? hanTra, DateTime? ngayTra, int? soTienPhat)
+        public string UpdPhieuMuonTra(int MaPhieuMuon, DateTime NgayTra)
         {
-            if (!DALPhieuMuonTra.Instance.UpdPhieuMuonTra(soPhieu, ngayMuon, hanTra, ngayTra, soTienPhat))
+            PHIEUMUONTRA pm;
+            pm = DALPhieuMuonTra.Instance.GetPhieuMuonTraById(MaPhieuMuon);
+            if (pm == null)
             {
-                MessageBox.Show("Cập nhật thông tin phiếu không thành công");
-                return false;
+                return "Số phiếu mượn không hợp lệ";
             }
-            return true;
+            if (pm.NgayTra != null)
+            {
+                return "Phiếu mượn đã được trả";
+            }
+            if (NgayTra > DateTime.Now)
+                return "Ngày trả không hợp lệ.";
+            int SoNgayTraTre = ((TimeSpan)(NgayTra - pm.HanTra)).Days;
+            THAMSO ts = DALThamSo.Instance.GetAllThamSo();
+            int TienPhat = 0;
+            if (NgayTra > pm.HanTra)
+                TienPhat = (SoNgayTraTre * (int)ts.DonGiaPhat);
+            if (DALPhieuMuonTra.Instance.UpdPhieuMuonTra(MaPhieuMuon, pm.NgayMuon, pm.HanTra, DateTime.Now, TienPhat))
+                return "";
+            return "Lỗi không thể cập nhật phiếu mượn.";
         }
 
         public bool DelPhieuMuonTra(int soPhieu)

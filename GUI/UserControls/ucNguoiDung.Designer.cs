@@ -42,7 +42,6 @@
             this.TenNND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -124,6 +123,7 @@
             this.dataGrid.ThemeStyle.RowsStyle.Height = 30;
             this.dataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // id
             // 
@@ -191,7 +191,6 @@
             // 
             // siticonePanel1
             // 
-            this.siticonePanel1.Controls.Add(this.butFind);
             this.siticonePanel1.Controls.Add(this.butRefresh);
             this.siticonePanel1.Controls.Add(this.txtFind);
             this.siticonePanel1.Controls.Add(this.butDel);
@@ -201,37 +200,6 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(897, 126);
             this.siticonePanel1.TabIndex = 4;
-            // 
-            // butFind
-            // 
-            this.butFind.AutoRoundedCorners = true;
-            this.butFind.BorderColor = System.Drawing.Color.Transparent;
-            this.butFind.BorderRadius = 19;
-            this.butFind.BorderThickness = 2;
-            this.butFind.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butFind.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butFind.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.butFind.ForeColor = System.Drawing.Color.White;
-            this.butFind.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butFind.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butFind.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butFind.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Location = new System.Drawing.Point(736, 20);
-            this.butFind.Name = "butFind";
-            this.butFind.Size = new System.Drawing.Size(139, 40);
-            this.butFind.TabIndex = 16;
-            this.butFind.Text = "Tìm kiếm";
-            this.butFind.TextOffset = new System.Drawing.Point(3, 0);
-            this.butFind.Click += new System.EventHandler(this.butFind_Click);
             // 
             // butRefresh
             // 
@@ -271,6 +239,7 @@
             this.txtFind.SelectedText = "";
             this.txtFind.Size = new System.Drawing.Size(260, 40);
             this.txtFind.TabIndex = 17;
+            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
             // butDel
             // 
@@ -365,7 +334,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNND;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butFind;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFind;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;

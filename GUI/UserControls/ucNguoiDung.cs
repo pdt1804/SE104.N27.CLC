@@ -61,23 +61,7 @@ namespace GUI.UserControls
             txtFind.Text = "";
         }
 
-        private void butFind_Click(object sender, EventArgs e)
-        {
-            string pat = txtFind.Text.ToLower();
-            List<NGUOIDUNG> Res = new List<NGUOIDUNG>();
-            foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
-            {
-                if (nd.TenNguoiDung.ToLower().Contains(pat)
-                    || nd.MaNguoiDung.ToLower().Contains(pat)
-                    || nd.TenDangNhap.ToLower().Contains(pat))
-                    Res.Add(nd);
-                else if (nd.ChucVu != null && nd.ChucVu.ToLower().Contains(pat))
-                    Res.Add(nd);
-
-            }
-            Bind(Res);
-        }
-
+       
         private void butDel_Click(object sender, EventArgs e)
         {
             List<string> idDel = new List<string>();
@@ -108,6 +92,23 @@ namespace GUI.UserControls
 
             MessageBox.Show("Đã xoá thành công " + cnt + " người dùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Bind(BUSNguoiDung.Instance.GetAllNguoiDung());
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            string pat = txtFind.Text.ToLower();
+            List<NGUOIDUNG> Res = new List<NGUOIDUNG>();
+            foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
+            {
+                if (nd.TenNguoiDung.ToLower().Contains(pat)
+                    || nd.MaNguoiDung.ToLower().Contains(pat)
+                    || nd.TenDangNhap.ToLower().Contains(pat))
+                    Res.Add(nd);
+                else if (nd.ChucVu != null && nd.ChucVu.ToLower().Contains(pat))
+                    Res.Add(nd);
+
+            }
+            Bind(Res);
         }
     }
 }

@@ -33,21 +33,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NDGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nHOMNGUOIDUNGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNhomNguoiDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNhomNguoiDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nGUOIDUNGsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cHUCNANGsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.nHOMNGUOIDUNGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.butDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.AskDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.NDGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHOMNGUOIDUNGBindingSource)).BeginInit();
             this.topPanel.SuspendLayout();
@@ -77,13 +76,13 @@
             this.NDGrid.ColumnHeadersHeight = 35;
             this.NDGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.NDGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.isChosen,
             this.id,
             this.maNhomNguoiDungDataGridViewTextBoxColumn,
             this.tenNhomNguoiDungDataGridViewTextBoxColumn,
             this.nGUOIDUNGsDataGridViewTextBoxColumn,
             this.cHUCNANGsDataGridViewTextBoxColumn,
-            this.Edit});
+            this.Edit,
+            this.Delete});
             this.NDGrid.DataSource = this.nHOMNGUOIDUNGBindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
@@ -128,73 +127,6 @@
             this.NDGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.NDGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NDGrid_CellClick);
             // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.ReadOnly = true;
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 6;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.Visible = false;
-            // 
-            // maNhomNguoiDungDataGridViewTextBoxColumn
-            // 
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.DataPropertyName = "MaNhomNguoiDung";
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "Mã Nhóm Người Dùng";
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.Name = "maNhomNguoiDungDataGridViewTextBoxColumn";
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maNhomNguoiDungDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tenNhomNguoiDungDataGridViewTextBoxColumn
-            // 
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.DataPropertyName = "TenNhomNguoiDung";
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "Tên Nhóm Người Dùng";
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.Name = "tenNhomNguoiDungDataGridViewTextBoxColumn";
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenNhomNguoiDungDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nGUOIDUNGsDataGridViewTextBoxColumn
-            // 
-            this.nGUOIDUNGsDataGridViewTextBoxColumn.DataPropertyName = "NGUOIDUNGs";
-            this.nGUOIDUNGsDataGridViewTextBoxColumn.HeaderText = "NGUOIDUNGs";
-            this.nGUOIDUNGsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nGUOIDUNGsDataGridViewTextBoxColumn.Name = "nGUOIDUNGsDataGridViewTextBoxColumn";
-            this.nGUOIDUNGsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nGUOIDUNGsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cHUCNANGsDataGridViewTextBoxColumn
-            // 
-            this.cHUCNANGsDataGridViewTextBoxColumn.DataPropertyName = "CHUCNANGs";
-            this.cHUCNANGsDataGridViewTextBoxColumn.HeaderText = "CHUCNANGs";
-            this.cHUCNANGsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cHUCNANGsDataGridViewTextBoxColumn.Name = "cHUCNANGsDataGridViewTextBoxColumn";
-            this.cHUCNANGsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cHUCNANGsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Edit.HeaderText = "";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Width = 6;
-            // 
             // nHOMNGUOIDUNGBindingSource
             // 
             this.nHOMNGUOIDUNGBindingSource.DataSource = typeof(DTO.NHOMNGUOIDUNG);
@@ -202,7 +134,6 @@
             // topPanel
             // 
             this.topPanel.Controls.Add(this.butRefresh);
-            this.topPanel.Controls.Add(this.butDel);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -224,37 +155,6 @@
             this.butRefresh.Size = new System.Drawing.Size(62, 63);
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
-            // butDel
-            // 
-            this.butDel.AutoRoundedCorners = true;
-            this.butDel.BorderColor = System.Drawing.Color.Transparent;
-            this.butDel.BorderRadius = 20;
-            this.butDel.BorderThickness = 2;
-            this.butDel.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butDel.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butDel.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butDel.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butDel.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butDel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.butDel.ForeColor = System.Drawing.Color.White;
-            this.butDel.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butDel.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butDel.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butDel.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butDel.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butDel.Location = new System.Drawing.Point(472, 29);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(172, 43);
-            this.butDel.TabIndex = 7;
-            this.butDel.Text = "Xóa Nhóm";
-            this.butDel.TextOffset = new System.Drawing.Point(3, 0);
-            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butAdd
             // 
@@ -314,6 +214,70 @@
             this.AskDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.AskDia.Text = "Bạn có chắc chắn xoá?";
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id.Visible = false;
+            // 
+            // maNhomNguoiDungDataGridViewTextBoxColumn
+            // 
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.DataPropertyName = "MaNhomNguoiDung";
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "Mã Nhóm Người Dùng";
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.Name = "maNhomNguoiDungDataGridViewTextBoxColumn";
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maNhomNguoiDungDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tenNhomNguoiDungDataGridViewTextBoxColumn
+            // 
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.DataPropertyName = "TenNhomNguoiDung";
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.HeaderText = "Tên Nhóm Người Dùng";
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.Name = "tenNhomNguoiDungDataGridViewTextBoxColumn";
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tenNhomNguoiDungDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nGUOIDUNGsDataGridViewTextBoxColumn
+            // 
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.DataPropertyName = "NGUOIDUNGs";
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.HeaderText = "NGUOIDUNGs";
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.Name = "nGUOIDUNGsDataGridViewTextBoxColumn";
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nGUOIDUNGsDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cHUCNANGsDataGridViewTextBoxColumn
+            // 
+            this.cHUCNANGsDataGridViewTextBoxColumn.DataPropertyName = "CHUCNANGs";
+            this.cHUCNANGsDataGridViewTextBoxColumn.HeaderText = "CHUCNANGs";
+            this.cHUCNANGsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cHUCNANGsDataGridViewTextBoxColumn.Name = "cHUCNANGsDataGridViewTextBoxColumn";
+            this.cHUCNANGsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cHUCNANGsDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Edit.HeaderText = "";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Width = 6;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Delete.HeaderText = "";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Width = 6;
+            // 
             // ucNhomND
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,20 +296,19 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView NDGrid;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
+        private System.Windows.Forms.BindingSource nHOMNGUOIDUNGBindingSource;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNhomNguoiDungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNhomNguoiDungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nGUOIDUNGsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cHUCNANGsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.BindingSource nHOMNGUOIDUNGBindingSource;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butDel;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog SuccDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
-        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog AskDia;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

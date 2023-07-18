@@ -200,7 +200,6 @@
             this.siticoneVSeparator2.Name = "siticoneVSeparator2";
             this.siticoneVSeparator2.Size = new System.Drawing.Size(10, 210);
             this.siticoneVSeparator2.TabIndex = 151;
-            this.siticoneVSeparator2.Click += new System.EventHandler(this.siticoneVSeparator2_Click);
             // 
             // siticoneVSeparator1
             // 
@@ -499,6 +498,7 @@
             this.Controls.Add(this.siticoneControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fPhieuMuonSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fPhieuMuonSach";
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();

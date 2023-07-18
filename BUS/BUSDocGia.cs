@@ -161,5 +161,14 @@ namespace BUS
             DALDocGia.Instance.DelDocGia(dg.ID);
             return "";
         }
+
+        public List<DOCGIA> GetAllDocGiaAvailable()
+        {
+            var listDG = new List<DOCGIA>();
+            foreach (DOCGIA docgia in DALDocGia.Instance.GetAllDocGia())
+                if (docgia.NgayLapThe <= DateTime.Now.Date && docgia.NgayHetHan >= DateTime.Now.Date)
+                    listDG.Add(docgia);
+            return listDG;
+        }
     }
 }

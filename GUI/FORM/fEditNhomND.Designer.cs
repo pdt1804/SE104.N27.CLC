@@ -322,6 +322,7 @@
             this.Controls.Add(this.siticoneControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fEditNhomND";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEditNhomND";
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();

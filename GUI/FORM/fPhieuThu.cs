@@ -68,6 +68,7 @@ namespace GUI.FORM
         private void comboDocGia_SelectedIndexChanged(object sender, EventArgs e)
         {
             docgia = BUSDocGia.Instance.GetDocGiaById(Convert.ToInt32(comboDocGia.SelectedValue));
+            labelHoten.Text = docgia.TenDocGia.ToString();
             labelNoHienTai.Text = docgia.TongNoHienTai.ToString();
             TienThu = 0;
             labelNoMoi.Text = "";

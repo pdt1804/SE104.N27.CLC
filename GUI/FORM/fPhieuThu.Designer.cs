@@ -33,7 +33,6 @@
             this.textTienThu = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.labelNoMoi = new System.Windows.Forms.Label();
             this.labelNoHienTai = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateNgayLap = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -50,6 +49,9 @@
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customPanel1 = new GUI.CustomPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelHoten = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             this.topPanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
@@ -62,7 +64,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label3.Location = new System.Drawing.Point(156, 421);
+            this.label3.Location = new System.Drawing.Point(156, 486);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 25);
             this.label3.TabIndex = 98;
@@ -80,7 +82,7 @@
             this.textTienThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.textTienThu.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTienThu.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.textTienThu.Location = new System.Drawing.Point(161, 362);
+            this.textTienThu.Location = new System.Drawing.Point(161, 427);
             this.textTienThu.Margin = new System.Windows.Forms.Padding(4);
             this.textTienThu.Name = "textTienThu";
             this.textTienThu.PasswordChar = '\0';
@@ -95,7 +97,7 @@
             this.labelNoMoi.AutoSize = true;
             this.labelNoMoi.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoMoi.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelNoMoi.Location = new System.Drawing.Point(157, 446);
+            this.labelNoMoi.Location = new System.Drawing.Point(157, 511);
             this.labelNoMoi.Name = "labelNoMoi";
             this.labelNoMoi.Size = new System.Drawing.Size(26, 31);
             this.labelNoMoi.TabIndex = 94;
@@ -106,29 +108,18 @@
             this.labelNoHienTai.AutoSize = true;
             this.labelNoHienTai.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoHienTai.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelNoHienTai.Location = new System.Drawing.Point(157, 286);
+            this.labelNoHienTai.Location = new System.Drawing.Point(157, 351);
             this.labelNoHienTai.Name = "labelNoHienTai";
             this.labelNoHienTai.Size = new System.Drawing.Size(26, 31);
             this.labelNoHienTai.TabIndex = 94;
             this.labelNoHienTai.Text = "0";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label9.Location = new System.Drawing.Point(158, 262);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 25);
-            this.label9.TabIndex = 94;
-            this.label9.Text = "Tổng nợ hiện tại:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label8.Location = new System.Drawing.Point(158, 333);
+            this.label8.Location = new System.Drawing.Point(158, 398);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 93;
@@ -143,7 +134,7 @@
             this.dateNgayLap.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayLap.ForeColor = System.Drawing.Color.White;
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayLap.Location = new System.Drawing.Point(161, 525);
+            this.dateNgayLap.Location = new System.Drawing.Point(161, 590);
             this.dateNgayLap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateNgayLap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayLap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -157,7 +148,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label12.Location = new System.Drawing.Point(157, 498);
+            this.label12.Location = new System.Drawing.Point(157, 563);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 25);
             this.label12.TabIndex = 78;
@@ -202,7 +193,7 @@
             this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSave.ForeColor = System.Drawing.Color.White;
             this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butSave.Location = new System.Drawing.Point(268, 620);
+            this.butSave.Location = new System.Drawing.Point(268, 685);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(150, 42);
             this.butSave.TabIndex = 70;
@@ -267,6 +258,8 @@
             // siticonePanel1
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.siticonePanel1.Controls.Add(this.labelHoten);
+            this.siticonePanel1.Controls.Add(this.label4);
             this.siticonePanel1.Controls.Add(this.pictureBox1);
             this.siticonePanel1.Controls.Add(this.customPanel1);
             this.siticonePanel1.Controls.Add(this.label1);
@@ -284,7 +277,7 @@
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(704, 700);
+            this.siticonePanel1.Size = new System.Drawing.Size(704, 755);
             this.siticonePanel1.TabIndex = 76;
             // 
             // pictureBox1
@@ -311,15 +304,49 @@
             this.customPanel1.Size = new System.Drawing.Size(376, 35);
             this.customPanel1.TabIndex = 100;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label9.Location = new System.Drawing.Point(158, 327);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 25);
+            this.label9.TabIndex = 94;
+            this.label9.Text = "Tổng nợ hiện tại:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(158, 252);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 25);
+            this.label4.TabIndex = 102;
+            this.label4.Text = "Họ tên:";
+            // 
+            // labelHoten
+            // 
+            this.labelHoten.AutoSize = true;
+            this.labelHoten.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoten.ForeColor = System.Drawing.Color.MediumBlue;
+            this.labelHoten.Location = new System.Drawing.Point(157, 277);
+            this.labelHoten.Name = "labelHoten";
+            this.labelHoten.Size = new System.Drawing.Size(78, 31);
+            this.labelHoten.TabIndex = 103;
+            this.labelHoten.Text = "họ tên";
+            // 
             // fPhieuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 700);
+            this.ClientSize = new System.Drawing.Size(704, 755);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.siticonePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fPhieuThu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fPhieuThu";
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
             this.topPanel.ResumeLayout(false);
@@ -337,7 +364,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox textTienThu;
         private System.Windows.Forms.Label labelNoMoi;
         private System.Windows.Forms.Label labelNoHienTai;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dateNgayLap;
         private System.Windows.Forms.Label label12;
@@ -354,5 +380,8 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private CustomPanel customPanel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelHoten;
     }
 }

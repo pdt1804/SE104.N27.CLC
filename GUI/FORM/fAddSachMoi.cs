@@ -44,8 +44,8 @@ namespace GUI.FORM
                 foreach (DataGridViewRow row in SachGrid.Rows)
                 {
                     TUASACH tuasach = BUSTuaSach.Instance.GetTuaSachById(Convert.ToInt32(row.Cells[0].Value));
-                    int s = BUSSach.Instance.AddSachMoi(tuasach, int.Parse(txtDonGia.Text), int.Parse(txtNamXB.Text), txtNhaXB.Text);
-                    BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, int.Parse(txtDonGia.Text), int.Parse(txtSoLuongNhap.Text));
+                    int s = BUSSach.Instance.AddSachMoi(tuasach, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[2].Value),row.Cells[3].Value.ToString());
+                    BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[5].Value));
                 }
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -88,7 +88,34 @@ namespace GUI.FORM
                     break;
                 }
             }
+            foreach (DataGridViewRow row in SachGrid.Rows)
+            {
+                if(tuaSach.id == Convert.ToInt32(row.Cells[0].Value))
+                {
+                    row.Cells[5].Value = (int.Parse(txtSoLuongNhap.Text) + int.Parse(row.Cells[5].Value.ToString())).ToString();
+                    row.Cells[6].Value = (int.Parse(txtDonGia.Text) * int.Parse(row.Cells[5].Value.ToString())).ToString();
+                    return;
+                }
+            }
             SachGrid.Rows.Add(tuaSach.id, tuaSach.TenTuaSach, txtNamXB.Text, txtNhaXB.Text, txtDonGia.Text, txtSoLuongNhap.Text, txtThanhtien.Text);
+        }
+
+        private void txtNamXB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtDonGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtSoLuongNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

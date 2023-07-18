@@ -77,7 +77,7 @@ namespace GUI.FORM
                 MessageBox.Show("Ngày trả không được trước ngày mượn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string err = (BUSPhieuMuonTra.Instance.UpdPhieuMuonTra(PhieuMuon.SoPhieuMuonTra, PhieuMuon.NgayMuon, PhieuMuon.HanTra, dateNgayTra.Value.Date, PhieuMuon.SoTienPhat)).ToString();
+            string err = (BUSPhieuMuonTra.Instance.UpdPhieuMuonTra(PhieuMuon.SoPhieuMuonTra, dateNgayTra.Value.Date)).ToString();
 
             if (err != "")
             {

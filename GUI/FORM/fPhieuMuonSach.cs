@@ -25,30 +25,45 @@ namespace GUI.FORM
 
         private void Binding()
         {
-            List<CUONSACH> listCS = BUSCuonSach.Instance.GetAllCuonSachAvailable();
+            List<string> listCS = new List<string>();
+            foreach (var cs in BUSCuonSach.Instance.GetAllCuonSachAvailable())
+            {
+                listCS.Add(cs.id + " | " + cs.MaCuonSach + " | " + cs.SACH.TUASACH.TenTuaSach);
+            }
             comboCuonSach.DataSource = listCS;
-            comboCuonSach.DisplayMember = "MaCuonSach" + " | " + "TenCuonSach";
-            comboCuonSach.ValueMember = "id";
-
-            List<DOCGIA> listDG = BUSDocGia.Instance.GetAllDocGiaAvailable();
+            List<string> listDG = new List<string>();
+            foreach (var dg in BUSDocGia.Instance.GetAllDocGiaAvailable())
+            {
+                listDG.Add(dg.ID + " | " + dg.MaDocGia + " | " + dg.TenDocGia);
+            }
             comboDocGia.DataSource = listDG;
-            comboDocGia.DisplayMember = "MaDocGia";
-            comboDocGia.ValueMember = "id";
-            if (listCS.Count == 0)
-                return;
-            dateNgayMuon.Value = DateTime.Now.Date;
+
+        }
+        private void dateNgayMuon_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void butSave_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void comboDocGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DOCGIA docgia = BUSDocGia.Instance.GetDocGiaById(Convert.ToInt32(comboDocGia.SelectedValue));
+            if (docgia == null) return;
+
+            labelHoTen.Text = "Họ tên: " + docgia.TenDocGia;
+            labelTongNoHienTai.Text = "Tổng nợ hiện tại: " + docgia.TongNoHienTai.ToString();
+        }
+
+        private void comboCuonSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
             CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSachById(Convert.ToInt32(comboCuonSach.SelectedValue));
+            if (cuonsach == null) return;
             labelTenCS.Text = "Tên: " + cuonsach.SACH.TUASACH.TenTuaSach;
             labelTheLoai.Text = "Thể loại: " + cuonsach.SACH.TUASACH.THELOAI.TenTheLoai;
-            if (listDG.Count != 0)
-            {
-                DOCGIA docgia = BUSDocGia.Instance.GetDocGiaById(Convert.ToInt32(comboDocGia.SelectedValue));
-                labelHoTen.Text = "Họ tên: " + docgia.TenDocGia;
-                labelTongNoHienTai.Text = "Tổng nợ hiện tại: " + docgia.TongNoHienTai.ToString();
-            }
-            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
-            NgayMuon = dateNgayMuon.Value.Date;
-            labelHanTra.Text = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa).ToShortDateString();
         }
     }
 }

@@ -168,6 +168,7 @@
             this.comboDocGia.Size = new System.Drawing.Size(236, 32);
             this.comboDocGia.TabIndex = 155;
             this.comboDocGia.ValueMember = "ID";
+            this.comboDocGia.SelectedIndexChanged += new System.EventHandler(this.comboDocGia_SelectedIndexChanged);
             // 
             // dOCGIABindingSource
             // 
@@ -187,6 +188,7 @@
             this.comboCuonSach.Size = new System.Drawing.Size(255, 32);
             this.comboCuonSach.TabIndex = 154;
             this.comboCuonSach.ValueMember = "id";
+            this.comboCuonSach.SelectedIndexChanged += new System.EventHandler(this.comboCuonSach_SelectedIndexChanged);
             // 
             // cUONSACHBindingSource
             // 
@@ -234,6 +236,7 @@
             this.butSave.Size = new System.Drawing.Size(178, 43);
             this.butSave.TabIndex = 65;
             this.butSave.Text = "Lưu";
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // label13
             // 
@@ -284,6 +287,7 @@
             this.dateNgayMuon.Size = new System.Drawing.Size(167, 40);
             this.dateNgayMuon.TabIndex = 131;
             this.dateNgayMuon.Value = new System.DateTime(2022, 12, 2, 22, 44, 12, 275);
+            this.dateNgayMuon.ValueChanged += new System.EventHandler(this.dateNgayMuon_ValueChanged);
             // 
             // labelHanTra
             // 

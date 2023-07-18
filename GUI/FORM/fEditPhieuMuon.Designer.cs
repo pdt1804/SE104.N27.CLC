@@ -165,7 +165,7 @@
             this.labelNgayTra.AutoSize = true;
             this.labelNgayTra.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayTra.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.labelNgayTra.Location = new System.Drawing.Point(118, 583);
+            this.labelNgayTra.Location = new System.Drawing.Point(114, 614);
             this.labelNgayTra.Name = "labelNgayTra";
             this.labelNgayTra.Size = new System.Drawing.Size(0, 27);
             this.labelNgayTra.TabIndex = 178;
@@ -515,6 +515,7 @@
             this.Controls.Add(this.siticoneControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fEditPhieuMuon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEditPhieuMuon";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();

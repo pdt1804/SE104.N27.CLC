@@ -18,30 +18,8 @@ namespace GUI.FORM
         {
             InitializeComponent();
             LoadTuaSach();
-            btnCapNhat.Visible = false;
         }
 
-        public SACH sach { get; set; }
-        // Gọi tới để chỉnh sửa thông tin sách
-        public fAddSachMoi(int i)
-        {
-            InitializeComponent();
-            LoadTuaSach();
-            sach = BUSSach.Instance.GetSachById(i);
-            //Load dữ liệu
-            comboTuaSach.SelectedItem = sach.TUASACH.TenTuaSach;
-            txtNamXB.Text = sach.NamXB.ToString();
-            txtNhaXB.Text = sach.NhaXB;
-            txtDonGia.Text = sach.DonGia.ToString();
-            //Unseen những trường không dùng đến
-            txtSoLuongNhap.Visible = false;
-            txtThanhtien.Visible = false;
-            label6.Visible = false;
-            label8.Visible = false;
-            labelThanhTien.Visible = false;
-            siticoneSeparator2.Visible = false;
-            butOK.Visible = false;
-        }
 
         private void LoadTuaSach()
         {
@@ -53,13 +31,54 @@ namespace GUI.FORM
             comboTuaSach.DataSource = listTuaSach;
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void butOK_Click(object sender, EventArgs e)
         {
+            if (SachGrid.Rows.Count <= 0)
+            {
+                MessageBox.Show("Danh sách rỗng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                int ph = BUSPhieuNhapSach.Instance.AddPhieuNhap(DateTime.Now);
+                foreach (DataGridViewRow row in SachGrid.Rows)
+                {
+                    TUASACH tuasach = BUSTuaSach.Instance.GetTuaSachById(Convert.ToInt32(row.Cells[0].Value));
+                    int s = BUSSach.Instance.AddSachMoi(tuasach, int.Parse(txtDonGia.Text), int.Parse(txtNamXB.Text), txtNhaXB.Text);
+                    BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, int.Parse(txtDonGia.Text), int.Parse(txtSoLuongNhap.Text));
+                }
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
+
+        private void txtSoLuongNhap_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSoLuongNhap.Text) || String.IsNullOrEmpty(txtDonGia.Text))
+            {
+                txtThanhtien.Text = "";
+            }
+            else
+            {
+                txtThanhtien.Text = (int.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text)).ToString();
+            }
+        }
+
+        private void txtDonGia_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSoLuongNhap.Text) || String.IsNullOrEmpty(txtDonGia.Text))
+            {
+                txtThanhtien.Text = "";
+            }
+            else
+            {
+                txtThanhtien.Text = (int.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text)).ToString();
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            // Nếu tựa sách trùng thì chỉ thay đổi một số trường trong datagridview
             TUASACH tuaSach = new TUASACH();
             foreach (var p in BUSTuaSach.Instance.GetAllTuaSach())
             {
@@ -67,46 +86,9 @@ namespace GUI.FORM
                 {
                     tuaSach = p;
                     break;
-                }    
+                }
             }
-            int s = BUSSach.Instance.AddSachMoi(tuaSach, int.Parse(txtDonGia.Text), int.Parse(txtNamXB.Text), txtNhaXB.Text);
-            int ph = BUSPhieuNhapSach.Instance.AddPhieuNhap(DateTime.Now);
-            BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, int.Parse(txtDonGia.Text), int.Parse(txtSoLuongNhap.Text));
-            this.Close();
-        }
-
-        private void txtSoLuongNhap_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txtSoLuongNhap.Text))
-            {
-                txtThanhtien.Text = "";
-            }    
-            else
-            {
-                txtThanhtien.Text = (int.Parse(txtDonGia.Text) * int.Parse(txtSoLuongNhap.Text)).ToString();
-            }    
-        }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            string tentuasach = comboTuaSach.SelectedItem.ToString();
-            foreach (var p in BUSTuaSach.Instance.GetAllTuaSach())
-            {
-                if (p.TenTuaSach.ToLower().Equals(tentuasach.ToLower()))
-                {
-                    if (BUSSach.Instance.UpdSach(sach.id, int.Parse(txtDonGia.Text), p, int.Parse(txtNamXB.Text), txtNhaXB.Text))
-                    {
-                        MessageBox.Show("Cập nhật thành công");
-                        break;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật không thành công");
-                        break;
-                    }    
-                }    
-            }
-            this.Close();
+            SachGrid.Rows.Add(tuaSach.id, tuaSach.TenTuaSach, txtNamXB.Text, txtNhaXB.Text, txtDonGia.Text, txtSoLuongNhap.Text, txtThanhtien.Text);
         }
     }
 }

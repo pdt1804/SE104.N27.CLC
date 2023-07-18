@@ -152,18 +152,22 @@ namespace DAL
         /// <returns></returns>
         public bool DelSach(int id)
         {
-            try
+            using (var transaction = QLTVEntities.Instance.Database.BeginTransaction())
             {
-                SACH sach = GetSachById(id);
-                if (sach == null) return false;
-                QLTVEntities.Instance.SACHes.Remove(sach);
-                QLTVEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                try
+                {
+                    SACH sach = GetSachById(id);
+                    if (sach == null) return false;
+                    QLTVEntities.Instance.SACHes.Remove(sach);
+                    QLTVEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
 

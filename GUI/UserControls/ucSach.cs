@@ -4,6 +4,8 @@ using GUI;
 using GUI.FORM;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 namespace GUI.UserControls
 {
@@ -27,7 +29,7 @@ namespace GUI.UserControls
             SachGrid.Rows.Clear();
             foreach (SACH sach in SachList)
             {
-                SachGrid.Rows.Add(0, sach.id, sach.MaSach, sach.TUASACH.MaTuaSach, sach.TUASACH.TenTuaSach, sach.NamXB, sach.NhaXB, sach.SoLuong, sach.SoLuongConLai, sach.DaAn);
+                SachGrid.Rows.Add(sach.id, sach.MaSach, sach.TUASACH.MaTuaSach, sach.TUASACH.TenTuaSach, sach.NamXB, sach.NhaXB, sach.SoLuong, sach.SoLuongConLai);
             }
 
         }
@@ -38,6 +40,7 @@ namespace GUI.UserControls
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
+            Binding(BUSSach.Instance.GetAllSach());
             txtMaSach.Text = "";
         }
 
@@ -83,13 +86,13 @@ namespace GUI.UserControls
             else
             {
                 List<SACH> list = new List<SACH>();
-                foreach (var p in SachList)
+                foreach (SACH sach in SachList)
+            {
+                if (sach.MaSach.ToLower().Contains(txtMaSach.Text.ToLower()) || sach.TUASACH.TenTuaSach.ToLower().Contains(txtMaSach.Text.ToLower()) || sach.TUASACH.MaTuaSach.ToLower().Contains(txtMaSach.Text.ToLower()))
                 {
-                    if (p.MaSach.ToLower().Contains(txtMaSach.Text.ToLower()))
-                    {
-                        list.Add(p);
-                    }
+                    list.Add(sach);
                 }
+            }
                 Binding(list);
             }
         }
@@ -98,8 +101,7 @@ namespace GUI.UserControls
         {
             fAddSachMoi f = new fAddSachMoi();
             f.ShowDialog();
-            SachList = BUSSach.Instance.GetAllSach();
-            Binding(SachList);
+            Binding(BUSSach.Instance.GetAllSach());
             comboTinhTrang.Text = "Tất cả";
             txtMaSach.Text = "";
         }
@@ -108,28 +110,8 @@ namespace GUI.UserControls
         {
             fAddSachDaCo f = new fAddSachDaCo();
             f.ShowDialog();
-            SachList = BUSSach.Instance.GetAllSach();
-            Binding(SachList);
+            Binding(BUSSach.Instance.GetAllSach());
             comboTinhTrang.Text = "Tất cả";
-            txtMaSach.Text = "";
-        }
-
-        private void SachGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int idx = e.RowIndex;
-            if (idx < 0) return;
-            if (e.ColumnIndex == 0) return;
-            //if (e.ColumnIndex == SachGrid.Columns["Edit"].Index)
-            //{
-            //    var f = new fAddSachMoi((Convert.ToInt32(SachGrid.Rows[idx].Cells["id"].Value)))
-            //    f.ShowDialog();
-            //    return;
-            //}
-            var fInfor = new fAddSachMoi(Convert.ToInt32(SachGrid.Rows[idx].Cells["id"].Value));
-            fInfor.ShowDialog();
-            SachList = BUSSach.Instance.GetAllSach();
-            Binding(SachList);
-            comboTinhTrang.SelectedItem = "Tất cả";
             txtMaSach.Text = "";
         }
     }

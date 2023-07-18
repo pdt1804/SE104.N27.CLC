@@ -36,27 +36,23 @@
             this.SuccDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.ErrorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneCreditCardValidationTool1 = new Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool();
-            this.DaAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticoneContextMenuStrip1 = new Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isChosen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboTinhTrang = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.butTenSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.butMaSach = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAddOld = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtMaSach = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
@@ -89,58 +85,6 @@
             this.ErrorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.ErrorDia.Text = null;
             // 
-            // DaAn
-            // 
-            this.DaAn.DataPropertyName = "DaAn";
-            this.DaAn.HeaderText = "Đã ẩn";
-            this.DaAn.MinimumWidth = 6;
-            this.DaAn.Name = "DaAn";
-            this.DaAn.ReadOnly = true;
-            this.DaAn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ConLai
-            // 
-            this.ConLai.HeaderText = "Còn lại";
-            this.ConLai.MinimumWidth = 6;
-            this.ConLai.Name = "ConLai";
-            this.ConLai.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // NXB
-            // 
-            this.NXB.HeaderText = "NXB";
-            this.NXB.MinimumWidth = 6;
-            this.NXB.Name = "NXB";
-            this.NXB.ReadOnly = true;
-            // 
-            // NamXB
-            // 
-            this.NamXB.HeaderText = "Năm XB";
-            this.NamXB.MinimumWidth = 6;
-            this.NamXB.Name = "NamXB";
-            this.NamXB.ReadOnly = true;
-            // 
-            // TuaSach
-            // 
-            this.TuaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TuaSach.HeaderText = "Tựa Sách";
-            this.TuaSach.MinimumWidth = 6;
-            this.TuaSach.Name = "TuaSach";
-            this.TuaSach.ReadOnly = true;
-            // 
-            // MaTuaSach
-            // 
-            this.MaTuaSach.HeaderText = "Mã tựa sách";
-            this.MaTuaSach.MinimumWidth = 6;
-            this.MaTuaSach.Name = "MaTuaSach";
-            this.MaTuaSach.ReadOnly = true;
-            // 
             // siticoneContextMenuStrip1
             // 
             this.siticoneContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -155,26 +99,6 @@
             this.siticoneContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.siticoneContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.siticoneContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // MaSach
-            // 
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            // 
-            // isChosen
-            // 
-            this.isChosen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.isChosen.FalseValue = "0";
-            this.isChosen.HeaderText = "";
-            this.isChosen.IndeterminateValue = "0";
-            this.isChosen.MinimumWidth = 6;
-            this.isChosen.Name = "isChosen";
-            this.isChosen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.isChosen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.isChosen.TrueValue = "1";
-            this.isChosen.Width = 17;
             // 
             // SachGrid
             // 
@@ -198,7 +122,6 @@
             this.SachGrid.ColumnHeadersHeight = 35;
             this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.isChosen,
             this.id,
             this.MaSach,
             this.MaTuaSach,
@@ -206,8 +129,7 @@
             this.NamXB,
             this.NXB,
             this.SoLuong,
-            this.ConLai,
-            this.DaAn});
+            this.ConLai});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,15 +140,15 @@
             this.SachGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.SachGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SachGrid.Location = new System.Drawing.Point(0, 138);
-            this.SachGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.SachGrid.Location = new System.Drawing.Point(0, 170);
+            this.SachGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SachGrid.Name = "SachGrid";
             this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SachGrid.RowHeadersVisible = false;
             this.SachGrid.RowHeadersWidth = 51;
             this.SachGrid.RowTemplate.Height = 30;
-            this.SachGrid.Size = new System.Drawing.Size(948, 380);
+            this.SachGrid.Size = new System.Drawing.Size(1264, 468);
             this.SachGrid.TabIndex = 4;
             this.SachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.SachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -249,14 +171,6 @@
             this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
             this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SachGrid_CellClick);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
             // 
             // comboTinhTrang
             // 
@@ -270,80 +184,18 @@
             this.comboTinhTrang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboTinhTrang.ItemHeight = 30;
-            this.comboTinhTrang.Location = new System.Drawing.Point(575, 20);
-            this.comboTinhTrang.Margin = new System.Windows.Forms.Padding(2);
+            this.comboTinhTrang.Location = new System.Drawing.Point(634, 25);
+            this.comboTinhTrang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboTinhTrang.Name = "comboTinhTrang";
-            this.comboTinhTrang.Size = new System.Drawing.Size(188, 36);
+            this.comboTinhTrang.Size = new System.Drawing.Size(249, 36);
             this.comboTinhTrang.TabIndex = 15;
             this.comboTinhTrang.SelectedValueChanged += new System.EventHandler(this.comboTinhTrang_SelectedValueChanged);
-            // 
-            // butTenSach
-            // 
-            this.butTenSach.AutoRoundedCorners = true;
-            this.butTenSach.BorderColor = System.Drawing.Color.Transparent;
-            this.butTenSach.BorderRadius = 16;
-            this.butTenSach.BorderThickness = 2;
-            this.butTenSach.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butTenSach.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butTenSach.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butTenSach.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butTenSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butTenSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butTenSach.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butTenSach.ForeColor = System.Drawing.Color.White;
-            this.butTenSach.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butTenSach.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butTenSach.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butTenSach.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butTenSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butTenSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butTenSach.Location = new System.Drawing.Point(782, 20);
-            this.butTenSach.Margin = new System.Windows.Forms.Padding(2);
-            this.butTenSach.Name = "butTenSach";
-            this.butTenSach.Size = new System.Drawing.Size(145, 34);
-            this.butTenSach.TabIndex = 14;
-            this.butTenSach.Text = "Lọc tình trạng";
-            this.butTenSach.TextOffset = new System.Drawing.Point(3, 0);
-            // 
-            // butMaSach
-            // 
-            this.butMaSach.AutoRoundedCorners = true;
-            this.butMaSach.BorderColor = System.Drawing.Color.Transparent;
-            this.butMaSach.BorderRadius = 16;
-            this.butMaSach.BorderThickness = 2;
-            this.butMaSach.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.butMaSach.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
-            this.butMaSach.CheckedState.FillColor = System.Drawing.Color.Lavender;
-            this.butMaSach.CheckedState.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.butMaSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.butMaSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.butMaSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.butMaSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.butMaSach.FillColor = System.Drawing.Color.RoyalBlue;
-            this.butMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butMaSach.ForeColor = System.Drawing.Color.White;
-            this.butMaSach.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.butMaSach.HoverState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.butMaSach.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.butMaSach.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.butMaSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.butMaSach.ImageOffset = new System.Drawing.Point(3, 0);
-            this.butMaSach.Location = new System.Drawing.Point(782, 77);
-            this.butMaSach.Margin = new System.Windows.Forms.Padding(2);
-            this.butMaSach.Name = "butMaSach";
-            this.butMaSach.Size = new System.Drawing.Size(145, 34);
-            this.butMaSach.TabIndex = 9;
-            this.butMaSach.Text = "Tìm kiếm";
-            this.butMaSach.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // butAddOld
             // 
             this.butAddOld.AutoRoundedCorners = true;
             this.butAddOld.BorderColor = System.Drawing.Color.Transparent;
-            this.butAddOld.BorderRadius = 16;
+            this.butAddOld.BorderRadius = 20;
             this.butAddOld.BorderThickness = 2;
             this.butAddOld.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butAddOld.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -362,10 +214,10 @@
             this.butAddOld.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAddOld.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAddOld.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAddOld.Location = new System.Drawing.Point(118, 20);
-            this.butAddOld.Margin = new System.Windows.Forms.Padding(2);
+            this.butAddOld.Location = new System.Drawing.Point(157, 25);
+            this.butAddOld.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAddOld.Name = "butAddOld";
-            this.butAddOld.Size = new System.Drawing.Size(176, 34);
+            this.butAddOld.Size = new System.Drawing.Size(235, 42);
             this.butAddOld.TabIndex = 4;
             this.butAddOld.Text = "Nhập Sách Đã Có";
             this.butAddOld.TextOffset = new System.Drawing.Point(3, 0);
@@ -375,7 +227,7 @@
             // 
             this.butAdd.AutoRoundedCorners = true;
             this.butAdd.BorderColor = System.Drawing.Color.Transparent;
-            this.butAdd.BorderRadius = 16;
+            this.butAdd.BorderRadius = 20;
             this.butAdd.BorderThickness = 2;
             this.butAdd.CheckedState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.butAdd.CheckedState.CustomBorderColor = System.Drawing.Color.DodgerBlue;
@@ -394,10 +246,10 @@
             this.butAdd.HoverState.ForeColor = System.Drawing.Color.RoyalBlue;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(118, 77);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.butAdd.Location = new System.Drawing.Point(157, 95);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(176, 34);
+            this.butAdd.Size = new System.Drawing.Size(235, 42);
             this.butAdd.TabIndex = 4;
             this.butAdd.Text = "Nhập Sách Mới";
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
@@ -406,7 +258,7 @@
             // txtMaSach
             // 
             this.txtMaSach.AutoRoundedCorners = true;
-            this.txtMaSach.BorderRadius = 16;
+            this.txtMaSach.BorderRadius = 20;
             this.txtMaSach.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSach.DefaultText = "";
             this.txtMaSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -417,14 +269,14 @@
             this.txtMaSach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMaSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSach.Location = new System.Drawing.Point(575, 77);
-            this.txtMaSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaSach.Location = new System.Drawing.Point(634, 95);
+            this.txtMaSach.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.PasswordChar = '\0';
             this.txtMaSach.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtMaSach.PlaceholderText = "Mã sách";
             this.txtMaSach.SelectedText = "";
-            this.txtMaSach.Size = new System.Drawing.Size(188, 34);
+            this.txtMaSach.Size = new System.Drawing.Size(251, 42);
             this.txtMaSach.TabIndex = 13;
             this.txtMaSach.TextChanged += new System.EventHandler(this.txtMaSach_TextChanged);
             // 
@@ -432,17 +284,15 @@
             // 
             this.topPanel.BackColor = System.Drawing.Color.AliceBlue;
             this.topPanel.Controls.Add(this.comboTinhTrang);
-            this.topPanel.Controls.Add(this.butTenSach);
             this.topPanel.Controls.Add(this.butRefresh);
-            this.topPanel.Controls.Add(this.butMaSach);
             this.topPanel.Controls.Add(this.butAddOld);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Controls.Add(this.txtMaSach);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(948, 138);
+            this.topPanel.Size = new System.Drawing.Size(1264, 170);
             this.topPanel.TabIndex = 3;
             // 
             // butRefresh
@@ -453,11 +303,11 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(14, 20);
-            this.butRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.butRefresh.Location = new System.Drawing.Point(19, 25);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(48, 44);
+            this.butRefresh.Size = new System.Drawing.Size(64, 54);
             this.butRefresh.TabIndex = 8;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
@@ -465,15 +315,79 @@
             // 
             this.sACHBindingSource.DataSource = typeof(DTO.SACH);
             // 
+            // id
+            // 
+            this.id.HeaderText = "";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // MaSach
+            // 
+            this.MaSach.FillWeight = 110.0789F;
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // MaTuaSach
+            // 
+            this.MaTuaSach.FillWeight = 110.0789F;
+            this.MaTuaSach.HeaderText = "Mã tựa sách";
+            this.MaTuaSach.MinimumWidth = 6;
+            this.MaTuaSach.Name = "MaTuaSach";
+            this.MaTuaSach.ReadOnly = true;
+            // 
+            // TuaSach
+            // 
+            this.TuaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TuaSach.FillWeight = 110.0789F;
+            this.TuaSach.HeaderText = "Tựa Sách";
+            this.TuaSach.MinimumWidth = 6;
+            this.TuaSach.Name = "TuaSach";
+            this.TuaSach.ReadOnly = true;
+            // 
+            // NamXB
+            // 
+            this.NamXB.FillWeight = 110.0789F;
+            this.NamXB.HeaderText = "Năm XB";
+            this.NamXB.MinimumWidth = 6;
+            this.NamXB.Name = "NamXB";
+            this.NamXB.ReadOnly = true;
+            // 
+            // NXB
+            // 
+            this.NXB.FillWeight = 110.0789F;
+            this.NXB.HeaderText = "NXB";
+            this.NXB.MinimumWidth = 6;
+            this.NXB.Name = "NXB";
+            this.NXB.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.FillWeight = 110.0789F;
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // ConLai
+            // 
+            this.ConLai.FillWeight = 110.0789F;
+            this.ConLai.HeaderText = "Còn lại";
+            this.ConLai.MinimumWidth = 6;
+            this.ConLai.Name = "ConLai";
+            this.ConLai.ReadOnly = true;
+            // 
             // ucSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.SachGrid);
             this.Controls.Add(this.topPanel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucSach";
-            this.Size = new System.Drawing.Size(948, 518);
+            this.Size = new System.Drawing.Size(1264, 638);
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).EndInit();
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
@@ -488,25 +402,21 @@
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog ErrorDia;
         private System.Windows.Forms.BindingSource sACHBindingSource;
         private Siticone.Desktop.UI.Winforms.SiticoneCreditCardValidationTool siticoneCreditCardValidationTool1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DaAn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConLai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TuaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTuaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneContextMenuStrip siticoneContextMenuStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isChosen;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView SachGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox comboTinhTrang;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butTenSach;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton butMaSach;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAddOld;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtMaSach;
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTuaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TuaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConLai;
     }
 }

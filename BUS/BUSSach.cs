@@ -56,7 +56,6 @@ namespace BUS
             }    
             else
             {
-                MessageBox.Show("Thêm thành công");
                 return i;
             }    
         }
@@ -75,15 +74,26 @@ namespace BUS
             return true;
         }
 
-        public bool DelSach(int id)
-        {
-            if (!DALSach.Instance.DelSach(id))
-            {
-                MessageBox.Show("Có lỗi xảy ra, không thể xoá.");
-                return false;
-            }
-            return true;
-        }
+        //public string DelSach(int id)
+        //{
+        //    SACH sach;
+        //    try
+        //    {
+        //        sach = DALSach.Instance.GetSachById(id);
+        //    }
+        //    catch
+        //    {
+        //        return "Mã sách không hợp lệ";
+        //    }
+
+
+        //    if (!DALSach.Instance.DelSach(id))
+        //    {
+        //        MessageBox.Show("Có lỗi xảy ra, không thể xoá.");
+        //        return "";
+        //    }
+        //    return "";
+        //}
 
         public bool AddSachDaCo(int id, int soLuong)
         {

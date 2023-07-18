@@ -21,7 +21,7 @@ namespace GUI.UserControls
             InitializeComponent();
             // Lấy data từ database hiển thị lên datagridview
             Binding(BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra());
-            List<string> comboList = new List<string> { "Chưa trả", "Đã trả" };
+            List<string> comboList = new List<string> { "Tất cả" , "Chưa trả", "Đã trả" };
             comboTinhTrang.DataSource = comboList;
         }
         public void Binding(List<PHIEUMUONTRA> PhieuMuonList)
@@ -60,7 +60,22 @@ namespace GUI.UserControls
             txtFind.Text = "";
         }
 
-        private void butFil_Click(object sender, EventArgs e)
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            string str = txtFind.Text.ToLower().ToString();
+            List<PHIEUMUONTRA> list = new List<PHIEUMUONTRA>();
+            foreach (PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra())
+            {
+                if (pmt.CUONSACH.MaCuonSach.ToLower().Contains(str) || pmt.DOCGIA.MaDocGia.ToLower().Contains(str) || pmt.SoPhieuMuonTra.ToString().Contains(str))
+                {
+                    list.Add(pmt);
+                }
+            }
+            Binding(list);
+        }
+
+        private void comboTinhTrang_SelectedValueChanged(object sender, EventArgs e)
         {
             string pat = comboTinhTrang.SelectedValue.ToString();
 
@@ -68,25 +83,13 @@ namespace GUI.UserControls
 
             foreach (PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra())
             {
+                if (pat == "Tất cả")
+                    list.Add(pmt);
                 if (pmt.NgayTra != null && pat == "Đã trả")
                     list.Add(pmt);
                 Console.Write(pmt.NgayTra.ToString());
                 if (pmt.NgayTra == null && pat == "Chưa trả")
                     list.Add(pmt);
-            }
-            Binding(list);
-        }
-
-        private void butFind_Click(object sender, EventArgs e)
-        {
-            string str = txtFind.Text.ToString();
-            List<PHIEUMUONTRA> list = new List<PHIEUMUONTRA>();
-            foreach(PHIEUMUONTRA pmt in BUSPhieuMuonTra.Instance.GetAllPhieuMuonTra())
-            {
-                if(pmt.CUONSACH.MaCuonSach.ToLower().Contains(str) || pmt.DOCGIA.MaDocGia.ToLower().Contains(str) || pmt.SoPhieuMuonTra.ToString().Contains(str))
-                {
-                    list.Add(pmt);
-                }
             }
             Binding(list);
         }

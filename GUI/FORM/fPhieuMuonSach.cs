@@ -25,28 +25,70 @@ namespace GUI.FORM
 
         private void Binding()
         {
-            List<string> listCS = new List<string>();
-            foreach (var cs in BUSCuonSach.Instance.GetAllCuonSachAvailable())
-            {
-                listCS.Add(cs.id + " | " + cs.MaCuonSach + " | " + cs.SACH.TUASACH.TenTuaSach);
-            }
+            List<CUONSACH> listCS = BUSCuonSach.Instance.GetAllCuonSachAvailable();
             comboCuonSach.DataSource = listCS;
-            List<string> listDG = new List<string>();
-            foreach (var dg in BUSDocGia.Instance.GetAllDocGiaAvailable())
-            {
-                listDG.Add(dg.ID + " | " + dg.MaDocGia + " | " + dg.TenDocGia);
-            }
+            comboCuonSach.DisplayMember = "MaCuonSach";
+            comboCuonSach.ValueMember = "id";
+
+            List<DOCGIA> listDG = BUSDocGia.Instance.GetAllDocGiaAvailable();
             comboDocGia.DataSource = listDG;
+            comboDocGia.DisplayMember = "MaDocGia";
+            comboDocGia.ValueMember = "id";
+            if (listCS.Count == 0)
+                return;
+            dateNgayMuon.Value = DateTime.Now.Date;
+            CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSachById(Convert.ToInt32(comboCuonSach.SelectedValue));
+            labelTenCS.Text = "Tên: " + cuonsach.SACH.TUASACH.TenTuaSach;
+            labelTheLoai.Text = "Thể loại: " + cuonsach.SACH.TUASACH.THELOAI.TenTheLoai;
+            if (listDG.Count != 0)
+            {
+                DOCGIA docgia = BUSDocGia.Instance.GetDocGiaById(Convert.ToInt32(comboDocGia.SelectedValue));
+                labelHoTen.Text = "Họ tên: " + docgia.TenDocGia;
+                labelTongNoHienTai.Text = "Tổng nợ hiện tại: " + docgia.TongNoHienTai.ToString();
+            }
+            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            NgayMuon = dateNgayMuon.Value.Date;
+            labelHanTra.Text = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa).ToShortDateString();
+
 
         }
         private void dateNgayMuon_ValueChanged(object sender, EventArgs e)
         {
-           
+            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            NgayMuon = dateNgayMuon.Value.Date;
+            labelHanTra.Text = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa).ToShortDateString();
         }
 
         private void butSave_Click(object sender, EventArgs e)
         {
-           
+            if (comboCuonSach.SelectedValue == null)
+            {
+                MessageBox.Show("Cuốn sách được chọn không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (comboDocGia.SelectedValue == null)
+            {
+                MessageBox.Show("Độc giả được chọn không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            NgayMuon = dateNgayMuon.Value.Date;
+
+            if (NgayMuon > DateTime.Now)
+            {
+                MessageBox.Show("Ngày mượn không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DOCGIA docgia = BUSDocGia.Instance.GetDocGiaById(Convert.ToInt32(comboDocGia.SelectedValue));
+            CUONSACH cuonsach = BUSCuonSach.Instance.GetCuonSachById(Convert.ToInt32(comboCuonSach.SelectedValue));
+            string error = BUSPhieuMuonTra.Instance.AddPhieuMuonTra(cuonsach.MaCuonSach, docgia.MaDocGia, NgayMuon);
+            if (error != "")
+            {
+                MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Thêm phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void comboDocGia_SelectedIndexChanged(object sender, EventArgs e)

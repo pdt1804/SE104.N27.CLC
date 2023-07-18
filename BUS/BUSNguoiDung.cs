@@ -47,28 +47,29 @@ namespace BUS
         public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
                                  string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {
+            foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
+                if (nd.TenDangNhap == tenDangNhap)
+                    return -1;
             int i = DALNguoiDung.Instance.AddNguoiDung(tenNguoiDung, ngaySinh, chucVu, tenDangNhap, matKhau, email, idNhomNguoiDung);
-            if (i == -1)
-            {
-                MessageBox.Show("Đã có lỗi, không thể thêm người dùng.");
-                return i; // return -1 
-            }    
-            else
-            {
-                MessageBox.Show("Thêm thành công");
-                return i; // return về ID của người dùng 
-            }    
+            return i;
         }
 
-        public bool UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
-                                 int? idNhomNguoiDung, string email)
+        public string UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
+                                 int idNhomNguoiDung, string email)
         {
-            if (!DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu, email, idNhomNguoiDung))
+            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungById(id);
+            if (nd == null)
             {
-                MessageBox.Show("Cập nhật thông tin không thành công");
-                return false;
+                return "Người dùng không hợp lệ";
             }
-            return true;
+            if (nd.TenDangNhap == "admin")
+                return "Không thể sửa người dùng này";
+            NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung);
+            if (nnd == null)
+                return " Nhóm người dùng không hợp lệ";
+            if (DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu, email, idNhomNguoiDung))
+                return "";
+            return "Không thể update người dùng";
         }
 
         public string DelNguoiDung(string maNguoiDung)

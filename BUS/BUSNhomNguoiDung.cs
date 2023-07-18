@@ -39,6 +39,7 @@ namespace BUS
         }
         public int AddNhomNguoiDung(string tenNhom)
         {
+            if (tenNhom == "Quản Lý") return -1;
             int i = DALNhomNguoiDung.Instance.AddNhomNguoiDung(tenNhom);
             if (i == -1)
             {
@@ -54,6 +55,7 @@ namespace BUS
 
         public bool UpdNhomNguoiDung(int id, string tenNhom)
         {
+
             if (!DALNhomNguoiDung.Instance.UpdNhomNguoiDung(id, tenNhom))
             {
                 MessageBox.Show("Có lỗi xảy ra, cập nhật không thành công.");
@@ -61,14 +63,23 @@ namespace BUS
             }
             return true;
         }
-        public bool DelNhomNguoiDung(int id)
+        public string DelNhomNguoiDung(int id)
         {
-            if (!DALNhomNguoiDung.Instance.DelNhomNguoiDung(id))
+            NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(id);
+            if (nnd == null)
+            { return "Mã nhóm người dùng không đúng"; }
+            if (nnd.id == 1)
+                return "Không thể xoá nhóm người dùng Quản Lý";
+            bool isDG = false;
+            foreach (CHUCNANG cn in nnd.CHUCNANGs)
             {
-                MessageBox.Show("Xoá không thành công.");
-                return false;
+                if (cn.TenChucNang == "DG") isDG = true;
             }
-            return true;
+            if (isDG && nnd.NGUOIDUNGs.Count > 0)
+                return "Không thể xóa nhóm người dùng này vì các người dùng thuộc nhóm có quyền độc giả!";
+            if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))
+                return "";
+            return "Không thể xoá nhóm người dùng";
         }
 
         public string AddChucNangNhom(int maNhomNguoiDung, List<String> dsChucNang)

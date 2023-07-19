@@ -104,7 +104,7 @@
             // labelEmailError
             // 
             this.labelEmailError.AutoSize = true;
-            this.labelEmailError.Location = new System.Drawing.Point(133, 437);
+            this.labelEmailError.Location = new System.Drawing.Point(135, 455);
             this.labelEmailError.Name = "labelEmailError";
             this.labelEmailError.Size = new System.Drawing.Size(0, 16);
             this.labelEmailError.TabIndex = 8;

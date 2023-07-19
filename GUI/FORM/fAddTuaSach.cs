@@ -84,6 +84,11 @@ namespace GUI.FORM
 
         private void butOK_Click(object sender, EventArgs e)
         {
+            if (txtTenTuaSach.Text == "" || TacGiaGrid == null || comboTheLoai.SelectedIndex == -1)
+            {
+                MessageBox.Show("Thông tin nhập vào chưa đầy đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             string tentheloai = comboTheLoai.SelectedItem.ToString();
             THELOAI theloai = new THELOAI();
             List<TACGIA> tglist = new List<TACGIA>();

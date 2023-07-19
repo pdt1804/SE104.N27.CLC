@@ -50,10 +50,11 @@ namespace GUI
         private void butOK_Click(object sender, EventArgs e)
         {
             string tenDG = txtHoTen.Text;
+          
             int idLDG = (int)comboLoaiDG.SelectedValue;
-            if (tenDG == "")
+            if (tenDG == "" || txtEmail.Text == "")
             {
-                MessageBox.Show("Tên độc giả không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Thông tin không đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string email = txtEmail.Text;

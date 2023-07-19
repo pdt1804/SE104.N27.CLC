@@ -36,7 +36,7 @@ namespace GUI.FORM
                 THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
                 DateTime NgayHetHan = NgayLapThe.AddMonths((int)thamso.ThoiHanThe);
 
-                if (tenDG == "" || username == "" || userpwd == "" || comboNND.SelectedItem == null || comboLoaiDG.SelectedItem == null)
+                if (tenDG == "" || username == "" || userpwd == "" || comboNND.SelectedItem == null || comboLoaiDG.SelectedItem == null || email == "")
                 {
                     MessageBox.Show("Chưa điền đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

@@ -54,6 +54,7 @@ namespace BUS
 
         public int AddPhieuNhap(DateTime ngayNhap)
         {
+            if (DateTime.Now < ngayNhap) { return -1; };
             int i = DALPhieuNhapSach.Instance.AddPhieuNhap(ngayNhap); // Hàm trả về số lượng phiếu đã được thêm
             if (i > 0)
             {

@@ -1,4 +1,5 @@
 ﻿using BUS;
+using GUI.Print;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,25 @@ namespace GUI.UserControls
 {
     public partial class ucMuonTheoTheLoai : UserControl
     {
+        private P_BCLuotMuonTheoTheLoai report;
         public ucMuonTheoTheLoai()
         {
             InitializeComponent();
             dateBC.Value = DateTime.Now;
         }
 
+        private void Print(DataGridView dataGrid, string mabc, int month, int year, string tongluotmuon)
+        {
+            Label labelMaBC = new Label();
+            Label labelDate = new Label();
+            Label labelTongLuotMuon = new Label();
+            labelMaBC.Text = mabc;
+            labelTongLM.Text = tongluotmuon;
+            string formattedDate = month + "/" + year;
+            labelDate.Text = formattedDate;
+            report = new P_BCLuotMuonTheoTheLoai(dataGrid, labelMaBC, labelDate, labelTongLuotMuon);
+            report.PrintReport();
+        }
         private void butAdd_Click(object sender, EventArgs e)
         {
             int month = dateBC.Value.Month;
@@ -42,6 +56,7 @@ namespace GUI.UserControls
             {
                 dataGrid.Rows.Add(c.THELOAI.MaTheLoai, c.THELOAI.TenTheLoai, c.SoLuotMuon, c.TiLe);
             }
+            Print(dataGrid, bc.MaBaoCao, month, year, labelTongLM.Text);
         }
 
         private void butDel_Click(object sender, EventArgs e)

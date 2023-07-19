@@ -41,11 +41,6 @@ namespace GUI
             this.tabAccount.Controls.Clear();
             this.tabAccount.Controls.Add(uctaikhoan);
 
-            //Console.WriteLine("qlpt");
-            //ucphieuthu = new UserControls.ucQLPhieuThu();
-            //ucphieuthu.Dock = DockStyle.Fill;
-            //ucphieuthu.Visible = true;
-            //this.pageQLPT.Controls.Add(ucphieuthu);
 
             foreach (var cn in user.NHOMNGUOIDUNG.CHUCNANGs)
             {
@@ -113,18 +108,6 @@ namespace GUI
             res = MessageBox.Show("Bạn có chắc muốn thoát?", "Thoát",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes) this.Close();
-            Form frm = new formLogin();
-            frm.Show();
-        }
-
-        private void topPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabTDQD_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void tabQLDG_Click(object sender, EventArgs e)

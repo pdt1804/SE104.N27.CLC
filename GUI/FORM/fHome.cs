@@ -41,11 +41,12 @@ namespace GUI
             con[0].BringToFront();
         }
 
-        private void butManager_Click(object sender, EventArgs e)
+        private void exitControlBox_Click(object sender, EventArgs e)
         {
-            
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Bạn có chắc muốn thoát?", "Thoát",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes) this.Close();
         }
-
-
     }
 }

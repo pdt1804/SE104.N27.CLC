@@ -112,6 +112,12 @@ namespace BUS
         {
             return DALNguoiDung.Instance.UpdPassword(id, MatKhau);
         }
+
+        public bool checkNND(int idNND)
+        {
+            if (DALNguoiDung.Instance.GetNguoiDungByIDNDD(idNND)) return true;
+            return false;
+        }
     }
 }
 

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DAL
 {
@@ -53,6 +55,15 @@ namespace DAL
                 return res.FirstOrDefault();
             return null;
         }
+
+        public bool GetNguoiDungByIDNDD(int idNND)
+        {
+            var res = QLTVEntities.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.idNhomNguoiDung == idNND);
+            if (res.Any())
+                return true;
+            return false;
+        }
+
         public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
                                  string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {

@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using GUI.FORM;
 using System;
 using System.Collections.Generic;
@@ -17,19 +18,18 @@ namespace GUI.UserControls
         public ucNhomND()
         {
             InitializeComponent();
-            Bind();
+            Bind(BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung());
         }
-        public void Bind()
+        public void Bind(List<NHOMNGUOIDUNG> NhomNguoiDungList)
         {
+            NDGrid.Rows.Clear();
             Image img_edit = Properties.Resources.edit_icon;
             img_edit = (Image)(new Bitmap(img_edit, new Size(25, 25)));
             Image img_del = Properties.Resources.delete;
             img_del = (Image)(new Bitmap(img_del, new Size(25, 25)));
-            this.NDGrid.DataSource = BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung();
-            foreach (DataGridViewRow row in NDGrid.Rows)
+            foreach (NHOMNGUOIDUNG nnd in NhomNguoiDungList)
             {
-                row.Cells["Edit"].Value = img_edit;
-                row.Cells["Delete"].Value = img_del;
+                NDGrid.Rows.Add(nnd.id, nnd.MaNhomNguoiDung, nnd.TenNhomNguoiDung, img_edit, img_del);
             }
         }
 
@@ -37,12 +37,12 @@ namespace GUI.UserControls
         {
             var f = new fAddNhomND();
             f.ShowDialog();
-            Bind();
+            Bind(BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung());
         }
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            Bind();
+            Bind(BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung());
         }
 
 
@@ -55,7 +55,7 @@ namespace GUI.UserControls
             {
                 var fEdit = new fEditNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
                 fEdit.ShowDialog();
-                Bind();
+                Bind(BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung());
                 return;
             }else if(e.ColumnIndex == NDGrid.Columns["Delete"].Index)
             {
@@ -68,13 +68,25 @@ namespace GUI.UserControls
                 {
                     MessageBox.Show("Đã xoá thành công nhóm người dùng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                Bind();
+                Bind(BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung());
                 return;
             }
             if (stt == -1) return;
             var fInfor = new fInfoNhomND(Convert.ToInt32(NDGrid.Rows[stt].Cells["id"].Value));
             fInfor.ShowDialog();
-            Bind();
+            Bind(BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung());
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+            string pat = txtFind.Text.ToLower();
+            List<NHOMNGUOIDUNG> Res = new List<NHOMNGUOIDUNG>();
+            foreach (NHOMNGUOIDUNG nd in BUSNhomNguoiDung.Instance.GetAllNhomNguoiDung())
+            {
+                if (nd.TenNhomNguoiDung.ToLower().Contains(pat)|| nd.MaNhomNguoiDung.ToLower().Contains(pat))
+                    Res.Add(nd);
+            }
+            Bind(Res);
         }
     }
 }

@@ -77,6 +77,8 @@ namespace BUS
             }
             if (isDG && nnd.NGUOIDUNGs.Count > 0)
                 return "Không thể xóa nhóm người dùng này vì các người dùng thuộc nhóm có quyền độc giả!";
+            if(BUSNguoiDung.Instance.checkNND(id))
+                return "Không thể xoá nhóm người dùng";
             if (DALNhomNguoiDung.Instance.DelNhomNguoiDung(nnd.id))
                 return "";
             return "Không thể xoá nhóm người dùng";

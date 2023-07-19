@@ -1,4 +1,5 @@
 ﻿using BUS;
+using GUI.Print;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,20 @@ namespace GUI.UserControls
 {
     public partial class ucSachTraTre : UserControl
     {
+        private P_BCSachTraTre report;
         public ucSachTraTre()
         {
             InitializeComponent();
             dateBC.Value = DateTime.Now;
         }
 
+        private void Print(DataGridView dataGrid, DateTime date)
+        {
+            Label datetime = new Label();
+            datetime.Text = date.ToString();
+            report = new P_BCSachTraTre(dataGrid, datetime);
+            report.PrintReport();
+        }
         private string AddBC(DateTime ngayBC)
         {
             string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
@@ -62,6 +71,7 @@ namespace GUI.UserControls
                 dataGrid.Rows.Add(i, b.CUONSACH.MaCuonSach, b.CUONSACH.SACH.TUASACH.TenTuaSach, b.NgayMuon.ToShortDateString(), b.SoNgayTre);
                 i++;
             }
+            Print(dataGrid, ngayBC);
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using BUS;
+using GUI.Print;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace GUI
 {
     public partial class fInfoPhieuNhap : Form
     {
+        private P_PhieuThu report;
         private static int id;
         public fInfoPhieuNhap(int _id)
         {
@@ -32,6 +35,12 @@ namespace GUI
             {
                 dataGrid.Rows.Add(ct.SACH.MaSach, ct.SACH.TUASACH.TenTuaSach, ct.SACH.DonGia, ct.SoLuongNhap, ct.ThanhTien);
             }
+        }
+
+        private void butPrint_Click(object sender, EventArgs e)
+        {
+            report = new P_PhieuThu(dataGrid, labelSoPhieu, labelNgayNhap, labelTongTien, 0);
+            report.PrintReport();           
         }
     }
 }

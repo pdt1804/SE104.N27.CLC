@@ -1,5 +1,7 @@
 ﻿using BUS;
 using DTO;
+using GUI.Print;
+using GUI.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,7 @@ namespace GUI.FORM
 {
     public partial class fAddSachMoi : Form
     {
+        private P_PhieuThu report;
         public fAddSachMoi()
         {
             InitializeComponent();
@@ -34,7 +37,24 @@ namespace GUI.FORM
             comboTuaSach.ValueMember = "id";
         }
 
+        private void Print(int pn)
+        {
+            var phieu = BUSPhieuNhapSach.Instance.GetPhieuNhap(pn);
+            var dsct = phieu.CT_PHIEUNHAP.ToList();
+            foreach (var ct in dsct)
+            {
+                DataGridViewPrint.Rows.Add(ct.SACH.MaSach, ct.SACH.TUASACH.TenTuaSach, ct.SACH.DonGia, ct.SoLuongNhap, ct.ThanhTien);
+            }
+            Label labelSoPhieu = new Label();
+            Label labelNgayNhap = new Label();
+            Label labelTongTien = new Label();
+            labelSoPhieu.Text = phieu.SoPhieuNhap.ToString();
+            labelNgayNhap.Text = phieu.NgayNhap.ToString();
+            labelTongTien.Text = phieu.TongTien.ToString();
+            report = new P_PhieuThu(DataGridViewPrint, labelSoPhieu, labelNgayNhap, labelTongTien, 0);
+            report.PrintReport();
 
+        }
         private void butOK_Click(object sender, EventArgs e)
         {
             if (SachGrid.Rows.Count > 0)
@@ -46,6 +66,7 @@ namespace GUI.FORM
                     int s = BUSSach.Instance.AddSachMoi(tuasach, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[2].Value), row.Cells[3].Value.ToString());
                     BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[5].Value));
                 }
+                Print(ph);
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);   
             }
             else

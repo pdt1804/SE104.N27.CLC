@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using GUI.Print;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace GUI.FORM
 {
     public partial class fAddSachDaCo : Form
     {
+        private P_PhieuThu report;
         public int TongTien { get; set; }
         public fAddSachDaCo()
         {
@@ -32,6 +34,18 @@ namespace GUI.FORM
                 listSach.Add(p.TUASACH.TenTuaSach + "(" + p.MaSach + ")");
             }
             comboSach.DataSource = listSach;
+        }
+
+        private void Print(DataGridView dataGrid, int SoPhieuNhap, DateTime NgayNhap, int TongTien)
+        {
+            Label labelSoPhieu = new Label();
+            Label labelNgayNhap = new Label();
+            Label labelTongTien = new Label();
+            labelSoPhieu.Text = SoPhieuNhap.ToString();
+            labelNgayNhap.Text = NgayNhap.ToString();
+            labelTongTien.Text = TongTien.ToString();
+            report = new P_PhieuThu(dataGrid, labelSoPhieu, labelNgayNhap, labelTongTien, 1);
+            report.PrintReport();
         }
 
         private void butOK_Click(object sender, EventArgs e)
@@ -58,6 +72,14 @@ namespace GUI.FORM
                 int DonGia = Convert.ToInt32(row.Cells["donGia"].Value);
                 int SoLuongNhap = Convert.ToInt32(row.Cells["SoLuong"].Value);
                 BUSCTPhieuNhap.Instance.AddCtPhieuNhap(pn, id, DonGia, SoLuongNhap);
+            }
+            try
+            {
+                Print(SachGrid, pn, NgayNhap, TongTien);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             MessageBox.Show("Thêm phiếu nhập thành công");
             this.Close();

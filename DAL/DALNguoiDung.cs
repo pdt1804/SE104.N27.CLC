@@ -39,6 +39,13 @@ namespace DAL
                 return res.FirstOrDefault();
             return null;
         }
+        public NGUOIDUNG GetNguoiDungByUsername(string username)
+        {
+            var res = QLTVEntities.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.TenDangNhap == username);
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
+        }
         public NGUOIDUNG GetNguoiDungByUsernameAndEmail(string username, string email)
         {
             var res = QLTVEntities.Instance.NGUOIDUNGs.AsNoTracking().Where(n => n.TenDangNhap == username && n.EMAIL == email);

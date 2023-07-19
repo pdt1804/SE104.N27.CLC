@@ -91,19 +91,23 @@ namespace BUS
                 MessageBox.Show("Loại độc giả không hợp lệ");
                 return false;
             }
-
+            NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungByUsername(username);
+            if (nd != null)
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại");
+                return false;
+            }
             int idND = DALNguoiDung.Instance.AddNguoiDung(ten, NgaySinh, chucVu, username, userpwd, Email, idNND);
             if (idND == -1)
             {
-                MessageBox.Show("Tên đăng nhập đã tồn tại");
-                return false;   
+                MessageBox.Show("Thên người dùng không thành công");
+                return false;
             }
             if (DALDocGia.Instance.AddDocGia(ten, NgaySinh, DiaChi, NgayLapThe, NgayHetHan, idLDG, 0, idND))
             {
                 MessageBox.Show("Thêm độc giả thành công");
                 return true;
             }
-            DALNguoiDung.Instance.DelNguoiDung(idND);
             return false;
         }
 
@@ -159,6 +163,7 @@ namespace BUS
                 return "Độc giả " + dg.MaDocGia + " không thể xóa";
             }
             DALDocGia.Instance.DelDocGia(dg.ID);
+            DALNguoiDung.Instance.DelNguoiDung(dg.idNguoiDung);
             return "";
         }
 

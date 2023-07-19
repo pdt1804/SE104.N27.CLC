@@ -10,12 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.UserControls;
+using GUI.Print;
 
 namespace GUI.FORM
 {
     public partial class fPhieuThu : Form
     {
         private DOCGIA docgia;
+        private P_PhieuThu report;
         public fPhieuThu()
         {
             InitializeComponent();
@@ -75,6 +77,11 @@ namespace GUI.FORM
             textTienThu.Text = "";
         }
 
+        private void Print(int idPT, string maDG, string tenDG, string noHT, string soTT, string noMoi, string ngaythu)
+        {
+            report = new P_PhieuThu(idPT, maDG, tenDG, noHT, soTT, noMoi, ngaythu);
+            report.PrintReport();
+        }
         private void butSave_Click(object sender, EventArgs e)
         {
             if(textTienThu.Text == "")
@@ -90,16 +97,17 @@ namespace GUI.FORM
                 return;
             }
             Console.WriteLine(TienThu);
-            string err = Convert.ToString(BUSPhieuThu.Instance.AddPhieuThu(docgia.ID, TienThu, dateNgayLap.Value.Date));
+            int result = BUSPhieuThu.Instance.AddPhieuThu(docgia.ID, TienThu, dateNgayLap.Value.Date);
 
-            if (err != "")
+            if (result == -1)
             {
-                MessageBox.Show(err);
+                MessageBox.Show("Thêm phiếu thu không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             MessageBox.Show("Thêm phiếu thu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+            Print(result, comboDocGia.Text, labelHoten.Text, labelNoHienTai.Text, textTienThu.Text, labelNoMoi.Text, dateNgayLap.Text);
         }
     }
 }

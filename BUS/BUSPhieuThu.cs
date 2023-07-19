@@ -36,17 +36,17 @@ namespace BUS
             return DALPhieuThu.Instance.FindPhieuThuByNgay(ngay, thang, nam);
         }
 
-        public bool AddPhieuThu(int idDocGia, int soTienThu, DateTime ngayLap)
+        public int AddPhieuThu(int idDocGia, int soTienThu, DateTime ngayLap)
         {
-            if (!DALPhieuThu.Instance.AddPhieuThu(idDocGia, soTienThu, ngayLap))
+            int pt = DALPhieuThu.Instance.AddPhieuThu(idDocGia, soTienThu, ngayLap);
+            if (pt == -1)
             {
-                MessageBox.Show("Thêm phiếu thu không thành công");
-                return false;
+                return -1;
             }  
             else
             {
                 MessageBox.Show("Thêm phiếu thu thành công");
-                return true;
+                return pt;
             }          
         }
 

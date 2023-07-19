@@ -37,7 +37,7 @@ namespace DAL
             if (nam != null) res = res.Where(p => p.NgayLap.Year == nam).ToList();
             return res;
         }
-        public bool AddPhieuThu(int idDocGia, int soTienThu, DateTime ngayLap)
+        public int AddPhieuThu(int idDocGia, int soTienThu, DateTime ngayLap)
         {
             try
             {
@@ -53,12 +53,12 @@ namespace DAL
 
                 QLTVEntities.Instance.PHIEUTHUs.Add(phieu);
                 QLTVEntities.Instance.SaveChanges();
-                return true;
+                return phieu.SoPhieuThu;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
         public bool UpdPhieuThu(int soPhieu, int? soTienThu, DateTime? ngayLap)

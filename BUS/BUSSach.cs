@@ -74,6 +74,13 @@ namespace BUS
             return true;
         }
 
+        public bool CheckThamSo(int namXB)
+        {
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            if ((int)DateTime.Now.Year - namXB > thamso.KhoangCachXuatBan || (int)DateTime.Now.Year - namXB < 0)
+                return false;
+            return true;
+        }
         //public string DelSach(int id)
         //{
         //    SACH sach;

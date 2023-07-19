@@ -23,31 +23,34 @@ namespace GUI.FORM
 
         private void LoadTuaSach()
         {
-            List<string> listTuaSach = new List<string>();
-            foreach(var p in BUSTuaSach.Instance.GetAllTuaSach())
-            {
-                listTuaSach.Add(p.TenTuaSach);
-            }
+            List<TUASACH> listTuaSach = BUSTuaSach.Instance.GetAllTuaSach();
+            //List<string> listTuaSach = new List<string>();
+            //foreach(var p in BUSTuaSach.Instance.GetAllTuaSach())
+            //{
+            //    listTuaSach.Add(p.TenTuaSach);
+            //}
             comboTuaSach.DataSource = listTuaSach;
+            comboTuaSach.DisplayMember = "MaTuaSach";
+            comboTuaSach.ValueMember = "id";
         }
 
 
         private void butOK_Click(object sender, EventArgs e)
         {
-            if (SachGrid.Rows.Count <= 0)
-            {
-                MessageBox.Show("Danh sách rỗng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
+            if (SachGrid.Rows.Count > 0)
             {
                 int ph = BUSPhieuNhapSach.Instance.AddPhieuNhap(DateTime.Now);
                 foreach (DataGridViewRow row in SachGrid.Rows)
                 {
                     TUASACH tuasach = BUSTuaSach.Instance.GetTuaSachById(Convert.ToInt32(row.Cells[0].Value));
-                    int s = BUSSach.Instance.AddSachMoi(tuasach, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[2].Value),row.Cells[3].Value.ToString());
+                    int s = BUSSach.Instance.AddSachMoi(tuasach, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[2].Value), row.Cells[3].Value.ToString());
                     BUSCTPhieuNhap.Instance.AddCtPhieuNhap(ph, s, Convert.ToInt32(row.Cells[4].Value), Convert.ToInt32(row.Cells[5].Value));
                 }
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);   
+            }
+            else
+            {
+                MessageBox.Show("Danh sách rỗng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.Close();
         }
@@ -79,18 +82,25 @@ namespace GUI.FORM
         private void btnThem_Click(object sender, EventArgs e)
         {
             // Nếu tựa sách trùng thì chỉ thay đổi một số trường trong datagridview
-            TUASACH tuaSach = new TUASACH();
-            foreach (var p in BUSTuaSach.Instance.GetAllTuaSach())
+            TUASACH tuaSach = BUSTuaSach.Instance.GetTuaSachById(Convert.ToInt32(comboTuaSach.SelectedIndex));
+            if(tuaSach == null)
             {
-                if (p.TenTuaSach.Equals(comboTuaSach.SelectedItem.ToString()))
-                {
-                    tuaSach = p;
-                    break;
-                }
+                MessageBox.Show("Tựa sách không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!(BUSSach.Instance.CheckThamSo(int.Parse(txtNamXB.Text))))
+            {
+                MessageBox.Show("Năm xuất bản không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(int.Parse(txtThanhtien.Text) <= 0)
+            {
+                MessageBox.Show("Thành tiện không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             foreach (DataGridViewRow row in SachGrid.Rows)
             {
-                if(tuaSach.id == Convert.ToInt32(row.Cells[0].Value))
+                if(tuaSach.id == Convert.ToInt32(row.Cells[0].Value) && Convert.ToInt32(txtNamXB.Text) == Convert.ToInt32(row.Cells[2].Value) && txtNhaXB.Text.Equals(row.Cells[3].Value.ToString()))
                 {
                     row.Cells[5].Value = (int.Parse(txtSoLuongNhap.Text) + int.Parse(row.Cells[5].Value.ToString())).ToString();
                     row.Cells[6].Value = (int.Parse(txtDonGia.Text) * int.Parse(row.Cells[5].Value.ToString())).ToString();
@@ -116,6 +126,13 @@ namespace GUI.FORM
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void comboTuaSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TUASACH tuaSach = BUSTuaSach.Instance.GetTuaSachById(Convert.ToInt32(comboTuaSach.SelectedIndex));
+            if (tuaSach == null) return;
+            labelTenTS.Text = tuaSach.TenTuaSach;
         }
     }
 }

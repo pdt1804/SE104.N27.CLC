@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.miniControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.controlPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -40,6 +40,14 @@
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
             this.mainPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labeltongcong = new System.Windows.Forms.Label();
             this.labelTongTien = new System.Windows.Forms.Label();
             this.btnThem = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -63,18 +71,12 @@
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.SachGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelTenTS = new System.Windows.Forms.Label();
             this.controlPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -132,6 +134,8 @@
             this.mainPanel.BorderColor = System.Drawing.Color.RoyalBlue;
             this.mainPanel.BorderRadius = 50;
             this.mainPanel.BorderThickness = 2;
+            this.mainPanel.Controls.Add(this.labelTenTS);
+            this.mainPanel.Controls.Add(this.label7);
             this.mainPanel.Controls.Add(this.SachGrid);
             this.mainPanel.Controls.Add(this.labeltongcong);
             this.mainPanel.Controls.Add(this.labelTongTien);
@@ -161,6 +165,135 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1136, 770);
             this.mainPanel.TabIndex = 9;
+            // 
+            // SachGrid
+            // 
+            this.SachGrid.AllowUserToAddRows = false;
+            this.SachGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.SachGrid.ColumnHeadersHeight = 35;
+            this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.tenSach,
+            this.NamXB,
+            this.NXB,
+            this.donGia,
+            this.SoLuong,
+            this.ThanhTien});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle7;
+            this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SachGrid.Location = new System.Drawing.Point(45, 364);
+            this.SachGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SachGrid.Name = "SachGrid";
+            this.SachGrid.ReadOnly = true;
+            this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.SachGrid.RowHeadersVisible = false;
+            this.SachGrid.RowHeadersWidth = 51;
+            this.SachGrid.RowTemplate.Height = 30;
+            this.SachGrid.Size = new System.Drawing.Size(1046, 302);
+            this.SachGrid.TabIndex = 26;
+            this.SachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.SachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.SachGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.SachGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.SachGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.SachGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.SachGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SachGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.SachGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.SachGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SachGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.SachGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.SachGrid.ThemeStyle.HeaderStyle.Height = 35;
+            this.SachGrid.ThemeStyle.ReadOnly = true;
+            this.SachGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.SachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.SachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SachGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
+            this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // tenSach
+            // 
+            this.tenSach.HeaderText = "Tên Sách";
+            this.tenSach.MinimumWidth = 6;
+            this.tenSach.Name = "tenSach";
+            this.tenSach.ReadOnly = true;
+            // 
+            // NamXB
+            // 
+            this.NamXB.HeaderText = "Năm Xuất Bản";
+            this.NamXB.MinimumWidth = 6;
+            this.NamXB.Name = "NamXB";
+            this.NamXB.ReadOnly = true;
+            // 
+            // NXB
+            // 
+            this.NXB.HeaderText = "Nhà Xuất Bản";
+            this.NXB.MinimumWidth = 6;
+            this.NXB.Name = "NXB";
+            this.NXB.ReadOnly = true;
+            // 
+            // donGia
+            // 
+            this.donGia.HeaderText = "Đơn Giá";
+            this.donGia.MinimumWidth = 6;
+            this.donGia.Name = "donGia";
+            this.donGia.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SoLuong.HeaderText = "Số Lượng Nhập";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 176;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
             // 
             // labeltongcong
             // 
@@ -242,8 +375,9 @@
             this.comboTuaSach.Location = new System.Drawing.Point(119, 133);
             this.comboTuaSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboTuaSach.Name = "comboTuaSach";
-            this.comboTuaSach.Size = new System.Drawing.Size(476, 28);
+            this.comboTuaSach.Size = new System.Drawing.Size(135, 28);
             this.comboTuaSach.TabIndex = 18;
+            this.comboTuaSach.SelectedIndexChanged += new System.EventHandler(this.comboTuaSach_SelectedIndexChanged);
             // 
             // butOK
             // 
@@ -376,13 +510,13 @@
             this.txtNamXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamXB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNamXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNamXB.Location = new System.Drawing.Point(650, 133);
+            this.txtNamXB.Location = new System.Drawing.Point(839, 133);
             this.txtNamXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNamXB.Name = "txtNamXB";
             this.txtNamXB.PasswordChar = '\0';
             this.txtNamXB.PlaceholderText = "";
             this.txtNamXB.SelectedText = "";
-            this.txtNamXB.Size = new System.Drawing.Size(358, 28);
+            this.txtNamXB.Size = new System.Drawing.Size(169, 28);
             this.txtNamXB.TabIndex = 10;
             this.txtNamXB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNamXB_KeyPress);
             // 
@@ -445,7 +579,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label9.Location = new System.Drawing.Point(646, 108);
+            this.label9.Location = new System.Drawing.Point(835, 108);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 20);
             this.label9.TabIndex = 9;
@@ -514,134 +648,31 @@
             this.labelTitle.TabIndex = 5;
             this.labelTitle.Text = "PHIẾU NHẬP SÁCH";
             // 
-            // SachGrid
+            // label7
             // 
-            this.SachGrid.AllowUserToAddRows = false;
-            this.SachGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.SachGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SachGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.SachGrid.ColumnHeadersHeight = 35;
-            this.SachGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.SachGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.tenSach,
-            this.NamXB,
-            this.NXB,
-            this.donGia,
-            this.SoLuong,
-            this.ThanhTien});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SachGrid.DefaultCellStyle = dataGridViewCellStyle31;
-            this.SachGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SachGrid.Location = new System.Drawing.Point(45, 364);
-            this.SachGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SachGrid.Name = "SachGrid";
-            this.SachGrid.ReadOnly = true;
-            this.SachGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SachGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
-            this.SachGrid.RowHeadersVisible = false;
-            this.SachGrid.RowHeadersWidth = 51;
-            this.SachGrid.RowTemplate.Height = 30;
-            this.SachGrid.Size = new System.Drawing.Size(1046, 302);
-            this.SachGrid.TabIndex = 26;
-            this.SachGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.SachGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.SachGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.SachGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.SachGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.SachGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.SachGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SachGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.SachGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.SachGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SachGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.SachGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.SachGrid.ThemeStyle.HeaderStyle.Height = 35;
-            this.SachGrid.ThemeStyle.ReadOnly = true;
-            this.SachGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.SachGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.SachGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SachGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SachGrid.ThemeStyle.RowsStyle.Height = 30;
-            this.SachGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SachGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label7.Location = new System.Drawing.Point(300, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 20);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Tên Tựa Sách";
             // 
-            // id
+            // labelTenTS
             // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // tenSach
-            // 
-            this.tenSach.HeaderText = "Tên Sách";
-            this.tenSach.MinimumWidth = 6;
-            this.tenSach.Name = "tenSach";
-            this.tenSach.ReadOnly = true;
-            // 
-            // NamXB
-            // 
-            this.NamXB.HeaderText = "Năm Xuất Bản";
-            this.NamXB.MinimumWidth = 6;
-            this.NamXB.Name = "NamXB";
-            this.NamXB.ReadOnly = true;
-            // 
-            // NXB
-            // 
-            this.NXB.HeaderText = "Nhà Xuất Bản";
-            this.NXB.MinimumWidth = 6;
-            this.NXB.Name = "NXB";
-            this.NXB.ReadOnly = true;
-            // 
-            // donGia
-            // 
-            this.donGia.HeaderText = "Đơn Giá";
-            this.donGia.MinimumWidth = 6;
-            this.donGia.Name = "donGia";
-            this.donGia.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.SoLuong.HeaderText = "Số Lượng Nhập";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 176;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
+            this.labelTenTS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTenTS.AutoSize = true;
+            this.labelTenTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenTS.ForeColor = System.Drawing.Color.MediumBlue;
+            this.labelTenTS.Location = new System.Drawing.Point(300, 134);
+            this.labelTenTS.Name = "labelTenTS";
+            this.labelTenTS.Size = new System.Drawing.Size(71, 22);
+            this.labelTenTS.TabIndex = 28;
+            this.labelTenTS.Text = "Tên TS";
             // 
             // fAddSachMoi
             // 
@@ -659,8 +690,8 @@
             this.controlPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SachGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,5 +736,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Label labelTenTS;
+        private System.Windows.Forms.Label label7;
     }
 }

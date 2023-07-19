@@ -57,7 +57,13 @@ namespace DAL
         }
         public List<PHIEUMUONTRA> FindPhieuMuonTre(DateTime today)
         {
-            return QLTVEntities.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => p.NgayTra == null && p.HanTra < today).ToList();
+            var muonTreHan = QLTVEntities.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => p.NgayTra == null && p.HanTra < today && p.HanTra.Year == today.Year && p.HanTra.Month == today.Month);
+            var traTre = QLTVEntities.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => p.NgayTra != null && p.HanTra < today && p.NgayTra > p.HanTra && p.HanTra.Year == today.Year && p.HanTra.Month == today.Month);
+            var ketQua = muonTreHan.Union(traTre).ToList();
+            return ketQua;
+            //return QLTVEntities.Instance.PHIEUMUONTRAs.AsNoTracking().Where(p => (p.NgayTra == null && p.HanTra < today && p.HanTra.Year == today.Year && p.HanTra.Month == today.Month) 
+            //    || 
+            //        (p.NgayTra != null && p.HanTra < today && p.NgayTra > p.HanTra && p.HanTra.Year == today.Year && p.HanTra.Month == today.Month)).ToList();
         }
 
         public List<PHIEUMUONTRA> FindPhieuMuonTre(List<PHIEUMUONTRA> ds, DateTime today)

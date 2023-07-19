@@ -16,6 +16,7 @@ namespace GUI.UserControls
         public ucMuonTheoTheLoai()
         {
             InitializeComponent();
+            dateBC.Value = DateTime.Now;
         }
 
         private void butAdd_Click(object sender, EventArgs e)

@@ -1,9 +1,11 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations.Model;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -65,11 +67,21 @@ namespace DAL
             }
         }
 
-        public bool DelBaoCao(DateTime ngayBC, int idCuonSach)
+        public BCSACHTRATRE FindBaoCao(int day, int month, int year, int idCS)
+        {
+            var res =  QLTVEntities.Instance.BCSACHTRATREs.Where(b => b.Ngay.Day == day
+            && b.Ngay.Month == month 
+            && b.Ngay.Year == year
+            && b.idCuonSach == idCS
+            );
+            return res.FirstOrDefault();
+        }
+
+        public bool DelBaoCao(int day, int month, int year, int idCS)
         {
             try
             {
-                var bc = GetBaoCao(ngayBC, idCuonSach);
+                var bc = FindBaoCao(day, month, year, idCS);
                 if (bc == null) return false;
                 QLTVEntities.Instance.BCSACHTRATREs.Remove(bc);
                 QLTVEntities.Instance.SaveChanges();
@@ -77,7 +89,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }

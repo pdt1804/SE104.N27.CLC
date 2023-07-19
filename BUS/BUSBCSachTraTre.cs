@@ -33,7 +33,9 @@ namespace BUS
 
         public List<BCSACHTRATRE> FindBaoCaoByDate(DateTime ngayBC)
         {
-            return DALBCSachTraTre.Instance.FindBaoCaoByDate(ngayBC);
+            List<BCSACHTRATRE> lbc = DALBCSachTraTre.Instance.FindBaoCaoByDate(ngayBC);
+            if (lbc.Count == 0) return null;
+            return lbc;
         }
 
         public List<BCSACHTRATRE> FindBaoCaoByCuonSach(int idCuonSach)
@@ -48,20 +50,27 @@ namespace BUS
             if (!lpmt.Any()) return "Không có sách trả trễ trong ngày này";
             foreach (PHIEUMUONTRA pmt in lpmt)
             {
+                int SoNgayTraTre;
                 if (pmt.NgayTra == null)
                 {
-                    int SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
-                    DALBCSachTraTre.Instance.AddBaoCao(NgayBC, (int)pmt.idCuonSach, (DateTime)pmt.NgayMuon, SoNgayTraTre);
+                    SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
                 }
+                else
+                {
+                    SoNgayTraTre = ((TimeSpan)(pmt.NgayTra - pmt.HanTra)).Days;
+                }
+                    DALBCSachTraTre.Instance.AddBaoCao(NgayBC, (int)pmt.idCuonSach, (DateTime)pmt.NgayMuon, SoNgayTraTre);
             }
             return "";
         }
 
-        public bool DelBaoCao(DateTime ngayBC, int idCuonSach)
+        public bool DelBaoCao(DateTime ngayBC, int idCS)
         {
-            if (!DALBCSachTraTre.Instance.DelBaoCao(ngayBC, idCuonSach))
+            int Day = ngayBC.Day;
+            int Month = ngayBC.Month;
+            int Year = ngayBC.Year;
+            if (!DALBCSachTraTre.Instance.DelBaoCao(Day, Month, Year, idCS))
             {
-                MessageBox.Show("Xoá báo cáo không thành công");
                 return false;
             }
             return true;

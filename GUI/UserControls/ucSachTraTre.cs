@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,17 @@ namespace GUI.UserControls
         public ucSachTraTre()
         {
             InitializeComponent();
+            dateBC.Value = DateTime.Now;
+        }
+
+        private string AddBC(DateTime ngayBC)
+        {
+            string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
+            if (err != "")
+            {
+                return "Thêm không thành công";
+            }
+            return "Đã thêm thành công";
         }
 
         private void butAdd_Click(object sender, EventArgs e)
@@ -25,14 +37,19 @@ namespace GUI.UserControls
             var bc = BUSBCSachTraTre.Instance.FindBaoCaoByDate(ngayBC);
             if (bc == null)
             {
-                string err = BUSBCSachTraTre.Instance.AddBaoCao(ngayBC);
-                if (err != "")
-                {
-                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                bc = BUSBCSachTraTre.Instance.FindBaoCaoByDate(ngayBC);
+                string result = AddBC(ngayBC);
+                MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                foreach(var _bc in bc)
+                {
+                    BUSBCSachTraTre.Instance.DelBaoCao(_bc.Ngay, _bc.idCuonSach);
+                }
+                string result = AddBC(ngayBC);
+                MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            bc = BUSBCSachTraTre.Instance.FindBaoCaoByDate(ngayBC);
             if (bc == null)
             {
                 MessageBox.Show("Có lỗi xảy ra! Vui lòng thử lại sau", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

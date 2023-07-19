@@ -238,7 +238,7 @@
     </Compile>
     <Compile Include="Print\P_BCLuotMuonTheoTheLoai.cs" />
     <Compile Include="Print\P_BCSachTraTre.cs" />
-    <Compile Include="Print\P_PhieuThu.cs" />
+    <Compile Include="Print\P_PhieuNhap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\ucBanAccess.cs">

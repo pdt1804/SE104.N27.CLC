@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class fInfoPhieuNhap : Form
     {
-        private P_PhieuThu report;
+        private P_PhieuNhap report;
         private static int id;
         public fInfoPhieuNhap(int _id)
         {
@@ -39,7 +39,7 @@ namespace GUI
 
         private void butPrint_Click(object sender, EventArgs e)
         {
-            report = new P_PhieuThu(dataGrid, labelSoPhieu, labelNgayNhap, labelTongTien, 0);
+            report = new P_PhieuNhap(dataGrid, labelSoPhieu, labelNgayNhap, labelTongTien, 0);
             report.PrintReport();           
         }
     }

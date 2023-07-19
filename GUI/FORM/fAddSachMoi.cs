@@ -16,7 +16,7 @@ namespace GUI.FORM
 {
     public partial class fAddSachMoi : Form
     {
-        private P_PhieuThu report;
+        private P_PhieuNhap report;
         public fAddSachMoi()
         {
             InitializeComponent();
@@ -51,7 +51,7 @@ namespace GUI.FORM
             labelSoPhieu.Text = phieu.SoPhieuNhap.ToString();
             labelNgayNhap.Text = phieu.NgayNhap.ToString();
             labelTongTien.Text = phieu.TongTien.ToString();
-            report = new P_PhieuThu(DataGridViewPrint, labelSoPhieu, labelNgayNhap, labelTongTien, 0);
+            report = new P_PhieuNhap(DataGridViewPrint, labelSoPhieu, labelNgayNhap, labelTongTien, 0);
             report.PrintReport();
 
         }

@@ -15,7 +15,7 @@ namespace GUI.FORM
 {
     public partial class fAddSachDaCo : Form
     {
-        private P_PhieuThu report;
+        private P_PhieuNhap report;
         public int TongTien { get; set; }
         public fAddSachDaCo()
         {
@@ -44,7 +44,7 @@ namespace GUI.FORM
             labelSoPhieu.Text = SoPhieuNhap.ToString();
             labelNgayNhap.Text = NgayNhap.ToString();
             labelTongTien.Text = TongTien.ToString();
-            report = new P_PhieuThu(dataGrid, labelSoPhieu, labelNgayNhap, labelTongTien, 1);
+            report = new P_PhieuNhap(dataGrid, labelSoPhieu, labelNgayNhap, labelTongTien, 1);
             report.PrintReport();
         }
 

@@ -77,9 +77,9 @@ namespace GUI.FORM
             textTienThu.Text = "";
         }
 
-        private void Print(int idPT, string maDG, string tenDG, string noHT, string soTT, string noMoi, string ngaythu)
+        private void Print(int idPT, string maDG, string tenDG, string soTT, string noMoi, string ngaythu)
         {
-            report = new P_PhieuThu(idPT, maDG, tenDG, noHT, soTT, noMoi, ngaythu);
+            report = new P_PhieuThu(idPT, maDG, tenDG, soTT, noMoi, ngaythu);
             report.PrintReport();
         }
         private void butSave_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace GUI.FORM
 
             MessageBox.Show("Thêm phiếu thu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-            Print(result, comboDocGia.Text, labelHoten.Text, labelNoHienTai.Text, textTienThu.Text, labelNoMoi.Text, dateNgayLap.Text);
+            Print(result, comboDocGia.Text, labelHoten.Text, textTienThu.Text, labelNoMoi.Text, dateNgayLap.Text);
         }
     }
 }

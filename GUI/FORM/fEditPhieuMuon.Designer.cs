@@ -64,6 +64,7 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.butPrint = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,6 +84,7 @@
             this.mainPanel.BorderColor = System.Drawing.Color.RoyalBlue;
             this.mainPanel.BorderRadius = 50;
             this.mainPanel.BorderThickness = 2;
+            this.mainPanel.Controls.Add(this.butPrint);
             this.mainPanel.Controls.Add(this.pictureBox4);
             this.mainPanel.Controls.Add(this.pictureBox3);
             this.mainPanel.Controls.Add(this.pictureBox2);
@@ -210,9 +212,9 @@
             this.butSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSave.ForeColor = System.Drawing.Color.White;
             this.butSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.butSave.Location = new System.Drawing.Point(403, 700);
+            this.butSave.Location = new System.Drawing.Point(165, 684);
             this.butSave.Name = "butSave";
-            this.butSave.Size = new System.Drawing.Size(201, 50);
+            this.butSave.Size = new System.Drawing.Size(243, 50);
             this.butSave.TabIndex = 165;
             this.butSave.Text = "Lưu";
             this.butSave.Click += new System.EventHandler(this.butSave_Click);
@@ -491,6 +493,24 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(60, 60);
             this.siticoneControlBox1.TabIndex = 75;
             // 
+            // butPrint
+            // 
+            this.butPrint.BorderRadius = 15;
+            this.butPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butPrint.FillColor = System.Drawing.Color.RoyalBlue;
+            this.butPrint.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butPrint.ForeColor = System.Drawing.Color.White;
+            this.butPrint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.butPrint.Location = new System.Drawing.Point(628, 684);
+            this.butPrint.Name = "butPrint";
+            this.butPrint.Size = new System.Drawing.Size(243, 50);
+            this.butPrint.TabIndex = 183;
+            this.butPrint.Text = "Xuất phiếu";
+            this.butPrint.Click += new System.EventHandler(this.butPrint_Click);
+            // 
             // fEditPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -551,5 +571,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butPrint;
     }
 }

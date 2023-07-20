@@ -14,16 +14,14 @@ namespace GUI.Print
         private int idPT;
         private string maDG;
         private string tenDG;
-        private string noHT;
         private string soTT;
         private string noMoi;
         private string ngaythu;
-        public P_PhieuThu(int idPT, string maDG, string tenDG, string noHT, string soTT, string noMoi, string ngaythu)
+        public P_PhieuThu(int idPT, string maDG, string tenDG, string soTT, string noMoi, string ngaythu)
         {
             this.idPT = idPT;
             this.maDG = maDG;
             this.tenDG = tenDG;
-            this.noHT = noHT;
             this.soTT = soTT;
             this.noMoi = noMoi;
             this.ngaythu = ngaythu;
@@ -46,17 +44,16 @@ namespace GUI.Print
         private void printPN_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString("PHIẾU THU", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(350, 100));
-            e.Graphics.DrawString("Thời gian báo cáo : " + ngaythu, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 170));
-            e.Graphics.DrawString("Mã phiếu thu: " + idPT.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 220));
+            e.Graphics.DrawString("Mã phiếu thu: " + idPT.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 170));
+            e.Graphics.DrawString("Ngày lập phiếu : " + ngaythu, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 220));
             e.Graphics.DrawString("Mã độc giả: " + maDG, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 270));
             e.Graphics.DrawString("Tên độc giả: " + tenDG, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 320));
-            e.Graphics.DrawString("Tổng nợ hiện tại: " + noHT, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 370));
-            e.Graphics.DrawString("Số tiền thu: " + soTT, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 420));
-            e.Graphics.DrawString("Tổng nợ mới: " + noMoi, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 470));
+            e.Graphics.DrawString("Số tiền thu: " + soTT, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 370));
+            e.Graphics.DrawString("Tổng nợ hiện tại: " + noMoi, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(90, 420));
             string date = "..., ngày " + DateTime.Now.Day + ", tháng " + DateTime.Now.Month + ", năm " + DateTime.Now.Year;
-            e.Graphics.DrawString(date, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(480, 550));
-            e.Graphics.DrawString("Người lập phiếu", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(535, 580));
-            e.Graphics.DrawString("Người được thu", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(120, 580));
+            e.Graphics.DrawString(date, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(480, 500));
+            e.Graphics.DrawString("Người lập phiếu", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(535, 530));
+            e.Graphics.DrawString("Người được thu", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(120, 530));
         }
     }
 }

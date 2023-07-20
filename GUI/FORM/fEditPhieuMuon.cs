@@ -109,5 +109,17 @@ namespace GUI.FORM
             Print(PhieuMuon, sntt, dgp, stp);
             this.Close();
         }
+
+        private void butPrint_Click(object sender, EventArgs e)
+        {
+            THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
+            int ngay = 0;
+            if (dateNgayTra.Value > PhieuMuon.HanTra)
+                ngay = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
+            sntt = ngay;
+            dgp = thamso.DonGiaPhat;
+            stp = (int)(thamso.DonGiaPhat * ngay);
+            Print(PhieuMuon, sntt, dgp, stp);
+        }
     }
 }

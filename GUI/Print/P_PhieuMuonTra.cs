@@ -107,7 +107,7 @@ namespace GUI.Print
             {
                 tendg = tendg.Substring(0,30) + "...";
             }
-            if(ngaytra == "")
+            if(ngaytra == "" || ngaytra == null)
             {
                 tinhtrang = "Chưa trả sách";
             }

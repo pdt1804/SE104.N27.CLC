@@ -51,13 +51,14 @@ namespace BUS
             foreach (PHIEUMUONTRA pmt in lpmt)
             {
                 int SoNgayTraTre;
-                if (pmt.NgayTra == null)
+                if (NgayBC > pmt.NgayTra && pmt.NgayTra != null)
                 {
-                    SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
+                    SoNgayTraTre = ((TimeSpan)(pmt.NgayTra - pmt.HanTra)).Days;
                 }
                 else
                 {
-                    SoNgayTraTre = ((TimeSpan)(pmt.NgayTra - pmt.HanTra)).Days;
+                    SoNgayTraTre = ((TimeSpan)(NgayBC - pmt.HanTra)).Days;
+                    
                 }
                     DALBCSachTraTre.Instance.AddBaoCao(NgayBC, (int)pmt.idCuonSach, (DateTime)pmt.NgayMuon, SoNgayTraTre);
             }

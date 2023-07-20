@@ -21,9 +21,8 @@ namespace GUI.Print
         private int sntt;
         private int dongiaphat;
         private int sotienphat;
-        private int? nomoi;
         private string hantra;
-        public P_PhieuMuonTra(int idCS, int idDG, string ngaymuon, string hantra, string ngaytra, int sntt, int dongiaphat, int sotienphat, int? nomoi)
+        public P_PhieuMuonTra(int idCS, int idDG, string ngaymuon, string hantra, string ngaytra, int sntt, int dongiaphat, int sotienphat)
         {
             this.cuonsach = CuonSach(idCS);
             this.docgia = DocGia(idDG);
@@ -32,19 +31,19 @@ namespace GUI.Print
             this.sntt = sntt;
             this.dongiaphat = dongiaphat;
             this.sotienphat = sotienphat;
-            this.nomoi = nomoi;
             this.hantra = hantra;
         }
 
-        public P_PhieuMuonTra(PHIEUMUONTRA pmt, string tongnoht, string sntt, string dongiaphat, string sotienphat, int nomoi) 
+        public P_PhieuMuonTra(PHIEUMUONTRA pmt, int sntt, int dongiaphat, int sotienphat) 
         { 
             this.cuonsach = pmt.CUONSACH;
             this.docgia = pmt.DOCGIA;
             this.ngaymuon = pmt.NgayMuon.ToShortDateString();
             this.hantra = pmt.HanTra.ToShortDateString();
             this.ngaytra = pmt.NgayTra.ToString();
-            
-
+            this.sntt = sntt;
+            this.dongiaphat = dongiaphat;
+            this.sotienphat = sotienphat;
         }
 
         private CUONSACH CuonSach(int idCS)
@@ -112,11 +111,6 @@ namespace GUI.Print
             {
                 tinhtrang = "Chưa trả sách";
             }
-            if(nomoi == null)
-            {
-                nomoi = docgia.TongNoHienTai;
-            }
-
             // Thông tin cuốn sách
             e.Graphics.DrawString("Thông tin cuốn sách", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(110, 200));
             e.Graphics.DrawString("Mã cuốn sách: " + cuonsach.MaCuonSach, new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(80, 250));
@@ -140,7 +134,6 @@ namespace GUI.Print
             e.Graphics.DrawString("Số ngày trả trễ: " + sntt.ToString(), new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(width / 2 + 30, 500));
             e.Graphics.DrawString("Đơn giá phạt: " + dongiaphat.ToString() + " VND/ngay", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(width / 2 + 30, 550));
             e.Graphics.DrawString("Tổng tiền phạt: " + sotienphat.ToString() + " VND", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(width / 2 + 30, 600));
-            e.Graphics.DrawString("Tổng nợ mới: " + nomoi.ToString() + " VND", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(width / 2 + 30, 650));
 
             // Ký tên
             string date = "..., ngày " + DateTime.Now.Day + ", tháng " + DateTime.Now.Month + ", năm " + DateTime.Now.Year;

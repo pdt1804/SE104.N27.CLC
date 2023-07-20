@@ -46,7 +46,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.labelTienPhat = new System.Windows.Forms.Label();
             this.labelDonGiaPhat = new System.Windows.Forms.Label();
-            this.labelTongNoMoi = new System.Windows.Forms.Label();
             this.labelSoNgayTre = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.siticoneVSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
@@ -99,7 +98,6 @@
             this.mainPanel.Controls.Add(this.label11);
             this.mainPanel.Controls.Add(this.labelTienPhat);
             this.mainPanel.Controls.Add(this.labelDonGiaPhat);
-            this.mainPanel.Controls.Add(this.labelTongNoMoi);
             this.mainPanel.Controls.Add(this.labelSoNgayTre);
             this.mainPanel.Controls.Add(this.label12);
             this.mainPanel.Controls.Add(this.siticoneVSeparator1);
@@ -302,17 +300,6 @@
             this.labelDonGiaPhat.Size = new System.Drawing.Size(154, 31);
             this.labelDonGiaPhat.TabIndex = 168;
             this.labelDonGiaPhat.Text = "Đơn Giá Phạt: ";
-            // 
-            // labelTongNoMoi
-            // 
-            this.labelTongNoMoi.AutoSize = true;
-            this.labelTongNoMoi.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTongNoMoi.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelTongNoMoi.Location = new System.Drawing.Point(582, 626);
-            this.labelTongNoMoi.Name = "labelTongNoMoi";
-            this.labelTongNoMoi.Size = new System.Drawing.Size(155, 31);
-            this.labelTongNoMoi.TabIndex = 169;
-            this.labelTongNoMoi.Text = "Tổng Nợ Mới: ";
             // 
             // labelSoNgayTre
             // 
@@ -542,7 +529,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelTienPhat;
         private System.Windows.Forms.Label labelDonGiaPhat;
-        private System.Windows.Forms.Label labelTongNoMoi;
         private System.Windows.Forms.Label labelSoNgayTre;
         private System.Windows.Forms.Label label12;
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticoneVSeparator1;

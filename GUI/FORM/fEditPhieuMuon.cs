@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using GUI.Print;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,10 @@ namespace GUI.FORM
 {
     public partial class fEditPhieuMuon : Form
     {
+        private int sntt;
+        private int dgp;
+        private int stp;
+        private P_PhieuMuonTra report;
         private PHIEUMUONTRA PhieuMuon;
         public fEditPhieuMuon(int idPhieuMuon)
         {
@@ -31,7 +36,6 @@ namespace GUI.FORM
             labelHoTen.Text += " " + PhieuMuon.DOCGIA.TenDocGia;
             labelMaDG.Text += ": " + PhieuMuon.DOCGIA.MaDocGia;
             labelTheLoai.Text += PhieuMuon.CUONSACH.SACH.TUASACH.THELOAI.TenTheLoai;
-            labelTongNoHienTai.Text += PhieuMuon.DOCGIA.TongNoHienTai.ToString();
             if (PhieuMuon.NgayTra != null)
             {
                 dateNgayTra.Visible = false;
@@ -51,7 +55,7 @@ namespace GUI.FORM
                 TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
             labelSoNgayTre.Text = "Số ngày trả trễ: " + TienPhat.ToString();
             labelTienPhat.Text = "Tiền phạt: " + (thamso.DonGiaPhat * TienPhat).ToString();
-            labelTongNoMoi.Text = "Tổng nợ mới: " + ((int)PhieuMuon.DOCGIA.TongNoHienTai + thamso.DonGiaPhat * TienPhat).ToString();
+            labelTongNoHienTai.Text += PhieuMuon.DOCGIA.TongNoHienTai.ToString();
         }
 
         private void dateNgayTra_ValueChanged(object sender, EventArgs e)
@@ -59,13 +63,18 @@ namespace GUI.FORM
             if (isDaTra.Checked == true)
             {
                 THAMSO thamso = BUSThamSo.Instance.GetAllThamSo();
-                int TienPhat = 0;
+                int ngay = 0;
                 if (dateNgayTra.Value > PhieuMuon.HanTra)
-                    TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
-                labelSoNgayTre.Text = "Số ngày trả trễ: " + TienPhat.ToString();
-                labelTienPhat.Text = "Tiền phạt: " + (thamso.DonGiaPhat * TienPhat).ToString();
-                labelTongNoMoi.Text = "Tổng nợ mới: " + ((int)PhieuMuon.DOCGIA.TongNoHienTai + thamso.DonGiaPhat * TienPhat).ToString();
+                    ngay = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
+                labelSoNgayTre.Text = "Số ngày trả trễ: " + ngay.ToString();
+                labelTienPhat.Text = "Tiền phạt: " + (thamso.DonGiaPhat * ngay).ToString();
             }
+        }
+
+        private void Print(PHIEUMUONTRA pmt, int sntt, int dongiaphat, int sotienphat)
+        {
+            report = new P_PhieuMuonTra(pmt, sntt, dongiaphat, sotienphat);
+            report.PrintReport();
         }
 
         private void butSave_Click(object sender, EventArgs e)
@@ -77,6 +86,11 @@ namespace GUI.FORM
                 MessageBox.Show("Ngày trả không được trước ngày mượn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (dateNgayTra.Value > DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày trả không được sau hôm nay!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string err = (BUSPhieuMuonTra.Instance.UpdPhieuMuonTra(PhieuMuon.SoPhieuMuonTra, dateNgayTra.Value.Date)).ToString();
 
             if (err != "")
@@ -84,11 +98,15 @@ namespace GUI.FORM
                 MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int TienPhat = 0;
+            int ngay = 0;
             if (dateNgayTra.Value > PhieuMuon.HanTra)
-                TienPhat = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
-            err = BUSDocGia.Instance.UpdTongNo(PhieuMuon.DOCGIA.ID, (int)PhieuMuon.DOCGIA.TongNoHienTai + (int)(thamso.DonGiaPhat * TienPhat));
+                ngay = (int)((DateTime)dateNgayTra.Value - (DateTime)PhieuMuon.HanTra).TotalDays;
+            err = BUSDocGia.Instance.UpdTongNo(PhieuMuon.DOCGIA.ID, (int)PhieuMuon.DOCGIA.TongNoHienTai + (int)(thamso.DonGiaPhat * ngay));
             MessageBox.Show("Đã cập nhật phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            sntt = ngay;
+            dgp = thamso.DonGiaPhat;
+            stp = (int)(thamso.DonGiaPhat * ngay);
+            Print(PhieuMuon, sntt, dgp, stp);
             this.Close();
         }
     }

@@ -1,11 +1,13 @@
 ﻿ using BUS;
 using DTO;
+using GUI.Print;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +16,7 @@ namespace GUI.FORM
 {
     public partial class fPhieuMuonSach : Form
     {
+        private P_PhieuMuonTra report;
         private DateTime NgayTra;
         private DateTime NgayMuon;
 
@@ -59,6 +62,12 @@ namespace GUI.FORM
             labelHanTra.Text = NgayMuon.AddDays((int)thamso.SoNgayMuonToiDa).ToShortDateString();
         }
 
+        private void Print(int idCS, int idDG, string ngaymuon, string hantra, string ngaytra, int sntt, int dongiaphat, int sotienphat)
+        {
+            report = new P_PhieuMuonTra(idCS, idDG, ngaymuon, hantra, ngaytra, sntt, dongiaphat, sotienphat);
+            report.PrintReport();
+        }
+
         private void butSave_Click(object sender, EventArgs e)
         {
             if (comboCuonSach.SelectedValue == null)
@@ -88,6 +97,7 @@ namespace GUI.FORM
                 return;
             }
             MessageBox.Show("Thêm phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Print(Convert.ToInt32(comboCuonSach.SelectedValue), Convert.ToInt32(comboDocGia.SelectedValue), NgayMuon.ToShortDateString() , labelHanTra.Text, "", 0, 0, 0);
             this.Close();
         }
 

@@ -11,6 +11,8 @@ namespace GUI.Print
 {
     public class P_BCLuotMuonTheoTheLoai
     {
+        private int rowIndex = 0;
+        private int x = 80;
         private DataGridView dataGrid;
         private Label labelMaBC;
         private Label labelDate;
@@ -40,29 +42,47 @@ namespace GUI.Print
 
         private void printPN_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString("BÁO CÁO LƯỢT MƯỢN THEO THỂ LOẠI", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(210, 80));
-            e.Graphics.DrawString("Mã báo cáo: " + labelMaBC.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 150));
-            e.Graphics.DrawString("Ngày báo cáo: " + labelDate.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 180));
-            e.Graphics.DrawString("Tổng lượt mượn: " + labelTongLuotMuon.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 210));
-
-            e.Graphics.DrawString("Mã Thể Loại", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 310));
-            e.Graphics.DrawString("Tên Thể Loại", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 310));
-            e.Graphics.DrawString("Tổng Số Lượt Mượn", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(430, 310));
-            e.Graphics.DrawString("Tỉ Lệ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(650, 310));
-            int x = 360;
-            for (int i = 0; i < dataGrid.Rows.Count; i++)
+            PrintDocument printDoc = new PrintDocument();
+            PaperSize paperSize = printDoc.DefaultPageSettings.PaperSize;
+            int rowsPerPage = paperSize.Height;
+            int rowCount = dataGrid.Rows.Count;
+            if(rowIndex == 0)
             {
-                e.Graphics.DrawString(dataGrid.Rows[i].Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, x));
-                string tenTheLoai = dataGrid.Rows[i].Cells[1].Value.ToString();
+                e.Graphics.DrawString("BÁO CÁO LƯỢT MƯỢN THEO THỂ LOẠI", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(210, 80));
+                e.Graphics.DrawString("Mã báo cáo: " + labelMaBC.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 150));
+                e.Graphics.DrawString("Ngày báo cáo: " + labelDate.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 180));
+                e.Graphics.DrawString("Tổng lượt mượn: " + labelTongLuotMuon.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 210));
+
+                e.Graphics.DrawString("Mã Thể Loại", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 310));
+                e.Graphics.DrawString("Tên Thể Loại", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, 310));
+                e.Graphics.DrawString("Tổng Số Lượt Mượn", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(430, 310));
+                e.Graphics.DrawString("Tỉ Lệ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(650, 310));
+                x = 360;
+            }
+            while( rowIndex < rowCount)
+            {
+                DataGridViewRow row = dataGrid.Rows[rowIndex];
+                e.Graphics.DrawString(row.Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, x));
+                string tenTheLoai = row.Cells[1].Value.ToString();
                 if (tenTheLoai.Length > 30)
                 {
                     tenTheLoai = tenTheLoai.Substring(0, 30) + "...";
                 }
                 e.Graphics.DrawString(tenTheLoai, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(200, x));
-                e.Graphics.DrawString(dataGrid.Rows[i].Cells[2].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(460, x));
-                e.Graphics.DrawString(dataGrid.Rows[i].Cells[3].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(650, x));
+                e.Graphics.DrawString(row.Cells[2].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(460, x));
+                e.Graphics.DrawString(row.Cells[3].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(650, x));
                 x += 40;
+                rowIndex++;
+                if (rowsPerPage - x <= 100 && rowCount > rowIndex)
+                {
+                    x = 80;
+                    e.HasMorePages = true;
+                    return;
+                }
             }
+            e.HasMorePages = false;
+
+            rowIndex = 0;
 
             string date = "..., ngày " + DateTime.Now.Day + ", tháng " + DateTime.Now.Month + ", năm " + DateTime.Now.Year;
             e.Graphics.DrawString(date, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(480, x));

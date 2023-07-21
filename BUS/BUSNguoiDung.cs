@@ -44,19 +44,42 @@ namespace BUS
             else return nd;
         }
 
-        public int AddNguoiDung(string tenNguoiDung, DateTime ngaySinh, string chucVu,
+        public int AddNguoiDung(string tenNguoiDung, DateTime NgaySinh, string chucVu,
                                  string tenDangNhap, string matKhau, string email, int idNhomNguoiDung)
         {
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            DateTime NgayLapThe = DateTime.Now;
+            int gap = NgayLapThe.Year - NgaySinh.Year;
+            if (NgayLapThe.Month < NgaySinh.Month || (NgayLapThe.Month == NgaySinh.Month && NgayLapThe.Day < NgaySinh.Day))
+                gap -= 1;
+
+            if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
+            {
+                MessageBox.Show("Tuổi không hợp lệ!");
+                return -1;
+            }
+
             foreach (NGUOIDUNG nd in BUSNguoiDung.Instance.GetAllNguoiDung())
                 if (nd.TenDangNhap == tenDangNhap)
                     return -1;
-            int i = DALNguoiDung.Instance.AddNguoiDung(tenNguoiDung, ngaySinh, chucVu, tenDangNhap, matKhau, email, idNhomNguoiDung);
+            int i = DALNguoiDung.Instance.AddNguoiDung(tenNguoiDung,NgaySinh, chucVu, tenDangNhap, matKhau, email, idNhomNguoiDung);
             return i;
         }
 
-        public string UpdNguoiDung(int id, string tenNguoiDung, DateTime? ngaySinh, string chucVu,
+        public string UpdNguoiDung(int id, string tenNguoiDung, DateTime NgaySinh, string chucVu,
                                  int idNhomNguoiDung, string email)
         {
+            THAMSO thamso = DALThamSo.Instance.GetAllThamSo();
+            DateTime NgayLapThe = DateTime.Now;
+            int gap = NgayLapThe.Year - NgaySinh.Year;
+            if (NgayLapThe.Month < NgaySinh.Month || (NgayLapThe.Month == NgaySinh.Month && NgayLapThe.Day < NgaySinh.Day))
+                gap -= 1;
+
+            if (gap < thamso.TuoiToiThieu || gap > thamso.TuoiToiDa)
+            {
+               
+                return "Tuổi không hợp lệ!";
+            }
             NGUOIDUNG nd = DALNguoiDung.Instance.GetNguoiDungById(id);
             if (nd == null)
             {
@@ -67,7 +90,7 @@ namespace BUS
             NHOMNGUOIDUNG nnd = DALNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhomNguoiDung);
             if (nnd == null)
                 return " Nhóm người dùng không hợp lệ";
-            if (DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, ngaySinh, chucVu, email, idNhomNguoiDung))
+            if (DALNguoiDung.Instance.UpdNguoiDung(id, tenNguoiDung, NgaySinh, chucVu, email, idNhomNguoiDung))
                 return "";
             return "Không thể update người dùng";
         }

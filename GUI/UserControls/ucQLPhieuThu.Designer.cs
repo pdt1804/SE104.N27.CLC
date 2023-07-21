@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PhieuThuGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.SoPhieuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xuathd = new System.Windows.Forms.DataGridViewImageColumn();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butFindNgay = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtNam = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -40,14 +45,9 @@
             this.txtNgay = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butFind = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtFind = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.pHIEUTHUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SoPhieuThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xuathd = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuThuGrid)).BeginInit();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUTHUBindingSource)).BeginInit();
@@ -123,6 +123,46 @@
             this.PhieuThuGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PhieuThuGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.PhieuThuGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhieuThuGrid_CellClick);
+            // 
+            // SoPhieuThu
+            // 
+            this.SoPhieuThu.FillWeight = 118.3155F;
+            this.SoPhieuThu.HeaderText = "Số phiếu thu";
+            this.SoPhieuThu.MinimumWidth = 6;
+            this.SoPhieuThu.Name = "SoPhieuThu";
+            this.SoPhieuThu.ReadOnly = true;
+            // 
+            // MaDocGia
+            // 
+            this.MaDocGia.FillWeight = 118.3155F;
+            this.MaDocGia.HeaderText = "Mã độc giả";
+            this.MaDocGia.MinimumWidth = 6;
+            this.MaDocGia.Name = "MaDocGia";
+            this.MaDocGia.ReadOnly = true;
+            // 
+            // SoTienThu
+            // 
+            this.SoTienThu.FillWeight = 118.3155F;
+            this.SoTienThu.HeaderText = "Số tiền thu";
+            this.SoTienThu.MinimumWidth = 6;
+            this.SoTienThu.Name = "SoTienThu";
+            this.SoTienThu.ReadOnly = true;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.FillWeight = 118.3155F;
+            this.NgayLap.HeaderText = "Ngày lập";
+            this.NgayLap.MinimumWidth = 6;
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            // 
+            // xuathd
+            // 
+            this.xuathd.FillWeight = 26.73797F;
+            this.xuathd.HeaderText = "";
+            this.xuathd.MinimumWidth = 6;
+            this.xuathd.Name = "xuathd";
+            this.xuathd.ReadOnly = true;
             // 
             // topPanel
             // 
@@ -300,21 +340,6 @@
             this.txtFind.Size = new System.Drawing.Size(317, 44);
             this.txtFind.TabIndex = 17;
             // 
-            // butRefresh
-            // 
-            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
-            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.butRefresh.ImageRotate = 0F;
-            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
-            this.butRefresh.Location = new System.Drawing.Point(34, 43);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(62, 56);
-            this.butRefresh.TabIndex = 9;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
             // butAdd
             // 
             this.butAdd.AutoRoundedCorners = true;
@@ -346,49 +371,24 @@
             this.butAdd.TextOffset = new System.Drawing.Point(3, 0);
             this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
+            // butRefresh
+            // 
+            this.butRefresh.CheckedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.butRefresh.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.butRefresh.Image = global::GUI.Properties.Resources.refresh__2_;
+            this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.butRefresh.ImageRotate = 0F;
+            this.butRefresh.ImageSize = new System.Drawing.Size(50, 50);
+            this.butRefresh.Location = new System.Drawing.Point(34, 43);
+            this.butRefresh.Name = "butRefresh";
+            this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.butRefresh.Size = new System.Drawing.Size(62, 56);
+            this.butRefresh.TabIndex = 9;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            // 
             // pHIEUTHUBindingSource
             // 
             this.pHIEUTHUBindingSource.DataSource = typeof(DTO.PHIEUTHU);
-            // 
-            // SoPhieuThu
-            // 
-            this.SoPhieuThu.FillWeight = 118.3155F;
-            this.SoPhieuThu.HeaderText = "Số phiếu thu";
-            this.SoPhieuThu.MinimumWidth = 6;
-            this.SoPhieuThu.Name = "SoPhieuThu";
-            this.SoPhieuThu.ReadOnly = true;
-            // 
-            // MaDocGia
-            // 
-            this.MaDocGia.FillWeight = 118.3155F;
-            this.MaDocGia.HeaderText = "Mã độc giả";
-            this.MaDocGia.MinimumWidth = 6;
-            this.MaDocGia.Name = "MaDocGia";
-            this.MaDocGia.ReadOnly = true;
-            // 
-            // SoTienThu
-            // 
-            this.SoTienThu.FillWeight = 118.3155F;
-            this.SoTienThu.HeaderText = "Số tiền thu";
-            this.SoTienThu.MinimumWidth = 6;
-            this.SoTienThu.Name = "SoTienThu";
-            this.SoTienThu.ReadOnly = true;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.FillWeight = 118.3155F;
-            this.NgayLap.HeaderText = "Ngày lập";
-            this.NgayLap.MinimumWidth = 6;
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.ReadOnly = true;
-            // 
-            // xuathd
-            // 
-            this.xuathd.FillWeight = 26.73797F;
-            this.xuathd.HeaderText = "";
-            this.xuathd.MinimumWidth = 6;
-            this.xuathd.Name = "xuathd";
-            this.xuathd.ReadOnly = true;
             // 
             // ucQLPhieuThu
             // 

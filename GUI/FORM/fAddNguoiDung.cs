@@ -34,7 +34,7 @@ namespace GUI
         private void butSave_Click(object sender, EventArgs e)
         {
             string ten = txtHoTen.Text;
-            string email = "";
+            string email = txtEmail.Text;
             DateTime ngaysinh = dateNgaySinh.Value.Date;
             if (ngaysinh > DateTime.Now.Date)
             {
@@ -48,7 +48,7 @@ namespace GUI
             int idNhom = (int)comboNhomND.SelectedValue;
             var nhom = BUSNhomNguoiDung.Instance.GetNhomNguoiDungById(idNhom);
             bool isDG = false;
-            if (ten == "" || matkhau == "" || tendn == "")
+            if (ten == "" || matkhau == "" || tendn == "" || email == "")
             {
                 MessageBox.Show("Chưa nhập đủ thông tin", "Lỗi",
                  MessageBoxButtons.OK, MessageBoxIcon.Error);

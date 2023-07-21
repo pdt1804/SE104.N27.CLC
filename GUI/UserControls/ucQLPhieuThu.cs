@@ -27,7 +27,7 @@ namespace GUI.UserControls
         public void Binding(List<PHIEUTHU> PhieuThuList)
         {
             PhieuThuGrid.Rows.Clear();
-            Image print_img = Properties.Resources.edit_icon;
+            Image print_img = Properties.Resources.printer;
             print_img = (Image)(new Bitmap(print_img, new Size(25, 25)));
             foreach (PHIEUTHU pt in PhieuThuList)
             {

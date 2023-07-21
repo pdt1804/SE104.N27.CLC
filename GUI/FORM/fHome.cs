@@ -48,5 +48,30 @@ namespace GUI
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes) this.Close();
         }
+
+        private void butManager_Click(object sender, EventArgs e)
+        {
+            bool canAccess = false;
+            foreach (var cn in user.NHOMNGUOIDUNG.CHUCNANGs)
+            {
+                if (cn.TenChucNang != "DG")
+                {
+                    canAccess = true;
+                    break;
+                }
+            }
+            if (canAccess)
+            {
+                var f = new fManager(user.id);
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào chức năng này!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

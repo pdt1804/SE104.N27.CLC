@@ -36,11 +36,12 @@
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.exitControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.errorDia = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
-            this.exitControlBox = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
+            this.butManager = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.container.SuspendLayout();
             this.siticoneGradientPanel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -61,6 +62,7 @@
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.siticoneGradientPanel1.Controls.Add(this.butManager);
             this.siticoneGradientPanel1.Controls.Add(this.butTraCuu);
             this.siticoneGradientPanel1.Controls.Add(this.butTTTK);
             this.siticoneGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -154,17 +156,20 @@
             this.topPanel.Size = new System.Drawing.Size(1500, 67);
             this.topPanel.TabIndex = 5;
             // 
-            // pictureBox1
+            // exitControlBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.lib;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.exitControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitControlBox.BackColor = System.Drawing.Color.Transparent;
+            this.exitControlBox.CustomClick = true;
+            this.exitControlBox.FillColor = System.Drawing.Color.Transparent;
+            this.exitControlBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.exitControlBox.IconColor = System.Drawing.Color.White;
+            this.exitControlBox.Location = new System.Drawing.Point(1409, 0);
+            this.exitControlBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.exitControlBox.Name = "exitControlBox";
+            this.exitControlBox.Size = new System.Drawing.Size(78, 65);
+            this.exitControlBox.TabIndex = 8;
+            this.exitControlBox.Click += new System.EventHandler(this.exitControlBox_Click);
             // 
             // label2
             // 
@@ -201,20 +206,41 @@
             this.errorDia.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Light;
             this.errorDia.Text = null;
             // 
-            // exitControlBox
+            // butManager
             // 
-            this.exitControlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitControlBox.BackColor = System.Drawing.Color.Transparent;
-            this.exitControlBox.CustomClick = true;
-            this.exitControlBox.FillColor = System.Drawing.Color.Transparent;
-            this.exitControlBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.exitControlBox.IconColor = System.Drawing.Color.White;
-            this.exitControlBox.Location = new System.Drawing.Point(1409, 0);
-            this.exitControlBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.exitControlBox.Name = "exitControlBox";
-            this.exitControlBox.Size = new System.Drawing.Size(78, 65);
-            this.exitControlBox.TabIndex = 8;
-            this.exitControlBox.Click += new System.EventHandler(this.exitControlBox_Click);
+            this.butManager.BorderRadius = 4;
+            this.butManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.butManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.butManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.butManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butManager.Dock = System.Windows.Forms.DockStyle.Right;
+            this.butManager.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.butManager.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butManager.ForeColor = System.Drawing.Color.White;
+            this.butManager.Image = global::GUI.Properties.Resources.key_icon;
+            this.butManager.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butManager.ImageOffset = new System.Drawing.Point(5, 0);
+            this.butManager.ImageSize = new System.Drawing.Size(30, 30);
+            this.butManager.Location = new System.Drawing.Point(1320, 0);
+            this.butManager.Name = "butManager";
+            this.butManager.Size = new System.Drawing.Size(180, 54);
+            this.butManager.TabIndex = 3;
+            this.butManager.Text = "Quản lý";
+            this.butManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.butManager.TextOffset = new System.Drawing.Point(10, 0);
+            this.butManager.Click += new System.EventHandler(this.butManager_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.lib;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // fHome
             // 
@@ -251,5 +277,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox exitControlBox;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton butManager;
     }
 }

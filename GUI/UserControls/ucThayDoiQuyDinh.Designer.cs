@@ -177,6 +177,7 @@
             0,
             0,
             0});
+            this.numTuoiMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTuoiMax_KeyPress);
             // 
             // label3
             // 
@@ -237,6 +238,7 @@
             0,
             0,
             0});
+            this.numTuoiMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTuoiMin_KeyPress);
             // 
             // label4
             // 
@@ -355,6 +357,7 @@
             0,
             0,
             0});
+            this.numThoiHan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numThoiHan_KeyPress);
             // 
             // label5
             // 
@@ -499,6 +502,7 @@
             0,
             0,
             0});
+            this.numKcNam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numKcNam_KeyPress);
             // 
             // label15
             // 
@@ -566,6 +570,7 @@
             this.txtDonGia.SelectedText = "";
             this.txtDonGia.Size = new System.Drawing.Size(150, 36);
             this.txtDonGia.TabIndex = 85;
+            this.txtDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDonGia_KeyPress);
             // 
             // label19
             // 
@@ -635,6 +640,7 @@
             0,
             0,
             0});
+            this.numSoSach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numSoSach_KeyPress);
             // 
             // label22
             // 
@@ -704,6 +710,7 @@
             0,
             0,
             0});
+            this.numNgayMuon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numNgayMuon_KeyPress);
             // 
             // label21
             // 

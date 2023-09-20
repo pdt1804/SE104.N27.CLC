@@ -114,5 +114,16 @@ namespace GUI.UserControls
             comboTinhTrang.Text = "Tất cả";
             txtMaSach.Text = "";
         }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            fBarcode fBarcode = new fBarcode();
+            fBarcode.ShowDialog();
+        }
+
+        private void comboTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
